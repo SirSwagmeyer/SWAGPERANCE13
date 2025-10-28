@@ -75,9 +75,7 @@ GLOBAL_LIST_INIT(special_traits, build_special_traits())
 
 /proc/virtue_check(var/datum/virtue/V, heretic = FALSE)
 	if(V)
-		if(istype(V,/datum/virtue/heretic) && !heretic)
-			return FALSE
-		return TRUE
+		return TRUE //lol
 	return FALSE
 
 /proc/apply_charflaw_equipment(mob/living/carbon/human/character, client/player)

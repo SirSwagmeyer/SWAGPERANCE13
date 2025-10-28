@@ -53,7 +53,13 @@
 		sleep (3 SECONDS)
 		explosion(T, devastation_range = 2, heavy_impact_range = 3, light_impact_range = 4, smoke = TRUE, soundin = mortarexplosion)
 		new /obj/effect/decal/crater(T)
+	addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/effect/proc_holder/spell/invoked/mortar, spawncrater), T), 1)
 	return TRUE
+
+/obj/effect/proc_holder/spell/invoked/mortar/proc/spawncrater(turf/T)
+    if(T)
+        new /obj/effect/decal/crater(T)
+
 
 /obj/effect/temp_visual/mortarmark
 	icon = 'icons/effects/effects.dmi'

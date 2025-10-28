@@ -1,20 +1,3 @@
-/datum/virtue/utility/noble
-	name = "Nobility"
-	desc = "By birth, blade or brain, I am noble known to the royalty of these lands, and have all the benefits associated with it."
-	added_traits = list(TRAIT_NOBLE)
-	added_skills = list(list(/datum/skill/misc/reading, 1, 6))
-	added_stashed_items = list("Heirloom Amulet" = /obj/item/clothing/neck/roguetown/ornateamulet/noble)
-
-/datum/virtue/utility/noble/apply_to_human(mob/living/carbon/human/recipient)
-	SStreasury.noble_incomes[recipient] += 15
-	var/obj/item/pouch = new /obj/item/storage/belt/rogue/pouch/coins/virtuepouch(get_turf(recipient))
-	recipient.put_in_hands(pouch, forced = TRUE)
-
-/datum/virtue/utility/beautiful
-	name = "Beautiful"
-	desc = "Wherever I go, I turn heads, such is my natural beauty. I am also rather good in bed, though they always say that."
-	custom_text = "Incompatible with Ugly virtue."
-	added_traits = list(TRAIT_BEAUTIFUL,TRAIT_GOODLOVER)
 
 /datum/virtue/utility/beautiful/handle_traits(mob/living/carbon/human/recipient)
 	..()
@@ -34,58 +17,6 @@
 	added_traits = list(TRAIT_LIGHT_STEP)
 	added_skills = list(list(/datum/skill/misc/sneaking, 3, 6))
 
-/datum/virtue/utility/resident
-	name = "Resident"
-	desc = "I'm a resident of King's Row. I have a home in the city."
-	added_traits = list(TRAIT_RESIDENT)
-
-/datum/virtue/utility/resident/apply_to_human(mob/living/carbon/human/recipient)
-	var/mapswitch = 0
-	if(SSmapping.config.map_name == "Dun Manor")
-		mapswitch = 1
-	else if(SSmapping.config.map_name == "Dun World")
-		mapswitch = 2
-
-	if(mapswitch == 0)
-		return
-	if(recipient.mind?.assigned_role == "Adventurer" || recipient.mind?.assigned_role == "Mercenary" || recipient.mind?.assigned_role == "Court Agent")
-		// Find tavern area for spawning
-		var/area/spawn_area
-		for(var/area/A in world)
-			if(istype(A, /area/rogue/indoors/town/tavern))
-				spawn_area = A
-				break
-
-		if(spawn_area)
-			var/target_z = 3 //ground floor of tavern for dun manor / world
-			var/target_y = 70 //dun manor
-			var/list/possible_chairs = list()
-
-			if(mapswitch == 2)
-				target_y = 234 //dun world huge
-
-			for(var/obj/structure/chair/C in spawn_area)
-				//z-level 3, wooden chair, and Y > north of tavern backrooms
-				var/turf/T = get_turf(C)
-				if(T && T.z == target_z && T.y > target_y && istype(C, /obj/structure/chair/wood/rogue) && !T.density && !T.is_blocked_turf(FALSE))
-					possible_chairs += C
-
-			if(length(possible_chairs))
-				var/obj/structure/chair/chosen_chair = pick(possible_chairs)
-				recipient.forceMove(get_turf(chosen_chair))
-				chosen_chair.buckle_mob(recipient)
-				to_chat(recipient, span_notice("As a resident of King's Row, you find yourself seated at a chair in the local tavern."))
-			else
-				var/list/possible_spawns = list()
-				for(var/turf/T in spawn_area)
-					if(T.z == target_z && T.y > (target_y + 4) && !T.density && !T.is_blocked_turf(FALSE))
-						possible_spawns += T
-
-				if(length(possible_spawns))
-					var/turf/spawn_loc = pick(possible_spawns)
-					recipient.forceMove(spawn_loc)
-					to_chat(recipient, span_notice("As a resident of King's Row, you find yourself in the local tavern."))
-
 /datum/virtue/utility/failed_squire
 	name = "Failed Squire"
 	desc = "I was once a squire in training, but failed to achieve knighthood. Though my dreams of glory were dashed, I retained my knowledge of equipment maintenance and repair, including how to polish arms and armor."
@@ -99,62 +30,6 @@
 /datum/virtue/utility/failed_squire/apply_to_human(mob/living/carbon/human/recipient)
 	to_chat(recipient, span_notice("Though you failed to become a knight, your training in equipment maintenance and repair remains useful."))
 	to_chat(recipient, span_notice("You can retrieve your hammer and polishing tools from a tree, statue, or clock."))
-
-/datum/virtue/utility/linguist
-	name = "Intellectual"
-	desc = "I've spent my life surrounded by various books or sophisticated foreigners, be it through travel or other fortunes beset on my life. I've picked up several tongues and wits, and keep a journal closeby. I can tell people's exact prowess."
-	custom_text = "Maximizes Assess benefits with a bonus of the target's Stats. Allows the choice of 3 languages to learn upon joining. +1 INT."
-	added_traits = list(TRAIT_INTELLECTUAL)
-	added_skills = list(list(/datum/skill/misc/reading, 3, 6))
-	added_stashed_items = list(
-		"Quill" = /obj/item/natural/feather,
-		"Scroll" = /obj/item/paper/scroll,
-		"Book" = /obj/item/book/rogue/playerbook
-	)
-
-/datum/virtue/utility/linguist/apply_to_human(mob/living/carbon/human/recipient)
-	recipient.change_stat("intelligence", 1)
-	addtimer(CALLBACK(src, .proc/linguist_apply, recipient), 50)
-
-/datum/virtue/utility/linguist/proc/linguist_apply(mob/living/carbon/human/recipient)
-	var/static/list/selectable_languages = list(
-		/datum/language/elvish,
-		/datum/language/dwarvish,
-		/datum/language/orcish,
-		/datum/language/hellspeak,
-		/datum/language/draconic,
-		/datum/language/celestial,
-		/datum/language/grenzelhoftian,
-		/datum/language/kazengunese,
-		/datum/language/otavan,
-		/datum/language/etruscan,
-		/datum/language/gronnic,
-		/datum/language/aavnic
-	)
-
-	var/list/choices = list()
-	for(var/language_type in selectable_languages)
-		if(recipient.has_language(language_type))
-			continue
-		var/datum/language/a_language = new language_type()
-		choices[a_language.name] = language_type
-
-	if(length(choices))	//If this isn't true then we have no new languages learn -- we probably picked archivist
-		var/lang_count = 3
-		var/count = lang_count
-		for(var/i in 1 to lang_count)
-			var/chosen_language = input(recipient, "Choose your extra spoken language.", "VIRTUE: [count] LEFT") as null|anything in choices
-			if(chosen_language)
-				var/language_type = choices[chosen_language]
-				recipient.grant_language(language_type)
-				choices -= chosen_language
-				to_chat(recipient, span_info("I recall my knowledge of [chosen_language]..."))
-				count--
-
-/datum/virtue/utility/deathless
-	name = "Deathless"
-	desc = "Some fell magick has rendered me inwardly unliving - I do not hunger, and I do not breathe."
-	added_traits = list(TRAIT_NOHUNGER, TRAIT_NOBREATH)
 
 /datum/virtue/utility/blacksmith
 	name = "Blacksmith's Apprentice"
@@ -278,16 +153,9 @@
 
 /datum/virtue/utility/ugly
 	name = "Ugly"
-	desc = "Be it your family's habits in and out of womb, your own choices or Xylix's cruel roll of fate, you have been left unbearable to look at. Stuck to the unseen pits and crevices of the town, you've grown used to the foul odours of lyfe that often follow you. Corpses do not stink for you, and that is all the company you might find."
+	desc = "You're ugly as fuck to look at - either through unfortunate inbreeding, or scarring. You don't mind the smell of death."
 	custom_text = "Incompatible with Beautiful virtue."
 	added_traits = list(TRAIT_UNSEEMLY, TRAIT_NOSTINK)
-
-/datum/virtue/utility/ugly/handle_traits(mob/living/carbon/human/recipient)
-	..()
-	if(HAS_TRAIT(recipient, TRAIT_BEAUTIFUL))
-		to_chat(recipient, "Your repulsiveness is cancelled out! You become normal.")
-		REMOVE_TRAIT(recipient, TRAIT_BEAUTIFUL, TRAIT_VIRTUE)
-		REMOVE_TRAIT(recipient, TRAIT_UNSEEMLY, TRAIT_VIRTUE)
 
 /datum/virtue/utility/secondvoice
 	name = "Second Voice"
@@ -353,8 +221,3 @@
 	name = "Woodwalker"
 	desc = "After years of training in the wilds, I've learned to traverse the woods confidently, without breaking any twigs. I can even step lightly on leaves without falling, and I can gather twice as many things from bushes."
 	added_traits = list(TRAIT_WOODWALKER, TRAIT_OUTDOORSMAN)
-
-/datum/virtue/heretic/zchurch_keyholder
-	name = "Heresiarch"
-	desc = "The 'Holy' See has their blood-stained grounds, and so do we. Underneath their noses, we pray to the true gods - I know the location of the local heretic conclave. Secrecy is paramount. If found out, I will surely be killed."
-	added_traits = list(TRAIT_HERESIARCH)
