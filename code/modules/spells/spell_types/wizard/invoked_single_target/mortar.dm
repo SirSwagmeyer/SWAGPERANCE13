@@ -52,13 +52,12 @@
 		playsound(T, mortarfall, 100, FALSE)
 		sleep (3 SECONDS)
 		explosion(T, devastation_range = 2, heavy_impact_range = 3, light_impact_range = 4, smoke = TRUE, soundin = mortarexplosion)
-		new /obj/effect/decal/crater(T)
-	addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/effect/proc_holder/spell/invoked/mortar, spawncrater), T), 1)
+	addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/effect/proc_holder/spell/invoked/mortar, spawncrater), T), 1) //there's probably a better way of doing this
 	return TRUE
 
 /obj/effect/proc_holder/spell/invoked/mortar/proc/spawncrater(turf/T)
     if(T)
-        new /obj/effect/decal/crater(T)
+        new /obj/structure/crater(T)
 
 
 /obj/effect/temp_visual/mortarmark
@@ -72,8 +71,10 @@
 	light_outer_range = 2
 	light_color = COLOR_NAVY
 
-/obj/effect/decal/crater
+/obj/structure/crater
 	icon = 'icons/turf/crater.dmi'
 	icon_state = "dirt_shell_alt"
 	name = "crater"
 	desc = "A crater left by a mortar strike. Surely they don't strike the same place twice, right?"
+	max_integrity = 99999 //lol
+	anchored = TRUE
