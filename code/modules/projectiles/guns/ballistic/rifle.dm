@@ -178,7 +178,7 @@
 	recoil = 0.15
 
 /obj/item/gun/ballistic/rifle/repeater/leveraction
-	name = "WTK 'Legionaire'"
+	name = "'Ark' Kaye XLVII"
 	desc = "A genuine lever action, produced by a WAR MACHINE's outlet. Fires pistol rounds."
 	icon_state = "leverchester"
 	item_state = "leverchester"

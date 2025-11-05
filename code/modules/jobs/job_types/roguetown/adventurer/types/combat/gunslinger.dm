@@ -60,6 +60,7 @@
 			H.change_stat("endurance", 1)
 			H.change_stat("speed", 3)
 			H.set_blindness(0)
+			H.cmode_music = 'sound/music/cmode/adventurer/combat_gunman.ogg'
 
 		if("Desperado")
 			to_chat(H, span_warning("You might just be a bandit. You carry a mass-produced revolver, and aren't recognized."))
@@ -103,6 +104,7 @@
 			H.change_stat("speed", 3)
 			H.grant_language(/datum/language/thievescant)
 			H.set_blindness(0)
+			H.cmode_music = 'sound/music/cmode/adventurer/combat_gunman.ogg'
 
 		if("Gangster") //code in pls
 			
@@ -146,6 +148,7 @@
 			H.change_stat("endurance", 1)
 			H.change_stat("speed", 3)
 			H.set_blindness(0)
+			H.cmode_music = 'sound/music/cmode/adventurer/combat_gunman.ogg'
 
 		if("Old-Boy")
 			
@@ -189,3 +192,4 @@
 			H.change_stat("endurance", 1)
 			H.change_stat("speed", 3)
 			H.set_blindness(0)
+			H.cmode_music = 'sound/music/cmode/adventurer/combat_gunman.ogg'
