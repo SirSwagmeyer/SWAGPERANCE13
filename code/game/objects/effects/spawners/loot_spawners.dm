@@ -463,6 +463,14 @@
 		/obj/item/reagent_containers/glass/bottle/rogue/healthpot = 2,
 	)
 
+/obj/effect/spawner/lootdrop/t13armor
+	name = "t13 armor spawner"
+	icon_state = "harmor"
+	lootcount = 1
+	loot = list(
+		/obj/item/clothing/suit/roguetown/armor/plate/full/ebarmor = 2,
+		/obj/item/clothing/suit/roguetown/armor/plate/full/ebarmor/pauldrons = 1
+	)
 /obj/effect/spawner/lootdrop/general_loot_low/x3
 	name = "low tier general loot spawnerx3"
 	icon_state = "genlowx3"

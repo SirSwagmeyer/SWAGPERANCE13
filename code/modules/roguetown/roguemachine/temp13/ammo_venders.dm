@@ -6,6 +6,7 @@
 	locked = FALSE
 	categories = list(
 		"AMMUNITION",
+		"FORTIFICATIONS",
 	)
 	categories_gamer = list()
 	icon_state = "ammovend_r"
@@ -18,6 +19,7 @@
 	locked = FALSE
 	categories = list(
 		"AMMUNITION",
+		"FORTIFICATIONS",
 	)
 	categories_gamer = list()
 	icon_state = "ammovend_p"

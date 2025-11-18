@@ -4,7 +4,7 @@
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/ebarmor
 	name = "manufactured armor plate"
-	desc = "A standard, manufactured armor plate produced by the local WAR MACHINE."
+	desc = "A standard, manufactured armor plate produced by the WAR MACHINE."
 	icon = 'icons/roguetown/clothing/armor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
 	icon_state = "EB_armor"
@@ -60,7 +60,7 @@
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/ebarmor/pauldrons
 	name = "pauldroned armor plate"
-	desc = "A humen-modified, manufactured armor plate. Once produced by the local WAR MACHINE, with pauldrons slapped on."
+	desc = "A humen-modified, manufactured armor plate. MACHINE-made, with pauldrons slapped on."
 	icon = 'icons/roguetown/clothing/armor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
 	icon_state = "EB_armor_pauldrons"
