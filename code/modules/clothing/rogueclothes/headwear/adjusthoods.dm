@@ -85,7 +85,7 @@
 
 /obj/item/clothing/head/roguetown/roguehood/shalal/hijab
 	name = "hijab"
-	desc = "Flowing like blood from a wound, this tithe of cloth-and-silk spills out to the shoulders. It carries the telltale mark of Naledian stitcheries."
+	desc = "A wrap that goes around the head. It doesn't obscure the face."
 	item_state = "hijab"
 	icon_state = "deserthood"
 	hidesnoutADJ = FALSE
