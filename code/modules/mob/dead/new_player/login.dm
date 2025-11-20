@@ -43,7 +43,6 @@
 				if(5)
 					shown_patreon_level = "Lord"
 			to_chat(src, span_info("Donator Level: [shown_patreon_level]"))
-		client.recent_changelog()
 /*
 	if(CONFIG_GET(flag/usewhitelist))
 		if(!client.whitelisted())
