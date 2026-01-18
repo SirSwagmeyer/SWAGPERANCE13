@@ -432,6 +432,16 @@
 		/obj/item/gun/ballistic/rifle/reaper = 1,
 	)
 
+/obj/effect/spawner/lootdrop/normalguns
+	name = "normal gun spawner"
+	icon_state = "normgun"
+	lootcount = 1
+	loot = list(
+		/obj/item/gun/ballistic/rifle/repeater/mondragon = 1,
+		/obj/item/gun/ballistic/revolver/pace = 1,
+		/obj/item/gun/ballistic/revolver/doublebarrel = 1,
+	)
+
 /obj/effect/spawner/lootdrop/hightierammo
 	name = "high tier ammo spawner"
 	icon_state = "highammo"
