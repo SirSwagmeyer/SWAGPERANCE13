@@ -69,7 +69,8 @@ Just because it'd get a LITTLE annoying if you kept seeing this over and over. H
 
 /datum/loreblurb/outpostxiphos
 	title = "Outpost Xiphos"
-	description = "Cold and oppressive. You're walking down the hallways of Perserdunian land. \n\
+	description = "Cold and oppressive. This outpost was built ontop of conquered land. \n\
 	Without a gas mask, the faint smell of copper coats the concrete walls mixed with the soft crackling of blue candles. \n\
-	Glory to the Empire, and hail to the Venerable Master."
+	The Perserdunians etched out this outpost a few months ago, after an intense offensive campaign shattered both the land and the bandits that once terrorized this region. \n\
+	Peace follows our Venerable Master."
 	sound = 'sound/loredump/lore_sting2.ogg'
