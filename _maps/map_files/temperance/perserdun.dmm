@@ -581,7 +581,12 @@
 /obj/structure/table/wood/long_table,
 /obj/item/reagent_containers/glass/bottle/rogue/redwine{
 	desc = "Kalarian red-wine. It's cheap.";
-	pixel_y = 10
+	pixel_y = 10;
+	pixel_x = 7
+	},
+/obj/item/book/rogue/regulations{
+	pixel_y = -1;
+	pixel_x = -7
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/perserdunbase)
