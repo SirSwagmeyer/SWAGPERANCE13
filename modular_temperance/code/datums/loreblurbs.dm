@@ -111,7 +111,7 @@ Just because it'd get a LITTLE annoying if you kept seeing this over and over. H
 /datum/loreblurb/apartments
 	title = "APARTMENTS"
 	description = "You're not alone. \n\
-	Whirring and beeping echo throughout the walls."
+	Whirring, beeping sounds echo throughout the walls."
 	sound = 'sound/loredump/lore_sting6.ogg'
 
 /datum/loreblurb/code2
