@@ -25,5 +25,29 @@
 			var/datum/hud/H = owner.hud_used
 			H.plane_masters_update()
 
-/// Experimental Heroin filters effects. 
+/datum/status_effect/meth
+	id = "meth"
+	alert_type = null
+	status_type = STATUS_EFFECT_REFRESH
+	duration = 10 SECONDS
+
+/datum/status_effect/meth/on_apply()
+	. = ..()
+	ADD_TRAIT(owner, TRAIT_INFINITE_STAMINA, TRAIT_GENERIC) // SPEED
+	owner.add_stress(/datum/stressevent/meth)
+	to_chat(owner, span_subtle("You feel tight. Tight like a tiger."))
+	if(owner?.client) // Code repeititon makes me want to tear my nipples off.
+		if(owner.client.screen && owner.client.screen.len)
+			var/datum/hud/H = owner.hud_used
+			H.plane_masters_update()
+
+/datum/status_effect/meth/on_remove()
+	. = ..()
+	REMOVE_TRAIT(owner, TRAIT_INFINITE_STAMINA, TRAIT_GENERIC)
+	owner.remove_stress(/datum/stressevent/meth)
+	to_chat(owner, span_subtle("You are slow again."))
+	if(owner?.client)
+		if(owner.client.screen && owner.client.screen.len)
+			var/datum/hud/H = owner.hud_used
+			H.plane_masters_update()
 

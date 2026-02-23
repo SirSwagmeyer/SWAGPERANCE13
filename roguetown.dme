@@ -2547,4 +2547,5 @@
 #include "modular_temperance\code\datums\loredump_tiles.dm"
 #include "modular_temperance\code\datums\status_effects\drugs.dm"
 #include "modular_temperance\code\reagents\drugs\heroin.dm"
+#include "modular_temperance\code\reagents\drugs\meth.dm"
 // END_INCLUDE

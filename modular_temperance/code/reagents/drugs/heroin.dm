@@ -11,22 +11,30 @@
 	icon_state = "spice"
 	item_state = "spice"
 	possible_transfer_amounts = list()
-	volume = 5
-	list_reagents = list(/datum/reagent/heroin = 5)
-	grind_results = list(/datum/reagent/heroin = 5)
+	volume = 15
+	list_reagents = list(/datum/reagent/heroin = 15)
+	grind_results = list(/datum/reagent/heroin = 15)
 
-/datum/reagent/on_mob_life(mob/living/carbon/M)
+/obj/item/reagent_containers/glass/bottle/alchemical/heroin
+	name = "vial (heroin)"
+	desc = ""
+	list_reagents = list(/datum/reagent/heroin = 27)
+
+/datum/reagent/heroin/on_mob_life(mob/living/carbon/M)
 	if(M.has_flaw(/datum/charflaw/addiction/heroin))
 		M.sate_addiction()
 	M.apply_status_effect(/datum/status_effect/heroin)
 	..()
 
-/datum/reagent/overdose_start(mob/living/M)
+/datum/reagent/heroin/overdose_start(mob/living/M)
 	to_chat(M, span_subtle("It's too much..."))
 	if(iscarbon(M))
 		var/mob/living/carbon/C = M
-		C.heart_attack() // Teehee.
+		C.emote("breathgasp", forced = TRUE)
+		spawn(3 SECONDS)
+			C.vomit(stun = TRUE)
+			C.heart_attack() // Teehee.
 
-/datum/reagent/on_mob_end_metabolize(mob/living/M)
+/datum/reagent/heroin/on_mob_end_metabolize(mob/living/M)
 	M.remove_status_effect(/datum/status_effect/heroin)
 

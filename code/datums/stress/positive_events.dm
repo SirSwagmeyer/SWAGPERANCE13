@@ -236,3 +236,8 @@
 	stressadd = -5
 	desc = span_green("I feel inspired by the sermon.")
 	timer = 20 MINUTES
+
+/datum/stressevent/meth
+	stressadd = -2
+	desc = span_green("Meth makes me fast. :)")
+	timer = INFINITY
