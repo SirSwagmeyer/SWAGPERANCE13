@@ -98,8 +98,8 @@
 	return nutrition_amount
 
 /mob/living/stamina_add(added as num, emote_override, force_emote = TRUE) //call update_stamina here and set last_fatigued, return false when not enough fatigue left
-	if(HAS_TRAIT(src, TRAIT_INFINITE_STAMINA))
-		return TRUE
+//	if(HAS_TRAIT(src, TRAIT_INFINITE_STAMINA)) Srry but I need meff overdosess :)
+//		return TRUE
 	if(HAS_TRAIT(src, TRAIT_FORTITUDE))
 		added = added * 0.5
 	stamina = CLAMP(stamina+added, 0, max_stamina)
@@ -151,12 +151,13 @@
 
 /mob/living/carbon/proc/heart_attack()
 	if(HAS_TRAIT(src, TRAIT_INFINITE_STAMINA))
+		to_chat(src, span_subtle("Your heart can take the pain."))
 		return
 	if(!heart_attacking)
 		heart_attacking = TRUE
 		shake_camera(src, 1, 3)
 		blur_eyes(10)
-		var/stuffy = list("ZIZO GRABS MY WEARY HEART!","ARGH! MY HEART BEATS NO MORE!","NO... MY HEART HAS BEAT IT'S LAST!","MY HEART HAS GIVEN UP!","MY HEART BETRAYS ME!","THE METRONOME OF MY LIFE STILLS!")
+		var/stuffy = list("Down whirling winds... toyle slowly goes the ticktockman...", "Descending clockwise.", "This can't be happening! I'm in charge here!")
 		to_chat(src, span_userdanger("[pick(stuffy)]"))
 		emote("breathgasp", forced = TRUE)
 		addtimer(CALLBACK(src, PROC_REF(adjustOxyLoss), 110), 30)

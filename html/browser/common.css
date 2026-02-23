@@ -440,6 +440,11 @@ Roll successes, fails... hm
 	animation: tremble 0.4s ease-in-out infinite;
 }
 
+.subtle {
+  font-size: 0.5;
+  color: #333030d7;
+  font-style: italic;
+}
 
 /*
 All my cute animations!!!

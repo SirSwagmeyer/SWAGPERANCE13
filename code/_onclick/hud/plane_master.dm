@@ -59,6 +59,27 @@
 	filters = list()
 	if(istype(mymob) && mymob.eye_blurry)
 		filters += GAUSSIAN_BLUR(CLAMP(mymob.eye_blurry*0.1,0.6,3))
+	if(isliving(mymob))
+		var/mob/living/L = mymob
+		if(L.has_status_effect(/datum/status_effect/heroin))
+			filters += filter(type="color", color = list(
+				1, 0, 0, 0,
+				0, 0.3, 0, 0,
+				0, 0, 1, 0,
+				0, 0, 0, 1,
+				0, 0, 0, 0),
+			space = FILTER_COLOR_HSV)
+			filters += filter(type="bloom")
+			filters += filter(type="blur", size = 0.6)
+		if(L.has_status_effect(/datum/status_effect/meth))
+			filters += filter(type="color", color = list(
+				2.5, 0, 0, 0,
+				0, 2, 0, 0,
+				0, 0, 0.6, 0,
+				0, 0, 0, 1,
+				0, 0, 0, 0),
+			space = FILTER_COLOR_HSV)
+			filters += filter(type="bloom", threshold = rgb(17, 156, 149), offset = 2, size = 1)
 
 /atom/movable/screen/plane_master/game_world
 	name = "game world plane master"
@@ -86,6 +107,25 @@
 				animate(F1, size=50, radius=480, time=10, loop=-1, flags=ANIMATION_PARALLEL)
 //			if(L.has_status_effect(/datum/status_effect/buff/weed))
 //				filters += filter(type="bloom",threshold=rgb(255, 128, 255),size=5,offset=5)
+			if(L.has_status_effect(/datum/status_effect/heroin))
+				filters += filter(type="color", color = list(
+					1, 0, 0, 0,
+					0, 0.3, 0, 0,
+					0, 0, 1, 0,
+					0, 0, 0, 1,
+					0, 0, 0, 0),
+				space = FILTER_COLOR_HSV)
+				filters += filter(type="bloom")
+				filters += filter(type="blur", size = 0.6)
+			if(L.has_status_effect(/datum/status_effect/meth))
+				filters += filter(type="color", color = list(
+					2.5, 0, 0, 0,
+					0, 2, 0, 0,
+					0, 0, 0.6, 0,
+					0, 0, 0, 1,
+					0, 0, 0, 0),
+				space = FILTER_COLOR_HSV)
+				filters += filter(type="bloom", threshold = rgb(17, 156, 149), offset = 2, size = 1)
 /*
 /atom/movable/screen/plane_master/byondlight
 	name = "byond lighting master"
@@ -165,6 +205,25 @@
 				filters += filter(type="color", color = list(0,0,1,0, 0,1,0,0, 1,0,0,0, 0,0,0,1, 0,0,0,0))
 				F1 = filters[filters.len-1]
 				animate(F1, size=50, radius=480, time=10, loop=-1, flags=ANIMATION_PARALLEL)
+			if(L.has_status_effect(/datum/status_effect/heroin))
+				filters += filter(type="color", color = list(
+					1, 0, 0, 0,
+					0, 0.3, 0, 0,
+					0, 0, 1, 0,
+					0, 0, 0, 1,
+					0, 0, 0, 0),
+				space = FILTER_COLOR_HSV)
+				filters += filter(type="bloom")
+				filters += filter(type="blur", size = 0.6)
+			if(L.has_status_effect(/datum/status_effect/meth))
+				filters += filter(type="color", color = list(
+					2.5, 0, 0, 0,
+					0, 2, 0, 0,
+					0, 0, 0.6, 0,
+					0, 0, 0, 1,
+					0, 0, 0, 0),
+				space = FILTER_COLOR_HSV)
+				filters += filter(type="bloom", threshold = rgb(17, 156, 149), offset = 2, size = 1)
 	filters += filter(type = "alpha", render_source = FIELD_OF_VISION_BLOCKER_RENDER_TARGET, flags = MASK_INVERSE)
 
 /atom/movable/screen/plane_master/game_world_above
@@ -188,6 +247,25 @@
 				filters += filter(type="color", color = list(0,0,1,0, 0,1,0,0, 1,0,0,0, 0,0,0,1, 0,0,0,0))
 				F1 = filters[filters.len-1]
 				animate(F1, size=50, radius=480, time=10, loop=-1, flags=ANIMATION_PARALLEL)
+			if(L.has_status_effect(/datum/status_effect/heroin))
+				filters += filter(type="color", color = list(
+					1, 0, 0, 0,
+					0, 0.3, 0, 0,
+					0, 0, 1, 0,
+					0, 0, 0, 1,
+					0, 0, 0, 0),
+				space = FILTER_COLOR_HSV)
+				filters += filter(type="bloom")
+				filters += filter(type="blur", size = 0.6)
+			if(L.has_status_effect(/datum/status_effect/meth))
+				filters += filter(type="color", color = list(
+					2.5, 0, 0, 0,
+					0, 2, 0, 0,
+					0, 0, 0.6, 0,
+					0, 0, 0, 1,
+					0, 0, 0, 0),
+				space = FILTER_COLOR_HSV)
+				filters += filter(type="bloom", threshold = rgb(17, 156, 149), offset = 2, size = 1)
 
 /atom/movable/screen/plane_master/field_of_vision_blocker
 	name = "field of vision blocker plane master"
@@ -226,7 +304,25 @@
 					filters += filter(type="color", color = list(0,0,1,0, 0,1,0,0, 1,0,0,0, 0,0,0,1, 0,0,0,0))
 					F1 = filters[filters.len-1]
 					animate(F1, size=50, radius=480, time=10, loop=-1, flags=ANIMATION_PARALLEL)
-
+				if(L.has_status_effect(/datum/status_effect/heroin))
+					filters += filter(type="color", color = list(
+						1, 0, 0, 0,
+						0, 0.3, 0, 0,
+						0, 0, 1, 0,
+						0, 0, 0, 1,
+						0, 0, 0, 0),
+					space = FILTER_COLOR_HSV)
+					filters += filter(type="bloom")
+					filters += filter(type="blur", size = 0.6)
+				if(L.has_status_effect(/datum/status_effect/meth))
+					filters += filter(type="color", color = list(
+					2.5, 0, 0, 0,
+					0, 2, 0, 0,
+					0, 0, 0.6, 0,
+					0, 0, 0, 1,
+					0, 0, 0, 0),
+					space = FILTER_COLOR_HSV)
+					filters += filter(type="bloom", threshold = rgb(17, 156, 149), offset = 2, size = 1)
 
 /atom/movable/screen/plane_master/game_world_walls
 	name = "game world walls"
@@ -250,6 +346,25 @@
 					filters += filter(type="color", color = list(0,0,1,0, 0,1,0,0, 1,0,0,0, 0,0,0,1, 0,0,0,0))
 					F1 = filters[filters.len-1]
 					animate(F1, size=50, radius=480, time=10, loop=-1, flags=ANIMATION_PARALLEL)
+				if(L.has_status_effect(/datum/status_effect/heroin))
+					filters += filter(type="color", color = list(
+						1, 0, 0, 0,
+						0, 0.3, 0, 0,
+						0, 0, 1, 0,
+						0, 0, 0, 1,
+						0, 0, 0, 0),
+					space = FILTER_COLOR_HSV)
+					filters += filter(type="bloom")
+					filters += filter(type="blur", size = 0.6)
+				if(L.has_status_effect(/datum/status_effect/meth))
+					filters += filter(type="color", color = list(
+					2.5, 0, 0, 0,
+					0, 2, 0, 0,
+					0, 0, 0.6, 0,
+					0, 0, 0, 1,
+					0, 0, 0, 0),
+					space = FILTER_COLOR_HSV)
+					filters += filter(type="bloom", threshold = rgb(17, 156, 149), offset = 2, size = 1)
 
 //Contains all weather overlays
 /atom/movable/screen/plane_master/weather_overlay

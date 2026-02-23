@@ -87,6 +87,20 @@
 	time = 40 MINUTES
 	needsate_text = "Time to get really high."
 
+/// HEROIN
+/datum/charflaw/addiction/heroin
+	name = "Addict(Heroin)"
+	desc = "It's too much to bear alone."
+	time = 40 MINUTES
+	needsate_text = "Life is unbearable without H."
+
+/// METH
+/datum/charflaw/addiction/meth
+	name = "Addict(meth)"
+	desc = "I'm not as spry as I used to be, I need an extra boost!"
+	time = 40 MINUTES
+	needsate_text = "I'm sinking into despair. I need speed."
+
 /// Smoker
 
 /datum/charflaw/addiction/smoker

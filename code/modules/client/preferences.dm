@@ -90,7 +90,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/datum/species/pref_species = new /datum/species/human/northern()	//Mutant race
 	var/static/datum/species/default_species = new /datum/species/human/northern()
 	var/datum/patron/selected_patron
-	var/static/datum/patron/default_patron = /datum/patron/divine/astrata
+	var/static/datum/patron/default_patron = /datum/patron/godless/faithless
 	var/list/features = MANDATORY_FEATURE_LIST
 	var/list/randomise = list(RANDOM_UNDERWEAR = TRUE, RANDOM_UNDERWEAR_COLOR = TRUE, RANDOM_UNDERSHIRT = TRUE, RANDOM_SOCKS = TRUE, RANDOM_BACKPACK = TRUE, RANDOM_JUMPSUIT_STYLE = FALSE, RANDOM_SKIN_TONE = TRUE, RANDOM_EYE_COLOR = TRUE)
 	var/list/friendlyGenders = list("male" = "masculine", "female" = "feminine")
@@ -225,6 +225,8 @@ GLOBAL_LIST_EMPTY(chosen_names)
 		to_chat(user, "<font color='red'>Classes reset.</font>")
 	random_character(gender, FALSE, FALSE)
 	accessory = "Nothing"
+	if(istype(pref_species, /datum/species/elf))
+		charflaw = new /datum/charflaw/addiction/heroin()
 
 	customizer_entries = list()
 	validate_customizer_entries()
@@ -373,7 +375,10 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			dat += "<b>Virtue:</b> <a href='?_src_=prefs;preference=virtue;task=input'>[virtue]</a><BR>"
 			if(statpack.name == "Virtuous")
 				dat += "<b>Second Virtue:</b> <a href='?_src_=prefs;preference=virtuetwo;task=input'>[virtuetwo]</a><BR>"
-			dat += "<b>Vice:</b> <a href='?_src_=prefs;preference=charflaw;task=input'>[charflaw]</a><BR>"
+			if(!istype(pref_species, /datum/species/elf))
+				dat += "<b>Vice:</b> <a href='?_src_=prefs;preference=charflaw;task=input'>[charflaw]</a><BR>"
+			else
+				dat += "<b>Lifepath:</b> Addict(Heroin)<BR>"
 			var/datum/faith/selected_faith = GLOB.faithlist[selected_patron?.associated_faith]
 			dat += "<b>Faith:</b> <a href='?_src_=prefs;preference=faith;task=input'>[selected_faith?.name || "FUCK!"]</a><BR>"
 			dat += "<b>Patron:</b> <a href='?_src_=prefs;preference=patron;task=input'>[selected_patron?.name || "FUCK!"]</a><BR>"

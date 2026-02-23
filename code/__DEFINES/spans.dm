@@ -164,3 +164,4 @@
 #define span_quote(str) ("<span class='quote'>" + str + "</span>")
 #define span_quoteauthor(str) ("<span class='quoteauthor'>" + str + "</span>")
 #define span_roundquote(str) ("<span class='roundquote'>" + str + "</span>")
+#define span_subtle(str) ("<span class ='subtle'>"+ str +"</span>")
