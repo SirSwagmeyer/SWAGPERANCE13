@@ -16,7 +16,7 @@
 	tutorial = "You're one of the Hierarch's most trusted underlings. \
 				You have exclusive access to one of the many high-tier weapons the Hierarch has stockpiled. \
 				The main goal is to keep the Hierarch and the town alive. People treat you like a sheriff. \
-				Contrary to your namesake, you aren't invincible. Your main strength comes from your guns. Try to compensate." 
+				Contrary to your namesake, you aren't invincible. Your main strength comes from your guns." 
 
 	outfit = /datum/outfit/job/roguetown/bulwark
 	display_order = JDO_BULWARK
@@ -72,6 +72,7 @@
 		/obj/item/reagent_containers/glass/bottle/rogue/healthpotnew = 2,
 		/obj/item/ammo_box/handfuls/shotgun = 4,
 		/obj/item/storage/belt/rogue/pouch/coins/mid,
+		/obj/item/storage/keyring/gatemaster,
 	)
 	H.adjust_skillrank(/datum/skill/combat/shotguns, 4, TRUE)
 
@@ -88,6 +89,7 @@
 		/obj/item/reagent_containers/glass/bottle/rogue/healthpotnew = 2,
 		/obj/item/ammo_box/clip/reaper = 4,
 		/obj/item/storage/belt/rogue/pouch/coins/mid,
+		/obj/item/storage/keyring/gatemaster,
 	)
 	H.adjust_skillrank(/datum/skill/combat/shotguns, 4, TRUE)
 
