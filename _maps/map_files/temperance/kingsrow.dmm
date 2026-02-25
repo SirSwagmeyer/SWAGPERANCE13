@@ -80,6 +80,11 @@
 	dir = 2;
 	pixel_y = -3
 	},
+/obj/structure/table/wood/perserdunsmall/smallmetal2,
+/obj/structure/lever{
+	pixel_y = 12;
+	redstone_id = "gatehouse"
+	},
 /turf/open/floor/rogue/brown,
 /area/rogue/indoors/shelter/town)
 "bi" = (
@@ -108,6 +113,12 @@
 /obj/structure/fluff/railing/sandbag{
 	dir = 2;
 	pixel_y = -3
+	},
+/obj/structure/table/wood/perserdunsmall/smallmetal2,
+/obj/structure/lever{
+	pixel_y = 12;
+	redstone_id = "gatehouse";
+	pixel_x = 4
 	},
 /turf/open/floor/rogue/brown,
 /area/rogue/indoors/shelter/town)
@@ -717,6 +728,9 @@
 "iQ" = (
 /obj/structure/bars/shop,
 /obj/structure/table/wood/perserdunsmall/smallmetal2,
+/obj/structure/bars/passage/shutter{
+	redstone_id = "gatehouse"
+	},
 /turf/open/floor/rogue/brown,
 /area/rogue/indoors/shelter/town)
 "iU" = (
@@ -777,6 +791,10 @@
 	},
 /turf/open/floor/rogue/grasscold,
 /area/rogue/outdoors)
+"jG" = (
+/obj/item/broom,
+/turf/open/floor/rogue/med,
+/area/rogue/indoors/shelter/town)
 "jO" = (
 /obj/structure/fluff/walldeco/shreds,
 /turf/open/floor/rogue/brown,
@@ -913,6 +931,14 @@
 "lK" = (
 /turf/open/floor/rogue/med,
 /area/rogue/outdoors)
+"lO" = (
+/obj/structure/bars/shop,
+/obj/structure/table/wood/perserdunsmall/smallmetal2,
+/obj/structure/bars/passage/shutter{
+	redstone_id = "merchie"
+	},
+/turf/open/floor/rogue/brown,
+/area/rogue/indoors/shelter/town)
 "lP" = (
 /obj/structure/roguewindow/openclose/reinforced,
 /turf/open/floor/rogue/brown,
@@ -1793,6 +1819,10 @@
 	},
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town)
+"yd" = (
+/obj/structure/roguewindow,
+/turf/open/floor/rogue/brown,
+/area/rogue/indoors/shelter/town)
 "yi" = (
 /obj/structure/fluff/walldeco/vent/vent3{
 	pixel_y = 32
@@ -1810,6 +1840,14 @@
 /obj/machinery/light/rogue/wallfire/candle/off,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
+"yq" = (
+/obj/structure/lever/wall{
+	dir = 1;
+	pixel_x = -14;
+	redstone_id = "merchie"
+	},
+/turf/open/floor/rogue/brown,
+/area/rogue/indoors/shelter/town)
 "ys" = (
 /obj/effect/decal/cleanable/blood/gibs/up,
 /turf/open/floor/rogue/cobble,
@@ -2775,6 +2813,9 @@
 "Mg" = (
 /obj/structure/mineral_door/wood/fancy{
 	lockid = "merchant"
+	},
+/obj/structure/bars/passage/shutter{
+	redstone_id = "merchie"
 	},
 /turf/open/floor/rogue/brown,
 /area/rogue/indoors/shelter/town)
@@ -61630,7 +61671,7 @@ Vp
 Vp
 Vp
 Vp
-uf
+yd
 YH
 nz
 YH
@@ -62311,7 +62352,7 @@ Vp
 Vp
 Vp
 Vp
-wA
+yd
 Ir
 Ir
 Ir
@@ -62538,7 +62579,7 @@ Vp
 Vp
 Vp
 Vp
-Vp
+sy
 Ir
 Ir
 Ir
@@ -62765,7 +62806,7 @@ Vp
 Vp
 Vp
 Vp
-Fe
+yd
 Ir
 Ir
 Ir
@@ -63446,7 +63487,7 @@ Vp
 Vp
 Vp
 Vp
-uf
+yd
 YH
 nz
 Ir
@@ -64121,7 +64162,7 @@ ej
 EB
 uf
 ts
-Vp
+yq
 cq
 PI
 Av
@@ -64349,7 +64390,7 @@ mW
 cq
 Hb
 Vp
-iQ
+lO
 Vp
 Vp
 Vp
@@ -64576,7 +64617,7 @@ EB
 uf
 fC
 oz
-iQ
+lO
 ur
 Vp
 Vp
@@ -64803,7 +64844,7 @@ Kf
 wA
 dQ
 Vp
-iQ
+lO
 Vp
 Vp
 Ej
@@ -65027,7 +65068,7 @@ UI
 ej
 ej
 ej
-iQ
+lO
 Vp
 Vp
 cq
@@ -65254,7 +65295,7 @@ ej
 wK
 ej
 ej
-iQ
+lO
 lp
 gz
 uf
@@ -65481,7 +65522,7 @@ ej
 wK
 ej
 ej
-iQ
+lO
 Vp
 SW
 Ub
@@ -117943,7 +117984,7 @@ cq
 jr
 jr
 jr
-jr
+Qm
 jr
 jr
 jr
@@ -119305,7 +119346,7 @@ cq
 jr
 jr
 jr
-jr
+Qm
 jr
 jr
 jr
@@ -119982,7 +120023,7 @@ cq
 jr
 jr
 jr
-jr
+Qm
 jr
 jr
 jr
@@ -120661,9 +120702,9 @@ Rs
 Rs
 cq
 jr
+jG
 jr
-jr
-jr
+Qm
 jr
 jr
 jr
