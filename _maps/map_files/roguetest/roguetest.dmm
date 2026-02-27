@@ -791,10 +791,6 @@
 /obj/item/storage/roguebag,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors)
-"Di" = (
-/obj/item/paper/fluff/jobs/perserdun,
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors)
 "Dm" = (
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors)
@@ -926,10 +922,6 @@
 /obj/item/clothing/head/roguetown/helmet/leather,
 /turf/open/floor/rogue/grass,
 /area/rogue/indoors)
-"JY" = (
-/obj/item/paper/fluff/jobs/risvon,
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors)
 "KF" = (
 /obj/effect/loretile/ruinedcity,
 /turf/open/floor/carpet/stellar,
@@ -2884,7 +2876,7 @@ al
 al
 BJ
 BJ
-JY
+BJ
 BJ
 BJ
 BJ
@@ -3092,7 +3084,7 @@ JQ
 Vf
 km
 BJ
-Di
+BJ
 BJ
 BJ
 BJ
