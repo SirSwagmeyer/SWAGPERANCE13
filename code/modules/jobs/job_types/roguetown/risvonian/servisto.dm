@@ -9,7 +9,7 @@
 	allowed_sexes = list(MALE)
 	allowed_ages = list(AGE_ADULT)
 
-	tutorial = "You are a supporter of Perserdun's war effort. \
+	tutorial = "You are a supporter of the Ziggurate's war effort. \
 				You are primarily a medicine-man, and spend most of your time chopping up bodies." 
 
 	outfit = /datum/outfit/job/roguetown/servisto
