@@ -43,7 +43,7 @@
 	beltl = /obj/item/flashlight/flare/torch/lantern
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/full/iron
 	cloak = /obj/item/clothing/cloak/perserduntabard
-	pants = /datum/anvil_recipe/armor/iron/platelegs
+	pants = /obj/item/clothing/pants/roguetown/plate/iron
 	head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket/iron
 	mask = /obj/item/clothing/mask/rogue/gasmask/perserdunmask
 	neck = /obj/item/clothing/neck/roguetown/chaincoif
