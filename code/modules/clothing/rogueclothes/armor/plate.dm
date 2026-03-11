@@ -356,6 +356,7 @@
 /obj/item/clothing/suit/roguetown/armor/plate/half/iron/ziggurate/pauldrons
 	name = "pauldroned armor plate"
 	desc = "A humen-modified, manufactured armor plate. MACHINE-made, with pauldrons slapped on."
+	body_parts_covered = CHEST|GROIN|VITALS|ARMS
 
 /obj/item/clothing/suit/roguetown/armor/plate/half/copper
 	name = "heart protector"

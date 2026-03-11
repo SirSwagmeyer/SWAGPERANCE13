@@ -24,6 +24,13 @@
 	/obj/item/ammo_box/handfuls/shotgun/buckshot, 
 	/obj/item/ammo_box/handfuls/shotgun/buckshot)
 
+/datum/supply_pack/rogue/ammunition/slug
+	name = "00 Slug Handfuls (x3)"
+	cost = 25
+	contains = list(/obj/item/ammo_box/handfuls/shotgun, 
+	/obj/item/ammo_box/handfuls/shotgun, 
+	/obj/item/ammo_box/handfuls/shotgun)
+
 /datum/supply_pack/rogue/ammunition/pistol
 	name = "Pistol Clips (x3)"
 	cost = 20
