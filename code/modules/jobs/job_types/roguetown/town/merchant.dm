@@ -20,8 +20,8 @@
 	..()
 	H.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/revolvers, 3, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/shotguns, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
@@ -32,16 +32,25 @@
 	H.adjust_skillrank(/datum/skill/craft/cooking, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/riding, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/lockpicking, 2, TRUE)
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/navaja)
+	backpack_contents = list(
+		/obj/item/rogueweapon/huntingknife/idagger/navaja,
+		/obj/item/ammo_box/speedloader/magnum = 3,
+		/obj/item/storage/belt/rogue/pouch/coins/rich,
+		/obj/item/reagent_containers/glass/bottle/rogue/healthpotnew,
+		/obj/item/lockpickring/mundane = 1,
+		/obj/item/flashlight/flare/torch/lantern
+	)
 	ADD_TRAIT(H, TRAIT_SEEPRICES, type)
 	ADD_TRAIT(H, TRAIT_CICERONE, TRAIT_GENERIC) //Makes up for loss of alchemy to see reagents.
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/puritan
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	shoes = /obj/item/clothing/shoes/roguetown/boots
+	armor = /obj/item/clothing/suit/roguetown/armor/longcoat
 	belt = /obj/item/storage/belt/rogue/leather/black
-	beltl = /obj/item/storage/keyring/merchant
+	beltl = /obj/item/gun/ballistic/revolver/pace
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
 	id = /obj/item/clothing/ring/gold
+	neck = /obj/item/storage/keyring/merchant
 	backr = /obj/item/storage/backpack/rogue/satchel
 	H.change_stat("intelligence", 2)
 	H.change_stat("perception", 3)

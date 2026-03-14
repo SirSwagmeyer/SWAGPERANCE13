@@ -35,6 +35,10 @@
 	categories = list(
 		"AMMUNITION",
 		"GRENADES",
+		"Adventuring Supplies",
+		"Armor (Light)",
+		"FORTIFICATIONS",
+		"GUNS",
 	)
 	categories_gamer = list()
 	icon_state = "ammovend_s"

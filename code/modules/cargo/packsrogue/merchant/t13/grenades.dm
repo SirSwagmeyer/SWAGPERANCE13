@@ -23,3 +23,10 @@
 	contains = list(/obj/item/grenade, 
 	/obj/item/grenade, 
 	/obj/item/grenade)
+
+/datum/supply_pack/rogue/ranged_weapons/bottlebombs
+	name = "Bottle Bomb"
+	cost = 40
+	contains = list(
+					/obj/item/bomb,
+				)

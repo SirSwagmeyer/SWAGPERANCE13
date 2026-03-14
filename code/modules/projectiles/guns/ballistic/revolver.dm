@@ -15,7 +15,7 @@
 	var/recent_spin = 0
 	bolt_wording = "primer"
 	dry_fire_sound = 'sound/combat/ranged/revolver_dryfire.ogg'
-	slot_flags = ITEM_SLOT_HIP
+	slot_flags = ITEM_SLOT_HIP, ITEM_SLOT_BACK
 	icon = 'icons/roguetown/weapons/32guns.dmi'
 	possible_item_intents = list(
 		/datum/intent/shoot/revolver,

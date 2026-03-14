@@ -105,3 +105,24 @@
 					/obj/item/ration,
 					/obj/item/ration,
 				)
+
+/datum/supply_pack/rogue/adventure_supplies/chestrig
+	name = "Chest Rig"
+	cost = 20
+	contains = list(
+					/obj/item/storage/backpack/rogue/satchel/chestrig,
+				)
+
+/datum/supply_pack/rogue/adventure_supplies/OldMask
+	name = "Old Gas Mask"
+	cost = 30
+	contains = list(
+					/obj/item/clothing/mask/rogue/gasmask/eb_gasmask
+				)
+
+/datum/supply_pack/rogue/adventure_supplies/zigbox
+	name = "Zigbox"
+	cost = 12
+	contains = list(
+					/obj/item/quiver/zigs/nicotine
+				)

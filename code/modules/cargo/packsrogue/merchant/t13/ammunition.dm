@@ -62,3 +62,10 @@
 	cost = 40
 	contains = list(/obj/item/ammo_box/clip/reaper,
 	/obj/item/ammo_box/clip/reaper)
+
+/datum/supply_pack/rogue/ranged_weapons/JackalAmmo
+	name = "Jackal Ammo"
+	cost = 25
+	contains = list(
+					/obj/item/ammo_box/magazine/jackal,
+				)

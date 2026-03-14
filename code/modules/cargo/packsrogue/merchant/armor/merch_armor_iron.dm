@@ -11,6 +11,16 @@
 	cost = 25
 	contains = list(/obj/item/clothing/suit/roguetown/armor/chainmail/iron)
 
+/datum/supply_pack/rogue/armor_iron/Manuplate
+	name = "Manufactured Plate"
+	cost = 115
+	contains = list(/obj/item/clothing/suit/roguetown/armor/plate/full/ebarmor)
+
+/datum/supply_pack/rogue/armor_iron/ManuplatePauldrons
+	name = "Pauldroned Manufactured Plate"
+	cost = 145
+	contains = list(/obj/item/clothing/suit/roguetown/armor/plate/full/ebarmor/pauldrons)
+
 /datum/supply_pack/rogue/armor_iron/hauberk_iron
 	name = "Hauberk"
 	cost = 40

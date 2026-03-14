@@ -1265,6 +1265,7 @@
 #include "code\modules\cargo\packsrogue\merchant\t13\ammunition.dm"
 #include "code\modules\cargo\packsrogue\merchant\t13\fortifications.dm"
 #include "code\modules\cargo\packsrogue\merchant\t13\grenades.dm"
+#include "code\modules\cargo\packsrogue\merchant\t13\guns.dm"
 #include "code\modules\cargo\packsrogue\merchant\t13\organs.dm"
 #include "code\modules\cargo\packsrogue\merchant\weapons\merch_weapons_foreign.dm"
 #include "code\modules\cargo\packsrogue\merchant\weapons\merch_weapons_melee_iron.dm"

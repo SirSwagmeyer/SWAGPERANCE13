@@ -1,5 +1,5 @@
-/datum/supply_pack/rogue/ranged_weapons
-	group = "Weapons (Ranged)"
+/datum/supply_pack/rogue/guns
+	group = "GUNS"
 	crate_name = "merchant guild's crate"
 	crate_type = /obj/structure/closet/crate/chest/merchant
 
@@ -29,13 +29,6 @@
 	cost = 80
 	contains = list(
 					/obj/item/gun/ballistic/rifle/repeater/jackal,
-				)
-
-/datum/supply_pack/rogue/ranged_weapons/JackalAmmo
-	name = "Jackal Ammo"
-	cost = 25
-	contains = list(
-					/obj/item/ammo_box/magazine/jackal,
 				)
 
 /datum/supply_pack/rogue/ranged_weapons/Reaper
