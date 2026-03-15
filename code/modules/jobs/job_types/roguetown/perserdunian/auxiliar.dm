@@ -41,7 +41,7 @@
 	beltl = /obj/item/flashlight/flare/torch/lantern
 	id = /obj/item/roguekey/perserdun
 	armor = /obj/item/clothing/suit/roguetown/armor/brigandine/light
-	cloak = /obj/item/clothing/cloak/perserduntabard
+	cloak = /obj/item/clothing/cloak/perserduntrenchcoat
 	pants = /obj/item/clothing/under/roguetown/trou/artipants
 	mask = /obj/item/clothing/mask/rogue/gasmask/perserdunmask
 	wrists = /obj/item/scomstone/garrison

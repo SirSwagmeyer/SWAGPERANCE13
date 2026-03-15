@@ -38,7 +38,7 @@
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/lord
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron
-	cloak = /obj/item/clothing/cloak/perserduntabard
+	cloak = /obj/item/clothing/cloak/perserduntrenchcoat
 	pants = /obj/item/clothing/under/roguetown/trou/artipants
 	head = /obj/item/clothing/head/roguetown/helmet/sallet/visored/iron
 	mask = /obj/item/clothing/mask/rogue/gasmask/perserdunmask
