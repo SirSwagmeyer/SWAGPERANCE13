@@ -96,6 +96,66 @@
 	var/open_wear = FALSE
 	var/overarmor = TRUE
 
+/obj/item/clothing/cloak/perserduntabard/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/storage/concrete/roguetown/cloak)
+
+/obj/item/clothing/cloak/perserduntabard/dropped(mob/living/carbon/human/user)
+	..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	if(STR)
+		var/list/things = STR.contents()
+		for(var/obj/item/I in things)
+			STR.remove_from_storage(I, get_turf(src))
+
+/obj/item/clothing/cloak/perserduntabard/MiddleClick(mob/user)
+	overarmor = !overarmor
+	to_chat(user, span_info("I [overarmor ? "wear the tabard over my armor" : "wear the tabard under my armor"]."))
+	if(overarmor)
+		alternate_worn_layer = TABARD_LAYER
+	else
+		alternate_worn_layer = UNDER_ARMOR_LAYER
+	user.update_inv_cloak()
+	user.update_inv_armor()
+
+/obj/item/clothing/cloak/perserduntrenchcoat
+	name = "perserdunian trenchcoat"
+	desc = "A standard issue coat worn by Perserdunian forces. Created due to the desire for an identifier that also shields you from the cold hollow winds of the no man's land."
+	color = null
+	icon_state = "PERSERDUN"
+	item_state = "PERSERDUN"
+	icon = 'icons/roguetown/clothing/armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
+	alternate_worn_layer = TABARD_LAYER
+	body_parts_covered = CHEST|GROIN
+	boobed = TRUE
+	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
+	flags_inv = HIDECROTCH|HIDEBOOB
+	var/open_wear = FALSE
+	var/overarmor = FALSE
+
+/obj/item/clothing/cloak/perserduntrenchcoat/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/storage/concrete/roguetown/cloak)
+
+/obj/item/clothing/cloak/perserduntrenchcoat/dropped(mob/living/carbon/human/user)
+	..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	if(STR)
+		var/list/things = STR.contents()
+		for(var/obj/item/I in things)
+			STR.remove_from_storage(I, get_turf(src))
+
+/obj/item/clothing/cloak/perserduntrenchcoat/MiddleClick(mob/user)
+	overarmor = !overarmor
+	to_chat(user, span_info("I [overarmor ? "wear the tabard over my armor" : "wear the tabard under my armor"]."))
+	if(overarmor)
+		alternate_worn_layer = TABARD_LAYER
+	else
+		alternate_worn_layer = UNDER_ARMOR_LAYER
+	user.update_inv_cloak()
+	user.update_inv_armor()
+
 /obj/item/clothing/cloak/psydontabard/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/storage/concrete/roguetown/cloak)
