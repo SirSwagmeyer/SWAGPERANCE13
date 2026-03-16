@@ -30,7 +30,7 @@
 
 /datum/time_of_day/midnight
 	name = "Midnight"
-	color = list("#100a18", "#0c0412", "#0f0012")
+	color = list("#141724", "#141424", "#141924")
 	start = 16 HOURS //4:00:00 PM
 
 GLOBAL_VAR_INIT(GLOBAL_LIGHT_RANGE, 3)
