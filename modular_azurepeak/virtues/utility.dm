@@ -82,13 +82,12 @@
 	desc = "Raw, toxic or spoiled food doesn't bother my superior digestive system."
 	added_traits = list(TRAIT_NASTY_EATER)
 
-/* nighttime is no longer pitch black
 /datum/virtue/utility/night_vision
 	name = "Night-eyed"
 	desc = "I have eyes able to see through cloying darkness. Incompatible with the vice Colorblind."
 	added_traits = list(TRAIT_DARKVISION)
 	custom_text = "Adds a button to toggle colorblindness to aid seeing in the dark. Taking this with the Colorblind vice will permanently colorblind you." 
-*/
+
 /datum/virtue/utility/night_vision/apply_to_human(mob/living/carbon/human/recipient)
 	if(recipient.charflaw)
 		if(recipient.charflaw.type == /datum/charflaw/colorblind)
