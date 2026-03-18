@@ -1007,6 +1007,7 @@
 #include "code\game\objects\structures\artstuff.dm"
 #include "code\game\objects\structures\barricades.dm"
 #include "code\game\objects\structures\bearpelt.dm"
+#include "code\game\objects\structures\brustwehr.dm"
 #include "code\game\objects\structures\curtain.dm"
 #include "code\game\objects\structures\deer_trophy.dm"
 #include "code\game\objects\structures\displaycase.dm"

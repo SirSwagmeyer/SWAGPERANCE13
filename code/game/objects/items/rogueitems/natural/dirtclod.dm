@@ -52,6 +52,43 @@
 		slapcraft_recipes = slapcraft_recipe_list,\
 		)
 
+/obj/item/natural/dirtclod/attackby(obj/item/rogueweapon/W as obj, mob/user as mob)
+	if(istype(W,/obj/item/rogueweapon/shovel))
+		var/obj/item/rogueweapon/shovel/C = W
+		if(C.heldclod)
+			if(C.working)
+				return
+			if((
+				locate(/obj/structure/brutswehr) || \
+				locate(/obj/structure/fluff/railing/sandbag)) in src.loc.contents \
+				)
+				to_chat(user, "\red There is no more space.")
+				return 0
+			if(istype(src, /turf/open/water))
+				to_chat(user, "\red You can't dig brustwehrs on water.")
+				return 0
+			C.working = 1
+			playsound(src, 'sound/items/empty_shovel.ogg', 100, 1)
+			to_chat(user, "You begin to dig a brustwehr.")
+			if(!C.ground >= 2)
+				to_chat(user, "You need more sand on your shovel.")
+				C.working = 0
+				return 0
+			if(!do_after(user, 20,src))
+				C.working = 0
+				return
+			new /obj/structure/brutswehrincomplete(src.loc)
+			C.ground = 0
+			C.working = 0
+			var/obj/item/I = C.heldclod
+			C.heldclod = null
+			qdel(I) //delete the clod on the shovel
+			C.update_icon() 
+			qdel(src) //delete the clod on the ground
+
+	else
+		return ..()
+
 /obj/structure/fluff/clodpile
 	name = "dirt pile"
 	desc = "A pile of dirt."
