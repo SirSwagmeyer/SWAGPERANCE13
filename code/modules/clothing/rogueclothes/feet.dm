@@ -477,7 +477,8 @@
 	sewrepair = FALSE
 
 // midsomber - uhh. event stuff, imagine a 1vFaction or some shit like that
-/obj/item/clothing/shoes/roguetown/boots/leather/midsomber
+/obj/item/clothing/shoes/roguetown/boots/leather/midsomber/Initialize(mapload)
+	. = ..()
 	name = "hardblood boots"
 	desc = "A product of blood magic. Even though it feels and looks like black leather - the smell of blood tells you otherwise."
 	icon_state = "midsomber"

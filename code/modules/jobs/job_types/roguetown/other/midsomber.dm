@@ -22,21 +22,15 @@
 
 	cmode_music = 'sound/music/combat_midsomber.ogg'
 
-/datum/job/roguetown/midsomber/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
-	ADD_TRAIT(H, TRAIT_NOMOOD, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_INFINITE_STAMINA, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_NOLIMBDISABLE, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_NOHUNGER, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_NOBREATH, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_NOPAIN, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_TOXIMMUNE, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_NOSLEEP, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_SHOCKIMMUNE, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_ARCYNE_T2, TRAIT_GENERIC)
+/datum/outfit/job/roguetown/midsomber/pre_equip(mob/living/carbon/human/H)
+	belt = /obj/item/storage/belt/rogue/leather
+	pants = /obj/item/clothing/under/roguetown/platelegs/blk/death
+	shoes = /obj/item/clothing/shoes/roguetown/boots/leather/midsomber
+	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/midsomber
+	gloves = /obj/item/clothing/gloves/roguetown/leather/midsomber
+	backr = /obj/item/storage/backpack/rogue/satchel
+	backl = /obj/item/rogueweapon/sword/sabre/midsomber
 
-/datum/job/roguetown/midsomber/pre_equip(mob/living/carbon/human/H)
-	..()
 	H.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 5, TRUE)
@@ -50,21 +44,26 @@
 	H.mind?.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/bloodlightning)
 	H.mind?.AddSpell(new /obj/effect/proc_holder/spell/self/recall_weapon)
 	H.mind?.AddSpell(new /obj/effect/proc_holder/spell/self/bind_weapon)
+	H.mind?.AddSpell (new /obj/effect/proc_holder/spell/invoked/funeral)
 
-	belt = /obj/item/storage/belt/rogue/leather
-	pants = /obj/item/clothing/under/roguetown/platelegs/blk/death
-	shoes = /obj/item/clothing/shoes/roguetown/boots/leather/midsomber
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/midsomber
-	gloves = /obj/item/clothing/gloves/roguetown/leather/midsomber
-	backr = /obj/item/storage/backpack/rogue/satchel
-	backl = /obj/item/rogueweapon/sword/long/death //change this later
-
+	ADD_TRAIT(H, TRAIT_NOMOOD, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_INFINITE_STAMINA, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_NOLIMBDISABLE, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_NOHUNGER, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_NOBREATH, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_NOPAIN, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_TOXIMMUNE, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_NOSLEEP, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_SHOCKIMMUNE, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_ARCYNE_T2, TRAIT_GENERIC)
 
 	to_chat(H, span_warning("You start with Bind Weapon. Remember to Bind your weapon so you can use your abilities and build up Arcyne Momentum."))
 
+	var/subclass_selected = "blade"
 	var/datum/status_effect/buff/arcyne_momentum/momentum = H.apply_status_effect(/datum/status_effect/buff/arcyne_momentum)
 	if(momentum)
-		momentum.chant = blade
+		momentum.chant = subclass_selected
 
 	H.change_stat("intelligence", 3)
 	H.change_stat("strength", 2)

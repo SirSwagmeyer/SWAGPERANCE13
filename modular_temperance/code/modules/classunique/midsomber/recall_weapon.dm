@@ -2,14 +2,13 @@
 	name = "Recall Weapon"
 	desc = "Recall your bound weapon to your hand from anywhere."
 	clothes_req = FALSE
-	action_icon = 'icons/mob/actions/classuniquespells/spellblade.dmi'
-	overlay_state = "recall_weapon"
-	releasedrain = SPELLCOST_SB_MOBILITY
+	overlay_state = "speakwithdead"
+	releasedrain = 15
 	chargedrain = 0
 	chargetime = 0
 	recharge_time = 20 SECONDS
 	warnie = "spellwarning"
-	invocations = list("Revoca, ferrum!")
+	invocation = "RETURN TO ME, O' BLADE!"
 	invocation_type = "shout"
 	gesture_required = TRUE
 	xp_gain = FALSE

@@ -617,7 +617,8 @@
 	flags_inv = HIDECROTCH|HIDEBOOB
 
 // midsomber - uhh. event stuff, imagine a 1vFaction or some shit like that
-/obj/item/clothing/suit/roguetown/shirt/undershirt/midsomber
+/obj/item/clothing/suit/roguetown/shirt/undershirt/midsomber/Initialize(mapload)
+	. = ..()
 	name = "hardblood tunic"
 	desc = "A product of blood magic. Despite having the texture and appearance of soft felt, the stench of iron tells you otherwise."
 	icon_state = "midsomber"
@@ -627,6 +628,8 @@
 	surgery_cover = FALSE
 	max_integrity = ARMOR_INT_CHEST_PLATE_BLACKSTEEL
 	armor = ARMOR_PLATE_BSTEEL
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
 	flags_inv = HIDECROTCH|HIDEBOOB
 
 /obj/item/clothing/suit/roguetown/shirt/undershirt/midsomber/dropped(mob/living/carbon/human/user)

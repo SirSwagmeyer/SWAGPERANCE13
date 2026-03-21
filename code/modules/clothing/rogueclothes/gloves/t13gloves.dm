@@ -8,7 +8,8 @@
 	desc = "Gloves produced by the LIFE MACHINE. Typically used by field medics and workmen."
 	icon_state = "sterile_gloves"
 
-/obj/item/clothing/gloves/roguetown/leather/midsomber
+/obj/item/clothing/gloves/roguetown/leather/midsomber/Initialize(mapload)
+	. = ..()
 	name = "hardblood gloves"
 	desc = "A product of blood magic. Even though it feels and looks like black leather - the smell of blood tells you otherwise."
 	icon_state = "midsomber"

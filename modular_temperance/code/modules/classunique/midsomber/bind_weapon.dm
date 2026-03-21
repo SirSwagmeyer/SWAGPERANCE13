@@ -6,14 +6,13 @@
 		You can rebind to restore a lost Arcyne Momentum status, or bind a new weapon if your old one was destroyed. \
 		Cast with empty hands to unbind your current weapon."
 	clothes_req = FALSE
-	action_icon = 'icons/mob/actions/classuniquespells/spellblade.dmi'
-	overlay_state = "bind_weapon" // Icon by Prominence.
-	releasedrain = SPELLCOST_SB_POKE
+	overlay_state = "ravox_tug" // Icon by Prominence.
+	releasedrain = 0
 	chargedrain = 0
 	chargetime = 0
 	recharge_time = 5 SECONDS
 	warnie = "yourstate"
-	invocations = list("Vinculum Arcanum.")
+	invocation = "Remain by my side."
 	invocation_type = "shout"
 	gesture_required = TRUE
 	xp_gain = FALSE

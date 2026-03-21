@@ -1,15 +1,16 @@
 {
     "map_name": "Temperance",
     "map_path": "map_files/temperance",
-    "map_file": ["risvon.dmm",
+    "map_file": [
+	"risvon.dmm",
 	"perserdun.dmm",
 	"dungeons.dmm",
 	"kingsrow.dmm"
 	],
-	"traits": [{"Name": "risvon", "Up": true}, {"Up": true, "Down": true},
+	"traits": [	{"Name": "kingsrow", "Up": true}, {"Up": true, "Down": true}, {"Up": true, "Down": true}, {"Down": true},
+	{"Name": "risvon", "Up": true}, {"Up": true, "Down": true},
 	{"Name": "dungeons"},
-	{"Name": "perserdun", "Up": true}, {"Up": true, "Down": true},
-	{"Name": "kingsrow", "Up": true}, {"Up": true, "Down": true}, {"Up": true, "Down": true}],
+	{"Name": "perserdun", "Up": true}, {"Up": true, "Down": true}],
 	"minetype": null,
 	"space_empty_levels": 0,
 	"space_ruin_levels": 0,

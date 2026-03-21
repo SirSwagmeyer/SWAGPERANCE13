@@ -2,7 +2,7 @@
 These mirror the species.dm melee attack flow (armor check -> apply_damage -> bodypart_attacked_by)
 without going through the click pipeline, so spells can deliver weapon-style strikes. */
 
-/proc/arcyne_strike(mob/living/carbon/human/user, mob/living/target, obj/item/weapon, damage, def_zone, blade_class_override, armor_penetration = 0, spell_name = "Arcyne Strike", skip_animation = FALSE, skip_message = FALSE)
+/proc/arcyne_strike(mob/living/carbon/human/user, mob/living/target, obj/item/weapon, damage, def_zone, blade_class_override, armor_penetration = 0, skip_animation = FALSE, skip_message = FALSE)
 	if(!user || !target || QDELETED(user) || QDELETED(target))
 		return FALSE
 
@@ -29,16 +29,6 @@ without going through the click pipeline, so spells can deliver weapon-style str
 
 	if(!def_zone)
 		def_zone = user.zone_selected || BODY_ZONE_CHEST
-
-	// Zone accuracy uses the same system as ranged — precise zones are capped.
-	// Base accuracy from PER/INT: 60 base + 10 per point of PER above 10 + 10 per point of INT above 10
-	// Below 10 penalizes instead. A class-intended spellblade (PER ~12, INT ~12) gets ~100 base accuracy.
-	// This feeds into bullet_hit_accuracy_check which caps ultra-precise at 50%, precise at 75%, face at 30%.
-	if(def_zone != BODY_ZONE_CHEST && isliving(target))
-		var/base_accuracy = 60
-		base_accuracy += (user.STAPER - 10) * 10
-		base_accuracy += (user.STAINT - 10) * 10
-		def_zone = target.bullet_hit_accuracy_check(base_accuracy, def_zone)
 
 	if(iscarbon(target))
 		var/mob/living/carbon/C = target
@@ -68,7 +58,7 @@ without going through the click pipeline, so spells can deliver weapon-style str
 				var/mob/living/carbon/C = target
 				var/obj/item/bodypart/affecting = C.get_bodypart(check_zone(def_zone))
 				if(affecting)
-					affecting.bodypart_attacked_by(blade_class, wound_damage, user, def_zone, crit_message = TRUE, weapon = weapon)
+					affecting.bodypart_attacked_by(blade_class, wound_damage, user, def_zone, crit_message = TRUE)
 			else
 				target.simple_woundcritroll(blade_class, wound_damage, user, def_zone, crit_message = TRUE)
 
@@ -95,7 +85,7 @@ without going through the click pipeline, so spells can deliver weapon-style str
 	if(target != user)
 		to_chat(target, span_danger("The strike hits my [span_userdanger(parse_zone(def_zone))]!"))
 
-	log_combat(user, target, "spell-struck ([spell_name])")
+	log_combat(user, target, "used a cutscene attack")
 	return max(0, damage - armor_block)
 
 /proc/arcyne_get_weapon(mob/living/carbon/human/H)
