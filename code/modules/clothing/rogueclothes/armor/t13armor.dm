@@ -96,7 +96,8 @@
 	icon_state = "grandmaster"
 	item_state = "grandmaster"
 	body_parts_covered = COVERAGE_FULL
-	sleeved = 'icons/roguetown/clothing/onmob/armor.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+	sleevetype = "grandmaster"
 
 /obj/item/clothing/suit/roguetown/armor/leather/consulo
 	name = "consulo's coat"
