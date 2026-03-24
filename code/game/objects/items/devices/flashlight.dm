@@ -295,7 +295,7 @@
 				qdel(src)
 
 /obj/item/flashlight/flare/torch/lantern
-	name = "iron lantern"
+	name = "iron lamptern"
 	icon_state = "lamp"
 	desc = "A light to guide the way."
 	light_outer_range = 5
@@ -343,7 +343,7 @@
 	spark_act()
 
 /obj/item/flashlight/flare/torch/lantern/bronzelamptern
-	name = "bronze lantern"
+	name = "bronze lamptern"
 	icon_state = "bronzelamp"
 	item_state = "bronzelamp"
 	desc = "A marvel of engineering that emits a strange green glow."
@@ -352,7 +352,7 @@
 	on = FALSE
 
 /obj/item/flashlight/flare/torch/lantern/bronzelamptern/malums_lamptern //unqiue item as a dungeon reward. Functionally a kite shield and a bronze lamptern combined into one
-	name = "ancient lantern"
+	name = "ancient lamptern"
 	icon_state = "bronzelamp"
 	item_state = "bronzelamp"
 	desc = "A marvel of enginseering that emits a strange teal glow. This one bears an emblem related to Malum and has an inscription. It reads, 'Wield me against your foe and the power of creation shall shield you from harm.'"
@@ -388,7 +388,7 @@
 
 /obj/item/flashlight/flare/torch/lantern/bronzelamptern/malums_lamptern/pickup(mob/living/user)
 	if(HAS_TRAIT(user, TRAIT_CABAL))
-		to_chat(user, "<font color='yellow'> You attempt to take the lantern. Runic flames of creation lap up the length of your arm in defiance of your Dark Mistress! Curses!</font>")
+		to_chat(user, "<font color='yellow'> You attempt to take the lamptern. Runic flames of creation lap up the length of your arm in defiance of your Dark Mistress! Curses!</font>")
 		user.adjust_fire_stacks(5)
 		user.IgniteMob()
 		user.Stun(40)
@@ -396,9 +396,9 @@
 	..()
 
 /obj/item/flashlight/flare/torch/lantern/copper
-	name = "copper lantern"
+	name = "copper lamptern"
 	icon_state = "clamp"
-	desc = "A simple and cheap lantern."
+	desc = "A simple and cheap lamptern."
 	on = FALSE
 	flags_1 = CONDUCT_1
 	slot_flags = ITEM_SLOT_HIP
@@ -418,7 +418,7 @@
 
 
 /obj/item/flashlight/flare/torch/lantern/tablelamp
-	name = "desk lantern"
+	name = "desk lamptern"
 	icon_state = "tablelamp"
 	desc = "A light to guide the parchment. Needs an external light source to ignite."
 	anchored = TRUE

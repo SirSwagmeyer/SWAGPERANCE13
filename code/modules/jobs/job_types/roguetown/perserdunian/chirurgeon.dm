@@ -7,7 +7,7 @@
 	spawn_positions = 2
 	allowed_races = RACES_TEMPERANCE
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
+	allowed_ages = list(AGE_ADULT)
 
 	tutorial = "You're one of the most competent doctors around. \
 				After promotion from an Auxiliarist Leech, you now specialize in the treatment of your Empire's wounded. \
@@ -58,16 +58,13 @@
 	H.adjust_skillrank(/datum/skill/misc/medicine, 5, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/rifles, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
 	H.change_stat("perception", 3)
 	H.change_stat("intelligence", 3)
 	H.change_stat("speed", 2)
-	if(H.mind)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/secular)

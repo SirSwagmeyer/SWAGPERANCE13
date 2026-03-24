@@ -3,7 +3,7 @@
 	tutorial = "Trained warriors and estemeed swordsmen from all corners of the world, \
 	warriors are defined by martial prowess - whether with a blade or their bare fists."
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = RACES_CONSCRIPT
+	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/sfighter
 	traits_applied = list(TRAIT_STEELHEARTED, TRAIT_OUTLANDER)
 	category_tags = list(CTAG_ADVENTURER, CTAG_COURTAGENT)

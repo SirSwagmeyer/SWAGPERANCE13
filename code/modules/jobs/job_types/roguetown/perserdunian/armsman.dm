@@ -7,7 +7,7 @@
 	spawn_positions = 8
 	allowed_races = RACES_CONSCRIPT
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
+	allowed_ages = list(AGE_ADULT)
 
 	tutorial = "You are the rank and file soldier of the Great Empire of Perserdun. \
 				Your main purpose is to bundle together with other Armsmen and to kill the enemies of the Empire. \
@@ -38,7 +38,7 @@
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/lord
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron
-	cloak = /obj/item/clothing/cloak/perserduntrenchcoat
+	cloak = /obj/item/clothing/cloak/perserduntabard
 	pants = /obj/item/clothing/under/roguetown/trou/artipants
 	head = /obj/item/clothing/head/roguetown/helmet/sallet/visored/iron
 	mask = /obj/item/clothing/mask/rogue/gasmask/perserdunmask
@@ -58,12 +58,11 @@
 		/obj/item/gasgrenade,
 		/obj/item/smokegrenade,
 		/obj/item/reagent_containers/glass/bottle/rogue/healthpotnew,
-		/obj/item/rogueweapon/sword/iron/short,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)

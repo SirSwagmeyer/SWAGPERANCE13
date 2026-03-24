@@ -86,7 +86,7 @@
 	name = "Night-eyed"
 	desc = "I have eyes able to see through cloying darkness. Incompatible with the vice Colorblind."
 	added_traits = list(TRAIT_DARKVISION)
-	custom_text = "Adds a button to toggle colorblindness to aid seeing in the dark. Taking this with the Colorblind vice will permanently colorblind you." 
+	custom_text = "Adds a button to toggle colorblindness to aid seeing in the dark. Taking this with the Colorblind vice will permanently colorblind you."
 
 /datum/virtue/utility/night_vision/apply_to_human(mob/living/carbon/human/recipient)
 	if(recipient.charflaw)
@@ -145,10 +145,10 @@
 
 /datum/virtue/utility/mining
 	name = "Miner's Apprentice"
-	desc = "The dark shafts, the damp smells of ichor and the laboring hours are no stranger to me. I keep my pickaxe and lantern close, and have been taught how to mine well."
+	desc = "The dark shafts, the damp smells of ichor and the laboring hours are no stranger to me. I keep my pickaxe and lamptern close, and have been taught how to mine well."
 	added_stashed_items = list(
 		"Steel Pickaxe" = /obj/item/rogueweapon/pick/steel,
-		"Lantern" = /obj/item/flashlight/flare/torch/lantern)
+		"Lamptern" = /obj/item/flashlight/flare/torch/lantern)
 	added_skills = list(list(/datum/skill/labor/mining, 3, 6))
 
 /datum/virtue/utility/ugly

@@ -1,5 +1,11 @@
 {
     "universal": {
+		"lucifer": "zizo",
+		"Beelzebub": "zizo",
+		"Abaddon": "eora",
+		"Belphegor": "eora",
+		"Asmodeus": "eora",
+		"satan": "zizo",
 		"ERP": "bush whacking",
 		"monday": "moonsday",
 		"tuesday": "tiwsday",
@@ -23,6 +29,7 @@
 		"fazbear": "dire bear",
 		"gamer": "gambler",
 		"bruh": "sire",
+		"fax": "truth",
 		"goated": "hallowed",
 		"dope": "gaunt",
 		"FOMO": "fear of gods",
@@ -67,8 +74,19 @@
 		"femboy": "girly boy",
 		"wtf": "what the devil",
 		"vibing": "relaxing",
+		"weirdo": "weerdoe",
+		"zombie": "zomble",
+		"skeleton": "skeleton",
+		"vampire": "immortal",
+		"vampires": "immortals",
+		"werewolf": "bestial",
+		"werewolfs": "bestials",
+		"wolf": "wolf",
+		"wolves": "wolves",
+		"lolth": "graggar",
+		"wolfpit": "wolfpit",
 		"PQ": "reputation",
-		"ziggur": "Shit Down My Throat, Please!!",
-		"ziggurs": "Shit Down My Throat, Please!!"
+		"sergant":  "sargent",
+		"zaelorian": "zizo"
     }
 }

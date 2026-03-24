@@ -7,7 +7,7 @@
 	spawn_positions = 8
 	allowed_races = RACES_CONSCRIPT
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
+	allowed_ages = list(AGE_ADULT)
 
 	tutorial = "You are the backbone of the Risvon Ziggurate. You are typically a volunteer, or a conscript. \
 				Your main purpose is follow the orders of your superiors. They are your Oficiros, and your Commandant. \

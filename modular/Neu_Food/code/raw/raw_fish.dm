@@ -85,7 +85,7 @@
 
 /obj/item/reagent_containers/food/snacks/fish/salmon
 	name = "salmon"
-	desc = "A lonesome, horrific creature of the freshwaters, searching for a mate. It makes for good eating."
+	desc = "A lonesome, horrific creacher of the freshwaters, searching for a mate. It makes for good eating."
 	icon_state = "salmon"
 	faretype = FARE_NEUTRAL
 	no_rarity_sprite = TRUE
@@ -105,7 +105,7 @@
 
 /obj/item/reagent_containers/food/snacks/fish/mudskipper
 	name = "mudskipper"
-	desc = "A furtive creature, it hides in murky waters to keep its grotesque visage secreted away."
+	desc = "A furtive creacher, it hides in murky waters to keep its grotesque visage secreted away."
 	icon_state = "mudskipper"
 	faretype = FARE_NEUTRAL
 	no_rarity_sprite = TRUE
@@ -135,7 +135,7 @@
 
 /obj/item/reagent_containers/food/snacks/fish/carp
 	name = "carp"
-	desc = "A mudraking creature of the river-depths, barely fit for food."
+	desc = "A mudraking creacher of the river-depths, barely fit for food."
 	faretype = FARE_IMPOVERISHED
 	icon_state = "carp"
 	fried_type = /obj/item/reagent_containers/food/snacks/rogue/fryfish/carp

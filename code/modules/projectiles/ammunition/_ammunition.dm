@@ -47,11 +47,6 @@
 	icon_state = "[initial(icon_state)]"
 	desc = ""
 
-/obj/item/ammo_casing/examine(mob/user)
-	. = ..()
-	if(!BB)
-		. += "It's spent."
-
 //proc to magically refill a casing with a new projectile
 /obj/item/ammo_casing/proc/newshot() //For energy weapons, syringe gun, shotgun shells and wands (!).
 	if(!BB)

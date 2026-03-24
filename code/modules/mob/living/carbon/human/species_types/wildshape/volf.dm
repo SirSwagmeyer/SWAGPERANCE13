@@ -1,5 +1,5 @@
 /mob/living/carbon/human/species/wildshape/volf //The baseline and tracker of the wildshapes
-	name = "Wolf"
+	name = "Volf"
 	race = /datum/species/shapewolf
 	footstep_type = FOOTSTEP_MOB_CLAW
 	ambushable = FALSE
@@ -22,12 +22,12 @@
 		src.STASPD = 13
 
 		AddSpell(new /obj/effect/proc_holder/spell/self/wolfclaws)
-		real_name = "Wolf ([stored_mob.real_name])" //So we don't get a random name
+		real_name = "Volf ([stored_mob.real_name])" //So we don't get a random name
 		faction += "wolfs" // It IS a wolf
 
 // WOLF SPECIES DATUM //
 /datum/species/shapewolf
-	name = "wolf"
+	name = "volf"
 	id = "shapewolf"
 	species_traits = list(NO_UNDERWEAR, NO_ORGAN_FEATURES, NO_BODYPART_FEATURES)
 	inherent_traits = list(
@@ -86,7 +86,7 @@
 // WOLF SPECIFIC ITEMS //
 /obj/item/clothing/suit/roguetown/armor/skin_armor/wolf_skin
 	slot_flags = null
-	name = "wolf's skin"
+	name = "volf's skin"
 	desc = ""
 	icon_state = null
 	body_parts_covered = FULL_BODY
@@ -115,7 +115,7 @@
 	item_d_type = "slash"
 
 /obj/item/rogueweapon/wolf_claw //Like a less defense dagger
-	name = "wolf claw"
+	name = "volf claw"
 	desc = ""
 	item_state = null
 	lefthand_file = null

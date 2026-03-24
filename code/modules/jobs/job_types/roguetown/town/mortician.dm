@@ -30,7 +30,6 @@
 	beltl = /obj/item/storage/belt/rogue/surgery_bag/full/physician
 	beltr = /obj/item/storage/keyring/physician
 	backl = /obj/item/storage/backpack/rogue/satchel
-	wrists = /obj/item/scomstone/kingsrow
 	backpack_contents = list(
 		/obj/item/reagent_containers/glass/bottle/rogue/healthpot = 2,
 		/obj/item/natural/worms/leech/cheele = 1,

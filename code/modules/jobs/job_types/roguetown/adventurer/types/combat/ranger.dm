@@ -2,7 +2,7 @@
 	name = "Ranger"
 	tutorial = "Rangers prefer to keep their enemies at a distance and rely on bows and ranged weaponry."
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = RACES_CONSCRIPT
+	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/ranger
 	traits_applied = list(TRAIT_OUTLANDER)
 	category_tags = list(CTAG_ADVENTURER, CTAG_COURTAGENT)

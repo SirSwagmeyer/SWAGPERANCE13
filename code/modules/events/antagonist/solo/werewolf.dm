@@ -1,5 +1,5 @@
 /datum/round_event_control/antagonist/solo/werewolf
-	name = "Werewolfs"
+	name = "Verevolfs"
 	tags = list(
 		TAG_COMBAT,
 		TAG_HAUNTED,

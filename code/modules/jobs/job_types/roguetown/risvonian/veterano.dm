@@ -7,7 +7,7 @@
 	spawn_positions = 2
 	allowed_races = RACES_TEMPERANCE
 	allowed_sexes = list(MALE)
-	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
+	allowed_ages = list(AGE_ADULT)
 
 	tutorial = "You're Risvonian Squad Support. \
 				You're supposed to obey the orders of the Oficiro and Commandant, while working with your squadron. \

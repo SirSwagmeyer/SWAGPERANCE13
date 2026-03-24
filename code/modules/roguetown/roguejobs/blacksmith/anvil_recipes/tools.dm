@@ -26,7 +26,7 @@
 	i_type = "Tools"
 
 /datum/anvil_recipe/tools/lamptern/copper
-	name = "Copper Lantern"
+	name = "Copper Lamptern"
 	req_bar = /obj/item/ingot/copper
 	created_item = /obj/item/flashlight/flare/torch/lantern/copper
 
@@ -281,7 +281,7 @@
 	i_type = "Tools"
 
 /datum/anvil_recipe/tools/iron/lamptern
-	name = "Lantern x3"
+	name = "Lamptern x3"
 	req_bar = /obj/item/ingot/iron
 	created_item = /obj/item/flashlight/flare/torch/lantern
 	createditem_num = 3

@@ -82,7 +82,7 @@
 	craftdiff = 1
 
 /datum/anvil_recipe/engineering/bronze/lamptern
-	name = "Bronze Lantern 3x"
+	name = "Bronze Lamptern 3x"
 	req_bar = /obj/item/ingot/bronze
 	created_item = /obj/item/flashlight/flare/torch/lantern/bronzelamptern
 	createditem_num = 3

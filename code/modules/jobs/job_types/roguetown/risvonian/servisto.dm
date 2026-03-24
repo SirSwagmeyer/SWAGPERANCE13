@@ -7,7 +7,7 @@
 	spawn_positions = 2
 	allowed_races = RACES_CONSCRIPT
 	allowed_sexes = list(MALE)
-	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
+	allowed_ages = list(AGE_ADULT)
 
 	tutorial = "You are a supporter of the Ziggurate's war effort. \
 				You are primarily a medicine-man, and spend most of your time chopping up bodies." 

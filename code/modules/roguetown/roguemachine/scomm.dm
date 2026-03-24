@@ -1,8 +1,5 @@
 #define GARRISON_SCOM_COLOR "#FF4242"
-#define RADIO_SOUNDS
-#define SCOMNET_EMPIRE "empire"
-#define SCOMNET_ZIGS "zigs"
-#define SCOMNET_KINGS "kings"
+#define RADIO_SOUNDS 
 
 /obj/structure/roguemachine/scomm
 	name = "SCOM"
@@ -281,6 +278,8 @@
 			raw_message = "<small>[raw_message]</small>"
 		if(garrisonline)
 			raw_message = "<span style='color: [GARRISON_SCOM_COLOR]'>[raw_message]</span>" //Prettying up for Garrison line
+			for(var/obj/item/scomstone/garrison/S in SSroguemachine.scomm_machines)
+				S.repeat_message(raw_message, src, usedcolor, message_language)
 			for(var/obj/item/scomstone/bad/garrison/S in SSroguemachine.scomm_machines)
 				S.repeat_message(raw_message, src, usedcolor, message_language)
 			for(var/obj/structure/roguemachine/scomm/S in SSroguemachine.scomm_machines)
@@ -343,7 +342,6 @@
 	var/speaking = TRUE
 	var/messagereceivedsound = 'sound/misc/ris_radio.ogg'
 	var/hearrange = 0 // change to 0 if you want your special scomstone to be only hearable by wearer
-	var/faction_net = SCOMNET_ZIGS
 	drop_sound = 'sound/foley/coinphy (1).ogg'
 	sellprice = 100
 	grid_width = 32
@@ -361,9 +359,15 @@
 	user.whisper(input_text)
 	if(length(input_text) > 100) //When these people talk too much, put that shit in slow motion, yeah
 		input_text = "<small>[input_text]</small>"
+	for(var/obj/structure/roguemachine/scomm/S in SSroguemachine.scomm_machines)
+		S.repeat_message(input_text, src, usedcolor)
 	for(var/obj/item/scomstone/S in SSroguemachine.scomm_machines)
-		if(S.faction_net == faction_net)
-			S.repeat_message(input_text, src, usedcolor)
+		S.repeat_message(input_text, src, usedcolor)
+	for(var/obj/item/scomstone/empire/S in SSroguemachine.scomm_machines)
+		return
+	for(var/obj/item/listenstone/S in SSroguemachine.scomm_machines)//make the listenstone hear scomstone
+		S.repeat_message(input_text, src, usedcolor)
+	SSroguemachine.crown?.repeat_message(input_text, src, usedcolor)
 
 
 /obj/item/scomstone/MiddleClick(mob/user)
@@ -428,7 +432,6 @@
 
 	icon_state = "scomstoner1"
 	desc = "A wrist-mounted device used by the Empire."
-	faction_net = SCOMNET_EMPIRE
 
 //needs testing
 /obj/item/scomstone/empire/attack_right(mob/living/carbon/human/user)
@@ -514,8 +517,8 @@
 
 	return
 
+// perserdunian radio
 
-// this currently isnt used in the game
 /obj/item/mattcoin
 	name = "communication device"
 	icon_state = "scomstoner1"
@@ -742,7 +745,6 @@
 	messagereceivedsound = 'sound/misc/per_radio.ogg'
 	hearrange = 0
 	sellprice = 100
-	faction_net = SCOMNET_EMPIRE
 
 /obj/item/scomstone/garrison/attack_right(mob/living/carbon/human/user)
 	user.changeNext_move(CLICK_CD_INTENTCAP)
@@ -761,6 +763,10 @@
 			S.repeat_message(input_text, src, usedcolor)
 		for(var/obj/item/scomstone/garrison/S in SSroguemachine.scomm_machines)
 			S.repeat_message(input_text, src, usedcolor)
+		for(var/obj/structure/roguemachine/scomm/S in SSroguemachine.scomm_machines)
+			if(S.garrisonline)
+				S.repeat_message(input_text, src, usedcolor)
+		SSroguemachine.crown?.repeat_message(input_text, src, usedcolor)
 		return
 
 /obj/item/scomstone/bad/garrison
@@ -771,11 +777,3 @@
 	sellprice = 20
 	messagereceivedsound = 'sound/misc/garrisonscom.ogg'
 	hearrange = 0
-
-
-/obj/item/scomstone/kingsrow
-	name = "communication piece"
-	icon_state = "scomstone"
-	desc = "A wrist-mounted communication device. Used by the Royalists."
-	faction_net = SCOMNET_KINGS
-	drop_sound = 'sound/foley/coinphy (1).ogg'

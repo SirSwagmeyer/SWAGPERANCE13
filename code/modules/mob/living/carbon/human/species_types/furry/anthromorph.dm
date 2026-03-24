@@ -11,7 +11,7 @@
 	They're usually identified as second-class citizens. As a result, they rarely receive proper education. \
 	Noticeably, they tend to be subservient to authority figures. Most chalk this up to the trauma inflicted by the Xiyuanese. \
 	All Black Beasts share the characteristics of the Twelve Great Animals - a zodiac table that contains things such as tigers, rabbits, dogs, and so on. \
-	(+1 Constitution, +1 Strength, -2 Intelligence)"
+	(+1 Constitution, +1 Perception, -2 Intelligence)"
 	default_color = "444"
 	species_traits = list(
 		MUTCOLORS,
@@ -41,7 +41,7 @@
 		OFFSET_NECK_F = list(0,-1), OFFSET_MOUTH_F = list(0,-1), OFFSET_PANTS_F = list(0,0), \
 		OFFSET_SHIRT_F = list(0,0), OFFSET_ARMOR_F = list(0,0), OFFSET_UNDIES_F = list(0,-1), \
 		)
-	race_bonus = list(STAT_STRENGTH = 1, STAT_CONSTITUTION = 1, STAT_INTELLIGENCE = -2)
+	race_bonus = list(STAT_PERCEPTION = 1, STAT_CONSTITUTION = 1, STAT_INTELLIGENCE = -2)
 	enflamed_icon = "widefire"
 	organs = list(
 		ORGAN_SLOT_BRAIN = /obj/item/organ/brain,

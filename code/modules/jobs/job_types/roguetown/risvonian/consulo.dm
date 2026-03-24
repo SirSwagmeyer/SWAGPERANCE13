@@ -7,7 +7,7 @@
 	spawn_positions = 1
 	allowed_races = RACES_TEMPERANCE
 	allowed_sexes = list(MALE)
-	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
+	allowed_ages = list(AGE_ADULT)
 
 	tutorial = "You're a diplomat to the local Caprito. \
 				Decked out in expensive, fancy clothing - you typically spend most of your time drafting up letters, while trying to convince the local populace to let your Great Ziggurate take over. \

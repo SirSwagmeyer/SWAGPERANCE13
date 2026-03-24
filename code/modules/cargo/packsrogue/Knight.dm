@@ -9,7 +9,7 @@
 //////////
 
 /datum/supply_pack/rogue/Knight/wolfhelm
-	name = "Wolf Plate Helm"
+	name = "Volf Plate Helm"
 	cost = 30
 	contains = list(/obj/item/clothing/head/roguetown/helmet/heavy/volfplate)
 

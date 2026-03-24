@@ -172,7 +172,7 @@
 /obj/item/alch/bone
 	name = "tail bone"
 	icon_state = "bone"
-	desc = "The only bone in creatures with alchemical properties."
+	desc = "The only bone in creachers with alchemical properties."
 	force = 7
 	throwforce = 5
 	w_class = WEIGHT_CLASS_SMALL

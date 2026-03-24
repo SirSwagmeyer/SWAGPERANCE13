@@ -43,7 +43,7 @@
 	craftdiff = 2
 
 /datum/crafting_recipe/roguetown/arcana/voidlamptern
-	name = "void lantern - (1 Lantern, 1 Obsidian, 1 Arcanic Meld)"
+	name = "void lamptern - (1 Lantern, 1 Obsidian, 1 Arcanic Meld)"
 	result = /obj/item/flashlight/flare/torch/lantern/voidlamptern
 	reqs = list(/obj/item/flashlight/flare/torch/lantern = 1,
 				/obj/item/magic/obsidian = 1,

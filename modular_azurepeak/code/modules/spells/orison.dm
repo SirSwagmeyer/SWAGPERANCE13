@@ -126,7 +126,7 @@
 
 			return light_devotion
 	else
-		to_chat(user, span_notice("Only living creatures can bear the blessing of [user.patron.name]'s light."))
+		to_chat(user, span_notice("Only living creachers can bear the blessing of [user.patron.name]'s light."))
 		return
 
 #undef BLESSINGOFLIGHT_FILTER

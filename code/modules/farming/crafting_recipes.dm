@@ -61,7 +61,7 @@
 	skillcraft = null
 
 /datum/crafting_recipe/roguetown/survival/sigsweet
-	name = "swampweed cigarette"
+	name = "swampweed zig"
 	result = /obj/item/clothing/mask/cigarette/rollie/cannabis
 	reqs = list(
 		/obj/item/reagent_containers/food/snacks/grown/rogue/swampweeddry = 1,
@@ -85,7 +85,7 @@
 	craftdiff = 0
 
 /datum/crafting_recipe/roguetown/survival/sigdry
-	name = "westleach cigarette"
+	name = "westleach zig"
 	result = /obj/item/clothing/mask/cigarette/rollie/nicotine
 	reqs = list(
 		/obj/item/reagent_containers/food/snacks/grown/rogue/pipeweeddry = 1,
@@ -109,7 +109,7 @@
 	craftdiff = 0
 
 /datum/crafting_recipe/roguetown/survival/rocknutdry
-	name = "rocknut cigarette"
+	name = "rocknut zig"
 	result = /obj/item/clothing/mask/cigarette/rollie/nicotine
 	reqs = list(
 		/obj/item/reagent_containers/powder/rocknut = 1,

@@ -382,10 +382,3 @@
 	icon_state = "bun_s"
 	default_color = "FFFFFF"
 	affected_bodyparts = HEAD
-
-/datum/body_marking/facepaint
-	icon ='icons/mob/body_markings/other_markings.dmi'
-	name = "Face Paint"
-	icon_state = "face_paint"
-	default_color = "FF0000"
-	affected_bodyparts = HEAD

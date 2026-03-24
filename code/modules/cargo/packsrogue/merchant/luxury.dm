@@ -6,7 +6,7 @@
 	crate_type = /obj/structure/closet/crate/chest/merchant
 
 /datum/supply_pack/rogue/luxury/sigs
-	name = "Pipe Weed cigarette"
+	name = "Pipe Weed Zig"
 	cost = 3
 	contains = list(/obj/item/clothing/mask/cigarette/rollie/nicotine)
 

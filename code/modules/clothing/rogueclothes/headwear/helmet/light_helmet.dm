@@ -32,8 +32,8 @@
 
 /obj/item/clothing/head/roguetown/helmet/leather/volfhelm
 	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_HIP
-	name = "wolf helmet"
-	desc = "A leather helmet fashioned from a wolf's head."
+	name = "volf helmet"
+	desc = "A leather helmet fashioned from a volf's head."
 	body_parts_covered = HEAD|HAIR|EARS
 	icon_state = "volfhead"
 	item_state = "volfhead"

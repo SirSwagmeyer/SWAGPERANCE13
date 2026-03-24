@@ -58,9 +58,9 @@
 	ranged_cooldown_time = 60
 	check_friendly_fire = 1
 	loot = list(
-			/obj/item/ammo_box/clip/pistol,
-			/obj/item/ammo_box/clip/pistol,
-			/obj/item/ammo_box/clip/pistol,
+			/obj/item/ammo_box/handfuls/rifle,
+			/obj/item/ammo_box/handfuls/rifle,
+			/obj/item/ammo_box/handfuls/rifle,
 			)
 	ai_controller = /datum/ai_controller/stranger
 

@@ -76,7 +76,6 @@
 		/datum/body_marking/tonage,
 		/datum/body_marking/bangs,
 		/datum/body_marking/bun,
-		/datum/body_marking/facepaint
 	)
 	languages = list(
 		/datum/language/common,
@@ -89,15 +88,29 @@
 
 /datum/species/human/halfelf/get_skin_list()
 	return list(
-		"Perdere" = SKIN_COLOR_GRENZEL_WOODS,
-		"Yun" = SKIN_COLOR_ARBORSHOME,
-		"King's Row" = SKIN_COLOR_ALMONDVALLE,
-		"Perserdunian Commoner" = SKIN_COLOR_WALNUT_WOODS,
-		"Perserdunian Conscript" = SKIN_COLOR_ETRUSCAN_SWAMPS,
-		"Kalarian Commoner" = SKIN_COLOR_SHALVINE_FORESTS,
-		"Kalarian Export" = SKIN_COLOR_LALVE_STEPPES,
-		"Risvonian Conscript" = SKIN_COLOR_TIMBERBORN,
-		"Risvonian Commoner"	= SKIN_COLOR_NALEDI_COAST
+		"Timber-Gronn" = SKIN_COLOR_TIMBER_GRONN,
+		"Giza-Azure" = SKIN_COLOR_GIZA_AZURE,
+		"Walnut-Stine" = SKIN_COLOR_WALNUT_STINE,
+		"Etrustcan-Dandelion" = SKIN_COLOR_ETRUSTCAN_DANDELION,
+		"Naledi-Born" = SKIN_COLOR_NALEDI_BORN,
+		"Naledi-Southerner" = SKIN_COLOR_NALEDI_LIGHT,
+		"Kaze-Lotus" = SKIN_COLOR_KAZE_LOTUS,
+		"Grenzel-Azuria" = SKIN_COLOR_GRENZEL_WOODS,
+		"Etrusca-Lirvas" = SKIN_COLOR_ETRUSCA_LIRVAS,
+		"Free Roamers" = SKIN_COLOR_FREE_FOLK,
+		"Avar Borne"	= SKIN_COLOR_AVAR_BORNE,
+		"Shalvine Roamer" = SKIN_COLOR_SHALVINE_AZURE,
+		"Lalve-Steppes" = SKIN_COLOR_LALVE_NALEDI,
+		"Naledi-Otava" = SKIN_COLOR_NALEDI_OTAVA,
+		"Grezel-Avar" = SKIN_COLOR_GRENZEL_AVAR,
+		"Hammer-Gronn" = SKIN_COLOR_HAMMER_GRONN,
+		"Commorah-kin" = SKIN_COLOR_COMMORAH,
+		"Gloomhaven-kin" = SKIN_COLOR_GLOOMHAVEN,
+		"Darkpila-kin" = SKIN_COLOR_DARKPILA,
+		"Sshanntynlan-kin" = SKIN_COLOR_SSHANNTYNLAN,
+		"Llurth Dreir-kin" = SKIN_COLOR_LLURTH_DREIR,
+		"Tafravma-kin" = SKIN_COLOR_TAFRAVMA,
+		"Yuethindrynn-kin" = SKIN_COLOR_YUETHINDRYNN
 	)
 
 /datum/species/human/halfelf/proc/languages(mob/living/carbon/human/literally_him)

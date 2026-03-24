@@ -30,13 +30,13 @@
 	sellprice = 10
 
 /datum/crafting_recipe/roguetown/leather/armor/volfhelm
-	name = "wolf helm (1 leather, 1 wolf fur, 1 wolf head)"
+	name = "volf helm (1 leather, 1 volf fur, 1 volf head)"
 	result = list(/obj/item/clothing/head/roguetown/helmet/leather/volfhelm)
 	reqs = list(/obj/item/natural/hide/cured = 1, /obj/item/natural/fur/wolf = 1, /obj/item/natural/head/volf = 1)
 	sellprice = 20
 
 /datum/crafting_recipe/roguetown/leather/armor/volfmantle
-	name = "wolf mantle (2 leather, 1 wolf head)"
+	name = "volf mantle (2 leather, 1 volf head)"
 	result = /obj/item/clothing/cloak/volfmantle
 	reqs = list(
 		/obj/item/natural/hide/cured = 2,

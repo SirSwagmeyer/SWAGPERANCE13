@@ -7,7 +7,7 @@
 	spawn_positions = 8
 	allowed_races = RACES_CONSCRIPT
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
+	allowed_ages = list(AGE_ADULT)
 
 	tutorial = "You've temporarily been reassigned as a backliner for the Ziggurate. \
 				Generally speaking, you're prohibited to fight - except in the case of self defense. \

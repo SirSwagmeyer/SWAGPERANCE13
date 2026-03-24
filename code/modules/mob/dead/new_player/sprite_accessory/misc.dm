@@ -112,11 +112,6 @@
 	icon_state = "scarhead"
 	layer = BODY_LAYER
 
-/datum/sprite_accessory/face_detail/sickeyes
-	name = "Sick Eyes"
-	icon_state = "sickeyes"
-	layer = BODY_LAYER
-
 /datum/sprite_accessory/accessory
 	icon = 'icons/mob/sprite_accessory/accessory.dmi'
 	default_colors = list("FFFFFF")

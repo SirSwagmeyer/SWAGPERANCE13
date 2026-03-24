@@ -8,7 +8,7 @@
 
 /obj/item/ammo_box/clip/pistol
 	name = "ammo clip"
-	desc = "A cheap and simple device meant to pair with the 'Harland' pistol line."
+	desc = "A cheap and simple device meant to pair with the 'Hero' pistol line."
 	icon_state = "pistol_clip"
 	ammo_type = /obj/item/ammo_casing/a9mm
 	caliber = "a9mm"

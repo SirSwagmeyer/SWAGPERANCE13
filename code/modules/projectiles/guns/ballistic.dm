@@ -101,11 +101,6 @@
 	chamber_round()
 	update_icon()
 
-/obj/item/gun/ballistic/examine(mob/user)
-	. = ..()
-	if (magazine && internal_magazine)
-		. += "It has [get_ammo()] [cartridge_wording][get_ammo() == 1 ? "" : "s"] in it."
-
 /obj/item/gun/ballistic/update_icon()
 	if (QDELETED(src))
 		return

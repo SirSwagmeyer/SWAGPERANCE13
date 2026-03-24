@@ -9,7 +9,7 @@
 	projectile_type = /obj/projectile/magic/bloodlightning
 	releasedrain = 30
 	chargedrain = 1
-	chargetime = 15
+	chargetime = 25
 	recharge_time = 15 SECONDS
 	warnie = "spellwarning"
 	no_early_release = TRUE
@@ -20,7 +20,7 @@
 	glow_color = GLOW_COLOR_VAMPIRIC
 	glow_intensity = GLOW_INTENSITY_MEDIUM
 	charging_slowdown = 3
-	chargedloop = /datum/looping_sound/invokeascendant
+	chargedloop = /datum/looping_sound/invokegen
 	associated_skill = /datum/skill/magic/blood
 	cost = 6
 

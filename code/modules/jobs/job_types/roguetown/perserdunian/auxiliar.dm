@@ -7,12 +7,12 @@
 	spawn_positions = 4
 	allowed_races = RACES_CONSCRIPT
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
+	allowed_ages = list(AGE_ADULT)
 
 	tutorial = "You are a supporter of Perserdun's war effort. \
-				Specifically - you're a Leech, which is a type of medicineman. You still carry a gun and know how to use it.\
+				Whenever you are a leech or an ingeniare, you still carry a gun and know how to use it.\
 				You've been granted a cloth to apply to your helmet in order to help identify what you are.\
-				Blue is for Leeches, which is what you are. It's mandatory for you to wear this." 
+				Red is for Ingenaires, Blue is for Leeches. It's mandatory for you to wear this." 
 
 	outfit = /datum/outfit/job/roguetown/auxiliarist
 	display_order = JDO_AUXILIARIST
@@ -41,7 +41,7 @@
 	beltl = /obj/item/flashlight/flare/torch/lantern
 	id = /obj/item/roguekey/perserdun
 	armor = /obj/item/clothing/suit/roguetown/armor/brigandine/light
-	cloak = /obj/item/clothing/cloak/perserduntrenchcoat
+	cloak = /obj/item/clothing/cloak/perserduntabard
 	pants = /obj/item/clothing/under/roguetown/trou/artipants
 	mask = /obj/item/clothing/mask/rogue/gasmask/perserdunmask
 	wrists = /obj/item/scomstone/garrison
@@ -58,12 +58,11 @@
 		/obj/item/storage/belt/rogue/pouch/coins/poor,
 		/obj/item/gasgrenade = 2,
 		/obj/item/natural/cloth,
-		/obj/item/rogueweapon/sword/iron/short,
 	)
 	H.adjust_skillrank(/datum/skill/misc/medicine, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
@@ -75,6 +74,4 @@
 	H.change_stat("perception", 3)
 	H.change_stat("intelligence", 3)
 	H.change_stat("speed", 2)
-	if(H.mind)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/secular)
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)

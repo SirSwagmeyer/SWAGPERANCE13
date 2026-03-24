@@ -74,8 +74,8 @@
 	icon_state = "rider_sash"
 
 /obj/item/clothing/neck/roguetown/luckcharm/mercmedal/forlorn
-	name = "laughing wolf medal"
-	desc ="A trinket bearing the snarling visage of a wolf and bolt, a mark of distinction among the Forlorn Hope. Often taken from the dead and issued anew to the living, each bearing \
+	name = "laughing volf medal"
+	desc ="A trinket bearing the snarling visage of a volf and bolt, a mark of distinction among the Forlorn Hope. Often taken from the dead and issued anew to the living, each bearing \
 	lyfetymes of nicks and scratches."
 	icon_state = "forlorn_dogmedal"
 
@@ -106,7 +106,7 @@
 
 /obj/item/clothing/neck/roguetown/luckcharm/mercmedal/routier
 	name = "otavan silvered halo"
-	desc = "A fragment of blessed Otavan steel, carefully wrought into an unusual halo-pattern. While it won't do any good against werewolfs or demons, it will remind a distant routier of what they're fighting for: \
+	desc = "A fragment of blessed Otavan steel, carefully wrought into an unusual halo-pattern. While it won't do any good against verevolfs or demons, it will remind a distant routier of what they're fighting for: \
 	home, blessed Otava, and their Weeping God, PSYDON."
 	icon_state = "routier_halo"
 

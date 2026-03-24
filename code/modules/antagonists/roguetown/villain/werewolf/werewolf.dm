@@ -156,7 +156,7 @@
 	item_d_type = "slash"
 
 /obj/item/rogueweapon/werewolf_claw
-	name = "Werewolf Claw"
+	name = "Verevolf Claw"
 	desc = ""
 	item_state = null
 	lefthand_file = null

@@ -160,7 +160,7 @@
 				him_replace = "them"
 			if (IT_ITS)
 				they_replace = "it"
-				man_replace = "creature"
+				man_replace = "creacher"
 				him_replace = "it"
 	// LETHALSTONE EDIT END
 	string = replacetext(string, "%THEY%", they_replace)

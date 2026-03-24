@@ -71,7 +71,7 @@
 
 /obj/item/clothing/under/roguetown/trou/leather/pontifex/raneshen
 	name = "baggy desert pants"
-	desc = "A handmade pair of baggy, thin leather pants. Keeps sand out of your boots, sun off your legs, and a creature's fangs from piercing your ankles."
+	desc = "A handmade pair of baggy, thin leather pants. Keeps sand out of your boots, sun off your legs, and a creacher's fangs from piercing your ankles."
 	naledicolor = FALSE
 
 /obj/item/clothing/under/roguetown/trou/leather/eastern

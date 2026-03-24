@@ -5,7 +5,12 @@
 	caliber = "a762"
 	max_ammo = 5
 	multiload = 0
-	handful = TRUE
+
+/obj/item/ammo_box/handfuls/get_round(keep = FALSE)
+    var/obj/item/ammo_casing/R = ..(keep)
+    if(!stored_ammo.len) // i literally have ZERO idea how to force this to the ground before its qdel'd. im super sorry - zera
+        qdel(src)
+    return R
 
 //rifle handfuls
 /obj/item/ammo_box/handfuls/rifle
@@ -20,8 +25,8 @@
 /obj/item/ammo_box/handfuls/leveraction
 	name = "handful of custom bullets"
 	desc = "A handful of modified pistol bullets, made in Perserdun."
-	ammo_type = /obj/item/ammo_casing/a44
-	caliber = "a44"
+	ammo_type = /obj/item/ammo_casing/a9mm
+	caliber = "a9mm"
 	max_ammo = 7
 	multiload = 0
 	icon_state = "pistol-handful"

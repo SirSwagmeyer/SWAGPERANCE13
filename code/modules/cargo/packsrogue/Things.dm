@@ -24,7 +24,7 @@
 	contains = list(/obj/item/needle)
 
 /datum/supply_pack/rogue/Things/Lamp
-	name = "Lantern"
+	name = "Lamptern"
 	cost = 5
 	contains = list(/obj/item/flashlight/flare/torch/lantern)
 
@@ -67,12 +67,12 @@
 ///////////
 
 /datum/supply_pack/rogue/Things/westleach
-	name = "Westleach cigarette"
+	name = "Westleach Zig"
 	cost = 2
 	contains = list(/obj/item/clothing/mask/cigarette/rollie/nicotine)
 
 /datum/supply_pack/rogue/Things/swampweed
-	name = "Swampweed cigarette"
+	name = "Swampweed Zig"
 	cost = 5
 	contains = list(/obj/item/clothing/mask/cigarette/rollie/cannabis)
 

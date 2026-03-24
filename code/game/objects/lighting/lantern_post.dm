@@ -1,6 +1,6 @@
 /obj/machinery/light/rogue/lanternpost
 	name = "lantern post"
-	desc = "A small lantern dangles from a wooden post. The metal frame around the inner flame casts shadows on its surroundings."
+	desc = "A small lamptern dangles from a wooden post. The metal frame around the inner flame casts shadows on its surroundings."
 	icon = 'icons/roguetown/misc/tallstructure.dmi'
 	icon_state = "streetlantern1"
 	base_state = "streetlantern"

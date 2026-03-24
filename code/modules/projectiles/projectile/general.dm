@@ -6,24 +6,23 @@
 /obj/projectile/bullet/a577
 	name = ".577 bullet"
 	icon_state = "bullet_proj"
-	damage = 160
+	damage = 120
 
 /obj/projectile/bullet/a50
 	name = ".50 caliber bullet"
 	icon_state = "bullet_proj"
-	damage = 140 
+	damage = 100 
 	armor_penetration = 100 //might be super broken, watch during playtests
 
 /obj/projectile/bullet/a9mm
 	name = "9mm bullet"
 	icon_state = "bullet_proj"
-	damage = 40
+	damage = 60
 
 /obj/projectile/bullet/a44
 	name = ".44 bullet"
 	icon_state = "bullet_proj"
 	damage = 60
-	armor_penetration = 40 // added armor pen due to the fact it's a higher-load and higher-caliber than 9mm
 
 /obj/projectile/bullet/a22lr
 	name = ".22LR bullet"
@@ -36,12 +35,12 @@
 	name = "12g shotgun slug"
 	damage = 70
 	spread = 2
-	armor_penetration = 65
+	armor_penetration = 15
 
 /obj/projectile/bullet/pellet/shotgun_buckshot
 	name = "buckshot pellet"
 	damage = 13.5
-	armor_penetration = 50
+	armor_penetration = 7
 
 // shotgun falloff
 /obj/projectile/bullet/pellet

@@ -188,7 +188,7 @@
 	slowdown = 0.15
 	spread = 0.5
 	pump_sound = 'sound/combat/ranged/leveractioncock.ogg'
-	fire_sound = REVOLVERSHOT
+	fire_sound = PISTOLSHOT
 	load_sound = 'sound/combat/ranged/leveractioninsert.ogg'
 	recoil = 0.15
 
@@ -222,7 +222,6 @@
 /obj/item/gun/ballistic/rifle/repeater/mondragon
 	name = "YKA 'Dragoon'"
 	desc = "A straight-bolt action rifle. Usually found in the hands of civilian hunters."
-	icon = 'icons/roguetown/weapons/48guns.dmi'
 	icon_state = "dragoon"
 	item_state = "dragoon"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/perserdun

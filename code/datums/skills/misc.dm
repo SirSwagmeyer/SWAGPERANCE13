@@ -7,7 +7,7 @@
 	name = "Athletics"
 	desc = "Increases your maximum stamina by 5 per point. Decreases chance of consuming nutrition when exerted by 16% per level."
 	dreams = list(
-		"...your lungs burn and you can no longer feel your breath as the pale wolf's howling grows distant. You should have collapsed three times over, but the urge to survive pushes you past your bodily limits...",
+		"...your lungs burn and you can no longer feel your breath as the pale volf's howling grows distant. You should have collapsed three times over, but the urge to survive pushes you past your bodily limits...",
 		"...the incline before you is steep, and the barrel weighs heavy in your hands but you press on. This is no longer a hill. This is your mountain and with every strained breath, you inch closer to its summit, determined to conquer it..."
 	)
 	expert_name = "Athlete"
@@ -55,7 +55,7 @@
 	desc = "Increases your chance of sneaking successfully and not be detected, and reduces your chances of leaving behind tracks."
 	dreams = list(
 		"...the four connected houses, orthogonally aligned, have a small dip at the center of their slanted rooftops. Your crow's nest. Your safe haven. The only light that can reach you here is what Noc takes from Astrata, and this night is particularly veiled. It's concealing and comforting, safe from the town guard, as you curl up to rest...",
-		"...the pale wolf gets on its hindlegs, and howls unto the moon. It seeks prey, and you happen to be unfortunate enough to be in its forest. This is the third time it has circled you, as you press yourself tighter into the hollow tree, completely still..."
+		"...the pale volf gets on its hindlegs, and howls unto the moon. It seeks prey, and you happen to be unfortunate enough to be in its forest. This is the third time it has circled you, as you press yourself tighter into the hollow tree, completely still..."
 	)
 	expert_name = "Sneak"
 

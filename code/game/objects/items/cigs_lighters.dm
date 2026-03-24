@@ -327,7 +327,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 // Rollies.
 
 /obj/item/clothing/mask/cigarette/rollie
-	name = "cigarette"
+	name = "zig"
 	desc = "Manufactured (or rolled) nicotine. Usually man-made."
 	icon_state = "spliffoff"
 	icon_on = "spliffon"
@@ -360,7 +360,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	starts_lit = TRUE
 
 /obj/item/clothing/mask/cigarette/rollie/cannabis
-	name = "swampleaf cigarette"
+	name = "swampleaf zig"
 	desc = "A paper wrapped cartridge of sweet smelling smokeleaf."
 	list_reagents = list(/datum/reagent/drug/space_drugs = 30)
 

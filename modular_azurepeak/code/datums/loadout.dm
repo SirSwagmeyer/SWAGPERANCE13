@@ -32,7 +32,7 @@ GLOBAL_LIST_EMPTY(loadout_items)
 	path = /obj/item/toy/cards/deck/tarot
 
 /datum/loadout_item/zigbox
-	name = "cigarette Box"
+	name = "Zig Box"
 	path = /obj/item/quiver/zigs/nicotine
 
 //HATS

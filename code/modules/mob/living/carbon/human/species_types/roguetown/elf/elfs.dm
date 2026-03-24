@@ -8,7 +8,6 @@
 	Elves were once known to be a mystical race that stemmed exclusively from the ethnostate of Perdere for over a thousand years. \
 	Though, the nation has recently collapsed underneath the advent of the \"Capaythian War,\" a six-month campaign initiated by the Great Empire in order to force the trade of Capaytha Madness, a highly addictive stimulant. \
 	Most elves now find themselves scattered across the continent, and have roles within the Great Empire itself, the Ziggurate, or other unclaimed city-states. \
-	Additionally, some elves have begun to partake in rituals to commune with fae and other spirits of nature, granting them horns and tails.\
 	(+1 Speed)"
 
 	skin_tone_wording = "Origin"
@@ -69,8 +68,6 @@
 		/datum/customizer/organ/penis/anthro,
 		/datum/customizer/organ/breasts/human,
 		/datum/customizer/organ/vagina/human_anthro,
-		/datum/customizer/organ/horns/anthro,
-		/datum/customizer/organ/tail/demihuman,
 		)
 
 	body_marking_sets = list(
@@ -89,7 +86,6 @@
 		/datum/body_marking/nose,
 		/datum/body_marking/bangs,
 		/datum/body_marking/bun,
-		/datum/body_marking/facepaint
 	)
 
 /datum/species/elf/wood/check_roundstart_eligible() // This is ugly as fuck and should use the config file but this codebase doesn't have the examples

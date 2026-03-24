@@ -271,10 +271,10 @@
 	desc = "A fluffy feather."
 
 /obj/item/flashlight/flare/torch/lantern/voidlamptern
-	name = "void lantern"
+	name = "void lamptern"
 	icon_state = "voidlamp"
 	item_state = "voidlamp"
-	desc = "An old lantern that seems darker and darker the longer you look at it."
+	desc = "An old lamptern that seems darker and darker the longer you look at it."
 	light_outer_range = 8
 	light_color = "#000000"
 	light_power = -3

@@ -213,8 +213,8 @@
 /obj/item/reagent_containers/food/snacks/rogue/meat/steak/wolf/fried
 	eat_effect = null
 	slices_num = 0
-	name = "fried wolf"
-	desc = "A slab of wolf, fried to a perfect medium rare. A bit gamey and chewy, but tasty."
+	name = "fried volf"
+	desc = "A slab of volf, fried to a perfect medium rare. A bit gamey and chewy, but tasty."
 	icon = 'modular/Neu_Food/icons/cooked/cooked_meat.dmi'
 	icon_state = "fryvolf"
 	bonus_reagents = list(/datum/reagent/consumable/nutriment = MEATSLAB_NUTRITION)

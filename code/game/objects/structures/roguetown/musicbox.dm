@@ -9,17 +9,6 @@
 	"Risvonian Talkshow" = 'sound/music/jukeboxes/gen/talkshow.ogg',\
 	"Ziggurate's Simplified Anthem" = 'sound/music/jukeboxes/gen/countdown.ogg',\
 )
-#define MUSIC_TAVCAT_MACHINE list(\
-	"Toxic" = 'sound/music/jukeboxes/machine/machinetoxic.ogg',\
-	"Alone" = 'sound/music/jukeboxes/machine/machinealone.ogg',\
-	"Class" = 'sound/music/jukeboxes/machine/machineclass.ogg',\
-	"Her" = 'sound/music/jukeboxes/machine/machineher.ogg',\
-	"Life" = 'sound/music/jukeboxes/machine/machinelife.ogg',\
-	"Madness" = 'sound/music/jukeboxes/machine/machinemadness.ogg',\
-	"Rain" = 'sound/music/jukeboxes/machine/machinerain.ogg',\
-	"Down" = 'sound/music/jukeboxes/machine/machinedown.ogg',\
-	"Face" = 'sound/music/jukeboxes/machine/machineface.ogg',\
-) // POP MUSIC ONLY FOR THE MACHINE -- NO CHUDMUSIC ALLOWED
 
 /datum/looping_sound/musloop
 	mid_sounds = list()
@@ -107,7 +96,7 @@
 		toggle_music()
 
 	if(button_selection=="Change Song")
-		var/songlists_selection = input(user, "Which song list?", "\The [src]") as null | anything in list("RECORDED MUSIC"=MUSIC_TAVCAT_OTHERWORLDLY, "RADIO STATION"=MUSIC_TAVCAT_RADIO, "MACHINE TRANSMISSION"=MUSIC_TAVCAT_MACHINE)
+		var/songlists_selection = input(user, "Which song list?", "\The [src]") as null | anything in list("RECORDED MUSIC"=MUSIC_TAVCAT_OTHERWORLDLY, "RADIO STATION"=MUSIC_TAVCAT_RADIO)
 		playsound(loc, pick('sound/misc/keyboard_select (1).ogg','sound/misc/keyboard_select (2).ogg','sound/misc/keyboard_select (3).ogg','sound/misc/keyboard_select (4).ogg'), 100, FALSE, -1)
 		user.visible_message(span_info("[user] presses a button on \the [src]."),span_info("I press a button on \the [src]."))
 		var/chosen_songlists_selection = null
@@ -115,8 +104,6 @@
 			chosen_songlists_selection = MUSIC_TAVCAT_OTHERWORLDLY
 		if(songlists_selection=="RADIO STATION")
 			chosen_songlists_selection = MUSIC_TAVCAT_RADIO
-		if(songlists_selection=="MACHINE TRANSMISSION")
-			chosen_songlists_selection = MUSIC_TAVCAT_MACHINE
 		var/song_selection = input(user, "Which song do I play?", "\The [src]") as null | anything in chosen_songlists_selection
 		if(!Adjacent(user))
 			return

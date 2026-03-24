@@ -34,7 +34,7 @@
 //At some point, this spell should Awaken beasts, allowing a ghost to possess them. Not for this PR though.
 /obj/effect/proc_holder/spell/targeted/beasttame
 	name = "Tame Beast"
-	desc = "Tames a targeted saiga, chicken, cow, goat, wolf or spider to be non hostile and tamed."
+	desc = "Tames a targeted saiga, chicken, cow, goat, volf or spider to be non hostile and tamed."
 	range = 5
 	overlay_state = "tamebeast"
 	releasedrain = 30

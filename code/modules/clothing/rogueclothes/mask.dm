@@ -368,7 +368,7 @@
 /obj/item/clothing/mask/rogue/gasmask
 	body_parts_covered = NECK|MOUTH|FACE|EYES
 	slot_flags = ITEM_SLOT_MASK
-	flags_inv = HIDEFACE|HIDESNOUT|HIDEEARS|HIDEHAIR|HIDEFACIALHAIR
+	flags_inv = HIDEFACE|HIDESNOUT|HIDEEARS
 	sewrepair = TRUE
 	equip_sound = 'sound/items/gasmask/gasmask_on.ogg'
 	var/worn = FALSE

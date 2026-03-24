@@ -7,7 +7,7 @@
 	spawn_positions = 2
 	allowed_races = RACES_TEMPERANCE
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
+	allowed_ages = list(AGE_ADULT)
 
 	tutorial = "You're a low-ranking officer, gifted with your own squad of Armsmen. \
 				Your main goal is to keep your Armsmen together and alive, while also killing the enemy. \
@@ -59,12 +59,11 @@
 		/obj/item/gasgrenade,
 		/obj/item/smokegrenade,
 		/obj/item/reagent_containers/glass/bottle/rogue/healthpotnew,
-		/obj/item/rogueweapon/sword/iron/short,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)

@@ -24,13 +24,6 @@
 	/obj/item/ammo_box/handfuls/shotgun/buckshot, 
 	/obj/item/ammo_box/handfuls/shotgun/buckshot)
 
-/datum/supply_pack/rogue/ammunition/slug
-	name = "00 Slug Handfuls (x3)"
-	cost = 25
-	contains = list(/obj/item/ammo_box/handfuls/shotgun, 
-	/obj/item/ammo_box/handfuls/shotgun, 
-	/obj/item/ammo_box/handfuls/shotgun)
-
 /datum/supply_pack/rogue/ammunition/pistol
 	name = "Pistol Clips (x3)"
 	cost = 20
@@ -62,9 +55,3 @@
 	cost = 40
 	contains = list(/obj/item/ammo_box/clip/reaper,
 	/obj/item/ammo_box/clip/reaper)
-
-/datum/supply_pack/rogue/ranged_weapons/JackalAmmo
-	name = "Jackal Ammo (x2)"
-	cost = 30
-	contains = list(/obj/item/ammo_box/magazine/jackal,
-	/obj/item/ammo_box/magazine/jackal)

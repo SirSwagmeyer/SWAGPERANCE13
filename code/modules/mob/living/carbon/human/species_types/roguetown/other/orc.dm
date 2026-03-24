@@ -114,7 +114,7 @@
 /datum/species/orc/get_hairc_list()
 	return sortList(list(
 	"Minotaur" = "58433b",
-	"Wolf" = "48322a",
+	"Volf" = "48322a",
 	"Maneater" = "458745",
 	"Mud" = "201616",
 	))

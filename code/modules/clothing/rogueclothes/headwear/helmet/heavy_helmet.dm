@@ -442,8 +442,8 @@
 			H.update_inv_head()
 
 /obj/item/clothing/head/roguetown/helmet/heavy/volfplate
-	name = "wolf-face helm"
-	desc = "A steel bascinet helmet with a wolfish visor protecting the head, ears, eyes, nose and mouth."
+	name = "volf-face helm"
+	desc = "A steel bascinet helmet with a volfish visor protecting the head, ears, eyes, nose and mouth."
 	icon_state = "volfplate"
 	item_state = "volfplate"
 	adjustable = CAN_CADJUST
