@@ -19,6 +19,7 @@
 	attack_verb = list("struck", "hit", "bashed")
 
 	var/list/fire_sound = list('sound/blank.ogg')
+	var/list/dist_fire_sound = DISTANTGENERICSHOT
 	var/fire_sound_volume = 50
 	var/dry_fire_sound = 'sound/blank.ogg'
 	var/recoil = 0						//boom boom shake the room
@@ -65,12 +66,33 @@
 	to_chat(user, "<span class='danger'>*FUCK!*</span>")
 	playsound(src, dry_fire_sound, 30, TRUE)
 
+/obj/item/gun/proc/play_fire_sound(var/mob/user)
+	var/turf/epicenter = get_turf(user)
+	var/delay_sound = 0
+
+	var/frequency = get_rand_frequency()
+	for(var/mob/M in range(60))
+		// Double check for client
+		if(M && M.client)
+			var/turf/M_turf = get_turf(M)
+			if(M_turf && M_turf.z == epicenter.z)
+				var/dist = get_dist(M_turf, epicenter)
+				if(dist <= 60 && dist >= 8 && delay_sound == 0)
+					var/far_volume = CLAMP(60, 70, 80) // Volume is based on explosion size and dist
+					far_volume += (dist <= 60 * 0.5 ? 50 : 0) // add 50 volume if the mob is pretty close to the explosion
+					M.playsound_local(epicenter, dist_fire_sound, far_volume, 1, frequency, falloff = 5)
+					delay_sound = 1
+					spawn(100)
+						delay_sound = 0
+		else
+			playsound(user, fire_sound, 100, 1, 4)
+
 
 /obj/item/gun/proc/shoot_live_shot(mob/living/user as mob|obj, pointblank = 0, mob/pbtarget = null, message = 1)
 	if(recoil)
 		shake_camera(user, recoil + 1, recoil)
 
-	playsound(user, pick(fire_sound), fire_sound_volume)
+	play_fire_sound()
 	if(message)
 		user.visible_message("<span class='danger'>[user] shoots [src]!</span>", \
 						"<span class='danger'>I shoot [src]!</span>", \

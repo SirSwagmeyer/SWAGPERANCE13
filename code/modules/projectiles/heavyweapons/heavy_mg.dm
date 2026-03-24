@@ -288,7 +288,7 @@
 	desc = "Ya Spetznas!"
 	icon_state = "utes"
 	mag_type = /obj/item/ammo_box/magazine/hmg/a762x59
-	fire_sound = HMGSHOT
+	fire_sound = HMGGENERICSHOT
 
 /obj/item/gun/ballistic/heavy_mg/utes/update_icon()
 	..()
@@ -302,11 +302,11 @@
 //////////////////////////////
 
 /obj/item/gun/ballistic/heavy_mg/m2
-	name = "M2 Browning HB"
-	desc = "Heavy machinegun, standard-issued by USMC"
+	name = "M2"
+	desc = "A slick, top of the line War Machine production. This, this is power."
 	icon_state = "m2"
 	mag_type = /obj/item/ammo_box/magazine/hmg/a303
-	fire_sound = HMGSHOT
+	fire_sound = HMGM2SHOT
 
 /obj/item/gun/ballistic/heavy_mg/m2/update_icon()
 	..()
