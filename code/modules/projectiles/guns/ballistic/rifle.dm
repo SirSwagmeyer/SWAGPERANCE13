@@ -9,6 +9,7 @@
 	item_state = "shotgun"
 	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
+	dist_fire_sound = DISTANTMEDIUM
 	slowdown = 0.5
 	spread = 0
 	force = 15

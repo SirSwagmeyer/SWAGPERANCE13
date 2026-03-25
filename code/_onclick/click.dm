@@ -104,12 +104,6 @@
 	if(next_move > world.time)
 		return
 
-	if(using_object)
-		if(istype(using_object, /obj/item/gun/ballistic/heavy_mg) || using_object != A)
-			var/obj/item/gun/ballistic/heavy_mg/M = using_object
-			M.afterattack(A, src)
-			return 1
-
 	if(modifiers["middle"] && atkswinging == "middle")
 		if(mmb_intent)
 			if(mmb_intent.get_chargetime())
@@ -190,6 +184,12 @@
 
 	if(incapacitated(ignore_restraints = 1))
 		return
+
+	if(using_object)
+		if(istype(using_object, /obj/item/gun/ballistic/heavy_mg) || using_object != A)
+			var/obj/item/gun/ballistic/heavy_mg/M = using_object
+			M.afterattack(A, src)
+			return 1
 
 	if(!atkswinging)
 		face_atom(A)

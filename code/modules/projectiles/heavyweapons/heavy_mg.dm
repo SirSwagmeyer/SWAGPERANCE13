@@ -19,6 +19,8 @@
 	anchored = 1
 	density = 1
 	w_class = WEIGHT_CLASS_GIGANTIC
+	dist_fire_sound = DISTANTHMG
+	far_volume = 60 // 60 is max, loudest guns for fun
 	spawnwithmagazine = FALSE
 	semi_auto = TRUE
 	burst = 3
@@ -307,6 +309,7 @@
 	icon_state = "m2"
 	mag_type = /obj/item/ammo_box/magazine/hmg/a303
 	fire_sound = HMGM2SHOT
+	burst = 2
 
 /obj/item/gun/ballistic/heavy_mg/m2/update_icon()
 	..()

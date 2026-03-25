@@ -9,6 +9,7 @@
 	icon_state = "risvshot"
 	item_state = "risvshot"
 	var/pump_sound = 'sound/blank.ogg'
+	dist_fire_sound = DISTANTMEDIUM
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	mag_type = /obj/item/ammo_box/magazine/internal/shot

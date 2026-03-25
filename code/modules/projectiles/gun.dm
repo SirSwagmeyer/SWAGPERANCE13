@@ -19,8 +19,9 @@
 	attack_verb = list("struck", "hit", "bashed")
 
 	var/list/fire_sound = list('sound/blank.ogg')
-	var/list/dist_fire_sound = DISTANTGENERICSHOT
+	var/list/dist_fire_sound = list('sound/blank.ogg') //DISTANTLIGHT,DISTANTMEDIUM,DISTANTHEAVY
 	var/fire_sound_volume = 50
+	var/far_volume = 50 // base volume of distant sounds, should not be higher than 60
 	var/dry_fire_sound = 'sound/blank.ogg'
 	var/recoil = 0						//boom boom shake the room
 	var/clumsy_check = TRUE
@@ -78,7 +79,6 @@
 				var/dist = get_dist(M_turf, epicenter)
 				var/distant_fire_sound = sound(pick(dist_fire_sound))
 				if(dist <= 60 && dist >= 8)
-					var/far_volume = 60 
 					if(dist <= 30)
 						far_volume += 40 //if within 30 tiles, make sound louder
 					M.playsound_local(M_turf, null, far_volume, 1, frequency, falloff = 5, S = distant_fire_sound)

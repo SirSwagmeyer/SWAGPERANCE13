@@ -7,6 +7,8 @@
 	eject_sound = 'sound/blank.ogg'
 	fire_sound_volume = 90
 	dry_fire_sound = 'sound/blank.ogg'
+	dist_fire_sound = DISTANTLIGHT
+	far_volume = 30 //60 max, default 50. pistols are quieter than revolvers to give them slight differentiation
 	casing_ejector = FALSE
 	internal_magazine = TRUE
 	bolt_type = BOLT_TYPE_NO_BOLT

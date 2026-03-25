@@ -9,6 +9,8 @@
 	pump_sound = 'sound/combat/ranged/patiencecock.ogg'
 	fire_sound = list('sound/combat/ranged/sniper_fire.ogg')
 	load_sound = 'sound/combat/ranged/patienceload.ogg'
+	dist_fire_sound = DISTANTHEAVY
+	far_volume = 60 //60 is max, default 50
 	recoil = 4
 
 /obj/item/gun/ballistic/shotgun/eternal
@@ -21,6 +23,7 @@
 	spread = 0.5
 	fire_sound = SHOTGUNSHOT
 	pump_sound = 'sound/combat/ranged/shotgunpump.ogg'
+	dist_fire_sound = DISTANTMEDIUM
 	recoil = 0.15
 	load_sound = SHOTGUNINSERT
 	rack_delay = 2
@@ -45,5 +48,6 @@
 	fire_sound = RIFLESHOT
 	pump_sound = 'sound/combat/ranged/smg_cock.ogg'
 	load_sound = 'sound/combat/ranged/smg_magin.ogg'
+	dist_fire_sound = DISTANTMEDIUM
 	recoil = 0.15
 	semi_auto = TRUE
