@@ -45,7 +45,7 @@
 	beltr = /obj/item/storage/belt/rogue/surgery_bag/full
 	wrists = /obj/item/scomstone
 	mask = /obj/item/clothing/mask/rogue/gasmask/sgmask/curacisto
-	head = /obj/item/clothing/head/roguetown/helmet/kettle/iron
+	head = /obj/item/clothing/head/roguetown/helmet/kettle/iron/visored
 	neck = /obj/item/storage/belt/rogue/pouch/coins/rich
 	gloves = /obj/item/clothing/gloves/roguetown/eastgloves1
 	id = /obj/item/roguekey/risvon

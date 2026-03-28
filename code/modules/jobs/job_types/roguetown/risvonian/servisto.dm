@@ -39,7 +39,7 @@
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/ziggurate
 	cloak = /obj/item/clothing/cloak/templar/malumite
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants
-	head = /obj/item/clothing/head/roguetown/helmet/kettle/iron
+	head = /obj/item/clothing/head/roguetown/helmet/kettle/iron/visored
 	mask = /obj/item/clothing/mask/rogue/gasmask/risvonmask
 	neck = /obj/item/clothing/neck/roguetown/chaincoif
 	belt = /obj/item/storage/belt/rogue/leather/black/soldier

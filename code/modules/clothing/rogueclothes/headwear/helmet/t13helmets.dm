@@ -39,9 +39,20 @@
 // medium helmets
 /obj/item/clothing/head/roguetown/helmet/kettle/iron/visored
 	name = "decorated kettle helmet"
-	desc = "A kettle helmet. It has the visor of a stolen Knight Commander's helmet welded onto it."
-	icon_state = "ikettlevisor"
-	item_state = "ikettlevisor"
+	desc = "A kettle helmet. It has a hand-made pair of goggles welded to it."
+	icon_state = "ikettle_visor"
+	item_state = "ikettle_visor"
+	adjustable = CAN_CADJUST
+	flags_inv = HIDEFACE|HIDESNOUT|HIDEHAIR
+	flags_cover = HEADCOVERSEYES
+	body_parts_covered = HEAD|EARS|HAIR|NOSE|EYES
+	block2add = FOV_BEHIND
+	smelt_bar_num = 2
+	armor = ARMOR_HEAD_HELMET_VISOR
+
+/obj/item/clothing/head/roguetown/helmet/kettle/iron/visored/ComponentInitialize()
+	AddComponent(/datum/component/adjustable_clothing, (HEAD|EARS|HAIR), HIDEHAIR, null, 'sound/items/visor.ogg', null, UPD_HEAD)
+
 
 /obj/item/clothing/head/roguetown/helmet/kettle/iron/oficiro
 	name = "iron ziggurate helmet"
