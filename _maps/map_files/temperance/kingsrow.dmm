@@ -2720,7 +2720,8 @@
 "rP" = (
 /obj/structure/mineral_door/wood/donjon{
 	dir = 1;
-	lockid = "garrison"
+	lockid = "garrison";
+	locked = 1
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town)
@@ -5263,6 +5264,17 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
+"Jz" = (
+/obj/structure/rack/rogue/shelf/biggest,
+/obj/item/mg_disassembled/m2,
+/obj/item/mg_tripod/m2,
+/obj/item/ammo_box/magazine/hmg/a50d,
+/obj/item/ammo_box/magazine/hmg/a50d,
+/obj/item/ammo_box/magazine/hmg/a50d,
+/obj/item/ammo_box/magazine/hmg/a50d,
+/obj/item/ammo_box/magazine/hmg/a50d,
+/turf/open/floor/rogue/brown,
+/area/rogue/indoors/shelter/town)
 "JC" = (
 /turf/closed/mineral/rogue/iron,
 /area/rogue/under/cave)
@@ -64530,7 +64542,7 @@ cd
 cd
 cd
 uf
-iL
+Jz
 SF
 Vp
 uf
@@ -64757,7 +64769,7 @@ cd
 cd
 cd
 uf
-Vp
+dQ
 Vp
 Vp
 uf

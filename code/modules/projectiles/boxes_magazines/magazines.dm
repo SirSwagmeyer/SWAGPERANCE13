@@ -27,8 +27,8 @@
 	max_ammo = 50
 	multiload = 1
 	icon_state = "hmg-magazine"
-	grid_width = 64
-	grid_height = 64
+	grid_width = 96
+	grid_height = 96
 
 /obj/item/ammo_box/magazine/hmg/a762x59
 	name = "7.62x59mm box magazine"

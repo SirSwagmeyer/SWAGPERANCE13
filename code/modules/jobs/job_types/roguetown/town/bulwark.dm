@@ -70,7 +70,7 @@
 
 /datum/outfit/job/roguetown/bulwark/shotgun/pre_equip(mob/living/carbon/human/H)
 	backl = /obj/item/gun/ballistic/shotgun/eternal
-	backr = /obj/item/storage/backpack/rogue/satchel/chestrig
+	backr = /obj/item/storage/backpack/rogue/backpack
 	backpack_contents = list(
 		/obj/item/reagent_containers/glass/bottle/rogue/healthpotnew = 2,
 		/obj/item/ammo_box/handfuls/shotgun = 6,
@@ -87,7 +87,7 @@
 
 /datum/outfit/job/roguetown/bulwark/rifle/pre_equip(mob/living/carbon/human/H)
 	backl = /obj/item/gun/ballistic/rifle/reaper
-	backr = /obj/item/storage/backpack/rogue/satchel/chestrig
+	backr = /obj/item/storage/backpack/rogue/backpack
 	backpack_contents = list(
 		/obj/item/reagent_containers/glass/bottle/rogue/healthpotnew = 2,
 		/obj/item/ammo_box/clip/reaper = 6,

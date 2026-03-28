@@ -45,19 +45,16 @@
 	neck = /obj/item/clothing/neck/roguetown/chaincoif
 	belt = /obj/item/storage/belt/rogue/leather/black/soldier
 	beltl = /obj/item/flashlight/flare/torch/lantern
-	beltr = /obj/item/storage/belt/rogue/pouch/ammobag
+	beltr = /obj/item/storage/belt/rogue/pouch/ammobag/rifle
 	backl = /obj/item/gun/ballistic/rifle/repeater/perserdun
 	wrists = /obj/item/scomstone/garrison
 	gloves = /obj/item/clothing/gloves/roguetown/eastgloves1
 	backr = /obj/item/storage/backpack/rogue/backpack/perserdun
 	id = /obj/item/roguekey/perserdun
 	backpack_contents = list(
-		/obj/item/ammo_box/handfuls/rifle = 6,
-		/obj/item/rogueweapon/huntingknife/idagger/steel,
 		/obj/item/storage/belt/rogue/pouch/coins/poor,
 		/obj/item/gasgrenade,
 		/obj/item/smokegrenade,
-		/obj/item/reagent_containers/glass/bottle/rogue/healthpotnew,
 		/obj/item/rogueweapon/sword/iron/short,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)

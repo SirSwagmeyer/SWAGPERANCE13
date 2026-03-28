@@ -185,6 +185,8 @@ GLOBAL_LIST_INIT(perserdun_positions, list(
 	"Grand Knight",
 	"Knight Commander",
 	"Armsman",
+	"Rook",
+	"Ammo Squire",
 	"Auxiliarist",
 	"Chirurgeon",
 	"Partisan",

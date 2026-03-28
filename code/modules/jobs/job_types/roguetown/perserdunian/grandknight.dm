@@ -56,11 +56,9 @@
 	id = /obj/item/roguekey/perserdun
 	backr = /obj/item/storage/backpack/rogue/backpack/perserdun
 	backpack_contents = list(
-		/obj/item/rogueweapon/huntingknife/idagger/steel,
 		/obj/item/storage/belt/rogue/pouch/coins/rich,
 		/obj/item/gasgrenade,
 		/obj/item/grenade,
-		/obj/item/reagent_containers/glass/bottle/rogue/healthpotnew,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE) //test 2 see if it's broken
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)

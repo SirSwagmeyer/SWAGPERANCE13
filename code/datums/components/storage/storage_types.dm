@@ -250,8 +250,8 @@
 	set_holdable(/obj/item/reagent_containers/pill)
 
 /datum/component/storage/concrete/grid/hmg
-	screen_max_rows = 8
-	screen_max_columns = 8
+	screen_max_rows = 9
+	screen_max_columns = 9
 	insert_preposition = "in"
 
 /datum/component/storage/concrete/grid/hmg/New(datum/P, ...)

@@ -54,12 +54,10 @@
 	id = /obj/item/roguekey/risvon
 	backpack_contents = list(
 		/obj/item/ammo_box/handfuls/shotgun/buckshot = 6,
-		/obj/item/rogueweapon/huntingknife/idagger/steel,
 		/obj/item/storage/belt/rogue/pouch/coins/mid,
 		/obj/item/smokegrenade,
 		/obj/item/grenade,
 		/obj/item/rogueweapon/stoneaxe/woodcut/risvon,
-		/obj/item/reagent_containers/glass/bottle/rogue/healthpotnew,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)

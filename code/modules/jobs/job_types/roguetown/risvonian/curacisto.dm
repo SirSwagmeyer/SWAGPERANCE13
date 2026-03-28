@@ -52,7 +52,6 @@
 	backr = /obj/item/storage/backpack/rogue/satchel/surgeon
 	backpack_contents = list(
 		/obj/item/storage/belt/rogue/pouch/pillbottle,
-		/obj/item/rogueweapon/huntingknife/idagger/steel,
 		/obj/item/storage/belt/rogue/pouch/coins/rich,
 		)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)

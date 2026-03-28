@@ -215,9 +215,11 @@
 #define KNIGHTCOMMANDER (1<<2) //better armor + sawn down lever-action & a sword
 #define AUXILIARIST	(1<<3) //support role - same w/ servico
 #define ARMSMAN	(1<<4) //standard soldier w/ a rifle
-#define CHIRURGEON (1<<5)
-#define PARTISAN (1<<6)
-#define ENVOY (1<<7)
+#define ROOK (1<<5) // terdun machine gunner
+#define AMMOSQUIRE (1<<6) // terdun ammo bearer
+#define CHIRURGEON (1<<7)
+#define PARTISAN (1<<8)
+#define ENVOY (1<<9)
 
 #define RISVON	(1<<13)
 
@@ -270,9 +272,11 @@
 #define JDO_KNIGHTCOMMANDER 1.2
 #define JDO_AUXILIARIST 1.3
 #define JDO_ARMSMAN 1.4
-#define JDO_CHIRURGEON 1.5
-#define JDO_PARTISAN 1.6
-#define JDO_ENVOY 1.7
+#define JDO_ROOK 1.5
+#define JDO_AMMOSQUIRE 1.6
+#define JDO_CHIRURGEON 1.7
+#define JDO_PARTISAN 1.8
+#define JDO_ENVOY 1.82
 
 // RISVON
 #define JDO_COMMANDANT 1.9

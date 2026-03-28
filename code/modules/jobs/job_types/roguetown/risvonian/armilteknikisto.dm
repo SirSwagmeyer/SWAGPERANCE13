@@ -59,7 +59,7 @@
 		/obj/item/storage/belt/rogue/pouch/coins/poor,
 		/obj/item/smokegrenade = 1,
 		/obj/item/mg_tripod/utes,
-		/obj/item/ammo_box/magazine/hmg/a762x59 = 2,
+		/obj/item/ammo_box/magazine/hmg/a762x59,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)

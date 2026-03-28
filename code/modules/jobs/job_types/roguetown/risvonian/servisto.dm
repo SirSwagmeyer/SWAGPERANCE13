@@ -42,7 +42,7 @@
 	head = /obj/item/clothing/head/roguetown/helmet/kettle/iron
 	mask = /obj/item/clothing/mask/rogue/gasmask/risvonmask
 	neck = /obj/item/clothing/neck/roguetown/chaincoif
-	belt = /obj/item/storage/belt/rogue/leather/black
+	belt = /obj/item/storage/belt/rogue/leather/black/soldier
 	beltl = /obj/item/flashlight/flare/torch/lantern
 	beltr = /obj/item/storage/belt/rogue/pouch/stim
 	wrists = /obj/item/scomstone
@@ -51,7 +51,6 @@
 	backr = /obj/item/storage/backpack/rogue/backpack/risvon
 	backpack_contents = list(
 		/obj/item/ammo_box/clip/pistol = 4,
-		/obj/item/rogueweapon/huntingknife/idagger/steel,
 		/obj/item/gun/ballistic/rifle/repeater/pistol,
 		/obj/item/storage/belt/rogue/pouch/coins/poor,
 		/obj/item/smokegrenade = 2,
