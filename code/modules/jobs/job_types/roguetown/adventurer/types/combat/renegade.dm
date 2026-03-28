@@ -126,7 +126,7 @@
 				/obj/item/rogueweapon/huntingknife = 1, 
 				/obj/item/recipe_book/survival = 1,
 				/obj/item/rogueweapon/scabbard/sheath = 1,
-				/obj/item/ammo_box/magazine/jackal = 2,
+				/obj/item/ammo_box/magazine/jackal = 3,
 				/obj/item/flashlight/flare/torch = 1,
 				)
 			H.adjust_skillrank(/datum/skill/misc/tracking, 3, TRUE)

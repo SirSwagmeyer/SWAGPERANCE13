@@ -50,6 +50,14 @@
 	projectile_type = /obj/projectile/bullet/a22lr
 	bullet_type = RIFLECASING
 
+/obj/item/ammo_casing/a45acp
+	name = ".45 ACP bullet casing"
+	desc = "A .45 ACP bullet-piece."
+	icon_state = "spent-casing_QT_pistol"
+	caliber = "a45acp"
+	projectile_type = /obj/projectile/bullet/a45acp
+	bullet_type = RIFLECASING
+
 //shotguns
 
 /obj/item/ammo_casing/shotgun

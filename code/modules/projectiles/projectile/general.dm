@@ -30,6 +30,12 @@
 	icon_state = "bullet_proj"
 	damage = 30
 
+/obj/projectile/bullet/a45acp
+	name = ".45 ACP bullet"
+	icon_state = "bullet_proj"
+	damage = 45
+	armor_penetration = 30 // just enough to punch through chainmaille
+
 // shotgun
 
 /obj/projectile/bullet/shotgun_slug

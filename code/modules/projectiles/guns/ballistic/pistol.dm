@@ -122,10 +122,9 @@
 	icon_state = "colt"
 	item_state = "colt"
 	w_class = WEIGHT_CLASS_SMALL
-	mag_type = /obj/item/ammo_box/magazine/jackal
+	mag_type = /obj/item/ammo_box/magazine/fury
 	slowdown = 0.15
 	spread = 0.5
-	pump_sound = 'sound/combat/ranged/pistol_cock.ogg'
 	fire_sound = PISTOLSHOT
 	load_sound = 'sound/combat/ranged/pistol_magin.ogg'
 	eject_sound = 'sound/combat/ranged/pistol_magout.ogg'

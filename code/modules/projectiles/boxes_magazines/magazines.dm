@@ -18,12 +18,12 @@
 	multiload = 1
 	icon_state = "handgunmag"
 
-	/obj/item/ammo_box/magazine/fury
+/obj/item/ammo_box/magazine/fury
 	name = "fury magazine"
 	desc = "An extractable magazine. It has a few holes punched in it, you can see the rounds through it."
 	multiple_sprites = AMMO_BOX_PER_BULLET
-	ammo_type = /obj/item/ammo_casing/a22lr
-	caliber = "a22lr"
+	ammo_type = /obj/item/ammo_casing/a45acp
+	caliber = "a45acp"
 	max_ammo = 7
 	multiload = 1
 	icon_state = "colt-mag_LQ"
