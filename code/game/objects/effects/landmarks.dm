@@ -145,6 +145,12 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Barkeep"
 	icon_state = "arrow"
 
+/obj/effect/landmark/start/barkeeplate
+	name = "Barkeep"
+	icon_state = "arrow"
+	jobspawn_override = list("Barkeep")
+	delete_after_roundstart = FALSE
+
 /obj/effect/landmark/start/cook
 	name = "Cook"
 	icon_state = "arrow"
@@ -550,6 +556,16 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Soldato"
 	icon_state = "arrow"
 	jobspawn_override = list("Soldato")
+	delete_after_roundstart = FALSE
+
+/obj/effect/landmark/start/bastiono
+	name = "Bastiono"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/bastionolate
+	name = "Bastiono"
+	icon_state = "arrow"
+	jobspawn_override = list("Bastiono")
 	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/servisto

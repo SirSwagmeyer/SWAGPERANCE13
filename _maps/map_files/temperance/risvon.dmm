@@ -1336,6 +1336,11 @@
 	},
 /turf/open/water/cleanshallow,
 /area/rogue/outdoors/risvon)
+"lO" = (
+/obj/effect/landmark/start/bastiono,
+/obj/effect/landmark/start/bastionolate,
+/turf/open/floor/rogue/risvon,
+/area/rogue/indoors/risvonbase)
 "lQ" = (
 /obj/structure/table/wood/poor,
 /turf/open/floor/carpet/royalblack,
@@ -13404,7 +13409,7 @@ xK
 xK
 xK
 xK
-xK
+lO
 Tx
 EB
 Qw

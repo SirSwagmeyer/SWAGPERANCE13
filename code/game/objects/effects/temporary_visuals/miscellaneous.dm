@@ -467,3 +467,26 @@
 	else
 		return INITIALIZE_HINT_QDEL
 
+/obj/effect/temp_visual/smash_effect
+	name = "smash"
+	icon_state = "smash"
+	duration = 4
+
+/obj/effect/temp_visual/smash_effect/red
+	color = COLOR_BLOODRED
+
+/obj/effect/temp_visual/dir_setting/slash
+	name = "slash"
+	icon_state = "slash"
+	duration = 4
+
+/obj/effect/temp_visual/dir_setting/slash/red
+	color = COLOR_BLOODRED
+
+/obj/effect/temp_visual/slice
+	name = "slice"
+	icon_state = "slice"
+	duration = 4
+
+/obj/effect/temp_visual/slice/red
+	color = COLOR_BLOODRED

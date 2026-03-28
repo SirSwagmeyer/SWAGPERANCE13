@@ -225,10 +225,11 @@
 #define OFICIRO (1<<1) //sniper? maybe a semi-auto rifle? + grenades?
 #define VETERANO (1<<2) //veteran w/ a shotgun & grenades instead of a pistol & net
 #define SOLDATO	(1<<3) //standard soldier - high speed, low armor, net + pistol
-#define SERVISTO (1<<4) //support role - can probably shit meds out the wazoo 
-#define CURACISTO (1<<5)
-#define CAMPFOLLOWER (1<<6)
-#define CONSULO (1<<7)
+#define TUORO (1<<4)
+#define SERVISTO (1<<5) //support role - can probably shit meds out the wazoo 
+#define CURACISTO (1<<6)
+#define CAMPFOLLOWER (1<<7)
+#define CONSULO (1<<8)
 
 #define KINGSROW (1<<14)
 
@@ -276,17 +277,19 @@
 #define JDO_OFICIRO 2.1
 #define JDO_VETERANO 2.2
 #define JDO_SOLDATO 2.3
-#define JDO_SERVISTO 2.4
-#define JDO_CURACISTO 2.5
-#define JDO_CAMPFOLLOWER 2.6
-#define JDO_CONSULO 2.7
+#define JDO_TUORO 2.5
+#define JDO_SERVISTO 2.6
+#define JDO_CURACISTO 2.7
+#define JDO_CAMPFOLLOWER 2.8
+#define JDO_CONSULO 2.9
 
 // KINGSROW
 #define JDO_HIERARCH 3
 #define JDO_BULWARK 3.1
 #define JDO_PROVISIONER 3.2
 #define JDO_MORTICIAN 3.3
-#define JDO_TOWNER 3.4
+#define JDO_BARKEEP 3.4
+#define JDO_TOWNER 3.5
 
 // UNAFFILIATED
 #define JDO_FOREIGNER 4
@@ -310,14 +313,16 @@
 	/datum/job/roguetown/servicus,\
 	/datum/job/roguetown/curacisto,\
 	/datum/job/roguetown/campfollower,\
-	/datum/job/roguetown/consulo
+	/datum/job/roguetown/consulo,\
+	/datum/job/roguetown/tuoro
 
 #define KINGSROW_ROLES \
 	/datum/job/roguetown/hierarch,\
 	/datum/job/roguetown/bulwark,\
 	/datum/job/roguetown/provisioner,\
 	/datum/job/roguetown/mortician,\
-	/datum/job/roguetown/villager
+	/datum/job/roguetown/villager,\
+	/datum/job/roguetown/barkeep
 
 #define UNAFFILIATED_ROLES \
 	/datum/job/roguetown/adventurer,\

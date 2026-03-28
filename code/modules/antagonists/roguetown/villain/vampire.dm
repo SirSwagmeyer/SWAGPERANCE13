@@ -31,7 +31,7 @@
 
 /datum/antagonist/vampire/examine_friendorfoe(datum/antagonist/examined_datum,mob/examiner,mob/examined)
 	if(istype(examined_datum, /datum/antagonist/vampire/lesser))
-		return span_boldnotice("A child of Kain.")
+		return span_boldnotice("A child of Rab.")
 	if(istype(examined_datum, /datum/antagonist/vampire))
 		return span_boldnotice("An elder Kin.")
 	if(examiner.Adjacent(examined))
@@ -66,7 +66,7 @@
 	ADD_TRAIT(owner.current, TRAIT_NOPAIN, TRAIT_GENERIC)
 	ADD_TRAIT(owner.current, TRAIT_TOXIMMUNE, TRAIT_GENERIC)
 	ADD_TRAIT(owner.current, TRAIT_STEELHEARTED, TRAIT_GENERIC)
-	owner.current.cmode_music = 'sound/music/cmode/antag/combat_thrall.ogg'
+	owner.current.cmode_music = 'sound/music/combat_midsomber.ogg'
 	var/obj/item/organ/eyes/eyes = owner.current.getorganslot(ORGAN_SLOT_EYES)
 	if(eyes)
 		eyes.Remove(owner.current,1)
@@ -213,16 +213,16 @@
 	if(!VD)
 		return
 	VD.disguised = FALSE
-	skin_tone = "c9d3de"
-	hair_color = "181a1d"
-	facial_hair_color = "181a1d"
+	skin_tone = VD.cache_skin
+	hair_color = VD.cache_hair
+	facial_hair_color = VD.cache_hair
 	var/obj/item/organ/eyes/eyes = getorganslot(ORGAN_SLOT_EYES)
 	if(eyes)
 		eyes.Remove(src,1)
 		QDEL_NULL(eyes)
 	eyes = new /obj/item/organ/eyes/night_vision/zombie
 	eyes.Insert(src)
-	set_eye_color(src, "#FF0000", "#FF0000")
+	set_eye_color(src, "#5c0e0e", "#5c0e0e")
 	update_body()
 	update_hair()
 	update_body_parts(redraw = TRUE)

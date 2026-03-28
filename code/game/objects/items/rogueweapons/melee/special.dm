@@ -111,7 +111,7 @@
 	wbalance = WBALANCE_NORMAL
 	minstr = 5
 	wdefense = 0
-	var/charge = 100
+	var/stuncharge = 100
 	var/on = FALSE
 
 /datum/intent/mace/strike/stunner/afterchange()
@@ -144,10 +144,10 @@
 	. = ..()
 	if(on)
 		target.electrocute_act(5, src)
-		charge -= 33
-		if(charge <= 0)
+		stuncharge -= 33
+		if(stuncharge <= 0)
 			on = FALSE
-			charge = 0
+			stuncharge = 0
 			update_icon()
 			if(user.a_intent)
 				var/datum/intent/I = user.a_intent
@@ -164,12 +164,12 @@
 	if(on)
 		on = FALSE
 	else
-		if(charge <= 33)
+		if(stuncharge <= 33)
 			to_chat(user, span_warning("It's out of juice."))
 			return
 		user.visible_message(span_warning("[user] flicks [src] on."))
 		on = TRUE
-		charge--
+		stuncharge--
 	playsound(user, pick('sound/items/stunmace_toggle (1).ogg','sound/items/stunmace_toggle (2).ogg','sound/items/stunmace_toggle (3).ogg'), 100, TRUE)
 	if(user.a_intent)
 		var/datum/intent/I = user.a_intent
@@ -180,13 +180,13 @@
 
 /obj/item/rogueweapon/mace/stunmace/process()
 	if(on)
-		charge--
+		stuncharge--
 	else
-		if(charge < 100)
-			charge++
-	if(charge <= 0)
+		if(stuncharge < 100)
+			stuncharge++
+	if(stuncharge <= 0)
 		on = FALSE
-		charge = 0
+		stuncharge = 0
 		update_icon()
 		var/mob/user = loc
 		if(istype(user))
@@ -202,7 +202,7 @@
 		if(istype(user))
 			user.electrocute_act(5, src)
 		on = FALSE
-		charge = 0
+		stuncharge = 0
 		update_icon()
 		playsound(src, pick('sound/items/stunmace_toggle (1).ogg','sound/items/stunmace_toggle (2).ogg','sound/items/stunmace_toggle (3).ogg'), 100, TRUE)
 

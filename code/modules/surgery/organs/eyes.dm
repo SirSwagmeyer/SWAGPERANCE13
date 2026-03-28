@@ -149,6 +149,7 @@
 
 /obj/item/organ/eyes/night_vision/zombie
 	name = "undead eyes"
+	eye_color = "#5c0e0e"
 	desc = ""
 
 /obj/item/organ/eyes/construct

@@ -1,5 +1,5 @@
 /datum/job/roguetown/barkeep
-	title = "Innkeeper"
+	title = "Barkeeper"
 	flag = BARKEEP
 	department_flag = KINGSROW
 	faction = "Station"
@@ -11,6 +11,7 @@
 	tutorial = "Adventurers, soldiers - even the regular townsfolk. You're both the bartender and the cook. So, let's make some money."
 
 	outfit = /datum/outfit/job/roguetown/barkeep
+	display_order = JDO_BARKEEP
 	give_bank_account = 43
 	min_pq = -4
 	max_pq = null
