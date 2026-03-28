@@ -144,6 +144,10 @@
 		/datum/sprite_accessory/snout/hjackal,
 		/datum/sprite_accessory/snout/hspots,
 		/datum/sprite_accessory/snout/hhorse,
+		/datum/sprite_accessory/snout/sharp
+		/datum/sprite_accessory/snout/sharplight
+		/datum/sprite_accessory/snout/round
+		/datum/sprite_accessory/snout/roundlight
 		)
 
 /datum/customizer/organ/snout/akula
