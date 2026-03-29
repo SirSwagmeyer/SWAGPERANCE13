@@ -131,3 +131,20 @@
 	eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
 	recoil = 0.15
 	semi_auto = TRUE
+
+/obj/item/gun/ballistic/pistol/broomhandle
+	name = "KR 'Trenchsweeper'"
+	desc = "Heavy and uncomfortable almost requiring two hands to pull this thing up, how the fuck is this a pistol? 10 round capacity fed by 5 round stripper clips loaded with rifle rounds. This thing is just as it's name implies, a trench sweeper. Semi automatic, Smooth trigger despite the weight on this thing. There's a crown stamped on the grip, along with a KR just above it. You'd imagine only someone with a high standing would own this."
+	icon_state = "broomhandle"
+	item_state = "broomhandle"
+	w_class = WEIGHT_CLASS_SMALL
+	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/broomhandle
+	slowdown = 0.25 //BIG pistol
+	spread = 0.5
+	force = 25 //heavy pistol, should be good for whipping someone in the head with
+	fire_sound = PISTOLSHOT
+	load_sound = 'sound/combat/ranged/pistol_magin.ogg'
+	eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
+	recoil = 0.2 //make it FEEL uncomfortable
+	semi_auto = TRUE
+	slot_flags = ITEM_SLOT_BACK

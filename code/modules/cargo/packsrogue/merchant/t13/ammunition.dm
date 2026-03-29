@@ -74,3 +74,9 @@
 	cost = 30
 	contains = list(/obj/item/ammo_box/magazine/fury,
 	/obj/item/ammo_box/magazine/fury)
+
+/datum/supply_pack/rogue/ammunition/broomhandle
+	name = "Broomhandle Clips (x2)"
+	cost = 40
+	contains = list(/obj/item/ammo_box/clip/broomhandle,
+	/obj/item/ammo_box/clip/broomhandle)
