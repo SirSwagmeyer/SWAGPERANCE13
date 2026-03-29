@@ -87,8 +87,8 @@
     contains = list(/obj/item/ammo_box/magazine/luger,
     /obj/item/ammo_box/magazine/luger)
 
-/datum/supply_pack/rogue/ammunition/snubby
-	name = "Snubby Speedloaders (x2)"
+/datum/supply_pack/rogue/ammunition/snub
+	name = "Snubnose Speedloaders (x2)"
 	cost = 30
-	contains = list(/obj/item/ammo_box/speedloader/snubby,
-	/obj/item/ammo_box/speedloader/snubby)
+	contains = list(/obj/item/ammo_box/speedloader/snub,
+	/obj/item/ammo_box/speedloader/snub)
