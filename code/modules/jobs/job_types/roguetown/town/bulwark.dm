@@ -5,8 +5,8 @@
 	flag = BULWARK
 	department_flag = RISVON
 	faction = "Station"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 6 //temporary solution
+	spawn_positions = 6
 	allowed_races = RACES_TEMPERANCE
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT)

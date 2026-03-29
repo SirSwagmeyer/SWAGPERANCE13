@@ -31,7 +31,7 @@
 	body_parts_covered = FULL_HEAD
 	flags_inv = HIDEFACE
 
-/obj/item/clothing/suit/roguetown/helmet/heavy/dwarven/visored/ComponentInitialize()
+/obj/item/clothing/suit/roguetown/helmet/heavy/ebhelmet/visored/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/layeredarmor/ebarmor)
 

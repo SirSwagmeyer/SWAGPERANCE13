@@ -85,9 +85,12 @@
 /obj/item/clothing/head/roguetown/helmet/kettle/iron
 	name = "iron kettle helmet"
 	desc = "A kettle helmet made of iron. It protects the top and sides of the head."
-	icon_state = "ikettle"
+	icon_state = "ikettle_visor"
 	smeltresult = /obj/item/ingot/iron
 	max_integrity = ARMOR_INT_HELMET_IRON
+
+/obj/item/clothing/head/roguetown/helmet/kettle/iron/ComponentInitialize()
+	AddComponent(/datum/component/adjustable_clothing, (HEAD|EARS|HAIR), HIDEHAIR, null, 'sound/items/visor.ogg', null, UPD_HEAD)
 
 /obj/item/clothing/head/roguetown/helmet/kettle/wide
 	name = "wide kettle helmet"

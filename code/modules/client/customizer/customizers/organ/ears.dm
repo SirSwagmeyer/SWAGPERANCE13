@@ -88,7 +88,7 @@
 		/datum/sprite_accessory/ears/goblin_small,
 		/datum/sprite_accessory/ears/halforc)
 
-/datum/customizer/organ/ears/goblin 
+/datum/customizer/organ/ears/goblin
 	customizer_choices = list(/datum/customizer_choice/organ/ears/goblin)
 	allows_disabling = FALSE
 
@@ -130,6 +130,10 @@
 		/datum/sprite_accessory/ears/murid,
 		/datum/sprite_accessory/ears/otie,
 		/datum/sprite_accessory/ears/wolf,
+		/datum/sprite_accessory/ears/lab,
+		/datum/sprite_accessory/ears/perky,
+		/datum/sprite_accessory/ears/cobrahood,
+		/datum/sprite_accessory/ears/miqote,
 		)
 
 /datum/customizer/organ/ears/anthro
@@ -156,6 +160,10 @@
 		/datum/sprite_accessory/ears/murid,
 		/datum/sprite_accessory/ears/otie,
 		/datum/sprite_accessory/ears/wolf,
+		/datum/sprite_accessory/ears/lab,
+		/datum/sprite_accessory/ears/perky,
+		/datum/sprite_accessory/ears/cobrahood,
+		/datum/sprite_accessory/ears/miqote,
 		)
 
 /datum/customizer/organ/ears/lizard
