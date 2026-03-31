@@ -285,19 +285,33 @@
 //////////////////////
 ///UTES///////////////
 //////////////////////
-/obj/item/gun/ballistic/heavy_mg/utes
-	name = "NSV Utes"
-	desc = "Ya Spetznas!"
+/obj/item/gun/ballistic/heavy_mg/mark1
+	name = "'Mark 1' HMG"
+	desc = "A top of the line, universally feared machine-produced heavy machine gun. The national Risvon WAR machine very rarely produces these things."
 	icon_state = "utes"
+	mag_type = /obj/item/ammo_box/magazine/hmg/a303
+	fire_sound = HMGGENERICSHOT
+
+/obj/item/gun/ballistic/heavy_mg/mark1/update_icon()
+	..()
+	if(magazine)
+		icon_state = "mark1"
+	else
+		icon_state = "mark1-empty"
+
+/obj/item/gun/ballistic/heavy_mg/spandau
+	name = "'Spandau' HMG"
+	desc = "The feared 'Spandau' heavy machine gun. The rare pieces of machine-produced production the Imperials can get their hands on go into weapons like this."
+	icon_state = "spandau"
 	mag_type = /obj/item/ammo_box/magazine/hmg/a762x59
 	fire_sound = HMGGENERICSHOT
 
-/obj/item/gun/ballistic/heavy_mg/utes/update_icon()
+/obj/item/gun/ballistic/heavy_mg/spandau/update_icon()
 	..()
 	if(magazine)
-		icon_state = "utes"
+		icon_state = "spandau"
 	else
-		icon_state = "utes-empty"
+		icon_state = "spandau-empty"
 
 //////////////////////////////
 ////////////M2BROWNING/////////

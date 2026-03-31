@@ -49,17 +49,18 @@
 	neck = /obj/item/clothing/neck/roguetown/chaincoif
 	belt = /obj/item/storage/belt/rogue/leather/black/soldier
 	beltl = /obj/item/flashlight/flare/torch/lantern
-	beltr = /obj/item/rogueweapon/stoneaxe/woodcut/risvon
+	beltr = /obj/item/gun/ballistic/pistol/offiseroluger
 	wrists = /obj/item/scomstone
 	gloves = /obj/item/clothing/gloves/roguetown/eastgloves1
 	id = /obj/item/roguekey/risvon
 	backr = /obj/item/storage/backpack/rogue/backpack/risvon
-	backl = /obj/item/mg_disassembled/utes
+	backl = /obj/item/mg_disassembled/mark1
 	backpack_contents = list(
 		/obj/item/storage/belt/rogue/pouch/coins/poor,
 		/obj/item/smokegrenade = 1,
-		/obj/item/mg_tripod/utes,
-		/obj/item/ammo_box/magazine/hmg/a762x59,
+		/obj/item/mg_tripod/mark1,
+		/obj/item/ammo_box/magazine/hmg/a303,
+		/obj/item/ammo_box/magazine/luger = 3,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)

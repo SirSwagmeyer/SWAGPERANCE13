@@ -10,10 +10,18 @@
 	slot_flags = ITEM_SLOT_BACK
 	var/id_g = "bmg"
 
-/obj/item/mg_disassembled/utes
-	name = "disassembled NSV Utes"
-	icon_state = "utes-disconnected"
-	id_g = "uts"
+/obj/item/mg_disassembled/spandau
+	name = "disassembled 'Spandau' HMG"
+	desc = "The feared 'Spandau' heavy machine gun. The rare pieces of machine-produced production the Imperials can get their hands on go into weapons like this."
+	icon_state = "spandau-disconnected"
+	id_g = "spd"
+
+/obj/item/mg_disassembled/mark1
+	name = "disassembled 'Mark 1' HMG"
+	desc = "A top of the line, universally feared machine-produced heavy machine gun. The national Risvon WAR machine very rarely produces these things."
+	icon_state = "utes"
+	icon_state = "mark1-disconnected"
+	id_g = "mk1"
 
 /obj/item/mg_disassembled/m2
 	name = "disassembled M2"

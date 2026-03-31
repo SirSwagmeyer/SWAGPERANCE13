@@ -67,8 +67,13 @@
 		qdel(src)
 
 //hmg
-/obj/projectile/bullet/a762x59
+/obj/projectile/bullet/a762x59 //perserdun mg
 	name = "7.62x59mm bullet"
+	damage = 70
+	armor_penetration = 10
+
+/obj/projectile/bullet/a303 //risvon mg 
+	name = ".303 bullet"
 	damage = 70
 	armor_penetration = 10
 

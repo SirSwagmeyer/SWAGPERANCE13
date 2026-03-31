@@ -87,11 +87,17 @@
 	src.forceMove(machinegun)
 
 
-/obj/item/mg_tripod/utes
-	name = "NSV Utes tripod"
-	icon_state = "utes-tripod"
-	id_g = "uts"
-	need_type = /obj/item/gun/ballistic/heavy_mg/utes
+/obj/item/mg_tripod/spandau
+	name = "'Spandau' tripod"
+	icon_state = "spandau-tripod"
+	id_g = "spd"
+	need_type = /obj/item/gun/ballistic/heavy_mg/spandau
+
+/obj/item/mg_tripod/mark1
+	name = "'Mark 1' tripod"
+	icon_state = "mark1-tripod"
+	id_g = "mk1"
+	need_type = /obj/item/gun/ballistic/heavy_mg/mark1
 
 /obj/item/mg_tripod/m2
 	name = "M2 tripod"

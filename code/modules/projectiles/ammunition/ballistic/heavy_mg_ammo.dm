@@ -1,4 +1,4 @@
-//UTES AMMO placeholder btw
+//SPANDAU AMMO
 
 /obj/item/ammo_casing/a762x59
 	name = "7.62x59 lead bullet casing"
@@ -8,6 +8,15 @@
 	projectile_type = /obj/projectile/bullet/a762x59
 	bullet_type = RIFLECASING
 
+//MARK 1 AMMO
+
+/obj/item/ammo_casing/a303
+	name = ".303 lead bullet casing"
+	desc = "A .303 bullet. For the big guns."
+	icon_state = "spent-casing_QT_rifle"
+	caliber = "a303"
+	projectile_type = /obj/projectile/bullet/a303
+	bullet_type = RIFLECASING
 
 //M2 AMMO 
 
