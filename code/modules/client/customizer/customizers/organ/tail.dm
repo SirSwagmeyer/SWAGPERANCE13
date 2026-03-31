@@ -161,4 +161,6 @@
 		/datum/sprite_accessory/tail/lizard/ltiger,
 		/datum/sprite_accessory/tail/lizard/spikes,
 		/datum/sprite_accessory/tail/rattlesnake,
+		/datum/sprite_accessory/tail/fox,
+		/datum/sprite_accessory/tail/fox2,
 		)
