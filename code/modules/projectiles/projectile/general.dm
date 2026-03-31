@@ -30,6 +30,17 @@
 	icon_state = "bullet_proj"
 	damage = 30
 
+/obj/projectile/bullet/a45acp
+	name = ".45 ACP bullet"
+	icon_state = "bullet_proj"
+	damage = 48
+
+/obj/projectile/bullet/a380
+    name = ".380 ACP bullet"
+    icon_state = "bullet_proj"
+    damage = 50
+    armor_penetration = 30
+
 // shotgun
 
 /obj/projectile/bullet/shotgun_slug

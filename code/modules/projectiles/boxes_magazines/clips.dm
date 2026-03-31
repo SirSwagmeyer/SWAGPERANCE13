@@ -21,3 +21,11 @@
 	ammo_type = /obj/item/ammo_casing/a762
 	caliber = "a762"
 	max_ammo = 5
+
+/obj/item/ammo_box/clip/broomhandle
+	name = "broomhandle clip"
+	desc = "A metal piece used for filling up the broomhandle pistol."
+	icon_state = "LQ-clip"
+	ammo_type = /obj/item/ammo_casing/a762
+	caliber = "a762"
+	max_ammo = 5

@@ -91,7 +91,7 @@
 
 /obj/item/gun/ballistic/revolver/grandmaster
 	name = "'Garland' Service Revolver"
-	desc = "A very, very expensive revolver used by the Grandmaster."
+	desc = "A very, very expensive revolver used by the Grandmaster. It's got a very nice finish, and looks very well made. It's also got a very high price tag, so you probably shouldn't be holding it."
 	w_class = WEIGHT_CLASS_SMALL
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/revolver
 	force = 10
@@ -107,7 +107,7 @@
 
 /obj/item/gun/ballistic/revolver/pace
 	name = "'Pace' Prarie Revolver"
-	desc = "A relatively cheap revolver, similar to the Garland. Doesn't handle as well."
+	desc = "A relatively cheap revolver, similar to the Garland. Doesn't handle as well. Not as accurate, not as well made. Still, it'll put holes in things, and that's what you need, right?"
 	w_class = WEIGHT_CLASS_SMALL
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/revolver
 	force = 10
@@ -121,6 +121,37 @@
 	recoil = 0.30
 	experimental_inhand = FALSE
 
+/obj/item/gun/ballistic/revolver/webley
+	name = "'Kesha' Break Open Revolver"
+	desc = "A classic Kalarian revolver, known for its reliability and it's intuitive break open cylinder, or at least that's what the gunsmith told you."
+	w_class = WEIGHT_CLASS_SMALL
+	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/revolver
+	force = 10
+	spread = 6
+	icon_state = "webley"
+	item_state = "webley"
+	slowdown = 0.15
+	empty_indicator = TRUE
+	fire_sound = REVOLVERSHOT
+	load_sound = REVOLVERINSERT
+	recoil = 0.30
+	experimental_inhand = FALSE
+
+/obj/item/gun/ballistic/revolver/snub
+	name = "'Land' Snubnose Revolver"
+	desc = "A compact revolver with a short barrel. Notoriously inaccurate, but easy to conceal. Seems the kind of gun that a bandit would use, but you know, it gets the job done."
+	w_class = WEIGHT_CLASS_SMALL
+	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/snubby
+	force = 9 // haha tiny gun bad
+	spread = 8 // with what barrel yo?
+	icon_state = "snubnose"
+	item_state = "snubnose"
+	slowdown = 0.1 // small gun, small slowdown
+	empty_indicator = TRUE
+	fire_sound = REVOLVERSHOT
+	load_sound = REVOLVERINSERT
+	recoil = 0.30
+	experimental_inhand = FALSE
 
 //dogshit double barrel shotgun code
 
@@ -139,3 +170,4 @@
 	load_sound = SHOTGUNINSERT
 	recoil = 0.30
 	experimental_inhand = FALSE
+	slot_flags = ITEM_SLOT_BACK

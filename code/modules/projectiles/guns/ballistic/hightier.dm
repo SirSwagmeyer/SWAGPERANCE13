@@ -34,7 +34,7 @@
 
 /obj/item/gun/ballistic/rifle/reaper
 	name = "GRD 'Reaper'"
-	desc = "One of the few semi-automatic guns around. Shoots rifle rounds, and loads using a clip."
+	desc = "One of the few semi-automatic guns around. Shoots rifle rounds, and loads using a clip. Mind the scratchy bolt, it might not close by itself sometimes, give it a nice tug and send it home. The trigger might get stuck from time to time too, so try pulling it faster to force it to shoot. The name has a touch of irony to it, sure it kills, hell it ruins people.... but with how fast you dump the clip, you might as well be visiting the reaper yourself."
 	icon_state = "rsc"
 	item_state = "rsc"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/reaper

@@ -57,6 +57,14 @@
 	max_ammo = 5
 	multiload = 1
 
+/obj/item/ammo_box/magazine/internal/boltaction/broomhandle
+	name = "broomhandle internal mag"
+	desc = "u shouldnt be seeing this"
+	ammo_type = /obj/item/ammo_casing/a762
+	caliber = "a762"
+	max_ammo = 10
+	multiload = 1
+
 //revolvers
 
 /obj/item/ammo_box/magazine/internal/boltaction/revolver
@@ -64,6 +72,14 @@
 	desc = "This should NOT be here."
 	ammo_type = /obj/item/ammo_casing/a44
 	caliber = "a44"
+	max_ammo = 6
+	multiload = 1
+
+/obj/item/ammo_box/magazine/internal/boltaction/snubby
+	name = "snubby internal magazine"
+	desc = "This should NOT be here."
+	ammo_type = /obj/item/ammo_casing/a380
+	caliber = "a380"
 	max_ammo = 6
 	multiload = 1
 

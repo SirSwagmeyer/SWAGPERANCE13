@@ -7,7 +7,6 @@
 	spawn_positions = 1
 	allowed_races = RACES_TEMPERANCE
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_ages = list(AGE_ADULT)
 	selection_color = JCOLOR_KINGSROW
 
 	tutorial = "You're the leading force of modernity in Kingsrow. \
@@ -31,25 +30,24 @@
 	beltr = /obj/item/storage/keyring/royal
 	id = /obj/item/clothing/ring/gold
 	backl = /obj/item/storage/backpack/rogue/satchel
+	backr = /obj/item/gun/ballistic/pistol/broomhandle
 	wrists = /obj/item/scomstone/kingsrow
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
+	backpack_contents = list(
+		/obj/item/flashlight/flare/torch/lantern = 1,
+		/obj/item/rogueweapon/huntingknife/idagger/steel = 1,
+		/obj/item/storage/belt/rogue/pouch/stim = 1,
+		/obj/item/ammo_box/clip/broomhandle = 6,		
+		)
+	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/pistols, 6, TRUE) //does nothing cause pistols don't have aim time but it just makes them feel cooler
 	H.change_stat("intelligence", 2)
 	H.change_stat("constitution", 1)
 	H.change_stat("endurance", 1)
@@ -64,3 +62,5 @@
 		gloves = /obj/item/clothing/gloves/roguetown/eastgloves1
 	else if(should_wear_femme_clothes(H))
 		shirt = /obj/item/clothing/suit/roguetown/shirt/hierarchess
+		pants = /obj/item/clothing/under/roguetown/heavy_leather_pants
+		gloves = /obj/item/clothing/gloves/roguetown/eastgloves1
