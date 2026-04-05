@@ -1372,6 +1372,7 @@
 #include "code\modules\clothing\rogueclothes\pants\leather.dm"
 #include "code\modules\clothing\rogueclothes\pants\plate.dm"
 #include "code\modules\clothing\rogueclothes\pants\skirt.dm"
+#include "code\modules\clothing\rogueclothes\pants\t13pants.dm"
 #include "code\modules\clothing\shoes\_shoes.dm"
 #include "code\modules\clothing\suits\_suits.dm"
 #include "code\modules\clothing\suits\cloaks.dm"

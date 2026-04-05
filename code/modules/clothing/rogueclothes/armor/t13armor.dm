@@ -149,3 +149,12 @@
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_shirts.dmi'
 	icon_state = "bulwark"
 	item_state = "bulwark"
+
+/obj/item/clothing/suit/roguetown/armor/plate/modern/blacksteel_full_plate/bulwark
+	name = "machined armor"
+	desc = "Raw strips of metal from the Outlet's walls, headed and formed for personal protection."
+	icon_state = "ibulwark"
+	item_state = "ibulwark"
+	icon = 'icons/roguetown/clothing/armor.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'

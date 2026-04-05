@@ -5,9 +5,9 @@
 	flag = BULWARK
 	department_flag = RISVON
 	faction = "Station"
-	total_positions = 6 //temporary solution
-	spawn_positions = 6
-	allowed_races = RACES_TEMPERANCE
+	total_positions = 2
+	spawn_positions = 2
+	allowed_races = RACES_CONSCRIPT
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT)
 	advclass_cat_rolls = list(CTAG_BULWARK = 20)
@@ -27,15 +27,16 @@
 	cmode_music = 'sound/music/combat_bulwark.ogg'
 
 /datum/outfit/job/roguetown/bulwark/pre_equip(mob/living/carbon/human/H)
-	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy //originally was going to be heavy/bulwark, but it looks like shit lol
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/heavy/bulwark
-	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants
+	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy
+	shoes = /obj/item/clothing/shoes/roguetown/boots/blacksteel/modern/plateboots/bulwark
+	armor = /obj/item/clothing/suit/roguetown/armor/plate/modern/blacksteel_full_plate/bulwark
+	pants = /obj/item/clothing/under/roguetown/platelegs/blacksteel/modern/bulwark
 	belt = /obj/item/storage/belt/rogue/leather/black/soldier
 	beltl = /obj/item/gun/ballistic/rifle/repeater/luger
 	beltr = /obj/item/storage/belt/rogue/pouch/stim
-	gloves = /obj/item/clothing/gloves/roguetown/eastgloves1
+	gloves = /obj/item/clothing/gloves/roguetown/blacksteel/modern/plategloves/bulwark
 	wrists = /obj/item/scomstone/kingsrow
+	head = /obj/item/clothing/head/roguetown/helmet/blacksteel/modern/armet/bulwark
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)

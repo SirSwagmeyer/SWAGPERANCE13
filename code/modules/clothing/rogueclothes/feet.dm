@@ -495,3 +495,13 @@
 	if(QDELETED(src))
 		return
 	qdel(src)
+
+
+/obj/item/clothing/shoes/roguetown/boots/blacksteel/modern/plateboots/bulwark
+	name = "machined boots"
+	desc = "Crush them."
+	icon_state = "ibulwark"
+	item_state = "ibulwark"
+	icon = 'icons/roguetown/clothing/feet.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/feet.dmi'
+	sleeved = 'icons/roguetown/clothing/onmob/feet.dmi'

@@ -55,6 +55,14 @@
 	icon_state = "commandant"
 	item_state = "commandant"
 
+/obj/item/clothing/head/roguetown/helmet/blacksteel/modern/armet/bulwark
+	name = "machined armet"
+	desc = "Make them pay."
+	icon_state = "ibulwark"
+	item_state = "ibulwark"
+	icon = 'icons/roguetown/clothing/head.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head.dmi'
+	flags_inv = HIDE_HEADTOP
 
 // light helmets
 

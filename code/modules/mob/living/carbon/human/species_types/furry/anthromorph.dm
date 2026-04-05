@@ -2,10 +2,10 @@
 	race = /datum/species/anthromorph
 
 /datum/species/anthromorph
-	name = "Black Beast"
+	name = "Heishou"
 	id = "anthromorph"
-	desc = "<b>Black Beast</b><br>\
-	The progenitor of Beastmen, Black Beasts were once human beings. They were around before the MACHINES appeared. \
+	desc = "<b>Heishou</b><br>\
+	The progenitor of Beastmen, Heishou were once human beings. They were around before the MACHINES appeared. \
 	Captured and forced into strange alchemical experiments by the Jade Empire of Xiyuan, \
 	they've been sold off by the Empire to act purely as slave-soldiers. Both Risvon and Perserdun actively use them. \
 	They're usually identified as second-class citizens. As a result, they rarely receive proper education. \

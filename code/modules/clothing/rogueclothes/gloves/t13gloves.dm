@@ -26,3 +26,12 @@
 	if(QDELETED(src))
 		return
 	qdel(src)
+
+/obj/item/clothing/gloves/roguetown/blacksteel/modern/plategloves/bulwark
+	name = "machined gloves"
+	desc = "Scare them."
+	icon_state = "ibulwark"
+	item_state = "ibulwark"
+	sleeved = 'icons/roguetown/clothing/onmob/gloves.dmi'
+	icon = 'icons/roguetown/clothing/gloves.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/gloves.dmi'

@@ -1,5 +1,5 @@
 /datum/job/roguetown/servisto
-	title = "Servisto"
+	title = "Magiisto"
 	flag = SERVISTO
 	department_flag = RISVON
 	faction = "Station"
@@ -9,8 +9,8 @@
 	allowed_sexes = list(MALE)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 
-	tutorial = "You are a supporter of the Ziggurate's war effort. \
-				You are primarily a medicine-man, and spend most of your time chopping up bodies." 
+	tutorial = "You are a magician within the Ziggurate force. \
+				You're attached to each Cadre, acting as both a means to increase Soldato strength & healing." 
 
 	outfit = /datum/outfit/job/roguetown/servisto
 	display_order = JDO_SERVISTO
