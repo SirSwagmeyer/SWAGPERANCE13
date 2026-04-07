@@ -257,6 +257,7 @@
 		/obj/item/rogueweapon/greataxe = 1,
 		/obj/item/rogueweapon/stoneaxe/handaxe/copper = 1,
 		/obj/item/rogueweapon/stoneaxe/handaxe = 1,
+		/obj/item/frogmine = 6,
 		//tools
 		/obj/item/rogueweapon/shovel = 2,
 		/obj/item/rogueweapon/shovel/aalloy = 1,
