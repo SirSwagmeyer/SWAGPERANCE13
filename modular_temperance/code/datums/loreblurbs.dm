@@ -105,7 +105,7 @@ Just because it'd get a LITTLE annoying if you kept seeing this over and over. H
 
 /datum/loreblurb/code1
 	title = "FROM A RADIO"
-	description = "ZLJBYPAF VBAWVZA"
+	description = "34 15 43 313 26 16 312 61 34 15 43 312 53 26"
 	sound = 'sound/loredump/lore_sting6.ogg'
 
 /datum/loreblurb/apartments
@@ -116,7 +116,7 @@ Just because it'd get a LITTLE annoying if you kept seeing this over and over. H
 
 /datum/loreblurb/code2
 	title = "SOMETHING WHISPERS"
-	description = "HWHYATLUA"
+	description = "41 231 41 26 312 51 15 52 312 34"
 	sound = 'sound/loredump/lore_sting6.ogg'
 
 /datum/loreblurb/hospital 
@@ -127,7 +127,7 @@ Just because it'd get a LITTLE annoying if you kept seeing this over and over. H
 
 /datum/loreblurb/code3
 	title = "WHISPERED IN YOUR EAR"
-	description = "OVZWPAHS"
+	description = "132 53 34 231 16 312 41 213"
 	sound = 'sound/loredump/lore_sting6.ogg'
 
 /datum/loreblurb/factory
@@ -138,9 +138,9 @@ Just because it'd get a LITTLE annoying if you kept seeing this over and over. H
 	sound = 'sound/loredump/lore_sting6.ogg'
 
 /datum/loreblurb/umamusume
-	title = "HYPTH KINEN"
+	title = "41 26 16 51 41 KINEN"
 	description = "2,500 meters. \n\
 	Right-handed. \n\
-	YHJLJVBYZL Racecourse. \n\
+	52 41 212 41 61 41 51 41 Racecourse. \n\
 	Though, it looks like this is a left-handed track. Weird."
 	sound = 'sound/loredump/lore_sting6.ogg'

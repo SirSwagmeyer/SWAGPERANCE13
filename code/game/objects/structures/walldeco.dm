@@ -524,7 +524,7 @@
 
 /obj/structure/fluff/walldeco/spoiler5
 	name = "???"
-	desc = "MYVT AOL ZAHYZ AOLF MVBUK BZ. There's something white and tall - shining light onto an incredible amount of bodies."
+	desc = "123 26 53 51 312 132 15 34 312 41 26 34 312 132 15 61 123 53 313 52 121 313 34. There's something white and tall - shining light onto an incredible amount of bodies."
 	icon_state = "spoiler5"
 	layer = ABOVE_MOB_LAYER
 

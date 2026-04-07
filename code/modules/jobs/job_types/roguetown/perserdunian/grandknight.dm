@@ -9,10 +9,11 @@
 	allowed_sexes = list(MALE)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 
-	tutorial = "You're the right hand man of the Grandmaster. Essentially a drugged up, combative Lieutenant. \
-				Your main goal is to draw the most attention onto yourself, while soaking up the most damage. \
-				Typically, Grand Knights are hand selected by their Grandmaster. You might also be assigned to one. \
-				Also, most Grand Knights lack fine-motor skills, due to the increased intake of stimulants. They aren't trained in guns." 
+	tutorial = "You're the right hand man of the Grandmaster. Essentially a combative Lieutenant. \
+				Your main goal is to act as a force multiplier for the Perserdunians.\
+				You do this by bringing up the rear in charges & dealing with stragglers. \
+				Typically, Grand Knights are selected from the few pre-machine noble lineages that remain within the Empire. \
+				Grand Knights are unique in that they are a symbolic representation of the pre-machine Empire's strength." 
 
 	outfit = /datum/outfit/job/roguetown/grandknight
 	display_order = JDO_GRANDKNIGHT
