@@ -77,5 +77,5 @@
 	name = "M&C 'Hare' Lever Action Shotgun"
 	cost = 180
 	contains = list(
-					/obj/item/gun/ballistic/revolver/levershotgun,
+					/obj/item/gun/ballistic/shotgun/levershotgun,
 				)

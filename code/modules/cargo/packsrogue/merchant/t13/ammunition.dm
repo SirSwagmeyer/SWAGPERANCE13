@@ -94,7 +94,7 @@
 	/obj/item/ammo_box/speedloader/snub)
 
 /datum/supply_pack/rogue/ammunition/judge
-	name = "Judge handfuls (x2)"
+	name = "Judge revolver handfuls (x2)"
 	cost = 30
-	contains = list(/obj/item/ammo_box/handfuls/judge
+	contains = list(/obj/item/ammo_box/handfuls/judge,
 	/obj/item/ammo_box/handfuls/judge)
