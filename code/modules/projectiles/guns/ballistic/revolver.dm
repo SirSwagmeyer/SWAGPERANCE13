@@ -176,7 +176,7 @@
 /obj/item/gun/ballistic/revolver/sawedoff
 	name = "'Persuader' Sawed off Single Barrel Shotgun"
 	desc = "A barebones sawed off single barrel shotgun. Looks like shit, Pretty heavy, could probably be thrown as a last resort."
-	w_class = WEIGHT_CLASS_BULKY
+	w_class = WEIGHT_CLASS_SMALL
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/sawedoff
 	force = 20
 	throwforce = 40

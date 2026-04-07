@@ -183,6 +183,7 @@
 	name = "M&C 'Hare' Lever Action Shotgun"
 	desc = "Old thing this is, but it still works, pretty well too for its age. It's got a lever action, pull it to chamber the round, and to eject the casing. Treat her well and she'll treat you well back. The stamp on the side reads 'Hare Lever Action Shotgun, Manufactured by Machine & Co, Caliber 12 Gauge'."
 	icon = 'icons/roguetown/weapons/64guns.dmi'
+	w_class = WEIGHT_CLASS_SMALL
 	icon_state = "levershotgun"
 	item_state = "levershotgun"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/levershotgun
