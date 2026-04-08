@@ -77,5 +77,5 @@
 	frogmine_shrapnel.projectile_type = /obj/projectile/bullet/shrapnel/frogmine
 	frogmine_shrapnel.radius = 5
 	frogmine_shrapnel.do_shrapnel(src, target)
-	explosion(src, devastation_range = 0, heavy_impact_range = 1, light_impact_range = 1, flash_range = 1, smoke = TRUE, soundin = pick('sound/misc/explode/arty1.ogg','sound/misc/explode/arty2.ogg','sound/misc/explode/arty3.ogg','sound/misc/explode/arty4.ogg','sound/misc/explode/arty5.ogg','sound/misc/explode/arty6.ogg'))
+	explosion(src, devastation_range = 0, heavy_impact_range = 1, light_impact_range = 1, flash_range = 0, smoke = TRUE, soundin = pick('sound/misc/explode/arty1.ogg','sound/misc/explode/arty2.ogg','sound/misc/explode/arty3.ogg','sound/misc/explode/arty4.ogg','sound/misc/explode/arty5.ogg','sound/misc/explode/arty6.ogg'))
 	qdel(src)

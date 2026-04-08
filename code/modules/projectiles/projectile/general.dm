@@ -91,7 +91,7 @@
 	hitscan = FALSE
 	ignore_source_check = TRUE
 	woundclass = BCLASS_CUT
-	spread = 15 //could probably fine-tune this to make mines explode prettier but it's okay for now
+	spread = 45 //could probably fine-tune this to make mines explode prettier but it's okay for now
 
 /obj/projectile/bullet/shrapnel/frogmine //frogmine explosion
 	name = "frogmine pellet"
