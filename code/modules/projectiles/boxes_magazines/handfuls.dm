@@ -26,6 +26,15 @@
 	multiload = 0
 	icon_state = "pistol-handful"
 
+/obj/item/ammo_box/handfuls/judge
+	name = "handful of heavy revolver bullets"
+	desc = "A handful of heavy revolver bullets."
+	ammo_type = /obj/item/ammo_casing/a45lc
+	caliber = "a45lc"
+	max_ammo = 6
+	multiload = 0
+	icon_state = "revolverhandful"
+
 /obj/item/ammo_box/handfuls/rattlesnake
 	name = "handful of blackout bullets"
 	desc = "A handful of machine-produced blackout bullets."

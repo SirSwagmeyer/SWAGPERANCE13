@@ -66,7 +66,9 @@
 	if(HAS_TRAIT(user, TRAIT_FIREARMS_EXPERT)) //unused as of rn
 		recentpump = world.time + 2
 	else
-		recentpump = world.time + 10
+		recentpump = world.time + 8
+	if(!slamfire)
+		user.changeNext_move(CLICK_CD_FAST)
 
 /obj/item/gun/ballistic/rifle/proc/pump(mob/M, visible = TRUE)
 	if(visible)
@@ -188,6 +190,7 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/leverchester
 	slowdown = 0.15
 	spread = 0.5
+	slamfire = TRUE
 	pump_sound = 'sound/combat/ranged/leveractioncock.ogg'
 	fire_sound = REVOLVERSHOT
 	load_sound = 'sound/combat/ranged/leveractioninsert.ogg'

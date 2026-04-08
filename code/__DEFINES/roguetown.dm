@@ -212,6 +212,7 @@
 	/datum/species/human/halfelf,\
 )
 
+<<<<<<< marionettes
 #define RACES_TEMPERANCE_NONCOMBATANT list(\
 	/datum/species/human/northern,\
 	/datum/species/elf/wood,\
@@ -229,6 +230,13 @@
 	/datum/species/anthromorph,\
 	/datum/species/human/halfelf,\
 	/datum/species/construct/metal/porcelain,\
+=======
+#define RACES_TEMPERANCE_NO_BM list(\
+	/datum/species/human/northern,\
+	/datum/species/elf/wood,\
+	/datum/species/tieberian,\
+	/datum/species/human/halfelf,\
+>>>>>>> main
 )
 
 #define RACES_ALL_KINDS list(RACES_DESPISED, RACES_SHUNNED, RACES_TOLERATED, RACES_RESPECTED, RACES_CONSCRIPT, RACES_TEMPERANCE)

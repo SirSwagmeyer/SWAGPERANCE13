@@ -161,7 +161,7 @@
 	desc = "A cheap, double barrel shotgun. Usually made by the guy that's holding it."
 	w_class = WEIGHT_CLASS_BULKY
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/risvon
-	force = 10
+	force = 20
 	spread = 0.5
 	icon_state = "dshotgun"
 	item_state = "dshotgun"
@@ -170,5 +170,41 @@
 	fire_sound = SHOTGUNSHOT
 	load_sound = SHOTGUNINSERT
 	recoil = 0.30
+	experimental_inhand = FALSE
+	slot_flags = ITEM_SLOT_BACK
+
+/obj/item/gun/ballistic/revolver/sawedoff
+	name = "TIZ 'Persuader' Pocket Shotgun"
+	desc = "A one-shot, sawed off shotgun. This configuration's typically made by outlaws to help with deal negotiation."
+	w_class = WEIGHT_CLASS_SMALL
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/sawedoff
+	force = 20
+	throwforce = 40
+	spread = 0.8 // the fuck you think you're gonna hit with that barrel?
+	icon_state = "singlebarrel"
+	item_state = "singlebarrel"
+	slowdown = 0.15
+	empty_indicator = TRUE
+	fire_sound = SHOTGUNSHOT
+	load_sound = SHOTGUNINSERT
+	recoil = 0.30
+	experimental_inhand = FALSE
+	slot_flags = ITEM_SLOT_HIP
+
+/obj/item/gun/ballistic/revolver/judge
+	name = "TYK 'Judge' Revolving Rifle"
+	desc = "A rifle-revolver hybrid. Typically used by national guardsmen or game hunters."
+	w_class = WEIGHT_CLASS_SMALL
+	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/judge
+	force = 30 //fat stock
+	spread = 2 // cut in half cuz much longer barrel
+	icon = 'icons/roguetown/weapons/64guns.dmi'
+	icon_state = "revolvingrifle"
+	item_state = "revolvingrifle"
+	slowdown = 0.2 //slower
+	empty_indicator = TRUE
+	fire_sound = REVOLVERSHOT
+	load_sound = REVOLVERINSERT
+	recoil = 0.1
 	experimental_inhand = FALSE
 	slot_flags = ITEM_SLOT_BACK

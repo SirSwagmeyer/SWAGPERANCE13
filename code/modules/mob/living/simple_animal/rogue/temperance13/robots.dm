@@ -40,7 +40,7 @@
 
 	can_have_ai = FALSE
 	AIStatus = AI_OFF
-	ai_controller = /datum/ai_controller/stranger
+	ai_controller = /datum/ai_controller/deepone
 	melee_cooldown = STRANGER_ATTACK_SPEED
 
 /mob/living/simple_animal/hostile/rogue/robot/gunner

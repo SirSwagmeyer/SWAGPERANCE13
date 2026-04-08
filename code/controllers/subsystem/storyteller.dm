@@ -274,7 +274,7 @@ SUBSYSTEM_DEF(gamemode)
 /// Gets the number of antagonists the antagonist injection events will stop rolling after.
 /datum/controller/subsystem/gamemode/proc/get_antag_cap()
 	var/total_number = get_correct_popcount() + (garrison * 2)
-	var/cap = FLOOR((total_number / ANTAG_CAP_DENOMINATOR), 1) + ANTAG_CAP_FLAT
+	var/cap = ANTAG_CAP_FLAT
 	return cap
 
 /datum/controller/subsystem/gamemode/proc/get_antag_count()

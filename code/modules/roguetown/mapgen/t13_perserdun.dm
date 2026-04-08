@@ -26,6 +26,7 @@
 							/obj/structure/flora/roguetree/stump/log = 1,
 							/obj/structure/flora/roguetree/stump = 10,
 							/obj/effect/mine/explosive = 1,
+							/obj/effect/frogmine = 1,
 							/obj/structure/flora/roguetree/burnt = 20)
 	spawnableTurfs = list(/turf/open/floor/rogue/dirt/road=2,
 						/turf/open/water/swamp=1)

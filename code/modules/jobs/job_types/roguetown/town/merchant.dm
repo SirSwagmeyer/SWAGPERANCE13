@@ -21,7 +21,7 @@
 	H.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/revolvers, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shotguns, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/rifles, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
@@ -34,7 +34,7 @@
 	H.adjust_skillrank(/datum/skill/misc/lockpicking, 2, TRUE)
 	backpack_contents = list(
 		/obj/item/rogueweapon/huntingknife/idagger/navaja,
-		/obj/item/ammo_box/speedloader/magnum = 3,
+		/obj/item/ammo_box/handfuls/judge = 3,
 		/obj/item/storage/belt/rogue/pouch/coins/rich,
 		/obj/item/reagent_containers/glass/bottle/rogue/healthpotnew,
 		/obj/item/lockpickring/mundane = 1,
@@ -47,11 +47,12 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	armor = /obj/item/clothing/suit/roguetown/armor/longcoat
 	belt = /obj/item/storage/belt/rogue/leather/black
-	beltl = /obj/item/gun/ballistic/revolver/pace
+	beltl = /obj/item/storage/belt/rogue/pouch/coins/rich
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
 	id = /obj/item/clothing/ring/gold
 	neck = /obj/item/storage/keyring/merchant
 	backr = /obj/item/storage/backpack/rogue/satchel
+	backl = /obj/item/gun/ballistic/revolver/judge
 	wrists = /obj/item/scomstone/kingsrow
 	H.change_stat("intelligence", 2)
 	H.change_stat("perception", 3)

@@ -66,6 +66,14 @@
     projectile_type = /obj/projectile/bullet/a380
     bullet_type = RIFLECASING
 
+/obj/item/ammo_casing/a45lc
+	name = ".45 Long Colt bullet casing"
+	desc = "A .45 Long Colt bullet-piece."
+	icon_state = "spent-casing_QT_pistol"
+	caliber = "a45lc"
+	projectile_type = /obj/projectile/bullet/a45lc
+	bullet_type = RIFLECASING
+
 //shotguns
 
 /obj/item/ammo_casing/shotgun

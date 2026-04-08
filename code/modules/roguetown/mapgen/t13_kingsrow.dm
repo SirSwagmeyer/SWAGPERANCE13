@@ -25,7 +25,8 @@
 							/obj/item/grown/log/tree/stick = 10,
 							/obj/structure/flora/roguetree/stump/log = 3,
 							/obj/structure/flora/roguetree/stump = 4,
-							/obj/effect/mine/explosive = 3)
+							/obj/effect/mine/explosive = 2,
+							/obj/effect/frogmine = 2)
 	spawnableTurfs = list(/turf/open/floor/rogue/dirt/road=2,
 						/turf/open/water/swamp=1)
 	allowed_areas = list(/area/rogue/outdoors/beach/forest/south)
@@ -33,7 +34,7 @@
 /datum/mapGeneratorModule/kingsrowroad
 	clusterCheckFlags = CLUSTER_CHECK_DIFFERENT_ATOMS
 	allowed_turfs = list(/turf/open/floor/rogue/dirt/road)
-	spawnableAtoms = list(/obj/item/natural/stone = 5, /obj/effect/mine/explosive = 2)
+	spawnableAtoms = list(/obj/item/natural/stone = 5, /obj/effect/mine/explosive = 1, /obj/effect/frogmine = 1)
 	allowed_areas = list(/area/rogue/outdoors/beach/forest/south)
 
 /datum/mapGeneratorModule/kingsrowsnow

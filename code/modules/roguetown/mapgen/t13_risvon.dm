@@ -25,6 +25,7 @@
 							/obj/item/grown/log/tree/stick = 16,
 							/obj/structure/flora/roguetree/stump/log = 3,
 							/obj/structure/flora/roguetree/stump = 4,
+							/obj/effect/frogmine = 1,
 							/obj/effect/mine/explosive = 1)
 	spawnableTurfs = list(/turf/open/floor/rogue/dirt/road=2)
 	allowed_areas = list(/area/rogue/outdoors/risvon)

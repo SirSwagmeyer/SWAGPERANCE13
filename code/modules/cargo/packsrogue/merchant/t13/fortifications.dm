@@ -22,3 +22,10 @@
 	cost = 30
 	contains = list(/obj/item/landmine,
 	/obj/item/landmine)
+
+/datum/supply_pack/rogue/fortifications/frogmine
+	name = "Frogmines (x3)"
+	cost = 30 //A little cheaper since you can survive these by putting stuff on them
+	contains = list(/obj/item/frogmine,
+	/obj/item/frogmine,
+	/obj/item/frogmine)

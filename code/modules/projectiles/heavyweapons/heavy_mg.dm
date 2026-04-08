@@ -145,6 +145,9 @@
 	..()
 	update_pixels(user) 
 
+/obj/item/gun/ballistic/heavy_mg/unbuckle_mob(mob/user, force = FALSE)
+	..()
+	stopped_using(user)
 
 /obj/item/gun/ballistic/heavy_mg/attack_right(mob/user)
 	if(user.get_active_held_item() == null)
@@ -246,13 +249,12 @@
 /obj/item/gun/ballistic/heavy_mg/proc/stopped_using(mob/user as mob, var/need_message = 1)
 	if(need_message)
 		user.visible_message("<span class='notice'>[user.name] released \the [src].</span>", \
-							 "<span class='notice'>You released \the [src].</span>")
+							"<span class='notice'>You released \the [src].</span>")
 	var/mob/living/M = user
 	used_by_mob = null
 	user.using_object = null
 	M.mobility_flags |= MOBILITY_MOVE
 	M.mobility_flags |= MOBILITY_PICKUP
-	unbuckle_mob(user)
 	var/grip_dir = reverse_direction(dir)
 	var/old_dir = dir
 	step(user, grip_dir)
