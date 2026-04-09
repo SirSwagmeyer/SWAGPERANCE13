@@ -30,7 +30,7 @@
 	grid_width = 32
 	grid_height = 64
 
-/obj/item/psydonmusicbox/Initialize()
+/obj/item/bomb/Initialize()
 	soundloop = new(src, FALSE)
 	. = ..()
 
@@ -45,17 +45,16 @@
 		lit = TRUE
 		explode(TRUE)
 
-/obj/item/bomb/proc/light(mob/user)
+/obj/item/bomb/proc/light()
 	if(!lit)
-		if(soundloop)
-			soundloop.start()
-		to_chat_immediate(user, "SEX")
+		START_PROCESSING(SSfastprocess, src)
 		icon_state = "[initial(icon_state)]-lit"
 		lit = TRUE
+		if(fused)
+			soundloop.start()
 		if(ismob(loc))
 			var/mob/M = loc
 			M.update_inv_hands()
-		START_PROCESSING(SSfastprocess, src)
 
 /obj/item/bomb/extinguish()
 	snuff()
@@ -66,11 +65,10 @@
 		STOP_PROCESSING(SSfastprocess, src)
 		playsound(src.loc, 'sound/items/firesnuff.ogg', 100)
 		icon_state = "[initial(icon_state)]"
+		soundloop.stop()
 		if(ismob(loc))
 			var/mob/M = loc
 			M.update_inv_hands()
-		if(soundloop)
-			soundloop.stop()
 
 /obj/item/bomb/proc/explode(skipprob)
 	STOP_PROCESSING(SSfastprocess, src)
@@ -122,25 +120,27 @@
 	name = "dynamite"
 	desc = "A curious concotion of explosive powders packed into a tight container. Has a wide variety of uses when considering the destructive capability, though it's pretty easy to avoid on it's own."
 	icon_state = "tnt_stick"
-	devastation_r = 2
-	heavy_r = 3
-	light_r = 4
+	devastation_r = 1
+	heavy_r = 2
+	light_r = 2
 	explosion_sound = BIGBOOM
 
 /obj/item/bomb/dynamite/Initialize()
+	fuze = rand(60,80)
 	. = ..()
-	fuze = rand(50,80)
 
 /obj/item/bomb/satchel
 	name = "satchel charge"
-	desc = "The big one. Stay very far away from this thing. Seriously. Far."
+	desc = "A heavy bag of explosives. Stay very far away from this thing. Seriously."
 	icon_state = "satchel_bomb"
+	w_class = WEIGHT_CLASS_NORMAL
 	devastation_r = 4
-	heavy_r = 4
+	heavy_r = 5
 	light_r = 5
+	throw_range = 3
 	snuffable = TRUE
 	explosion_sound = BIGBOOM
 
 /obj/item/bomb/satchel/Initialize()
-	. = ..()
 	fuze = rand(80, 160)
+	. = ..()
