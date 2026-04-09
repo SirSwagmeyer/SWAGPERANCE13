@@ -98,3 +98,16 @@
 	cost = 30
 	contains = list(/obj/item/ammo_box/handfuls/judge,
 	/obj/item/ammo_box/handfuls/judge)
+
+/datum/supply_pack/rogue/ammunition/mondragon
+	name = "Low Powder Rifle clips (x2)"
+	cost = 30
+	contains = list(/obj/item/ammo_box/clip/mondragon,
+	/obj/item/ammo_box/clip/mondragon)
+
+/datum/supply_pack/rogue/ammunition/lowpowder
+	name = "Low Powder Rifle ammo handfuls (x3)"
+	cost = 20
+	contains = list(/obj/item/ammo_box/handfuls/rifle/762lp,
+	/obj/item/ammo_box/handfuls/rifle/762lp,
+	/obj/item/ammo_box/handfuls/rifle/762lp)

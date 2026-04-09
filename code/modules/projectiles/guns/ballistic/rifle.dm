@@ -247,7 +247,9 @@
 	slowdown = 0.15
 	spread = 0.5
 	pump_sound = 'sound/combat/ranged/riflecock.ogg'
-	fire
+	fire_sound = RIFLESHOT
+	load_sound = 'sound/combat/ranged/rifleload.ogg'
+	recoil = 0.15
 
 /obj/item/gun/ballistic/rifle/repeater/enfield
 	name = "FKZ 'Flicker'"
@@ -258,4 +260,6 @@
 	slowdown = 0.15
 	spread = 0.5
 	pump_sound = 'sound/combat/ranged/riflecock.ogg'
-	fire
+	fire_sound = RIFLESHOT
+	load_sound = 'sound/combat/ranged/rifleload.ogg'
+	recoil = 0.15

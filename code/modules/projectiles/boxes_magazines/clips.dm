@@ -31,8 +31,8 @@
 	max_ammo = 5
 
 /obj/item/ammo_box/clip/mondragon
-	name = "mondragon clip"
-	desc = "A metal piece used for filling up the mondragon rifle."
+	name = "Low Powder Rifle clip"
+	desc = "A metal piece used for filling up a rifle with a lower powder load."
 	icon_state = "clip"
 	ammo_type = /obj/item/ammo_casing/a762lp
 	caliber = "a762lp"
