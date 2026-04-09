@@ -205,3 +205,21 @@
     eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
     recoil = 0.05 //stocked pistol
     semi_auto = TRUE
+
+/obj/item/gun/ballistic/rifle/repeater/infiltrator
+    name = "KR 'Infiltrator'"
+    desc = "A 20-round, semi-automatic pistol. It goes all in on the ammo capacity - meaning that the caliber's pretty weak, and it can't be reloaded."
+    icon_state = "mauser"
+    item_state = "mauser"
+    w_class = WEIGHT_CLASS_SMALL
+    mag_type = /obj/item/ammo_box/magazine/internal/boltaction/infiltrator
+    slowdown = 0.15
+    spread = 0.5
+    force = 15 
+    pump_sound = 'sound/combat/ranged/pistol_cock.ogg'
+    fire_sound = PISTOLSHOT
+    load_sound = 'sound/combat/ranged/pistol_magin.ogg'
+    eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
+    recoil = 0.15
+    semi_auto = TRUE
+    slot_flags = ITEM_SLOT_HIP

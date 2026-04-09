@@ -89,6 +89,8 @@
 	///Whether the gun can be tacloaded by slapping a fresh magazine directly on it
 	var/tac_reloads = TRUE //Snowflake mechanic no more.
 	var/verbage = "load"
+	//Whether or not racking has a click delay
+	var/slamfire = FALSE
 
 /obj/item/gun/ballistic/Initialize()
 	. = ..()

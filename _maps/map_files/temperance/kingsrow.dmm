@@ -5984,6 +5984,10 @@
 /mob/living/carbon/human/species/skeleton/npc/hard,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
+"MU" = (
+/obj/effect/frogmine,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/beach/forest/south)
 "MV" = (
 /obj/machinery/light/rogue/wallfire/candle/off,
 /obj/structure/bars/cemetery,
@@ -68065,7 +68069,7 @@ xP
 tn
 tn
 tn
-UI
+MU
 tn
 tn
 tn
@@ -69428,7 +69432,7 @@ xP
 tn
 tn
 tn
-UI
+MU
 xP
 tn
 xP
@@ -73734,7 +73738,7 @@ tn
 tn
 cT
 tn
-UI
+MU
 tn
 tn
 tn
@@ -74875,7 +74879,7 @@ tn
 tn
 xP
 xP
-UI
+MU
 tn
 tn
 tn
@@ -81007,7 +81011,7 @@ xP
 tn
 tn
 tn
-UI
+MU
 tn
 tn
 tn
@@ -82378,7 +82382,7 @@ tn
 xP
 tn
 tn
-UI
+MU
 tn
 tn
 tn
@@ -82598,7 +82602,7 @@ xP
 tn
 tn
 tn
-UI
+MU
 tn
 tn
 UI
@@ -83750,7 +83754,7 @@ tn
 tn
 tn
 tn
-UI
+MU
 xP
 xP
 Ot
@@ -83968,7 +83972,7 @@ tn
 tn
 tn
 tn
-UI
+MU
 tn
 tn
 xP

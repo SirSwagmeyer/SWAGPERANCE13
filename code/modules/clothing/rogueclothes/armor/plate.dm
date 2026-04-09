@@ -352,11 +352,12 @@
 	name = "manufactured armor plate"
 	desc = "A standard, manufactured armor plate produced by the WAR MACHINE."
 	icon_state = "EB_armor"
+	body_parts_covered = CHEST|GROIN|VITALS|NECK
 
 /obj/item/clothing/suit/roguetown/armor/plate/half/iron/ziggurate/pauldrons
 	name = "pauldroned armor plate"
 	desc = "A humen-modified, manufactured armor plate. MACHINE-made, with pauldrons slapped on."
-	body_parts_covered = CHEST|GROIN|VITALS|ARMS
+	body_parts_covered = CHEST|GROIN|VITALS|ARMS|NECK
 	icon_state = "EB_armor_pauldrons"
 
 /obj/item/clothing/suit/roguetown/armor/plate/half/copper

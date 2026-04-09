@@ -95,7 +95,7 @@
 	desc = "A full-body suit, stolen from a WAR MACHINE. Rather expensive. Comes with a decorative tin shoulder."
 	icon_state = "grandmaster"
 	item_state = "grandmaster"
-	body_parts_covered = COVERAGE_FULL
+	body_parts_covered = CHEST | GROIN | VITALS | LEGS | ARMS | NECK
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
 	sleevetype = "grandmaster"
 

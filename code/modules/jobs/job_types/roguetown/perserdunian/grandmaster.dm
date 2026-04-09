@@ -5,7 +5,7 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	allowed_races = RACES_TEMPERANCE
+	allowed_races = RACES_TEMPERANCE_NO_BM
 	allowed_sexes = list(MALE) //until a female armor sprite is made
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 	selection_color = JCOLOR_PERSERDUN
@@ -44,7 +44,6 @@
 	pants = /obj/item/clothing/under/roguetown/trou/artipants
 	head = /obj/item/clothing/head/roguetown/helmet/leather/grandmaster
 	mask = /obj/item/clothing/mask/rogue/gasmask/grandmask
-	neck = /obj/item/clothing/neck/roguetown/chaincoif
 	belt = /obj/item/storage/belt/rogue/leather/black/soldier
 	beltl = /obj/item/flashlight/flare/torch/lantern
 	beltr = /obj/item/gun/ballistic/revolver/grandmaster

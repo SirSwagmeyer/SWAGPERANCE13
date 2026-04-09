@@ -2582,6 +2582,7 @@
 #include "modular_temperance\code\datums\loreblurbs.dm"
 #include "modular_temperance\code\datums\loredump_tiles.dm"
 #include "modular_temperance\code\datums\status_effects\drugs.dm"
+#include "modular_temperance\code\game\objects\effects\mines.dm"
 #include "modular_temperance\code\modules\classunique\midsomber\anime_spells_helper.dm"
 #include "modular_temperance\code\modules\classunique\midsomber\arcyne_conduit.dm"
 #include "modular_temperance\code\modules\classunique\midsomber\arcyne_momentum.dm"

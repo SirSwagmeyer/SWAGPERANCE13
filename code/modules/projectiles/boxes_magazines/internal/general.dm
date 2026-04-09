@@ -83,6 +83,14 @@
 	max_ammo = 6
 	multiload = 1
 
+/obj/item/ammo_box/magazine/internal/boltaction/judge
+	name = "Judge Revolving Rifle internal magazine"
+	desc = "This should NOT be here."
+	ammo_type = /obj/item/ammo_casing/a45lc
+	caliber = "a45lc"
+	max_ammo = 6
+	multiload = 1
+
 //pistols
 
 /obj/item/ammo_box/magazine/internal/boltaction/pistol
@@ -99,4 +107,12 @@
 	ammo_type = /obj/item/ammo_casing/a9mm
 	caliber = "a9mm"
 	max_ammo = 14
+	multiload = 1
+
+/obj/item/ammo_box/magazine/internal/boltaction/infiltrator
+	name = "infiltrator internal magazine"
+	desc = "please ahelp if u find me"
+	ammo_type = /obj/item/ammo_casing/a22lr
+	caliber = "a22lr"
+	max_ammo = 20
 	multiload = 1

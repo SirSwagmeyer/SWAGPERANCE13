@@ -1016,10 +1016,6 @@
 	if(atkswinging)
 		stop_attack(FALSE)
 
-	if(using_object)
-		var/obj/item/gun/ballistic/heavy_mg/M = using_object
-		M.stopped_using(src)
-
 	SEND_SIGNAL(src, COMSIG_LIVING_RESIST, src)
 	//resisting grabs (as if it helps anyone...)
 	if(pulledby)

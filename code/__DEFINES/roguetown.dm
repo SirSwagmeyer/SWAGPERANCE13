@@ -212,6 +212,13 @@
 	/datum/species/human/halfelf,\
 )
 
+#define RACES_TEMPERANCE_NO_BM list(\
+	/datum/species/human/northern,\
+	/datum/species/elf/wood,\
+	/datum/species/tieberian,\
+	/datum/species/human/halfelf,\
+)
+
 #define RACES_ALL_KINDS list(RACES_DESPISED, RACES_SHUNNED, RACES_TOLERATED, RACES_RESPECTED, RACES_CONSCRIPT, RACES_TEMPERANCE)
 
 #define RACES_NO_CONSTRUCT list(RACES_DESPISED, RACES_SHUNNED, RACES_TOLERATED, RACES_RESPECTED)

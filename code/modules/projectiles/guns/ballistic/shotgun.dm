@@ -148,3 +148,48 @@
 	pump_sound = 'sound/combat/ranged/shotgunpump.ogg'
 	recoil = 0.15
 	load_sound = SHOTGUNINSERT
+
+/obj/item/gun/ballistic/rifle/repeater/auto8
+	name = "AO-8 'Willbreaker'"
+	desc = "A pretty rare semi-automatic shotgun, made by the WAR MACHINE. It sacrifices the raw melee power of the Eternal in favor for an extended magazine."
+	icon = 'icons/roguetown/weapons/64guns.dmi'
+	icon_state = "auto8"
+	item_state = "auto8"
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/auto8
+	slowdown = 0.15
+	spread = 0.5
+	fire_sound = SHOTGUNSHOT
+	pump_sound = 'sound/combat/ranged/patiencecock.ogg'
+	recoil = 0.15
+	load_sound = SHOTGUNINSERT
+	semi_auto = TRUE
+
+/obj/item/gun/ballistic/rifle/repeater/auto5
+	name = "AO-5 'Gloria'"
+	desc = "A modified AO-8, sawed down for convenience. 'Gloria' is engraved into the stock, for whatever reason."
+	icon = 'icons/roguetown/weapons/64guns.dmi'
+	icon_state = "auto5"
+	item_state = "auto5"
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/auto5
+	slowdown = 0.15
+	spread = 0.5
+	fire_sound = SHOTGUNSHOT
+	pump_sound = 'sound/combat/ranged/patiencecock.ogg'
+	recoil = 0.15
+	load_sound = SHOTGUNINSERT
+	semi_auto = TRUE
+
+/obj/item/gun/ballistic/shotgun/levershotgun
+	name = "MNZ 'Hare'"
+	desc = "Somewhat similar to the Ark. It's a compact shotgun that can fit inside your bag - how neat!"
+	icon = 'icons/roguetown/weapons/64guns.dmi'
+	w_class = WEIGHT_CLASS_SMALL
+	icon_state = "levershotgun"
+	item_state = "levershotgun"
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/levershotgun
+	slowdown = 0.15
+	spread = 0.5
+	fire_sound = SHOTGUNSHOT
+	pump_sound = 'sound/combat/ranged/leveractioncock.ogg'
+	recoil = 0.15
+	load_sound = SHOTGUNINSERT

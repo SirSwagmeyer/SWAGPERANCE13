@@ -1690,8 +1690,9 @@
 /area/rogue/under/cave/warmachine)
 "Ai" = (
 /obj/structure/closet/crate/roguecloset/metal,
-/obj/item/landmine,
-/obj/item/landmine,
+/obj/item/frogmine,
+/obj/item/frogmine,
+/obj/item/frogmine,
 /turf/open/floor/rogue/warmetal,
 /area/rogue/under/cave/warmachine)
 "Ao" = (

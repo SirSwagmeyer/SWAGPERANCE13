@@ -58,3 +58,24 @@
 	contains = list(
 					/obj/item/gun/ballistic/rifle/repeater/fury,
 				)
+
+/datum/supply_pack/rogue/firearms/sawedoff
+	name = "Sawed-off 'Persuader' Shotgun-Pistol"
+	cost = 75
+	contains = list(
+					/obj/item/gun/ballistic/revolver/sawedoff,
+				)
+
+/datum/supply_pack/rogue/firearms/infiltrator
+	name = "KR 'Infiltrator' One-Use Pistol"
+	cost = 60
+	contains = list(
+					/obj/item/gun/ballistic/rifle/repeater/infiltrator,
+				)
+
+/datum/supply_pack/rogue/firearms/levershotgun
+	name = "M&C 'Hare' Lever Action Shotgun"
+	cost = 180
+	contains = list(
+					/obj/item/gun/ballistic/shotgun/levershotgun,
+				)
