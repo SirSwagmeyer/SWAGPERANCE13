@@ -55,7 +55,7 @@
 		/obj/item/ammo_box/handfuls/shotgun/buckshot = 6,
 		/obj/item/storage/belt/rogue/pouch/coins/mid,
 		/obj/item/grenade/gas/smoke,
-		/obj/item/grenade,
+		/obj/item/bomb/dynamite,
 		/obj/item/rogueweapon/stoneaxe/woodcut/risvon,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
