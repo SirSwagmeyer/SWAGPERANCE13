@@ -129,7 +129,7 @@
 	slowdown = 0.15
 	spread = 0.5
 	force = 25 //heavy pistol, should be good for whipping someone in the head with
-	fire_sound = PISTOLSHOT
+	fire_sound = 'sound/combat/ranged/firebow-shot-01.ogg'
 	load_sound = 'sound/combat/ranged/pistol_magin.ogg'
 	eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
 	recoil = 0.15

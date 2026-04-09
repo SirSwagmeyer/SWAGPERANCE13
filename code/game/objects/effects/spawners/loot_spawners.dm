@@ -468,6 +468,10 @@
 		/obj/item/ammo_box/handfuls/shotgun = 1,
 		/obj/item/ammo_box/handfuls/shotgun/buckshot = 1,
 		/obj/item/ammo_box/handfuls/rattlesnake = 1,
+		/obj/item/ammo_box/handfuls/762lp = 1,
+		/obj/item/ammo_box/clip/broomhandle = 1,
+		/obj/item/ammo_box/clip/mondragon = 1,
+		/obj/item/ammo_box/speedloader/snub = 1,
 	)
 
 /obj/effect/spawner/lootdrop/medicines
@@ -486,6 +490,7 @@
 	loot = list(
 		/obj/item/clothing/suit/roguetown/armor/plate/full/ebarmor = 2,
 		/obj/item/clothing/suit/roguetown/armor/plate/full/ebarmor/pauldrons = 1
+		/obj/item/clothing/suit/roguetown/armor/gambeson/heavy = 1,
 	)
 /obj/effect/spawner/lootdrop/general_loot_low/x3
 	name = "low tier general loot spawnerx3"

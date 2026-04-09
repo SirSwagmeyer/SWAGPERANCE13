@@ -260,6 +260,6 @@
 	slowdown = 0.15
 	spread = 0.5
 	pump_sound = 'sound/combat/ranged/riflecock.ogg'
-	fire_sound = RIFLESHOT
+	fire_sound = 'sound/combat/ranged/newrifle3.ogg'
 	load_sound = 'sound/combat/ranged/rifleload.ogg'
 	recoil = 0.15
