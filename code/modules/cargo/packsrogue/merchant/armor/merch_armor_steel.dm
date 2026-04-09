@@ -116,7 +116,7 @@
 	cost = 50 // 1 Steel
 	contains = list(/obj/item/clothing/wrists/roguetown/bracers)
 
-/datum/supply_pack/rogue/armor_steel/helmet_nasal
+/datum/supply_pack/rogue/light_armor/helmet_nasal
 	name = "Helmet, Nasal"
 	cost = 50 // 1 Steel
 	contains = list(/obj/item/clothing/head/roguetown/helmet)

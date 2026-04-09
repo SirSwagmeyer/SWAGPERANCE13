@@ -184,7 +184,7 @@
 
 /obj/item/gun/ballistic/rifle/repeater/leveraction
 	name = "'Ark' Kaye XLVII"
-	desc = "A genuine lever action, produced by a WAR MACHINE's outlet. Fires pistol rounds."
+	desc = "A genuine lever action, produced by a WAR MACHINE's outlet. Fires revolver rounds."
 	icon_state = "leverchester"
 	item_state = "leverchester"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/leverchester
@@ -253,7 +253,7 @@
 
 /obj/item/gun/ballistic/rifle/repeater/enfield
 	name = "FKZ 'Flicker'"
-	desc = "A straight-bolt action rifle with an extended internal magazine. Usually found in the hands of civilian hunters looking for a weapon with a lower load."
+	desc = "A straight-bolt action rifle with an extended internal magazine, two clips should do it right. Usually found in the hands of civilian hunters looking for a weapon with a lower load."
 	icon_state = "enfield"
 	item_state = "enfield"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/mondragon
