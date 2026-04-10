@@ -55,7 +55,7 @@
 	backr = /obj/item/storage/backpack/rogue/backpack/risvon
 	backpack_contents = list(
 		/obj/item/storage/belt/rogue/pouch/coins/poor,
-		/obj/item/smokegrenade = 1,
+		/obj/item/grenade/gas/smoke = 1,
 		/obj/item/rogueweapon/stoneaxe/woodcut/risvon,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)

@@ -445,6 +445,7 @@
 		/obj/item/gun/ballistic/revolver/pace = 1,
 		/obj/item/gun/ballistic/revolver/doublebarrel = 1,
 		/obj/item/gun/ballistic/shotgun/levershotgun = 1,
+		/obj/item/grenade/frag = 1,
 		/obj/item/gun/ballistic/revolver/snub = 1,
 	)
 
@@ -468,7 +469,6 @@
 		/obj/item/ammo_box/handfuls/shotgun = 1,
 		/obj/item/ammo_box/handfuls/shotgun/buckshot = 1,
 		/obj/item/ammo_box/handfuls/rattlesnake = 1,
-		/obj/item/ammo_box/handfuls/762lp = 1,
 		/obj/item/ammo_box/clip/broomhandle = 1,
 		/obj/item/ammo_box/clip/mondragon = 1,
 		/obj/item/ammo_box/speedloader/snub = 1,
