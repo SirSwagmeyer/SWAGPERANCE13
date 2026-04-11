@@ -111,3 +111,9 @@
 	contains = list(/obj/item/ammo_box/handfuls/riflelp,
 	/obj/item/ammo_box/handfuls/riflelp,
 	/obj/item/ammo_box/handfuls/riflelp)
+
+/datum/supply_pack/rogue/ammunition/cfmag
+	name = "Certain Fury Magazine (x2)"
+	cost = 40
+	contains = list(/obj/item/ammo_box/magazine/cfmag,
+	/obj/item/ammo_box/magazine/cfmag)
