@@ -206,7 +206,7 @@ GLOBAL_LIST_EMPTY(created_sound_groups)
 	START_PROCESSING(SSsoundloopers, src)
 
 /datum/looping_sound/proc/on_stop()
-//	play(end_sound)
+	//play(end_sound)
 	STOP_PROCESSING(SSsoundloopers, src)
 	if(persistent_loop)
 		GLOB.persistent_sound_loops -= src
