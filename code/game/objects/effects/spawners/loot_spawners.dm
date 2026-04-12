@@ -428,12 +428,9 @@
 	icon_state = "highgun"
 	lootcount = 1
 	loot = list(
-		/obj/item/gun/ballistic/shotgun/eternal = 1,
+		/obj/item/gun/ballistic/shotgun/eternal = 5,
 		/obj/item/gun/ballistic/rifle/repeater/patience	= 1,
-		/obj/item/gun/ballistic/rifle/reaper = 1,
-		/obj/item/gun/ballistic/rifle/repeater/mondragon = 1,
-		/obj/item/gun/ballistic/rifle/repeater/mpcolt = 1,
-	)
+		/obj/item/gun/ballistic/rifle/reaper = 5,	)
 
 /obj/effect/spawner/lootdrop/normalguns
 	name = "normal gun spawner"
@@ -457,7 +454,6 @@
 	loot = list(
 		/obj/item/ammo_box/boxes/amr = 1,
 		/obj/item/ammo_box/clip/reaper = 3,
-		/obj/item/ammo_box/magazine/cfmag = 2,
 	)
 
 /obj/effect/spawner/lootdrop/ammo
