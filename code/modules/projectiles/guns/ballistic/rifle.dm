@@ -184,7 +184,7 @@
 
 /obj/item/gun/ballistic/rifle/repeater/leveraction
 	name = "'Ark' Kaye XLVII"
-	desc = "A genuine lever action, produced by a WAR MACHINE's outlet. Fires pistol rounds."
+	desc = "A genuine lever action, produced by a WAR MACHINE's outlet. Fires revolver rounds."
 	icon_state = "leverchester"
 	item_state = "leverchester"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/leverchester
@@ -225,14 +225,41 @@
 
 /obj/item/gun/ballistic/rifle/repeater/mondragon
 	name = "YKA 'Dragoon'"
-	desc = "A straight-bolt action rifle. Usually found in the hands of civilian hunters."
+	desc = "A weak, semi-automatic rifle. High capacity, low powder - comes suppressed."
 	icon = 'icons/roguetown/weapons/48guns.dmi'
 	icon_state = "dragoon"
 	item_state = "dragoon"
+	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/mondragon
+	slowdown = 0.15
+	spread = 0.5
+	pump_sound = 'sound/combat/ranged/riflecock.ogg'
+	fire_sound = 'sound/combat/ranged/suppressed_fire.ogg'
+	load_sound = 'sound/combat/ranged/rifleload.ogg'
+	recoil = 0.15
+	semi_auto = TRUE
+
+/obj/item/gun/ballistic/rifle/repeater/springfield
+	name = "MFG 'Springer'"
+	desc = "A straight-bolt action rifle. Posed to replace the Harland, eventually."
+	icon_state = "springfield"
+	item_state = "springfield"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/perserdun
 	slowdown = 0.15
 	spread = 0.5
 	pump_sound = 'sound/combat/ranged/riflecock.ogg'
 	fire_sound = RIFLESHOT
+	load_sound = 'sound/combat/ranged/rifleload.ogg'
+	recoil = 0.15
+
+/obj/item/gun/ballistic/rifle/repeater/enfield
+	name = "FKZ 'Flicker'"
+	desc = "Something similar to the Dragoon - though this one comes unsuppressed."
+	icon_state = "enfield"
+	item_state = "enfield"
+	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/mondragon
+	slowdown = 0.15
+	spread = 0.5
+	pump_sound = 'sound/combat/ranged/riflecock.ogg'
+	fire_sound = 'sound/combat/ranged/newrifle3.ogg'
 	load_sound = 'sound/combat/ranged/rifleload.ogg'
 	recoil = 0.15

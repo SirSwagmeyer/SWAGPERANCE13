@@ -4,6 +4,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_CONSCRIPT
 	outfit = /datum/outfit/job/roguetown/adventurer/renegade
+	horse = /mob/living/simple_animal/hostile/retaliate/rogue/saiga/saigabuck/tame/saddled
 	maximum_possible_slots = 5
 	traits_applied = list(TRAIT_OUTLANDER)
 	category_tags = list(CTAG_ADVENTURER, CTAG_COURTAGENT)
@@ -46,6 +47,7 @@
 			H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/climbing, 5, TRUE)
+			H.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/stealing, 3, TRUE)
@@ -91,6 +93,7 @@
 			H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/climbing, 6, TRUE)
+			H.adjust_skillrank(/datum/skill/misc/riding, 4, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/stealing, 4, TRUE)
@@ -133,6 +136,7 @@
 			H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/climbing, 5, TRUE)
+			H.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
 			H.adjust_skillrank(/datum/skill/misc/stealing, 3, TRUE)

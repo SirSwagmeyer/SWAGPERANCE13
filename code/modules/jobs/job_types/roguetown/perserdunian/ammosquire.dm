@@ -44,15 +44,16 @@
 	mask = /obj/item/clothing/mask/rogue/gasmask/perserdunmask
 	belt = /obj/item/storage/belt/rogue/leather/black/soldier
 	beltl = /obj/item/flashlight/flare/torch/lantern
-	beltr = /obj/item/gun/ballistic/revolver/snub
+	beltr = /obj/item/storage/belt/rogue/pouch/ammobag
 	backl = /obj/item/storage/backpack/rogue/backpack/mg
 	wrists = /obj/item/scomstone/garrison
 	gloves = /obj/item/clothing/gloves/roguetown/eastgloves1
 	backr = /obj/item/storage/backpack/rogue/satchel/perserdun
+	r_hand = /obj/item/gun/ballistic/revolver/snub
 	id = /obj/item/roguekey/perserdun
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/hmg/a762x59 = 9,
-		/obj/item/ammo_box/speedloader/snub = 3
+		/obj/item/ammo_box/speedloader/snub = 6
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
@@ -63,6 +64,7 @@
 	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/pistols, 4, TRUE) //again, this is just flavor, it does nothing because the MP Colt is technically a rifle in the code
 	H.adjust_skillrank(/datum/skill/combat/rifles, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/armorsmithing, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)

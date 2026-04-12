@@ -4,8 +4,8 @@
 	crate_type = /obj/structure/closet/crate/chest/merchant
 
 /datum/supply_pack/rogue/firearms/mondragon
-	name = "Mondragon Rifle"
-	cost = 70
+	name = "Mondragon Semi-Automatic Suppressed Rifle"
+	cost = 200 //t3 weapon
 	contains = list(
 					/obj/item/gun/ballistic/rifle/repeater/mondragon,
 				)
@@ -74,8 +74,43 @@
 				)
 
 /datum/supply_pack/rogue/firearms/levershotgun
-	name = "M&C 'Hare' Lever Action Shotgun"
-	cost = 180
+	name = "MNZ 'Hare' Lever Action Shotgun"
+	cost = 160 //not a t3 weapon but still pretty expensive because of the ammo capacity and the fact that it's a shotgun
 	contains = list(
 					/obj/item/gun/ballistic/shotgun/levershotgun,
+				)
+
+/datum/supply_pack/rogue/firearms/enfield
+	name = "MFG 'Flicker' Bolt Action Rifle"
+	cost = 80
+	contains = list(
+					/obj/item/gun/ballistic/rifle/repeater/enfield,
+				)
+
+/datum/supply_pack/rogue/firearms/mercy
+	name = "LC 'Mercy' Revolver"
+	cost = 60
+	contains = list(
+					/obj/item/gun/ballistic/revolver/mercy,
+				)
+
+/datum/supply_pack/rogue/firearms/mpcolt
+	name = "MP 'Certain Fury' Semi-Automatic Pistol Carbine"
+	cost = 190
+	contains = list(
+					/obj/item/gun/ballistic/rifle/repeater/mpcolt,
+				)
+
+/datum/supply_pack/rogue/firearms/risvocarb
+	name = "KAR 'Marland' Pistol Carbine"
+	cost = 210
+	contains = list(
+					/obj/item/gun/ballistic/rifle/repeater/risvocarb,
+				)
+
+/datum/supply_pack/rogue/firearms/auto5
+	name = "AO5 'Gloria' Semi-Automatic Shotgun"
+	cost = 300
+	contains = list(
+					/obj/item/gun/ballistic/rifle/repeater/auto5,
 				)

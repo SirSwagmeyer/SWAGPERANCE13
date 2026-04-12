@@ -431,7 +431,8 @@
 		/obj/item/gun/ballistic/shotgun/eternal = 1,
 		/obj/item/gun/ballistic/rifle/repeater/patience	= 1,
 		/obj/item/gun/ballistic/rifle/reaper = 1,
-		/obj/item/gun/ballistic/rifle/repeater/auto8 = 1,
+		/obj/item/gun/ballistic/rifle/repeater/mondragon = 1,
+		/obj/item/gun/ballistic/rifle/repeater/mpcolt = 1,
 	)
 
 /obj/effect/spawner/lootdrop/normalguns
@@ -439,11 +440,14 @@
 	icon_state = "normgun"
 	lootcount = 1
 	loot = list(
-		/obj/item/gun/ballistic/rifle/repeater/mondragon = 1,
+		/obj/item/gun/ballistic/revolver/sawedoff = 1,
+		/obj/item/gun/ballistic/rifle/repeater/enfield = 1,
 		/obj/item/gun/ballistic/revolver/pace = 1,
 		/obj/item/gun/ballistic/revolver/doublebarrel = 1,
 		/obj/item/gun/ballistic/shotgun/levershotgun = 1,
+		/obj/item/gun/ballistic/revolver/mercy = 1,
 		/obj/item/grenade/frag = 1,
+		/obj/item/gun/ballistic/revolver/snub = 1,
 	)
 
 /obj/effect/spawner/lootdrop/hightierammo
@@ -453,6 +457,7 @@
 	loot = list(
 		/obj/item/ammo_box/boxes/amr = 1,
 		/obj/item/ammo_box/clip/reaper = 3,
+		/obj/item/ammo_box/magazine/cfmag = 2,
 	)
 
 /obj/effect/spawner/lootdrop/ammo
@@ -461,11 +466,16 @@
 	lootcount = 1
 	loot = list(
 		/obj/item/ammo_box/handfuls/leveraction = 1,
-		/obj/item/ammo_box/clip/pistol = 2,
+		/obj/item/ammo_box/clip/pistol = 3,
 		/obj/item/ammo_box/handfuls/rifle = 2,
 		/obj/item/ammo_box/handfuls/shotgun = 1,
 		/obj/item/ammo_box/handfuls/shotgun/buckshot = 1,
 		/obj/item/ammo_box/handfuls/rattlesnake = 1,
+		/obj/item/ammo_box/clip/broomhandle = 2,
+		/obj/item/ammo_box/clip/mondragon = 2,
+		/obj/item/ammo_box/handfuls/riflelp = 2,
+		/obj/item/ammo_box/speedloader/snub = 1,
+		/obj/item/ammo_box/speedloader/magnum = 1,
 	)
 
 /obj/effect/spawner/lootdrop/medicines
@@ -483,7 +493,8 @@
 	lootcount = 1
 	loot = list(
 		/obj/item/clothing/suit/roguetown/armor/plate/full/ebarmor = 2,
-		/obj/item/clothing/suit/roguetown/armor/plate/full/ebarmor/pauldrons = 1
+		/obj/item/clothing/suit/roguetown/armor/plate/full/ebarmor/pauldrons = 1,
+		/obj/item/clothing/suit/roguetown/armor/gambeson/heavy = 1,
 	)
 /obj/effect/spawner/lootdrop/general_loot_low/x3
 	name = "low tier general loot spawnerx3"

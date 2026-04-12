@@ -98,3 +98,28 @@
 	cost = 30
 	contains = list(/obj/item/ammo_box/handfuls/judge,
 	/obj/item/ammo_box/handfuls/judge)
+
+/datum/supply_pack/rogue/ammunition/mondragon
+	name = "Low Powder Rifle clips (x2)"
+	cost = 30
+	contains = list(/obj/item/ammo_box/clip/mondragon,
+	/obj/item/ammo_box/clip/mondragon)
+
+/datum/supply_pack/rogue/ammunition/lowpowder
+	name = "Low Powder Rifle ammo handfuls (x3)"
+	cost = 20
+	contains = list(/obj/item/ammo_box/handfuls/riflelp,
+	/obj/item/ammo_box/handfuls/riflelp,
+	/obj/item/ammo_box/handfuls/riflelp)
+
+/datum/supply_pack/rogue/ammunition/cfmag
+	name = "Certain Fury Magazine (x2)"
+	cost = 40
+	contains = list(/obj/item/ammo_box/magazine/cfmag,
+	/obj/item/ammo_box/magazine/cfmag)
+
+/datum/supply_pack/rogue/ammunition/mercy
+	name = "Mercy revolver handfuls (x2)"
+	cost = 20
+	contains = list(/obj/item/ammo_box/handfuls/mercy,
+	/obj/item/ammo_box/handfuls/mercy)

@@ -74,6 +74,22 @@
 	projectile_type = /obj/projectile/bullet/a45lc
 	bullet_type = RIFLECASING
 
+/obj/item/ammo_casing/a30
+	name = ".30 light bullet casing"
+	desc = "A .30 light bullet-piece."
+	icon_state = "spent-casing_QT_pistol"
+	caliber = "a30"
+	projectile_type = /obj/projectile/bullet/a30
+	bullet_type = RIFLECASING
+
+/obj/item/ammo_casing/a762lp
+	name = "LP 7.62mm bullet casing"
+	desc = "A low powder 7.62mm bullet piece."
+	icon_state = "spent-casing_QT_rifle"
+	caliber = "a762lp"
+	projectile_type = /obj/projectile/bullet/a762lp
+	bullet_type = RIFLECASING
+
 //shotguns
 
 /obj/item/ammo_casing/shotgun

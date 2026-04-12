@@ -129,7 +129,7 @@
 	slowdown = 0.15
 	spread = 0.5
 	force = 25 //heavy pistol, should be good for whipping someone in the head with
-	fire_sound = PISTOLSHOT
+	fire_sound = 'sound/combat/ranged/firebow-shot-01.ogg'
 	load_sound = 'sound/combat/ranged/pistol_magin.ogg'
 	eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
 	recoil = 0.15
@@ -223,3 +223,39 @@
     recoil = 0.15
     semi_auto = TRUE
     slot_flags = ITEM_SLOT_HIP
+
+/obj/item/gun/ballistic/rifle/repeater/mpcolt
+    name = "MP 'Certain Fury'"
+    desc = "In-fort modification of a Fury, fitted with a stock made from some other rifle, a grip, and with a flared magwell, allowing it to fit in bigger magazines."
+    icon = 'icons/roguetown/weapons/64guns.dmi'
+    icon_state = "mp1911"
+    item_state = "mp1911"
+    w_class = WEIGHT_CLASS_NORMAL
+    mag_type = /obj/item/ammo_box/magazine/cfmag
+    slowdown = 0.2
+    spread = 0.5
+    force = 30 //it has a fat fucking stock lemme smack a motherfucker with it
+    pump_sound = 'sound/combat/ranged/pistol_cock.ogg'
+    fire_sound = 'sound/combat/ranged/firebow-shot-01.ogg'
+    load_sound = 'sound/combat/ranged/pistol_magin.ogg'
+    eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
+    recoil = 0.05 //stocked pistol
+    semi_auto = TRUE
+
+/obj/item/gun/ballistic/rifle/repeater/risvocarb
+    name = "KAR 'Marland' Pistol Carbine"
+    desc = "A modified Harland pistol fitted with a cheap stock, and with a much more expensive internal magazine."
+    icon = 'icons/roguetown/weapons/64guns.dmi'
+    icon_state = "m1912"
+    item_state = "m1912"
+    w_class = WEIGHT_CLASS_NORMAL
+    mag_type = /obj/item/ammo_box/magazine/internal/boltaction/risvocarb
+    slowdown = 0.2
+    spread = 0.5
+    force = 30 //it has a fat fucking stock lemme smack a motherfucker with it
+    pump_sound = 'sound/combat/ranged/pistol_cock.ogg'
+    fire_sound = PISTOLSHOT
+    load_sound = 'sound/combat/ranged/pistol_magin.ogg'
+    eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
+    recoil = 0.05 //stocked pistol
+    semi_auto = TRUE

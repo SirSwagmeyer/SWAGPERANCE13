@@ -75,6 +75,14 @@
 	max_ammo = 6
 	multiload = 1
 
+/obj/item/ammo_box/magazine/internal/boltaction/mercy
+	name = "mercy revolver internal magazine"
+	desc = "This should NOT be here."
+	ammo_type = /obj/item/ammo_casing/a22lr
+	caliber = "a22lr"
+	max_ammo = 8
+	multiload = 1
+
 /obj/item/ammo_box/magazine/internal/boltaction/snubby
 	name = "snubby internal magazine"
 	desc = "This should NOT be here."
@@ -112,7 +120,23 @@
 /obj/item/ammo_box/magazine/internal/boltaction/infiltrator
 	name = "infiltrator internal magazine"
 	desc = "please ahelp if u find me"
-	ammo_type = /obj/item/ammo_casing/a22lr
-	caliber = "a22lr"
+	ammo_type = /obj/item/ammo_casing/a30
+	caliber = "a30"
 	max_ammo = 20
+	multiload = 1
+
+/obj/item/ammo_box/magazine/internal/boltaction/mondragon
+	name = "mondragon internal magazine"
+	desc = "please ahelp if u find me"
+	ammo_type = /obj/item/ammo_casing/a762lp
+	caliber = "a762lp"
+	max_ammo = 10
+	multiload = 1
+
+/obj/item/ammo_box/magazine/internal/boltaction/risvocarb
+	name = "m1912 internal magazine"
+	desc = "please ahelp if u find me"
+	ammo_type = /obj/item/ammo_casing/a9mm
+	caliber = "a9mm"
+	max_ammo = 21
 	multiload = 1

@@ -18,7 +18,7 @@
 	switch(classchoice)
 
 		if("Private Investigator")
-			to_chat(H, span_warning("Sent here by someone lookin' for something or just passin' buy for a job, really anything that can get you by for another day whatever it may be, your best pal in all of this is your revolver, and that inquisitive mind of yours. The folks in need of your services are usually the ones who have no one else to turn to, so try not to let them down."))
+			to_chat(H, span_warning("Sent here by someone lookin' for something or just passin' buy for a job, really anything that can get you by for another day. Whatever it may be, your best pal in all of this is your revolver, and that inquisitive mind of yours. The folks in need of your services are usually the ones who have no one else to turn to, so try not to let them down."))
 			armor = /obj/item/clothing/suit/roguetown/armor/leather
 			backl = /obj/item/storage/backpack/rogue/satchel
 			shoes = /obj/item/clothing/shoes/roguetown/boots
@@ -115,17 +115,18 @@
 			shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 			pants = /obj/item/clothing/under/roguetown/trou
 			beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
+			beltr = /obj/item/gun/ballistic/revolver/snub
 			shoes = /obj/item/clothing/shoes/roguetown/boots
 			gloves = /obj/item/clothing/gloves/roguetown/fingerless_leather
 			backl = /obj/item/storage/backpack/rogue/satchel
-			backr = /obj/item/gun/ballistic/rifle/repeater/mondragon
+			backr = /obj/item/gun/ballistic/rifle/repeater/enfield
 			belt = /obj/item/storage/belt/rogue/leather
 			backpack_contents = list(
 				/obj/item/lockpick = 1, 
 				/obj/item/rogueweapon/huntingknife = 1, 
 				/obj/item/recipe_book/survival = 1,
 				/obj/item/rogueweapon/scabbard/sheath = 1,
-				/obj/item/ammo_box/handfuls/rifle = 2,
+				/obj/item/ammo_box/handfuls/riflelp = 3,
 				/obj/item/flashlight/flare/torch = 1,
 				)
 			H.adjust_skillrank(/datum/skill/misc/tracking, 3, TRUE)

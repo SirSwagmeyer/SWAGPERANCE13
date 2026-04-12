@@ -108,7 +108,7 @@
 
 /obj/item/gun/ballistic/revolver/pace
 	name = "'Pace' Prarie Revolver"
-	desc = "A relatively cheap revolver, similar to the Garland. Doesn't handle as well. Not as accurate, not as well made. Still, it'll put holes in things, and that's what you need, right?"
+	desc = "A relatively cheap revolver, similar to the Garland. Doesn't handle as well. Not as accurate, not as well made. Still, it'll put holes in things, and that's what you need, right? Just try to match the tempo"
 	w_class = WEIGHT_CLASS_SMALL
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/revolver
 	force = 10
@@ -208,3 +208,19 @@
 	recoil = 0.1
 	experimental_inhand = FALSE
 	slot_flags = ITEM_SLOT_BACK
+
+/obj/item/gun/ballistic/revolver/mercy
+	name = "LC 'Mercy' Revolver"
+	desc = "A low-caliber revolver, at least it has 8 rounds in the chamber over six. Probably not gonna kill anything, unless you put it up against someone's head."
+	w_class = WEIGHT_CLASS_SMALL
+	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/mercy
+	force = 10
+	spread = 6
+	icon_state = "mercy"
+	item_state = "mercy"
+	slowdown = 0.15
+	empty_indicator = TRUE
+	fire_sound = REVOLVERSHOT
+	load_sound = REVOLVERINSERT
+	recoil = 0.10 //22lr is a pussy caliber, so less recoil
+	experimental_inhand = FALSE

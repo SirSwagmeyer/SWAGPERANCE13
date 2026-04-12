@@ -67,12 +67,12 @@
 
 /datum/advclass/bulwark/shotgun
 	name = "Frontman"
-	tutorial = "You've selected one of the better shotguns in Kingsrow's armory. Armed with a PAX, your entire thing is trying to engage in tight hallways."
+	tutorial = "You've selected one of the better shotguns in Kingsrow's armory. Armed with a Auto 8, your entire thing is trying to engage in tight hallways."
 	outfit = /datum/outfit/job/roguetown/bulwark/shotgun
 	category_tags = list(CTAG_BULWARK)
 
 /datum/outfit/job/roguetown/bulwark/shotgun/pre_equip(mob/living/carbon/human/H)
-	backl = /obj/item/gun/ballistic/shotgun/eternal
+	backl = /obj/item/gun/ballistic/rifle/repeater/auto8
 	backr = /obj/item/storage/backpack/rogue/backpack
 	backpack_contents = list(
 		/obj/item/reagent_containers/glass/bottle/rogue/healthpotnew = 2,

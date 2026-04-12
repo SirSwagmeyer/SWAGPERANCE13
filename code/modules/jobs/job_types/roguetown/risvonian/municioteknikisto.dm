@@ -47,15 +47,16 @@
 	mask = /obj/item/clothing/mask/rogue/gasmask/risvonmask
 	belt = /obj/item/storage/belt/rogue/leather/black/soldier
 	beltl = /obj/item/flashlight/flare/torch/lantern
-	beltr = /obj/item/gun/ballistic/rifle/repeater/offiseroluger
+	beltr = /obj/item/storage/belt/rogue/pouch/ammobag/pistol
 	wrists = /obj/item/scomstone
 	gloves = /obj/item/clothing/gloves/roguetown/eastgloves1
 	id = /obj/item/roguekey/risvon
 	backr = /obj/item/storage/backpack/rogue/satchel/risvon
 	backl = /obj/item/storage/backpack/rogue/satchel/chestrig
+	r_hand = /obj/item/gun/ballistic/rifle/repeater/offiseroluger
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/hmg/a303 = 9,
-		/obj/item/ammo_box/magazine/luger = 3,
+		/obj/item/ammo_box/magazine/luger = 6,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
@@ -67,7 +68,8 @@
 	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/pistols, 4, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/pistols, 4, TRUE) // this is literally just flavor to be completely honest with you, it does fucking nothing
+	H.adjust_skillrank(/datum/skill/combat/rifles, 4, TRUE) // this is so they can actually aim with the carbine if they want because it is technically a rifle
 	H.adjust_skillrank(/datum/skill/craft/armorsmithing, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
 	H.change_stat("constitution", 1)

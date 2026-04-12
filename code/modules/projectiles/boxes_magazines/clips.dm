@@ -7,7 +7,7 @@
 	multiload = 1
 
 /obj/item/ammo_box/clip/pistol
-	name = "ammo clip"
+	name = "pistol ammo clip"
 	desc = "A cheap and simple device meant to pair with the 'Harland' pistol line."
 	icon_state = "pistol_clip"
 	ammo_type = /obj/item/ammo_casing/a9mm
@@ -23,9 +23,17 @@
 	max_ammo = 5
 
 /obj/item/ammo_box/clip/broomhandle
-	name = "broomhandle clip"
-	desc = "A metal piece used for filling up the broomhandle pistol."
+	name = "rifle ammo clip"
+	desc = "A metal piece used for filling up the broomhandle pistol or other rifles."
 	icon_state = "LQ-clip"
 	ammo_type = /obj/item/ammo_casing/a762
 	caliber = "a762"
+	max_ammo = 5
+
+/obj/item/ammo_box/clip/mondragon
+	name = "Low Powder Rifle clip"
+	desc = "A metal piece used for filling up a rifle with a lower powder load."
+	icon_state = "LP-clip"
+	ammo_type = /obj/item/ammo_casing/a762lp
+	caliber = "a762lp"
 	max_ammo = 5

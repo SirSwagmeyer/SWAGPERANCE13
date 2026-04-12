@@ -481,6 +481,16 @@
 		/obj/item/ammo_box/handfuls/rifle, 
 	)
 
+/obj/item/storage/belt/rogue/pouch/ammobag/rifleclip //these are not broomhandle clips per se, they're just rifle clips but renamed for the heirarch in the code
+	populate_contents = list(
+		/obj/item/ammo_box/clip/broomhandle,
+		/obj/item/ammo_box/clip/broomhandle,
+		/obj/item/ammo_box/clip/broomhandle,
+		/obj/item/ammo_box/clip/broomhandle,
+		/obj/item/ammo_box/clip/broomhandle,
+		/obj/item/ammo_box/clip/broomhandle,
+	)
+
 /obj/item/storage/belt/rogue/pouch/ammobag/pistol 
 	populate_contents = list(
 		/obj/item/ammo_box/clip/pistol,

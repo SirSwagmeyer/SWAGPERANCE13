@@ -39,6 +39,15 @@
     multiload = 1
     icon_state = "lugermag"
 
+/obj/item/ammo_box/magazine/cfmag
+    name = "Certain Fury magazine"
+    desc = "An extractable magazine. It looks like a Fury magazine, but MUCH bigger."
+    multiple_sprites = AMMO_BOX_PER_BULLET
+    ammo_type = /obj/item/ammo_casing/a45acp
+    caliber = "a45acp"
+    max_ammo = 15
+    multiload = 1
+    icon_state = "cfmag"
 
 //hmg 
 

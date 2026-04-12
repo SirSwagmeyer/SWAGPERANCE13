@@ -231,6 +231,7 @@
 		/obj/item/ammo_box/clip,
 		/obj/item/ammo_box/handfuls,
 		/obj/item/ammo_box/speedloader,
+		/obj/item/ammo_box/magazine,
 	))
 
 /datum/component/storage/concrete/grid/pillbottle
