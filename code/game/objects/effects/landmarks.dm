@@ -578,24 +578,24 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	jobspawn_override = list("Soldato")
 	delete_after_roundstart = FALSE
 
-/obj/effect/landmark/start/armilteknikisto
-	name = "Armilteknikisto"
+/obj/effect/landmark/start/pafanto
+	name = "pafanto"
 	icon_state = "arrow"
 
-/obj/effect/landmark/start/armilteknikistolate
-	name = "Armilteknikisto"
+/obj/effect/landmark/start/pafantolate
+	name = "Pafanto"
 	icon_state = "arrow"
-	jobspawn_override = list("Armilteknikisto")
+	jobspawn_override = list("Pafanto")
 	delete_after_roundstart = FALSE
 
-/obj/effect/landmark/start/municioteknikisto
-	name = "Municioteknikisto"
+/obj/effect/landmark/start/mulo
+	name = "Mulo"
 	icon_state = "arrow"
 
-/obj/effect/landmark/start/municioteknikistolate
-	name = "Municioteknikisto"
+/obj/effect/landmark/start/mulolate
+	name = "Mulo"
 	icon_state = "arrow"
-	jobspawn_override = list("Municioteknikisto")
+	jobspawn_override = list("Mulo")
 	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/bastiono

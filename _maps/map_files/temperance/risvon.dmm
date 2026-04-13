@@ -550,8 +550,8 @@
 /area/rogue/under/cave/warmachine)
 "fh" = (
 /obj/structure/chair/stool/rogue,
-/obj/effect/landmark/start/municioteknikisto,
-/obj/effect/landmark/start/municioteknikistolate,
+/obj/effect/landmark/start/mulo,
+/obj/effect/landmark/start/mulolate,
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
 "fi" = (
@@ -620,8 +620,8 @@
 /area/rogue/indoors/risvonbase)
 "fT" = (
 /obj/structure/chair/stool/rogue,
-/obj/effect/landmark/start/armilteknikisto,
-/obj/effect/landmark/start/armilteknikistolate,
+/obj/effect/landmark/start/pafanto,
+/obj/effect/landmark/start/pafantolate,
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
 "fX" = (
