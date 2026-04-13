@@ -107,7 +107,6 @@
 
 	equip_delay_self = 1 SECONDS
 	unequip_delay_self = 1 SECONDS
-	inv_storage_delay = 1 SECONDS
 	edelay_type = 1
 
 	//flipping knives has a cooldown on to_chat to reduce chatspam

@@ -141,7 +141,6 @@
 
 	equip_delay_self = 1.5 SECONDS
 	unequip_delay_self = 1.5 SECONDS
-	inv_storage_delay = 1.5 SECONDS
 	edelay_type = 1
 
 /obj/item/rogueweapon/sword/Initialize()
