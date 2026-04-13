@@ -102,8 +102,8 @@
 
 /obj/projectile/bullet/shrapnel //default shrapnel; if we ever want specific behaviors for shrapnel we can put em here
 	name = "pellet"
-	damage = 30
-	armor_penetration = 40
+	damage = 70
+	armor_penetration = 20
 	hitscan = FALSE
 	ignore_source_check = TRUE
 	woundclass = BCLASS_CUT

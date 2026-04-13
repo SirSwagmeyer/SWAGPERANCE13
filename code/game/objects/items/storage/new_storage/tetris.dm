@@ -78,6 +78,7 @@
 /datum/component/storage/Initialize(datum/component/storage/concrete/master)
 	if(!grid_box_size)
 		grid_box_size = get_grid_box_size()
+	RegisterSignal(parent, COMSIG_ITEM_EQUIPPED, PROC_REF(on_equipped))
 	RegisterSignal(parent, COMSIG_STORAGE_BLOCK_USER_TAKE, PROC_REF(should_block_user_take))
 	. = ..()
 	if(!.)
@@ -379,15 +380,11 @@
 			return FALSE
 	return handle_item_insertion(attacking_item, FALSE, user, params = params, storage_click = storage_click)
 
+//This is basically literally just for backpacks.
 /datum/component/storage/proc/on_equipped(obj/item/source, mob/user, slot)
 	SIGNAL_HANDLER
-
-	var/atom/parent_atom = parent
-	for(var/mob/living/living_viewer in can_see_contents())
-		if(!living_viewer.CanReach(parent_atom))
-			hide_from(living_viewer)
-	if(!worn_check_aggressive(parent, user, TRUE))
-		hide_from(user)
+	if(user.active_storage == src && istype(source, /obj/item/storage/backpack/rogue/backpack))
+		close(user)
 
 /datum/component/storage/proc/worn_check(obj/item/storing, mob/user, no_message = FALSE)
 	. = TRUE
