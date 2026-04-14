@@ -456,6 +456,7 @@ GLOBAL_LIST_EMPTY(round_join_times)
 #define SHOTGUNCASING 2
 #define PISTOLCASING 3
 #define SMGCASING 4
+#define FLAMECASING 5
 
 //var-lists for gasmask breathing
 

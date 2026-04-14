@@ -165,4 +165,4 @@
 	icon_state = "flamercoat"
 	item_state = "flamercoat"
 	body_parts_covered = COVERAGE_FULL
-	armor = list("blunt" = 100, "slash" = 70, "stab" = 50, "piercing" = 50, "fire" = 90, "acid" = 0)
+	armor = list("blunt" = 100, "slash" = 70, "stab" = 50, "piercing" = 50, "fire" = 100, "acid" = 0)

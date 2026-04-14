@@ -13,9 +13,10 @@
 	. = ..()
 	if(ishuman(target))
 		var/mob/living/carbon/human/H = target
-		if(!istype(H.wear_armor, /obj/item/clothing/suit/roguetown/armor/plate/modern/blacksteel_full_plate/bulwark)) // change this to the flamer suit
+		if(!istype(H.wear_armor, /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat/flamer))
 			H.adjust_fire_stacks(5)
 			H.IgniteMob()
+			H.emote("agony", forced = TRUE)
 		new /obj/flamer_fire(get_turf(src))
 
 /obj/flamer_fire
@@ -80,7 +81,7 @@
 	if(istype(M))
 		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
-			if(istype(H.wear_armor, /obj/item/clothing/suit/roguetown/armor/plate/modern/blacksteel_full_plate/bulwark)) // change to flamer suit later
+			if(istype(H.wear_armor, /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat/flamer))
 				return
 		M.adjust_fire_stacks(burnlevel) //Make it possible to light them on fire later.
 		if (prob(firelevel + 2*M.fire_stacks)) //the more soaked in fire you are, the likelier to be ignited
@@ -122,7 +123,7 @@
 			var/mob/living/I = i
 			if(istype(I,/mob/living/carbon/human))
 				var/mob/living/carbon/human/M = I
-				if(istype(M.wear_armor, /obj/item/clothing/suit/roguetown/armor/plate/modern/blacksteel_full_plate/bulwark)) // change 2 the flamer suit
+				if(istype(M.wear_armor, /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat/flamer))
 					continue
 			I.adjust_fire_stacks(burnlevel) //If i stand in the fire i deserve all of this. Also Napalm stacks quickly.
 			I.IgniteMob()
