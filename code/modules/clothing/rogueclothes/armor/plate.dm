@@ -341,6 +341,7 @@
 	icon_state = "ibreastplate"
 	boobed = FALSE	//the armor just looks better with this, makes sense and is 8 sprites less
 	max_integrity = ARMOR_INT_CHEST_MEDIUM_IRON
+	body_parts_covered = CHEST|GROIN|VITALS|ARMS|NECK
 	smeltresult = /obj/item/ingot/iron
 	smelt_bar_num = 2
 

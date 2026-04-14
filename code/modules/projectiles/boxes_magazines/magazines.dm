@@ -86,3 +86,15 @@
 	max_ammo = 40
 	multiload = 1
 	icon_state = "50dbox"
+
+// other
+
+/obj/item/ammo_box/magazine/flamer
+	name = "fuel tank"
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
+	max_ammo = 200
+	multiload = 1
+	icon_state = "flamer"
+	ammo_type = /obj/item/ammo_casing/flamer
+	caliber = "flamer"
+	multiload = 1

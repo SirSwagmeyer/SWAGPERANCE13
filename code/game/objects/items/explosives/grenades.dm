@@ -95,16 +95,27 @@
 	name = "'Molon Labe' fragmentation grenade"
 	desc = "Four seconds. A lumpy shaped shrapnel shitter. Take care not to hit yourself."
 	icon_state = "pineapple-nade"
-	fuze = 40
+	fuze = 25
 	var/fradius = 6
 
 //frag explode
 /obj/item/grenade/frag/explode()
 	visible_message(span_danger("[src] explodes!"))
-	var/datum/component/shrapnel/fragnade = new /datum/component/shrapnel()
+	var/obj/effect/shrapnel/uwu
+	uwu = new /obj/effect/shrapnel()
 	var/target = get_turf(src)
-	fragnade.projectile_type = /obj/projectile/bullet/shrapnel
-	fragnade.radius = fradius	
-	fragnade.do_shrapnel(src, target)
+	uwu.projectile_type = /obj/projectile/bullet/shrapnel
+	uwu.radius = fradius
+	uwu.do_shrapnel(src, target)
 	explosion(src, devastation_range = 0, heavy_impact_range = 1, light_impact_range = 1, flash_range = 0, smoke = FALSE, soundin = pick('sound/misc/explode/arty1.ogg','sound/misc/explode/arty2.ogg','sound/misc/explode/arty3.ogg','sound/misc/explode/arty4.ogg','sound/misc/explode/arty5.ogg','sound/misc/explode/arty6.ogg'))
 	qdel(src)
+
+/*
+	var/obj/effect/shrapnel/uwu //it's my code and i get to name the variables what i want
+	uwu = new /obj/effect/shrapnel()
+	var target = get_turf(src)
+	uwu.projectile_type = /obj/projectile/bullet/shrapnel/frogmine
+	uwu.radius = 5
+	uwu.override_projectile_range = 10	
+	uwu.do_shrapnel(src, target)
+*/

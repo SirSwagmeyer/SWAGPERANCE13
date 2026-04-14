@@ -196,11 +196,13 @@ GLOBAL_LIST_INIT(perserdun_positions, list(
 GLOBAL_LIST_INIT(risvon_positions, list(
 	"Commandant",
 	"Oficiro",
+	"Kaspafisto",
 	"Veterano",
 	"Soldato",
+	"Magiisto",
+	"Bastiono",
 	"Armilteknikisto",
 	"Municioteknikisto",
-	"Servisto",
 	"Curacisto",
 	"Camp Follower",
 	"Consulo",
@@ -210,6 +212,7 @@ GLOBAL_LIST_INIT(kingsrow_positions, list(
 	"Hierarch",
 	"Bulwark",
 	"Provisioner",
+	"Barkeeper",
 	"Towner",
 	"Mortician",
 ))

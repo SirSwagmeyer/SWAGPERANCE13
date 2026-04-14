@@ -111,3 +111,12 @@
 	variance = 18
 	bullet_type = SHOTGUNCASING
 
+//other
+
+/obj/item/ammo_casing/flamer
+	name = "flame pellet"
+	desc = "A fuel pellet used by a flamethrower."
+	icon_state = null
+	caliber = "flamer"
+	projectile_type = /obj/projectile/bullet/flamer
+	bullet_type = FLAMECASING

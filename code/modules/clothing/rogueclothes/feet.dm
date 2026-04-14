@@ -505,3 +505,10 @@
 	icon = 'icons/roguetown/clothing/feet.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/feet.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/feet.dmi'
+
+/obj/item/clothing/shoes/roguetown/boots/flamer
+	name = "burnt boots"
+	desc = "The soles have this weird, charred, & sticky residue on them."
+	icon_state = "flamer"
+	item_state = "flamer"
+	armor = list("blunt" = 100, "slash" = 70, "stab" = 50, "piercing" = 50, "fire" = 90, "acid" = 0)

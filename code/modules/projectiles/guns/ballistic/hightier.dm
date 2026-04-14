@@ -51,3 +51,19 @@
 	dist_fire_sound = DISTANTMEDIUM
 	recoil = 0.15
 	semi_auto = TRUE
+
+/obj/item/gun/ballistic/rifle/flamer
+	name = "MSD 'Scorcher'"
+	desc = "A very, /very/ expensive flamethrower made by the Dictate."
+	icon_state = "flamer"
+	item_state = "flamer"
+	mag_type = /obj/item/ammo_box/magazine/flamer
+	slowdown = 0.2
+	bolt_type = BOLT_TYPE_LOCKING
+	experimental_inhand = FALSE
+	empty_indicator = TRUE
+	fire_sound = FLAMEFIRE
+	pump_sound = 'sound/combat/ranged/flamer_insert.ogg'
+	load_sound = 'sound/combat/ranged/flamer_remove.ogg'
+	semi_auto = TRUE
+	burst = 5

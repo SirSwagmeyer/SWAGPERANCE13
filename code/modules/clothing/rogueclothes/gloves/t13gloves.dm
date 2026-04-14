@@ -35,3 +35,10 @@
 	sleeved = 'icons/roguetown/clothing/onmob/gloves.dmi'
 	icon = 'icons/roguetown/clothing/gloves.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/gloves.dmi'
+
+/obj/item/clothing/gloves/roguetown/leather/flamer
+	name = "ashed gloves"
+	desc = "Charred gloves. Fire resistant."
+	icon_state = "flamer"
+	item_state = "flamer"
+	armor = list("blunt" = 100, "slash" = 70, "stab" = 50, "piercing" = 50, "fire" = 90, "acid" = 0)

@@ -443,13 +443,20 @@ GLOBAL_LIST_EMPTY(round_join_times)
 #define RIFLEFALL list('sound/combat/ranged/casingfall1.ogg', 'sound/combat/ranged/casingfall2.ogg', 'sound/combat/ranged/casingfall3.ogg')
 #define SHOTGUNFALL list('sound/combat/ranged/shotgun_fall.ogg')
 
+
+
+// for flamethrowers.. duh
+#define FLAMECOMBUST list('sound/combat/ranged/flame1.ogg', 'sound/combat/ranged/flame2.ogg', 'sound/combat/ranged/flame3.ogg', 'sound/combat/ranged/flame4.ogg', 'sound/combat/ranged/flame5.ogg')
+#define FLAMEFIRE list('sound/combat/ranged/flamer_fire1.ogg', 'sound/combat/ranged/flamer_fire2.ogg')
+#define PELLETFALL list('sound/blank.ogg')
+
 //casing types
 ///as of temp13 release, primarily used for calling casing falls - used for var/bullet_type
 #define RIFLECASING 1
 #define SHOTGUNCASING 2
 #define PISTOLCASING 3
 #define SMGCASING 4
-
+#define FLAMECASING 5
 
 //var-lists for gasmask breathing
 

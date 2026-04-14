@@ -98,3 +98,16 @@
 	dynamic_hair_suffix = ""
 	sewrepair = TRUE
 	//dropshrink = 0.75
+
+/obj/item/clothing/head/roguetown/helmet/leather/flamer
+	slot_flags = ITEM_SLOT_HEAD
+	name = "scorched hood"
+	desc = "A plastic-rubber combination. Comes with a funny face, with respiratory features."
+	body_parts_covered = HEAD|HAIR|EARS|NOSE|FACE
+	icon_state = "flamer"
+	armor = list("blunt" = 100, "slash" = 70, "stab" = 50, "piercing" = 50, "fire" = 90, "acid" = 0)
+	sellprice = 10
+	prevent_crits = list(BCLASS_BLUNT, BCLASS_TWIST, BCLASS_BURN)
+	sewrepair = TRUE
+	blocksound = SOFTHIT
+	max_integrity = ARMOR_INT_HELMET_LEATHER
