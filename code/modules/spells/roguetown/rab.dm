@@ -184,7 +184,9 @@
 	impact_type = null
 	hitscan = TRUE
 	movement_type = UNSTOPPABLE
-	nodamage = TRUE
+	damage = 40
+	damage_type = BRUTE
+	nodamage = FALSE
 	speed = 0.3
 	flag = "magic"
 	light_color = "#802121"
@@ -201,10 +203,15 @@
 			return BULLET_ACT_BLOCK
 		if(isliving(target))
 			var/mob/living/L = target
-			L.Immobilize(0.5 SECONDS)
-			L.bleed(40)
-			L.adjustBruteLoss(20)
-	qdel(src)
+			L.visible_message(span_danger("[target] is struck by a beam of blood!"), \
+					span_userdanger("I'M STRUCK BY A BEAM OF BLOOD!"), \
+					span_hear("I hear something that sounds like splashes of liquid..."))
+			if(iscarbon(L))
+				var/mob/living/carbon/C = L
+				var/obj/item/bodypart/BP = C.get_bodypart(def_zone) || pick(C.bodyparts)
+				C.apply_damage(35, BRUTE, BP.body_zone)
+				BP.bodypart_attacked_by(BCLASS_CUT, 35, firer, BP.body_zone)
+			qdel(src)
 
 /obj/effect/proc_holder/spell/invoked/projectile/bloodsiphon
 	name = "Blood Siphon"
@@ -237,7 +244,9 @@
 	impact_type = null
 	hitscan = TRUE
 	movement_type = UNSTOPPABLE
-	nodamage = TRUE
+	damage = 20
+	damage_type = BRUTE
+	nodamage = FALSE
 	speed = 0.3
 	flag = "magic"
 	light_color = "#e74141"
@@ -255,25 +264,28 @@
 		if(ishuman(target))
 			var/mob/living/carbon/human/H = target
 			if(NOBLOOD in H.dna?.species?.species_traits)
-				to_chat(sender, span_warning("[H] has no blood to siphon!"))
+				if(ishuman(firer))
+					to_chat(firer, span_warning("[H] has no blood to siphon!"))
 				qdel(src)
 				return BULLET_ACT_BLOCK
 			if(H.blood_volume < 60)
-				to_chat(sender, span_warning("[H] doesn't have enough blood to siphon!"))
+				if(ishuman(firer))
+					to_chat(firer, span_warning("[H] doesn't have enough blood to siphon!"))
 				qdel(src)
 				return BULLET_ACT_BLOCK
 			var/amount = min(60, H.blood_volume)
 			H.blood_volume -= amount
 			H.handle_blood()
 			H.visible_message(span_danger("[target] has blood ripped from their body!"), \
-					span_userdanger("My blood erupts from my body!"), \
-					span_hear("..."), COMBAT_MESSAGE_RANGE, target)
+					span_userdanger("MY BLOOD ERUPTS FROM MY BODY!"), \
+					span_hear("I hear something that sounds like splashes of liquid..."), COMBAT_MESSAGE_RANGE, target)
 			new /obj/effect/decal/cleanable/blood/puddle(H.loc)
-			if(ishuman(sender))
-				var/mob/living/carbon/human/user = sender
+			if(ishuman(firer))
+				var/mob/living/carbon/human/user = firer
 				user.blood_volume = min(user.blood_volume + amount, BLOOD_VOLUME_NORMAL)
 				user.handle_blood()
-			H.bleed(60)
-			H.adjustBruteLoss(10)
-			H.Immobilize(0.3 SECONDS)
-	qdel(src)
+				to_chat(user, span_notice("I drain blood from [H]!"))
+			var/obj/item/bodypart/BP = H.get_bodypart(def_zone) || pick(H.bodyparts)
+			H.apply_damage(20, BRUTE, BP.body_zone)
+			BP.bodypart_attacked_by(BCLASS_CUT, 15, firer, BP.body_zone)
+			qdel(src)
