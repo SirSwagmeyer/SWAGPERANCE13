@@ -158,3 +158,11 @@
 	icon = 'icons/roguetown/clothing/armor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+
+/obj/item/clothing/suit/roguetown/armor/leather/heavy/coat/flamer
+	name = "fire suit"
+	desc = "A fire-retardant coat stripped from the War Machine."
+	icon_state = "flamercoat"
+	item_state = "flamercoat"
+	body_parts_covered = COVERAGE_FULL
+	armor = list("blunt" = 100, "slash" = 70, "stab" = 50, "piercing" = 50, "fire" = 100, "acid" = 0)

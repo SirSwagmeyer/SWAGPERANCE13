@@ -92,4 +92,5 @@
 		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), src, RIFLEFALL, 20, 1), bounce_delay) //if its a rifle casing, play riflefall when it's ejected.
 	else if(bullet_type == 2 && T.bullet_bounce_sound)
 		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), src, SHOTGUNFALL, 20, 1), bounce_delay) //if its a shotgun casing, play shotgun fall when ejected.
-
+	else if(bullet_type == 5 && T.bullet_bounce_sound)
+		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), src, PELLETFALL, 20, 1), bounce_delay) //if its a flame casing, play flame fall when ejected.
