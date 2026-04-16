@@ -1422,8 +1422,8 @@
 /area/rogue/outdoors/perserdun)
 "uu" = (
 /obj/structure/bed/rogue,
-/obj/effect/landmark/start/ranger,
-/obj/effect/landmark/start/rangerlate,
+/obj/effect/landmark/start/voltigeur,
+/obj/effect/landmark/start/voltigeurlate,
 /turf/open/floor/rogue/tile,
 /area/rogue/outdoors/perserdun)
 "uB" = (

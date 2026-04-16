@@ -120,3 +120,13 @@
 	caliber = "flamer"
 	projectile_type = /obj/projectile/bullet/flamer
 	bullet_type = FLAMECASING
+
+/obj/item/ammo_casing/flare
+	name = "FG-1 flare"
+	desc = "A low intensity flare. These came from the LOVE MACHINE along with the flare gun, but the Dictate and Empire can both make these on their own nowadays."
+	icon_state = "flare-handful-1"
+	caliber = "flare"
+	projectile_type = /obj/projectile/bullet/flare
+	bullet_type = SHOTGUNCASING //these aren't shotguns but the shotgun sound is fine
+	sellprice = 6
+	dropshrink = 0.3

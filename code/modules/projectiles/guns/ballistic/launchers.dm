@@ -17,3 +17,39 @@
 	. = ..()
 	if(istype(A, /obj/item/ammo_box) || istype(A, /obj/item/ammo_casing))
 		chamber_round()
+
+/obj/item/gun/ballistic/revolver/flaregun //while under the revolver subtype this IS a launcher and needs a lot of niche code to work
+	name = "IFS flare gun"
+	desc = "A flare gun. Despite being found in the LOVE MACHINE, these have found themselves used mainly for war instead of rescue. Designed to fire two kinds of flares- high illumination and low intensity."
+	icon = 'icons/roguetown/weapons/32guns.dmi'
+	icon_state = "flaregun"
+	item_state = "flaregun"
+	mag_type = /obj/item/ammo_box/magazine/internal/revolver/flaregun
+	slowdown = 0.15
+	grid_height = 64
+	grid_width = 64
+	spread = 0.5
+	cartridge_wording = "flare"
+	fire_sound = FLARESHOT
+	load_sound = 'sound/combat/ranged/hpistol_cock.ogg'
+	recoil = 2
+	sellprice = 34
+	possible_item_intents = list(
+		/datum/intent/shoot/revolver,
+		/datum/intent/arc/flare,
+		INTENT_GENERIC,
+		)
+
+/datum/intent/arc/flare
+	chargetime = 0.5
+	chargedrain = 0
+	no_early_release = FALSE
+
+/obj/item/gun/ballistic/revolver/flaregun/process_chamber() //To update to the empty icons
+	..()
+	var/list/shells = src.magazine.stored_ammo 
+	message_admins("Attempting to get the bullets [shells]")//getting the bullets
+	for(var/obj/item/ammo_casing/shell in shells) //should be easy to slap onto other guns. i could probably put this elsewhere but frankly the fact we don't have a way to convert existing shells to spent ones is atrocious enough
+		message_admins("Got bullets [shells], acting on bullet [shell]")
+		shell.icon_state += "-spent" //FYI, if you make this a more general function make sure repacked shells go back to their initial state
+

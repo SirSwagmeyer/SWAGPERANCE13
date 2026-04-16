@@ -131,3 +131,45 @@
 	//This has been made a simple loop, for the most part flamer_fire_act() just does return, but for specific items it'll cause other effects.
 	firelevel -= 2 //reduce the intensity by 2 per tick
 	return
+
+/obj/projectile/bullet/flare
+	name = "flare"
+	damage = 0
+	armor_penetration = 0
+	hitscan = FALSE
+	spread = 0
+	speed = 0.2
+
+/obj/projectile/bullet/flare/on_hit(target)
+	. = ..()
+	new /obj/item/flashlight/flare/flaregun(get_turf(src))
+
+/obj/item/flashlight/flare/flaregun
+	name = "lit flare"
+	icon = 'icons/roguetown/items/lighting.dmi'
+	icon_state = "fgunlow"
+	desc = "A burning flare! Looks bright. Far too hot to touch while it's burning."
+	light_outer_range = 8
+	on = TRUE
+	slot_flags = ITEM_SLOT_HIP
+	obj_flags = CAN_BE_HIT
+	force = 1
+	on_damage = 5
+	fuel = 5 MINUTES
+	grid_width = 32
+	grid_height = 64
+	extinguishable = TRUE
+	weather_resistant = TRUE
+	anchored = TRUE
+	sellprice = 4
+
+/obj/item/flashlight/flare/flaregun/Initialize()
+	. = ..()
+	START_PROCESSING(SSobj, src)
+
+
+/obj/item/flashlight/flare/flaregun/turn_off()
+	..()
+	name = "burned out flare"
+	desc = "A burned out flare. Sometimes, you feel like you can sympathize with it." //this is not a cry for help btw
+	anchored = FALSE

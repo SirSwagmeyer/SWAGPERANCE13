@@ -499,13 +499,13 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/voltigeur
-	name = "Ranger"
+	name = "Voltigeur"
 	icon_state = "arrow"
 
-/obj/effect/landmark/start/rangerlate
-	name = "Ranger"
+/obj/effect/landmark/start/voltigeurlate
+	name = "Voltigeur"
 	icon_state = "arrow"
-	jobspawn_override = list("Ranger")
+	jobspawn_override = list("Voltigeur")
 	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/auxiliarist

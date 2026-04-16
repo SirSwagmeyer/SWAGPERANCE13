@@ -44,8 +44,8 @@
 
 /obj/item/ammo_casing/update_icon()
 	..()
-	icon_state = "[initial(icon_state)]"
-	desc = ""
+	/*icon_state = "[initial(icon_state)]"
+	desc = ""*/ //If these were here for an important reason I cannot fathom what the value of erasing the description of anything updated is along with resetting the icon state we may have deliberately changed
 
 /obj/item/ammo_casing/examine(mob/user)
 	. = ..()
