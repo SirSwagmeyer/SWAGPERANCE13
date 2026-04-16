@@ -259,6 +259,16 @@
 	. = ..()
 	set_holdable(/obj/item/ammo_box/magazine/hmg)
 
+/datum/component/storage/concrete/grid/lmg
+	screen_max_rows = 4
+	screen_max_columns = 8
+	insert_preposition = "in"
+
+/datum/component/storage/concrete/grid/lmg/New(datum/P, ...)
+	. = ..()
+	set_holdable(/obj/item/ammo_box/magazine/lewis,
+	/obj/item/ammo_box/magazine/dp47,)
+
 /datum/component/storage/concrete/grid/amr
 	max_w_class = WEIGHT_CLASS_SMALL
 	screen_max_rows = 3

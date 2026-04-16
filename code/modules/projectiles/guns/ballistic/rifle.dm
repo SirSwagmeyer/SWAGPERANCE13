@@ -292,3 +292,49 @@
 	fire_sound = 'sound/combat/ranged/enfieldfire.ogg'
 	load_sound = 'sound/combat/ranged/rifleload.ogg'
 	recoil = 0.25
+
+/obj/item/gun/ballistic/rifle/repeater/lewis
+	name = "KR 'Leonard'"
+	desc = "One of the only light machine guns produced the by WAR machine. This one sports a gun shield at the front. There is a tally mark for each man who's held it before you. It's at XII."
+	icon = 'icons/roguetown/weapons/64guns.dmi'
+	icon_state = "lewis"
+	item_state = "lewis"
+	can_parry = TRUE
+	armor = ARMOR_SHIELD
+	possible_item_intents = list(, SHIELD_BLOCK, SHIELD_SMASH)
+	mag_type = /obj/item/ammo_box/magazine/lewis
+	slowdown = 1.5 //I'M THE JUGGAHNAUT BAYBEE
+	force = 40 //if someone hits you with a fucking lewis gun, you're gonna have a bad time
+	spread = 3
+	pump_sound = 'sound/combat/ranged/riflecock.ogg'
+	fire_sound = RIFLESHOT
+	load_sound = 'sound/combat/ranged/rifleload.ogg'
+	recoil = 0.15
+	semi_auto = TRUE
+	burst = 3
+	wdefense = 11
+	max_integrity = 150
+	possible_item_intents = list(
+		/datum/intent/shoot/rifle,
+		/datum/intent/arc/rifle,
+		/datum/intent/shield/smash,
+		/datum/intent/shield/block,
+		INTENT_GENERIC,
+		)
+
+/obj/item/gun/ballistic/rifle/repeater/dp47
+	name = "RSV 'Redeemer'"
+	desc = "A light machine gun, produced by the WAR MACHINE. Fires rifle rounds at a high rate of fire, with a dinner plate on top of it. It's one of a kind."
+	icon = 'icons/roguetown/weapons/64guns.dmi'
+	icon_state = "dp47"
+	item_state = "dp47"
+	mag_type = /obj/item/ammo_box/magazine/dp47
+	slowdown = 0.7
+	force = 40
+	spread = 2
+	pump_sound = 'sound/combat/ranged/riflecock.ogg'
+	fire_sound = RIFLESHOT
+	load_sound = 'sound/combat/ranged/rifleload.ogg'
+	recoil = 0.15
+	semi_auto = TRUE
+	burst = 2

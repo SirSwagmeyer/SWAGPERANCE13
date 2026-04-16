@@ -51,6 +51,30 @@
 
 //hmg 
 
+/obj/item/ammo_box/magazine/lewis
+	name = "Lewis gun ammo pan"
+	desc = "A pan magazine for the Lewis gun."
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
+	caliber = "a30"
+	max_ammo = 97
+	multiload = 1
+	ammo_type = /obj/item/ammo_casing/a30
+	icon_state = "lewismag"
+	grid_width = 64
+	grid_height = 64
+
+/obj/item/ammo_box/magazine/dp47
+	name = "DP47 ammo pan"
+	desc = "A pan magazine for the DP47."
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
+	ammo_type = /obj/item/ammo_casing/a762lp
+	caliber = "a762lp"
+	max_ammo = 48
+	multiload = 1
+	grid_width = 32
+	grid_height = 64
+	icon_state = "dp47mag"
+
 /obj/item/ammo_box/magazine/hmg
 	name = "heavy machinegun magazine"
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
