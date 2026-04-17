@@ -336,7 +336,7 @@
 	id = "hold"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/order/hold
 	effectedstats = list("endurance" = 2, "constitution" = 2)
-	duration = 1 MINUTES
+	duration = 5 MINUTES
 
 /atom/movable/screen/alert/status_effect/buff/order/hold
 	name = "Hold!"
@@ -345,7 +345,7 @@
 
 /datum/status_effect/buff/order/hold/on_apply()
 	. = ..()
-	to_chat(owner, span_blue("My officer orders me to hold!"))
+	to_chat(owner, span_blue("My officer orders me to bundle together!"))
 
 #define TARGET_FILTER "target_marked"
 

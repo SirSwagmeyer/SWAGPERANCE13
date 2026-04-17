@@ -334,6 +334,12 @@
 	volume = 100
 	extra_range = 5
 
+/datum/looping_sound/invokeradio
+	mid_sounds = list('sound/magic/radiocharge.ogg')
+	mid_length = 130
+	volume = 100
+	extra_range = 5
+
 /datum/looping_sound/flailswing
 	mid_sounds = list('sound/combat/wooshes/flail_swing.ogg')
 	mid_length = 7

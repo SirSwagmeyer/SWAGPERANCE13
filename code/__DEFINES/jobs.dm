@@ -221,6 +221,7 @@
 #define PARTISAN (1<<8)
 #define ENVOY (1<<9)
 #define JAEGER (1<<10) //trapper
+#define RADIOTROOPER (1<<10)
 
 #define RISVON	(1<<13)
 
@@ -281,6 +282,7 @@
 #define JDO_CHIRURGEON 1.7
 #define JDO_PARTISAN 1.8
 #define JDO_ENVOY 1.82
+#define JDO_RADIOTROOPER 1.83
 
 // RISVON
 #define JDO_COMMANDANT 1.9

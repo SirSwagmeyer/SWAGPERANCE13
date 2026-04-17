@@ -122,13 +122,13 @@
 	item_state = "mortician"
 	body_parts_covered = COVERAGE_FULL
 
-/obj/item/clothing/suit/roguetown/armor/leather/heavy/bulwark
-	name = "heavy coat"
-	desc = "It feels weird to walk around in. There's plates sewn into the inside of this piece, so it's suseptible to being cut."
-	icon_state = "northprotector"
-	item_state = "northprotector"
+/obj/item/clothing/suit/roguetown/armor/leather/heavy/radio
+	name = "imperial coat"
+	desc = "Semi-formal wear, standard issue for radio officers."
+	icon_state = "officerguard"
+	item_state = "officerguard"
 	body_parts_covered = COVERAGE_FULL
-	max_integrity = ARMOR_INT_CHEST_LIGHT_MEDIUM
+	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER
 	equip_delay_self = 40
 	armor = list("blunt" = 100, "slash" = 50, "stab" = 80, "piercing" = 80, "fire" = 0, "acid" = 0)
 

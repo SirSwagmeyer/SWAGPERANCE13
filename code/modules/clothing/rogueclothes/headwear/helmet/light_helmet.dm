@@ -156,3 +156,19 @@
 	sewrepair = TRUE
 	flags_inv = HIDEEARS
 	body_parts_covered = HEAD|HAIR|EARS|NOSE|EYES
+
+
+/obj/item/clothing/head/roguetown/paddedcap/radio
+	name = "radio headset"
+	desc = "A pair of headphones that pair up with a radiopack."
+	icon_state = "radio"
+	item_state = "radio"
+	sleevetype = null
+	sleeved = null
+	body_parts_covered = HEAD|EARS
+	slot_flags = ITEM_SLOT_HEAD
+	armor = ARMOR_HEAD_BAD
+	prevent_crits = list(BCLASS_CUT)
+	blocksound = SOFTHIT
+	max_integrity = ARMOR_INT_HELMET_CLOTH
+	color = null

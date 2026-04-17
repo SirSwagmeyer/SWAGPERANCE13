@@ -609,3 +609,9 @@
 	desc = "A clean, compartmentalized satchel for holding advanced medical supplies. Product of the LIFE machine."
 	icon_state = "medic_satchel_blue"
 	item_state = "medic_satchel_blue"
+
+/obj/item/storage/backpack/rogue/satchel/radiopack
+	name = "radiopack"
+	desc = "An expensive piece of equipment that connects straight to AS-Y14 through the use of radio waves."
+	icon_state = "radiopack"
+	item_state = "radiopack"

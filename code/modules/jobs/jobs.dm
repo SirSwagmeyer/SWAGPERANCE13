@@ -192,6 +192,7 @@ GLOBAL_LIST_INIT(perserdun_positions, list(
 	"Chirurgeon",
 	"Partisan",
 	"Envoy",
+	"Radio Officer",
 ))
 
 GLOBAL_LIST_INIT(risvon_positions, list(
@@ -207,6 +208,7 @@ GLOBAL_LIST_INIT(risvon_positions, list(
 	"Curacisto",
 	"Camp Follower",
 	"Consulo",
+	"Flamsoldato",
 ))
 
 GLOBAL_LIST_INIT(kingsrow_positions, list(
