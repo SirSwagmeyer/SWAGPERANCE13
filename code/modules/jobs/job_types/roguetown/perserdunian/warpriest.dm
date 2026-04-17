@@ -11,7 +11,7 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 
 	tutorial = "You are a War Priest, a preacher of Rab's will and a warrior of the faith. \
-				You've learned how to manipulate blood as both a weapon and a tool, being taught the practice at a young age by a noble house.\
+				You've learned how to manipulate blood as both a weapon and a tool, being taught the practice at a young age by a noble house. \
 				The training of War Priests is rigorous and extensive, leading to your body being weakened as a result. This is the extent you are allowed to share, however. \
 				War Priests are an extremely valuable asset to the Perserdun force, though are few in numbers due to the extremely selective process. \
 				Your role is to exercise Rab's practices, preachings, and support allies with your unique skillset." 
