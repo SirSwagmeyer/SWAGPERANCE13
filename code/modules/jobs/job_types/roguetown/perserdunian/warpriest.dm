@@ -69,6 +69,7 @@
 	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE) // cutting yourself and doing freaky blood shit would probably get you pretty good at wielding knives
+	H.adjust_skillrank(/datum/skill/combat/revolvers, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
