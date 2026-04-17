@@ -193,8 +193,7 @@
 
 /obj/effect/illumination_flare_spawner/Initialize()
 	. = ..()
-	sleep(30) //There is probably a better way to do this. I don't know it.
-	addtimer(CALLBACK(src, PROC_REF(ignite_flare), 30))
+	addtimer(CALLBACK(src, PROC_REF(ignite_flare)), 30)
 
 
 /obj/effect/illumination_flare_spawner/proc/ignite_flare()
