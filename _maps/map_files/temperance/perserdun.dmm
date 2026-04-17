@@ -67,6 +67,7 @@
 /obj/structure/closet/crate/roguecloset/dark{
 	pixel_x = -7
 	},
+/obj/item/storage/belt/rogue/pouch/ammobag/flare,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/outdoors/perserdun)
 "bd" = (
@@ -1399,6 +1400,7 @@
 	pixel_x = -7
 	},
 /obj/machinery/light/rogue/wallfire/candle/blue/l,
+/obj/item/storage/belt/rogue/pouch/ammobag/flare,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/outdoors/perserdun)
 "uj" = (

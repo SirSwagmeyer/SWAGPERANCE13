@@ -176,24 +176,34 @@
 
 /obj/item/flashlight/flare/flaregun/high
 	name = "illumination flare"
-	desc = "You shouldn't be seeing this. Tell an admin."
+	desc = "An illumination flare is in the air overhead."
+	light_power = 40
+	light_inner_range = null
 	light_outer_range = 40
-	icon_state = "null"
+//	light_falloff_curve = 0.2
+	icon_state = "fgunhigh"
 	extinguishable = FALSE
 	on = TRUE
-	fuel = 2 MINUTES
+	fuel = 1 MINUTES
 	sellprice = 3
-
-/obj/item/flashlight/flare/flaregun/turn_off()
-	..()
-	icon_state = "fgunhigh-empty"
 
 /obj/effect/illumination_flare_spawner
 	name = "illumination flare spawner"
 	desc = "Something broke! Uh oh."
 
-/obj/effect/illumination_flare_spawner/proc/ignite_flare
-	new /obj/item/flashlight/flare/flaregun/high(src)
-	playsound(TODO: PUT A FLARE IGNITING SOUND HERE)
+/obj/effect/illumination_flare_spawner/Initialize()
+	. = ..()
+	sleep(30) //There is probably a better way to do this. I don't know it.
+	addtimer(CALLBACK(src, PROC_REF(ignite_flare), 30))
+
+
+/obj/effect/illumination_flare_spawner/proc/ignite_flare()
+	new /obj/item/flashlight/flare/flaregun/high(src.loc)
+	for(var/mob/living/carbon/human/uwu in range(60, src.loc))
+		var/distance = get_dist(src.loc, uwu.loc)
+		var/volumetoplay = 100 - distance*2
+		if(volumetoplay < 20)
+			volumetoplay = 20
+		uwu.playsound_local(get_turf(uwu), 'sound/misc/flaregun_high_ignite.ogg', volumetoplay, FALSE)
 	loud_message("You hear a flare ignite in the air", hearing_distance = 60) //This really should be based on solely range and having sight, not hearing, but these flares are already driving me mad. Fix it later
 	qdel(src)

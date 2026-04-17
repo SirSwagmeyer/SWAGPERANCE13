@@ -3,17 +3,17 @@
 	flag = VOLTIGEUR
 	department_flag = PERSERDUN
 	faction = "Station"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	allowed_races = RACES_CONSCRIPT
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 
 	tutorial = "You are an Armsman, given the honor of being a Voltigeur. You are expected to serve as a scout and skirmisher. \
-				Having done intense physical training in the mountains of Osk Averwael, you've passed the intense training needed to get this position.\
-				While Voltigeurs were always flankers and scouts, the guns are fairly new; replacing crossbows with guns from the WAR MACHINE. \
-				Be careful not to get caught alone, as you may not excel in a one-on-one fight. Try to always stay on the flanks of another battle. \
-				Voltigeurs have a reputation as the best of Armsman; try to live up to that standard, and take pride in your accomplishments." 
+				Having done intense physical training in the mountains of Osk Averwael, you've passed the rigorous selection to get this position.\
+				While Voltigeurs were always flankers and scouts, the guns are fairly new; replacing crossbows with weapons from the WAR MACHINE. \
+				Be careful not to get caught on your own. Try to always stay on the flanks of another battle. \
+				Voltigeurs have a reputation as the best of Armsman; try to live up to that standard, and take pride in your role." 
 
 	outfit = /datum/outfit/job/roguetown/voltigeur
 	display_order = JDO_VOLTIGEUR
@@ -57,6 +57,8 @@
 		/obj/item/grenade/gas/poison,
 		/obj/item/grenade/gas/smoke,
 		/obj/item/rogueweapon/sword/iron/short,
+		/obj/item/gun/ballistic/revolver/flaregun,
+		/obj/item/storage/belt/rogue/pouch/ammobag/flare,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)

@@ -47,29 +47,30 @@
 
 /obj/item/gun/ballistic/revolver/flaregun/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
 	var/obj/item/ammo_casing/shell = src.magazine.stored_ammo[1]
-	if(shell == /obj/item/ammo_casing/flareh)
+	if(istype(shell, /obj/item/ammo_casing/flareh))
 		var/turf/firerlocation = user.loc
-		if(firerlocation.weatherproof)
-			to_chat(src, span_warning("I can't fire [src] until I'm outside!"))
+		firerlocation.can_see_sky()
+		if(firerlocation.can_see_sky != 1)
+			to_chat(user, span_warning("I can't fire [src] until I'm outside!"))
 			return
 		var/turf/aimedturf
-		if(target isturf)
+		if(isturf(target))
 			aimedturf = target
-		else 
+		else
 			aimedturf = target.loc
-		if(aimedturf.weatherproof)
-			to_chat(src, span_warning("I can't fire [src] at a roof!"))
+		aimedturf.can_see_sky()
+		if(aimedturf.can_see_sky != 1)
+			to_chat(user, span_warning("I can't fire [src] at a roof!"))
 			return
 		if(shell.BB == null)
-			to_chat(src, span_warning("I can't fire a spent flare!"))
+			to_chat(user, span_warning("I can't fire a spent flare!"))
 			return
-		playsound(src, 'sound/combat/ranged/flaregun_high_fire.ogg')//todo: make this an actual sound
-		user.visible_message(span_warning "[user] fires [src] into the air!")
+		playsound(user, 'sound/misc/flaregun_high_fire.ogg', 100)
+		shake_camera(user, 2, 1)
+		user.visible_message(span_warning("[user] fires [src] into the air!"))
 		shell.BB = null
-		shell.icon_state = flareh-handful-1-spent
-		var/obj/effect/illumination_flare_spawner/uwu //it's my code and i get to name the variables what i want
-		uwu = new /obj/effect/illumination_flare_spawner
-		addtimer(CALLBACK(uwu, PROC_REF(ignite_flare), 6 SECONDS))
+		shell.icon_state += "-spent"
+		new /obj/effect/illumination_flare_spawner(aimedturf)  //it's my code and i get to name the variables what i want
 	else
 		..()
 

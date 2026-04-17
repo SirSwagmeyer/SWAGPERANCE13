@@ -511,6 +511,16 @@
 		/obj/item/ammo_box/handfuls/shotgun,
 	)
 
+/obj/item/storage/belt/rogue/pouch/ammobag/flare 
+	populate_contents = list(
+		/obj/item/ammo_box/handfuls/flare,
+		/obj/item/ammo_box/handfuls/flare,
+		/obj/item/ammo_box/handfuls/flare,
+		/obj/item/ammo_box/handfuls/flare,
+		/obj/item/ammo_box/handfuls/flareh,
+		/obj/item/ammo_box/handfuls/flareh,
+	)
+
 /obj/item/storage/belt/rogue/pouch/ammobag/amr
 	name = "ammo sack"
 	desc = "A leather satchel meant to carry boxes of .50 caliber rounds."
