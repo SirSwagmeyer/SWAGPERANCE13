@@ -61,21 +61,25 @@
 	if(istext(soundin))
 		switch(soundin)
 			if("chuckle")
-				used = pick('sound/vo/
+				used = pick('sound/vo/male/renegade/cheeki-breeki.ogg',)
 			if("embed")
 				used = pick('sound/vo/male/young/embed (1).ogg','sound/vo/male/young/embed (2).ogg')
-			if("fatigue")
-				used = 'sound/vo/male/young/embed (1).ogg'
-			if("firescream")
-				used = pick('sound/vo/male/young/firescream (1).ogg','sound/vo/male/young/firescream (2).ogg','sound/vo/male/young/firescream (3).ogg')
+			if("sigh")
+				used = pick('sound/vo/male/zeth/sigh (1).ogg','sound/vo/male/zeth/sigh (2).ogg','sound/vo/male/zeth/sigh (3).ogg')
+			if("grumble")
+				used = pick('sound/vo/male/zeth/grumble (1).ogg','sound/vo/male/zeth/grumble (2).ogg')
+			if("scream")
+				used = 'sound/vo/male/renegade/scream (1).ogg'
 			if("laugh")
-				used = pick('sound/vo/male/young/laugh (1).ogg','sound/vo/male/young/laugh (2).ogg','sound/vo/male/young/laugh (3).ogg','sound/vo/male/young/laugh (4).ogg','sound/vo/male/young/laugh (5).ogg','sound/vo/male/young/laugh (6).ogg','sound/vo/male/young/laugh (7).ogg')
+				used = pick('sound/vo/male/renegade/laugh (1).ogg', 'sound/vo/male/renegade/laugh (2).ogg')
 			if("pain")
-				used = pick('sound/vo/male/young/pain (1).ogg','sound/vo/male/young/pain (2).ogg','sound/vo/male/young/pain (3).ogg','sound/vo/male/young/pain (4).ogg')
+				used = 'sound/vo/male/renegade/death.ogg'
+			if("cough")
+				used = pick('sound/vo/male/renegade/cough (1).ogg','sound/vo/male/renegade/cough (2).ogg')
 			if("paincrit")
 				used = pick('sound/vo/male/young/paincrit (1).ogg','sound/vo/male/young/paincrit (2).ogg','sound/vo/male/young/paincrit (3).ogg')
 			if("painscream")
-				used = pick('sound/vo/male/young/painscream (1).ogg','sound/vo/male/young/painscream (2).ogg','sound/vo/male/young/painscream (3).ogg')
+				used = pick('sound/vo/male/renegade/painscream (1).ogg','sound/vo/male/wilhelm_scream.ogg')
 			if("rage")
 				used = 'sound/vo/male/young/rage.ogg'
 		return used

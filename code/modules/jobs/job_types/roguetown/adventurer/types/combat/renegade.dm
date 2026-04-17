@@ -10,7 +10,8 @@
 	category_tags = list(CTAG_ADVENTURER, CTAG_COURTAGENT)
 	classes = list("Perpretrator" = "In all honesty, you're probably a criminal. You have a double-barreled shotgun.",
 					"Desperado" = "You might just be a bandit, or a cowboy lover. You carry a mass-produced revolver.",
-					"Gangster" = "You're probably from a gang. Or, you happened to kill whoever held the pistol before you. Make some money, grab some guns. Try not to die.",)
+					"Gangster" = "You're probably from a gang. Or, you happened to kill whoever held the pistol before you. Make some money, grab some guns. Try not to die.",
+					"Poacher" = "You know how to track, and you know how to shoot. You might be a poacher, or maybe you just like guns. Either way, you carry a sawn-off lever-action rifle.")
 
 /datum/outfit/job/roguetown/adventurer/renegade/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -61,6 +62,7 @@
 			H.change_stat("speed", 3)
 			H.set_blindness(0)
 			H.cmode_music = 'sound/music/cmode/adventurer/combat_gunman.ogg'
+			H.dna.species.soundpack_m = new /datum/voicepack/male/renegade()
 
 		if("Desperado")
 			to_chat(H, span_warning("You might just be a bandit, or a cowboy lover. You carry a mass-produced revolver."))
@@ -108,6 +110,7 @@
 			H.grant_language(/datum/language/thievescant)
 			H.set_blindness(0)
 			H.cmode_music = 'sound/music/cmode/adventurer/combat_gunman.ogg'
+			H.dna.species.soundpack_m = new /datum/voicepack/male/renegade()
 
 		if("Gangster")
 			
@@ -117,6 +120,7 @@
 			pants = /obj/item/clothing/under/roguetown/trou/leather
 			beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
 			beltr = /obj/item/gun/ballistic/rifle/repeater/jackal
+			head = /obj/item/clothing/head/roguetown/helmet/bandana //get shiesty wid it
 			shoes = /obj/item/clothing/shoes/roguetown/boots
 			gloves = /obj/item/clothing/gloves/roguetown/fingerless_leather
 			backl = /obj/item/storage/backpack/rogue/satchel
@@ -150,4 +154,50 @@
 			H.change_stat("speed", 3)
 			H.set_blindness(0)
 			H.cmode_music = 'sound/music/cmode/adventurer/combat_gunman.ogg'
+			H.dna.species.soundpack_m = new /datum/voicepack/male/renegade()
 
+		if("Poacher")
+			to_chat(H, span_warning("You know how to track, and you know how to shoot. You might be a poacher, or maybe you just like guns. Either way, you carry a sawn-off lever-action rifle."))
+			armor = /obj/item/clothing/suit/roguetown/armor/leather
+			backl = /obj/item/storage/backpack/rogue/satchel
+			backr = /obj/item/gun/ballistic/rifle/repeater/leverleg
+			shoes = /obj/item/clothing/shoes/roguetown/boots
+			head = /obj/item/clothing/head/roguetown/helmet/tricorn/lucky
+			neck = /obj/item/clothing/neck/roguetown/gorget
+			wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+			beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
+			beltr = /obj/item/flashlight/flare/torch/lantern
+			belt = /obj/item/storage/belt/rogue/leather
+			gloves = /obj/item/clothing/gloves/roguetown/fingerless
+			pants = /obj/item/clothing/under/roguetown/trou/leather
+			shirt = /obj/item/clothing/suit/roguetown/armor/gambeson
+			cloak = /obj/item/clothing/cloak/half/red
+			backpack_contents = list(
+				/obj/item/rogueweapon/huntingknife/idagger/steel = 1,
+				/obj/item/lockpickring/mundane = 1,
+				/obj/item/ammo_box/handfuls/leveraction = 5,
+				/obj/item/rogueweapon/scabbard/sheath = 1,
+				)
+			H.adjust_skillrank(/datum/skill/misc/tracking, 5, TRUE) //good tracker, can level up in 4 seconds by rushing kingsrow
+			H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+			H.adjust_skillrank(/datum/skill/combat/rifles, 3, TRUE)
+			H.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
+			H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
+			H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
+			H.adjust_skillrank(/datum/skill/combat/unarmed, 4, TRUE) //you've got no unarmed weapons- wait what's that? You've got hands? Well shit, show off some moves cowpoke
+			H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
+			H.adjust_skillrank(/datum/skill/misc/climbing, 6, TRUE)
+			H.adjust_skillrank(/datum/skill/misc/riding, 5, TRUE)
+			H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+			H.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
+			H.adjust_skillrank(/datum/skill/misc/stealing, 4, TRUE)
+			H.adjust_skillrank(/datum/skill/misc/lockpicking, 2, TRUE)
+			ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
+			H.change_stat("strength", 1) //no knuckles = 1 more str to make up for it
+			H.change_stat("perception", 1)
+			H.change_stat("endurance", 1)
+			H.change_stat("speed", 3)
+			H.grant_language(/datum/language/thievescant)
+			H.set_blindness(0)
+			H.cmode_music = 'sound/music/cmode/adventurer/combat_gunman.ogg'
+			H.dna.species.soundpack_m = new /datum/voicepack/male/renegade()
