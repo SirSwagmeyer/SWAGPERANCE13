@@ -212,7 +212,7 @@
 
 #define GRANDMASTER	(1<<0) // no-armor leadership wimp w/ drip
 #define GRANDKNIGHT (1<<1) // heaviest armor in the game - very tanky - melee only - consider adding a shield
-#define WARPRIEST (1<<2)
+#define WARPRIEST (1<<2) // rab worshipper support role, uses blood magic, has a few offensive spells with a few support ones too
 #define KNIGHTCOMMANDER (1<<3) //better armor + sawn down lever-action & a sword
 #define AUXILIARIST	(1<<4) //support role - same w/ servico
 #define ARMSMAN	(1<<5) //standard soldier w/ a rifle
