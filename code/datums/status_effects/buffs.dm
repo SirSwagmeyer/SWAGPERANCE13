@@ -320,3 +320,21 @@
 /datum/status_effect/antimagic/on_remove()
 	REMOVE_TRAIT(owner, TRAIT_ANTIMAGIC, MAGIC_TRAIT)
 	owner.visible_message("<span class='warning'>[owner]'s dull aura fades away...</span>")
+
+/datum/status_effect/buff/order/takeaimweak
+	id = "takeaimweak"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/order/takeaim
+	effectedstats = list("perception" = 3)
+	duration = 1 MINUTES
+
+/datum/status_effect/buff/order/movemovemoveweak
+	id = "movemovemoveweak"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/order/movemovemove
+	effectedstats = list("speed" = 3)
+	duration = 1 MINUTES
+
+	/datum/status_effect/buff/order/holdweak
+	id = "holdweak"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/order/hold
+	effectedstats = list("endurance" = 2, "constitution" = 2)
+	duration = 3 MINUTES
