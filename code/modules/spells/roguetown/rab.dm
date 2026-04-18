@@ -192,6 +192,7 @@
 	tracer_type = /obj/effect/projectile/tracer/bloodbeam
 	muzzle_type = null
 	impact_type = null
+	movement_type = UNSTOPPABLE
 	hitscan = TRUE
 	damage = 70
 	armor_penetration = 20
