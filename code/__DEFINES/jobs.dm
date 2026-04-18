@@ -223,7 +223,6 @@
 #define PARTISAN (1<<8)
 #define ENVOY (1<<9)
 #define RADIOTROOPER (1<<10)
-=======
 >>>>>>> main
 
 #define RISVON	(1<<13)
