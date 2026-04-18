@@ -187,6 +187,10 @@
 	},
 /turf/open/floor/rogue/grass,
 /area/rogue/indoors)
+"fD" = (
+/obj/effect/spawner/lootdrop/machine/reaper,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
 "fL" = (
 /obj/structure/table/wood{
 	icon_state = "longtable_mid";
@@ -336,6 +340,10 @@
 /obj/structure/roguemachine/goldface,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors)
+"jD" = (
+/obj/effect/spawner/lootdrop/machine/explosives,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
 "jM" = (
 /obj/machinery/light/rogue/smelter,
 /turf/open/floor/rogue/ruinedwood,
@@ -366,6 +374,10 @@
 /obj/item/reagent_containers/food/snacks/rogue/meat/poultry,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/indoors)
+"ln" = (
+/obj/effect/spawner/lootdrop/machine/patience,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
 "ls" = (
 /obj/structure/table/wood{
 	icon_state = "longtable"
@@ -381,6 +393,10 @@
 "lC" = (
 /turf/closed/wall/mineral/rogue/decostone/cand,
 /area/rogue/indoors)
+"lN" = (
+/obj/structure/machine/spawner/delay,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
 "lO" = (
 /obj/structure/closet/crate/chest/old_crate,
 /obj/item/reagent_containers/food/snacks/grown/onion/rogue,
@@ -493,6 +509,10 @@
 /obj/item/clothing/shoes/roguetown/boots/leather,
 /turf/open/floor/rogue/grass,
 /area/rogue/indoors)
+"qu" = (
+/obj/effect/spawner/lootdrop/machine/rifleammo,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
 "qA" = (
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/indoors)
@@ -716,6 +736,10 @@
 /obj/item/flint,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors)
+"yq" = (
+/obj/effect/spawner/lootdrop/machine/ammo,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
 "ys" = (
 /obj/structure/fluff/customsign{
 	name = "LORETILES";
@@ -726,6 +750,10 @@
 "zf" = (
 /obj/structure/roguemachine/stockpile,
 /turf/open/floor/rogue/grass,
+/area/rogue/outdoors)
+"zg" = (
+/obj/effect/spawner/lootdrop/machine/eternal,
+/turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors)
 "zp" = (
 /obj/machinery/light/rogue/firebowl/stump,
@@ -810,6 +838,10 @@
 /obj/item/rogueweapon/sword/long/exe,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors)
+"DJ" = (
+/obj/structure/machine/spawner,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
 "DW" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -880,6 +912,10 @@
 	},
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors)
+"HW" = (
+/obj/effect/spawner/lootdrop/machine/pistol,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
 "Ie" = (
 /obj/structure/table/optable,
 /obj/item/storage/belt/rogue/surgery_bag/full,
@@ -1091,6 +1127,10 @@
 "Og" = (
 /turf/closed/wall/mineral/rogue/decowood/vert,
 /area/rogue/indoors)
+"Oo" = (
+/obj/effect/spawner/lootdrop/machine/leverrifle,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors)
 "OI" = (
 /obj/structure/table/wood{
 	icon_state = "longtable_mid";
@@ -2821,11 +2861,11 @@ qA
 BJ
 al
 cz
+yq
+qu
 BJ
-HA
 BJ
-BJ
-BJ
+DJ
 BJ
 BJ
 BJ
@@ -2873,8 +2913,8 @@ qA
 al
 al
 al
-al
-BJ
+zg
+fD
 BJ
 BJ
 BJ
@@ -2925,11 +2965,11 @@ mr
 al
 al
 al
-al
-al
+jD
+HW
 BJ
 BJ
-BJ
+lN
 BJ
 BJ
 BJ
@@ -2977,8 +3017,8 @@ qA
 al
 BJ
 BJ
-al
-al
+Oo
+ln
 BJ
 BJ
 BJ
@@ -3083,7 +3123,7 @@ Dm
 JQ
 Vf
 km
-BJ
+sD
 BJ
 BJ
 BJ

@@ -2132,6 +2132,10 @@
 	},
 /turf/closed/wall/mineral/rogue/kingsrow,
 /area/rogue/outdoors/beach/forest/south)
+"nR" = (
+/obj/machinery/light/rogue/firebowl/standing/blue,
+/turf/open/floor/rogue/warmetal,
+/area/rogue/under/cave/warmachine)
 "nW" = (
 /obj/structure/table/wood/large_table/north_east{
 	dir = 1
@@ -3770,6 +3774,11 @@
 /obj/effect/decal/cleanable/blood/gibs/up,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
+"yt" = (
+/obj/structure/mineral_door/wood/wardoor,
+/obj/structure/mineral_door/wood/wardoor,
+/turf/open/floor/rogue/warquad,
+/area/rogue/under/cave/warmachine)
 "yw" = (
 /obj/structure/table/wood/large_table/south_west,
 /turf/open/floor/rogue/cobble,
@@ -3788,6 +3797,10 @@
 "yD" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/wolf,
 /turf/open/floor/rogue/snow,
+/area/rogue/outdoors/beach/forest/south)
+"yF" = (
+/obj/machinery/light/rogue/firebowl/standing/blue,
+/turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/beach/forest/south)
 "yG" = (
 /obj/structure/gate/preopen{
@@ -4058,6 +4071,9 @@
 /obj/item/rogueweapon/spear/militia,
 /turf/open/floor/rogue/brown,
 /area/rogue/indoors/shelter/town)
+"AC" = (
+/turf/closed/wall/mineral/rogue/machine/outercorner/dir8,
+/area/rogue/under/cave/warmachine)
 "AD" = (
 /obj/structure/vampire/necromanticbook{
 	pixel_x = -16;
@@ -4076,6 +4092,9 @@
 /obj/machinery/light/rogue/oven/west,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town)
+"AJ" = (
+/turf/closed/wall/mineral/rogue/machine/outercorner/dir4,
+/area/rogue/under/cave/warmachine)
 "AK" = (
 /turf/open/floor/rogue/snow,
 /area/rogue/under/cave)
@@ -4095,6 +4114,9 @@
 /obj/item/ammo_box/handfuls/shotgun/buckshot,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town)
+"AS" = (
+/turf/closed/wall/mineral/rogue/machine/long,
+/area/rogue/under/cave/warmachine)
 "AV" = (
 /obj/structure/table/wood/longreif,
 /obj/item/storage/belt/rogue/pouch/coins/mid,
@@ -4948,6 +4970,9 @@
 /obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/beach/forest/south)
+"Gs" = (
+/turf/closed/wall/mineral/rogue/machine/outercorner,
+/area/rogue/under/cave/warmachine)
 "Gv" = (
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/dirt/road,
@@ -5273,6 +5298,12 @@
 /obj/effect/spawner/lootdrop/valuable_jewelry_spawner,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
+"Iu" = (
+/obj/structure/closet/crate/roguecloset/metal/metal2,
+/obj/effect/spawner/lootdrop/medicines,
+/obj/effect/spawner/lootdrop/medicines,
+/turf/open/floor/rogue/wardouble,
+/area/rogue/under/cave/warmachine)
 "Iz" = (
 /obj/structure/closet/crate/drawer,
 /turf/open/floor/carpet/royalblack,
@@ -6579,6 +6610,10 @@
 	},
 /turf/open/transparent/openspace,
 /area/rogue/outdoors)
+"Qp" = (
+/obj/machinery/light/rogue/firebowl/standing/blue,
+/turf/open/floor/rogue/wardouble,
+/area/rogue/under/cave/warmachine)
 "Qq" = (
 /obj/structure/fluff/railing/border/west,
 /turf/open/floor/rogue/ruinedwood/spiral,
@@ -6666,6 +6701,9 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
+"QN" = (
+/turf/closed/wall/mineral/rogue/machine/outercorner/dir1,
+/area/rogue/under/cave/warmachine)
 "QP" = (
 /obj/structure/mineral_door/wood/donjon/stone/broken,
 /turf/open/floor/rogue/cobble,
@@ -6809,6 +6847,10 @@
 /obj/structure/flora/roguetree/stump,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/beach/forest/south)
+"RA" = (
+/obj/structure/mineral_door/wood/wardoor,
+/turf/open/floor/rogue/warquad,
+/area/rogue/under/cave/warmachine)
 "RB" = (
 /obj/structure/fluff/railing/border/east,
 /turf/open/transparent/openspace,
@@ -7414,6 +7456,10 @@
 /obj/item/seeds/pipeweed,
 /turf/open/floor/rogue/twig,
 /area/rogue/indoors/shelter/town)
+"VT" = (
+/obj/effect/spawner/lootdrop/machine/rifleammo,
+/turf/closed/mineral/rogue/bedrock,
+/area/rogue/outdoors/town)
 "VV" = (
 /obj/structure/fluff/railing/corner,
 /turf/open/floor/rogue/dirt/road,
@@ -7503,6 +7549,13 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town)
+"Wz" = (
+/turf/open/floor/rogue/wardouble,
+/area/rogue/under/cave/warmachine)
+"WA" = (
+/obj/structure/machine/spawner/delay,
+/turf/open/floor/rogue/wardouble,
+/area/rogue/under/cave/warmachine)
 "WC" = (
 /obj/machinery/light/rogue/wallfire{
 	pixel_x = 32;
@@ -7594,6 +7647,9 @@
 "Xl" = (
 /turf/closed/wall/mineral/rogue/wooddark/vertical,
 /area/rogue/indoors/shelter/town)
+"Xm" = (
+/turf/closed/wall/mineral/rogue/machine/long/east_west,
+/area/rogue/under/cave/warmachine)
 "Xn" = (
 /obj/machinery/light/rogue/wallfire{
 	pixel_y = 32
@@ -67190,7 +67246,7 @@ Hx
 uf
 PE
 jX
-nz
+Ir
 Ir
 Ir
 Ir
@@ -88016,13 +88072,13 @@ iU
 tn
 tn
 tn
-xP
-xP
-Hf
-Hf
-Hf
-xP
-xP
+tn
+Gs
+AS
+AS
+AS
+AS
+AJ
 tn
 tn
 xP
@@ -88244,13 +88300,13 @@ tn
 tn
 tn
 xP
-Hf
+Xm
+Wz
+Wz
+Wz
+Qp
+Xm
 tn
-Hf
-Hf
-Hf
-xP
-xP
 tn
 tn
 xP
@@ -88470,14 +88526,14 @@ iU
 iU
 tn
 tn
-xP
-Hf
-Hf
-hc
-Hf
-Hf
-Hf
-xP
+tn
+RA
+Wz
+Wz
+Wz
+Wz
+RA
+tn
 tn
 tn
 xP
@@ -88697,14 +88753,14 @@ iU
 iU
 iU
 tn
-xP
-Hf
-xP
 tn
-xP
-Hf
-Hf
-xP
+Xm
+Iu
+Wz
+Wz
+Wz
+Xm
+tn
 tn
 tn
 tn
@@ -88924,14 +88980,14 @@ iU
 iU
 iU
 tn
-xP
-xP
-xP
-tn
-xP
-Hf
-Hf
-xP
+yF
+QN
+AJ
+YY
+YY
+Gs
+AC
+yF
 tn
 tn
 tn
@@ -89152,12 +89208,12 @@ iU
 tn
 tn
 xP
-Hf
-xP
 tn
-hc
-tn
-Hf
+Xm
+YY
+YY
+Xm
+cF
 xP
 tn
 tn
@@ -89379,12 +89435,12 @@ iU
 tn
 tn
 xP
-Hf
-Hf
-Hf
 xP
-xP
-Hf
+Xm
+YY
+YY
+Xm
+cF
 xP
 tn
 tn
@@ -89605,14 +89661,14 @@ iU
 iU
 tn
 tn
-xP
-Hf
-tn
-Hf
-Hf
-Hf
-Hf
-xP
+Gs
+AS
+AC
+YY
+YY
+QN
+AS
+AJ
 xP
 tn
 tn
@@ -89832,14 +89888,14 @@ iU
 iU
 tn
 tn
-xP
-hc
-xP
-xP
-Hf
-hc
-Hf
-tn
+Xm
+nR
+YY
+YY
+YY
+YY
+nR
+Xm
 xP
 tn
 tn
@@ -90059,14 +90115,14 @@ iU
 tn
 tn
 xP
-xP
-tn
-xP
-Hf
-Hf
-tn
-Hf
-xP
+Xm
+YY
+YY
+YY
+YY
+YY
+YY
+Xm
 xP
 tn
 tn
@@ -90286,15 +90342,15 @@ iU
 tn
 tn
 xP
-Hf
-Hf
-Hf
-Hf
-Hf
-xP
-Hf
-xP
-xP
+RA
+YY
+YY
+Wz
+WA
+YY
+YY
+RA
+tn
 tn
 tn
 tn
@@ -90513,15 +90569,15 @@ iU
 tn
 tn
 xP
-Hf
-Hf
-Hf
-xP
-xP
-Hf
-Hf
+RA
+YY
+YY
+Wz
+Wz
+YY
+YY
+yt
 tn
-xP
 tn
 tn
 tn
@@ -90740,14 +90796,14 @@ tn
 tn
 tn
 xP
-Hf
-Hf
-tn
-tn
-xP
-Hf
-Hf
-tn
+Xm
+YY
+YY
+YY
+YY
+YY
+YY
+Xm
 xP
 tn
 tn
@@ -90967,14 +91023,14 @@ iU
 tn
 tn
 xP
-Hf
-Hf
-hc
-tn
-tn
-Hf
-Hf
-xP
+Xm
+nR
+YY
+YY
+YY
+YY
+nR
+Xm
 tn
 tn
 tn
@@ -91194,14 +91250,14 @@ iU
 tn
 tn
 xP
-Hf
-Hf
-tn
-tn
-Hf
-Hf
-Hf
-xP
+QN
+AS
+AJ
+YY
+YY
+Gs
+AS
+AC
 tn
 tn
 tn
@@ -91421,14 +91477,14 @@ iU
 iU
 tn
 xP
-Hf
-Hf
-Hf
-tn
-Hf
-Hf
-Hf
 xP
+xP
+Xm
+YY
+YY
+Xm
+xP
+tn
 tn
 tn
 tn
@@ -91648,14 +91704,14 @@ iU
 tn
 tn
 xP
-Hf
-Hf
-Hf
-Hf
-Hf
-Hf
-Hf
 xP
+xP
+Xm
+YY
+YY
+Xm
+xP
+tn
 tn
 tn
 tn
@@ -91875,14 +91931,14 @@ iU
 iU
 tn
 xP
-Hf
-Hf
-Hf
+xP
+Gs
+AC
+YY
+YY
+QN
+AJ
 tn
-Hf
-xP
-xP
-xP
 tn
 tn
 tn
@@ -92102,14 +92158,14 @@ iU
 tn
 tn
 xP
-Hf
-Hf
-Hf
-Hf
-Hf
 xP
-xP
-xP
+Xm
+Wz
+Wz
+Wz
+Wz
+Xm
+tn
 tn
 tn
 tn
@@ -92329,14 +92385,14 @@ iU
 tn
 tn
 xP
-xP
-Hf
-Hf
-Hf
-xP
-hc
 tn
-xP
+RA
+Wz
+Wz
+Wz
+Wz
+RA
+tn
 tn
 tn
 tn
@@ -92556,14 +92612,14 @@ iU
 tn
 tn
 tn
-xP
-Hf
-Hf
-xP
-Hf
 tn
+Xm
+Qp
+Wz
+Wz
+Iu
+Xm
 tn
-xP
 tn
 tn
 xP
@@ -92783,14 +92839,14 @@ iU
 tn
 tn
 tn
-xP
-Hf
-xP
-xP
-Hf
-Hf
-Hf
-xP
+tn
+QN
+AS
+AS
+AS
+AS
+AC
+tn
 tn
 tn
 xP
@@ -112594,7 +112650,7 @@ Ot
 Ot
 Ot
 cd
-cd
+VT
 cd
 cd
 cd

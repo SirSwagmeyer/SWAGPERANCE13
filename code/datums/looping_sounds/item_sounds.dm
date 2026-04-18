@@ -25,6 +25,14 @@
 	volume = 100
 	extra_range = 4
 
+/datum/looping_sound/machineloop
+	start_sound = list('sound/misc/loops/machinestart.ogg')
+	start_length = 100
+	mid_sounds = list('sound/misc/loops/machinerun.ogg')
+	mid_length = 140
+	volume = 90
+	extra_range = 1
+
 /datum/looping_sound/boneloop
 	mid_sounds = list('sound/vo/mobs/ghost/skullpile_loop.ogg')
 	mid_length = 65
