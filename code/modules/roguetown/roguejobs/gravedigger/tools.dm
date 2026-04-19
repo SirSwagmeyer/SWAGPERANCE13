@@ -174,7 +174,8 @@
 	grid_height = 64
 
 /obj/item/rogueweapon/shovel/small/etool
-	force = 10
+	force = 20
+	wdefense = 6
 	name = "etool"
 	desc = "Arguably, a tool of war."
 	icon_state = "etool"
@@ -186,7 +187,7 @@
 		return
 	if(src.folded)
 		src.folded = FALSE
-		src.possible_item_intents = list(/datum/intent/shovelscoop, /datum/intent/mace/strike/shovel)
+		src.possible_item_intents = list(/datum/intent/shovelscoop, /datum/intent/mace/strike/shovel, /datum/intent/axe/chop)
 		user.update_a_intents()
 		src.grid_height = 64
 		src.w_class = WEIGHT_CLASS_NORMAL

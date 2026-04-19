@@ -57,6 +57,7 @@
 		/obj/item/storage/belt/rogue/pouch/coins/poor,
 		/obj/item/grenade/gas/smoke = 1,
 		/obj/item/rogueweapon/stoneaxe/woodcut/risvon,
+		/obj/item/rope,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)

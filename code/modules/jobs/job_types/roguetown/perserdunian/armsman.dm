@@ -55,6 +55,7 @@
 		/obj/item/grenade/gas/poison,
 		/obj/item/grenade/gas/smoke,
 		/obj/item/rogueweapon/sword/iron/short,
+		/obj/item/rope,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)

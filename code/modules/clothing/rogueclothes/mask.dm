@@ -370,12 +370,13 @@
 	slot_flags = ITEM_SLOT_MASK
 	flags_inv = HIDEFACE|HIDESNOUT|HIDEEARS|HIDEHAIR|HIDEFACIALHAIR
 	sewrepair = TRUE
+	block2add = FOV_BEHIND //should make vision 180 when worn
 	equip_sound = 'sound/items/gasmask/gasmask_on.ogg'
 	var/worn = FALSE
 
 /obj/item/clothing/mask/rogue/gasmask/equipped(mob/living/carbon/human/user, slot)
 	. = ..()
-	if(user.wear_mask == src)
+	if(user.wear_mask == src)//We should probably rework this to account for people who already have the trait
 		ADD_TRAIT(user, TRAIT_NOSTINK, TRAIT_GENERIC)
 		worn = TRUE
 

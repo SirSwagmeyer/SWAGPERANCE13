@@ -57,6 +57,7 @@
 		/obj/item/grenade/gas/smoke,
 		/obj/item/bomb/dynamite,
 		/obj/item/rogueweapon/stoneaxe/woodcut/risvon,
+		/obj/item/rope,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)

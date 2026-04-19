@@ -5,7 +5,7 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	allowed_races = RACES_TEMPERANCE_NO_BM
+	allowed_races = RACES_CONSCRIPT
 	allowed_patrons = list(/datum/patron/godless/perserdun)
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
@@ -53,7 +53,7 @@
 	wrists = /obj/item/scomstone/garrison
 	gloves = /obj/item/clothing/wrists/roguetown/wrappings/perserdun
 	id = /obj/item/roguekey/perserdun
-	backr = /obj/item/storage/backpack/rogue/satchel/perserdun
+	backr = /obj/item/storage/backpack/rogue/satchel/perserdun/warpriest
 	
 	backpack_contents = list(
 		/obj/item/storage/belt/rogue/pouch/coins/mid,

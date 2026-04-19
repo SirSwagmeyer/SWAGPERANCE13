@@ -162,8 +162,8 @@
 	projectile_type = /obj/projectile/magic/bloodbeam
 	releasedrain = 30
 	chargedrain = 1
-	chargetime = 15
-	recharge_time = 20 SECONDS
+	chargetime = 5
+	recharge_time = 5 SECONDS
 	warnie = "spellwarning"
 	no_early_release = TRUE
 	movement_interrupt = FALSE
@@ -172,7 +172,7 @@
 	invocation_type = "shout"
 	glow_color = GLOW_COLOR_VAMPIRIC
 	glow_intensity = GLOW_INTENSITY_MEDIUM
-	charging_slowdown = 3
+	charging_slowdown = 2
 	chargedloop = /datum/looping_sound/invokeblood
 	associated_skill = /datum/skill/magic/blood
 	cost = 6
@@ -192,9 +192,10 @@
 	tracer_type = /obj/effect/projectile/tracer/bloodbeam
 	muzzle_type = null
 	impact_type = null
+	movement_type = UNSTOPPABLE
 	hitscan = TRUE
 	damage = 70
-	armor_penetration = 20
+	armor_penetration = 50
 	damage_type = BRUTE
 	woundclass = BCLASS_PIERCE
 	nodamage = FALSE
@@ -229,8 +230,8 @@
 	projectile_type = /obj/projectile/magic/bloodsiphon
 	releasedrain = 30
 	chargedrain = 1
-	chargetime = 25
-	recharge_time = 40 SECONDS
+	chargetime = 10
+	recharge_time = 30 SECONDS
 	warnie = "spellwarning"
 	no_early_release = TRUE
 	movement_interrupt = FALSE
@@ -238,7 +239,7 @@
 	invocation_type = "none"
 	glow_color = GLOW_COLOR_VAMPIRIC
 	glow_intensity = GLOW_INTENSITY_MEDIUM
-	charging_slowdown = 3
+	charging_slowdown = 1
 	chargedloop = /datum/looping_sound/invokeblood
 	associated_skill = /datum/skill/magic/blood
 	cost = 3

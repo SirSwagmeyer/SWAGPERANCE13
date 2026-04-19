@@ -58,6 +58,7 @@
 		/obj/item/grenade/gas/poison = 2,
 		/obj/item/natural/cloth,
 		/obj/item/rogueweapon/sword/iron/short,
+		/obj/item/rope,
 	)
 	H.adjust_skillrank(/datum/skill/misc/medicine, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)

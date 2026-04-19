@@ -604,6 +604,9 @@
 	icon_state = "redsatchelalt"
 	item_state = "redsatchelalt"
 
+/obj/item/storage/backpack/rogue/satchel/perserdun/warpriest
+	color = "#4d4d4d"
+
 /obj/item/storage/backpack/rogue/satchel/surgeon
 	name = "medbag"
 	desc = "A clean, compartmentalized satchel for holding advanced medical supplies. Product of the LIFE machine."
