@@ -50,6 +50,7 @@
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/armorsmithing, 4, TRUE)
+	H.adjust_skillrank(/datum/skill/craft/weaponsmithing, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/blacksmithing, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/smelting, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
