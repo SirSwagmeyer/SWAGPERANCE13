@@ -17,3 +17,66 @@
 	. = ..()
 	if(istype(A, /obj/item/ammo_box) || istype(A, /obj/item/ammo_casing))
 		chamber_round()
+
+/obj/item/gun/ballistic/revolver/flaregun //while under the revolver subtype this IS a launcher and needs a lot of niche code to work
+	name = "\improper IFS flare gun"
+	desc = "A flare gun. Despite being found in the LOVE MACHINE, these have found themselves used mainly for war instead of rescue. Designed to fire two kinds of flares- high illumination and low intensity."
+	icon = 'icons/roguetown/weapons/32guns.dmi'
+	icon_state = "flaregun"
+	item_state = "flaregun"
+	mag_type = /obj/item/ammo_box/magazine/internal/revolver/flaregun
+	slowdown = 0.15
+	grid_height = 64
+	grid_width = 64
+	spread = 0.5
+	cartridge_wording = "flare"
+	fire_sound = FLARESHOT
+	load_sound = 'sound/combat/ranged/hpistol_cock.ogg'
+	recoil = 2
+	sellprice = 34
+	possible_item_intents = list(
+		/datum/intent/shoot/revolver,
+		/datum/intent/arc/flare,
+		INTENT_GENERIC,
+		)
+
+/datum/intent/arc/flare
+	chargetime = 0.5
+	chargedrain = 0
+	no_early_release = FALSE
+
+/obj/item/gun/ballistic/revolver/flaregun/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
+	var/obj/item/ammo_casing/shell = src.magazine.stored_ammo[1]
+	if(istype(shell, /obj/item/ammo_casing/flareh))
+		var/turf/firerlocation = user.loc
+		firerlocation.can_see_sky()
+		if(firerlocation.can_see_sky != 1)
+			to_chat(user, span_warning("I can't fire [src] until I'm outside!"))
+			return
+		var/turf/aimedturf
+		if(isturf(target))
+			aimedturf = target
+		else
+			aimedturf = target.loc
+		aimedturf.can_see_sky()
+		if(aimedturf.can_see_sky != 1)
+			to_chat(user, span_warning("I can't fire [src] at a roof!"))
+			return
+		if(shell.BB == null)
+			to_chat(user, span_warning("I can't fire a spent flare!"))
+			return
+		playsound(user, 'sound/misc/flaregun_high_fire.ogg', 100)
+		shake_camera(user, 2, 1)
+		user.visible_message(span_warning("[user] fires [src] into the air!"))
+		shell.BB = null
+		shell.icon_state += "-spent"
+		new /obj/effect/illumination_flare_spawner(aimedturf)  //it's my code and i get to name the variables what i want
+	else
+		..()
+
+/obj/item/gun/ballistic/revolver/flaregun/process_chamber() //To update to the empty icons
+	..()
+	var/list/shells = src.magazine.stored_ammo //getting the bullets
+	for(var/obj/item/ammo_casing/shell in shells) //should be easy to slap onto other guns. i could probably put this elsewhere but frankly the fact we don't have a way to convert existing shells to spent ones is atrocious enough
+		shell.icon_state += "-spent" //FYI, if you make this a more general function make sure repacked shells go back to their initial state
+

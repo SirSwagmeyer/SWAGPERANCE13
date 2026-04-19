@@ -24,7 +24,7 @@
 #define ARMOR_INT_CHEST_PLATE_ANTAG 700
 #define ARMOR_INT_CHEST_PLATE_BLACKSTEEL 600
 #define ARMOR_INT_CHEST_PLATE_STEEL 500
-#define ARMOR_INT_CHEST_PLATE_BRIGANDINE 100
+#define ARMOR_INT_CHEST_PLATE_BRIGANDINE 150 //can't be worse than a regular iron breastplate
 #define ARMOR_INT_CHEST_PLATE_PSYDON 400 // You get free training, less int
 #define ARMOR_INT_CHEST_PLATE_IRON 250
 #define ARMOR_INT_CHEST_PLATE_DECREPIT 250
@@ -430,6 +430,7 @@ GLOBAL_LIST_EMPTY(round_join_times)
 #define REVOLVERSHOT list('sound/combat/ranged/revolverfire1.ogg', 'sound/combat/ranged/revolverfire2.ogg', 'sound/combat/ranged/revolverfire3.ogg')
 #define HMGGENERICSHOT list('sound/combat/ranged/hmg_fire.ogg') //add more when we have them
 #define HMGM2SHOT list('sound/combat/ranged/m2hb.ogg')
+#define FLARESHOT list('sound/combat/ranged/flaregunfire.ogg')
 //distant sounds
 #define DISTANTLIGHT list('sound/combat/ranged/light_distant2.ogg', 'sound/combat/ranged/light_distant3.ogg')
 #define DISTANTMEDIUM list('sound/combat/ranged/distant_generic1.ogg', 'sound/combat/ranged/distant_generic2.ogg', 'sound/combat/ranged/distant_generic3.ogg', 'sound/combat/ranged/distant_generic4.ogg', 'sound/combat/ranged/distant_generic5.ogg')

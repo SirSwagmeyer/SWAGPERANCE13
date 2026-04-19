@@ -662,7 +662,8 @@
 
 	else //not currently sneaking, check if we can sneak
 		if(light_amount < rogue_sneaking_light_threshhold + (get_skill_level(/datum/skill/misc/sneaking)/200) && m_intent == MOVE_INTENT_SNEAK)
-			animate(src, alpha = 0, time = used_time)
+			if(get_skill_level(/datum/skill/misc/sneaking) >= SKILL_LEVEL_EXPERT)
+				animate(src, alpha = 0, time = used_time)
 			spawn(used_time + 5) regenerate_icons()
 			rogue_sneaking = TRUE
 	return

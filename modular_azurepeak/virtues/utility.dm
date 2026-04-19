@@ -15,7 +15,6 @@
 	name = "Light Steps"
 	desc = "Years of skulking about have left my steps quiet, and my hunched gait quicker."
 	added_traits = list(TRAIT_LIGHT_STEP)
-	added_skills = list(list(/datum/skill/misc/sneaking, 3, 6))
 
 /datum/virtue/utility/failed_squire
 	name = "Failed Squire"

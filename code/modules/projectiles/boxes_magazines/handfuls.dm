@@ -80,3 +80,21 @@
 	max_ammo = 5
 	multiload = 0
 	icon_state = "shotgun-handful"
+
+/obj/item/ammo_box/handfuls/flare
+	name = "handful of low intensity flares"
+	desc = "A handful of FG-1 flares."
+	ammo_type = /obj/item/ammo_casing/flare
+	caliber = "flare"
+	max_ammo = 3
+	multiload = 0
+	icon_state = "flare-handful"
+
+/obj/item/ammo_box/handfuls/flareh
+	name = "handful of high illumination flares"
+	desc = "A handful of FG-2 flares."
+	ammo_type = /obj/item/ammo_casing/flareh
+	caliber = "flare"
+	max_ammo = 3
+	multiload = 0
+	icon_state = "flareh-handful"

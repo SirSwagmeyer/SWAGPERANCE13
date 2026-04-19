@@ -59,6 +59,7 @@
 		/obj/item/natural/cloth,
 		/obj/item/rogueweapon/sword/iron/short,
 		/obj/item/rope,
+		/obj/item/storage/belt/rogue/surgery_bag,
 	)
 	H.adjust_skillrank(/datum/skill/misc/medicine, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)

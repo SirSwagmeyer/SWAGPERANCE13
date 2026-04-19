@@ -131,3 +131,78 @@
 	//This has been made a simple loop, for the most part flamer_fire_act() just does return, but for specific items it'll cause other effects.
 	firelevel -= 2 //reduce the intensity by 2 per tick
 	return
+
+/obj/projectile/bullet/flare
+	name = "flare"
+	damage = 0
+	armor_penetration = 0
+	hitscan = FALSE
+	spread = 0
+	speed = 0.2
+
+/obj/projectile/bullet/flare/on_hit(target)
+	. = ..()
+	new /obj/item/flashlight/flare/flaregun(get_turf(src))
+
+/obj/item/flashlight/flare/flaregun
+	name = "lit flare"
+	icon = 'icons/roguetown/items/lighting.dmi'
+	icon_state = "fgunlow"
+	desc = "A burning flare! Looks bright. Far too hot to touch while it's burning."
+	light_outer_range = 8
+	on = TRUE
+	slot_flags = ITEM_SLOT_HIP
+	obj_flags = CAN_BE_HIT
+	force = 1
+	on_damage = 5
+	fuel = 5 MINUTES
+	grid_width = 32
+	grid_height = 64
+	extinguishable = TRUE
+	weather_resistant = TRUE
+	anchored = TRUE
+	sellprice = 2
+
+/obj/item/flashlight/flare/flaregun/Initialize()
+	. = ..()
+	START_PROCESSING(SSobj, src)
+
+
+/obj/item/flashlight/flare/flaregun/turn_off()
+	..()
+	name = "burned out flare"
+	desc = "A burned out flare. Sometimes, you feel like you can sympathize with it." //this is not a cry for help btw
+	anchored = FALSE
+
+/obj/item/flashlight/flare/flaregun/high
+	name = "illumination flare"
+	desc = "An illumination flare is in the air overhead."
+	light_power = 40
+	light_inner_range = null
+	light_outer_range = 40
+//	light_falloff_curve = 0.2
+	icon_state = "fgunhigh"
+	extinguishable = FALSE
+	on = TRUE
+	fuel = 1 MINUTES
+	sellprice = 3
+
+/obj/effect/illumination_flare_spawner
+	name = "illumination flare spawner"
+	desc = "Something broke! Uh oh."
+
+/obj/effect/illumination_flare_spawner/Initialize()
+	. = ..()
+	addtimer(CALLBACK(src, PROC_REF(ignite_flare)), 30)
+
+
+/obj/effect/illumination_flare_spawner/proc/ignite_flare()
+	new /obj/item/flashlight/flare/flaregun/high(src.loc)
+	for(var/mob/living/carbon/human/uwu in range(60, src.loc))
+		var/distance = get_dist(src.loc, uwu.loc)
+		var/volumetoplay = 100 - distance*2
+		if(volumetoplay < 20)
+			volumetoplay = 20
+		uwu.playsound_local(get_turf(uwu), 'sound/misc/flaregun_high_ignite.ogg', volumetoplay, FALSE)
+	loud_message("You hear a flare ignite in the air", hearing_distance = 60) //This really should be based on solely range and having sight, not hearing, but these flares are already driving me mad. Fix it later
+	qdel(src)
