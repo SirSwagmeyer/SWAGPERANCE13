@@ -377,9 +377,8 @@
 /turf/open/floor/rogue/med,
 /area/rogue/under/cave/warmachine)
 "eN" = (
-/obj/effect/decal/cleanable/dirt/grime,
-/mob/living/simple_animal/hostile/rogue/robot/gunner/rifle,
-/turf/open/floor/rogue/grime,
+/mob/living/simple_animal/hostile/rogue/robot/gunner/shotgun,
+/turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/under/cave/warmachine)
 "eO" = (
 /obj/structure/table/wood/longreif{
@@ -2412,12 +2411,8 @@
 /turf/open/floor/rogue/warmetal,
 /area/rogue/under/cave/warmachine)
 "MB" = (
-/obj/effect/decal/cleanable/dirt/grime/grime2,
-/obj/effect/decal/cleanable/dirt/grime/grime3,
-/obj/effect/decal/cleanable/blood/tracks{
-	dir = 4
-	},
-/mob/living/simple_animal/hostile/rogue/robot/gunner/rifle,
+/obj/effect/decal/cleanable/dirt/grime/grime4,
+/mob/living/simple_animal/hostile/rogue/robot,
 /turf/open/floor/rogue/grime,
 /area/rogue/under/cave/warmachine)
 "MD" = (
@@ -3084,8 +3079,8 @@
 /turf/open/floor/rogue/warmetal,
 /area/rogue/under/cave/warmachine)
 "XS" = (
-/mob/living/simple_animal/hostile/rogue/robot/gunner/rifle,
-/turf/open/floor/rogue/grime,
+/mob/living/simple_animal/hostile/rogue/robot,
+/turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/under/cave/warmachine)
 "Yb" = (
 /obj/effect/decal/cleanable/dirt/grime/dust,
@@ -3913,8 +3908,8 @@ lX
 lX
 fN
 xl
-rJ
 xl
+XS
 bj
 qZ
 wJ
@@ -4355,7 +4350,7 @@ tO
 VC
 hr
 xl
-rJ
+eN
 xl
 xl
 wJ
@@ -5270,7 +5265,7 @@ MD
 qu
 MD
 MD
-qD
+MD
 MD
 SB
 MD
@@ -6192,7 +6187,7 @@ rx
 MD
 SF
 MD
-EV
+MD
 wJ
 FI
 FI
@@ -6417,7 +6412,7 @@ wJ
 MD
 wz
 MD
-ID
+qD
 MD
 MD
 wJ
@@ -6872,7 +6867,7 @@ VU
 MD
 SF
 MD
-EV
+MD
 MD
 wJ
 FI
@@ -7299,7 +7294,7 @@ FI
 wJ
 MD
 MD
-EV
+MD
 wJ
 MD
 qD
@@ -14342,9 +14337,9 @@ FI
 FI
 FI
 wJ
-Le
+qd
 Vl
-Le
+qd
 wJ
 FI
 FI
@@ -14569,7 +14564,7 @@ FI
 FI
 FI
 wJ
-XS
+dt
 dt
 Le
 wJ
@@ -14796,7 +14791,7 @@ FI
 FI
 FI
 wJ
-Oh
+MB
 Oh
 rb
 wJ
@@ -15252,7 +15247,7 @@ FI
 wJ
 Cd
 Cd
-dt
+CC
 wJ
 FI
 FI
@@ -15932,7 +15927,7 @@ FI
 FI
 wJ
 dt
-eN
+Le
 dt
 wJ
 FI
@@ -16158,9 +16153,9 @@ FI
 FI
 FI
 wJ
-dt
+iF
 Le
-dt
+iF
 wJ
 FI
 FI
@@ -18202,7 +18197,7 @@ FI
 FI
 wJ
 Le
-MB
+jt
 fH
 wJ
 FI
@@ -19562,7 +19557,7 @@ wJ
 tb
 Bn
 MD
-MD
+Df
 vH
 Sf
 pr
@@ -20923,7 +20918,7 @@ FI
 wJ
 tb
 Bn
-Df
+MD
 MD
 MD
 Ro

@@ -1771,7 +1771,6 @@
 /obj/structure/bars/grille,
 /obj/effect/spawner/lootdrop/hightierguns,
 /obj/effect/spawner/lootdrop/hightierguns,
-/obj/effect/spawner/lootdrop/hightierguns,
 /obj/structure/closet/crate/roguecloset/metal/metal2{
 	plane = -5
 	},
