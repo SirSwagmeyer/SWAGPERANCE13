@@ -97,11 +97,6 @@
 	var/delay = 0.5 SECONDS
 
 /obj/effect/proc_holder/spell/invoked/blood_link/cast(list/targets, mob/user = usr)
-	if(targets[1] == user)
-		to_chat(user, span_warning("I can't use this on myself!"))
-		revert_cast()
-		return FALSE
-
 	if(ishuman(targets[1]))
 		var/mob/living/carbon/human/target = targets[1]
 		var/mob/living/carbon/human/UH = user
