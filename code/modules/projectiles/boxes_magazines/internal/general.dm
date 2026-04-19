@@ -99,6 +99,14 @@
 	max_ammo = 6
 	multiload = 1
 
+/obj/item/ammo_box/magazine/internal/revolver/flaregun
+	name = "Flare Gun internal magazine"
+	desc = "You should probably tell an admin."
+	ammo_type = /obj/item/ammo_casing/flare
+	caliber = "flare"
+	max_ammo = 1
+	multiload = 0
+
 //pistols
 
 /obj/item/ammo_box/magazine/internal/boltaction/pistol
@@ -140,3 +148,4 @@
 	caliber = "a9mm"
 	max_ammo = 21
 	multiload = 1
+

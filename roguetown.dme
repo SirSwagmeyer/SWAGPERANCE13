@@ -1631,6 +1631,7 @@
 #include "code\modules\jobs\job_types\roguetown\perserdunian\knightcommander.dm"
 #include "code\modules\jobs\job_types\roguetown\perserdunian\partisan.dm"
 #include "code\modules\jobs\job_types\roguetown\perserdunian\radiotrooper.dm"
+#include "code\modules\jobs\job_types\roguetown\perserdunian\voltigeur.dm"
 #include "code\modules\jobs\job_types\roguetown\perserdunian\rook.dm"
 #include "code\modules\jobs\job_types\roguetown\perserdunian\warpriest.dm"
 #include "code\modules\jobs\job_types\roguetown\risvonian\campfollower.dm"
