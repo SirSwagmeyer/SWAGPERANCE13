@@ -82,22 +82,6 @@
 	body_parts_covered = HEAD|HAIR|EARS
 	armor = ARMOR_HEAD_HELMET
 
-/obj/item/clothing/head/roguetown/helmet/kettle/iron
-	name = "iron kettle helmet"
-	desc = "A kettle helmet made of iron. It protects the top and sides of the head."
-	adjustable = CAN_CADJUST
-	icon_state = "ikettle_visor"
-	smeltresult = /obj/item/ingot/iron
-	max_integrity = ARMOR_INT_HELMET_IRON
-
-/obj/item/clothing/head/roguetown/helmet/kettle/iron/ComponentInitialize()
-	AddComponent(/datum/component/adjustable_clothing, (HEAD|EARS|HAIR), HIDEHAIR, null, 'sound/items/visor.ogg', null, UPD_HEAD)
-
-/obj/item/clothing/head/roguetown/helmet/kettle/wide
-	name = "wide kettle helmet"
-	desc = "A steel helmet which protects the top and sides of the head. This one looks wider than others."
-	icon_state = "kettlewide"
-
 /obj/item/clothing/head/roguetown/helmet/kettle/attackby(obj/item/W, mob/living/user, params)
 	..()
 	if(istype(W, /obj/item/natural/cloth) && !detail_tag)
@@ -121,6 +105,22 @@
 		if(get_detail_color())
 			pic.color = get_detail_color()
 		add_overlay(pic)
+
+/obj/item/clothing/head/roguetown/helmet/kettle/iron
+	name = "iron kettle helmet"
+	desc = "A kettle helmet made of iron. It protects the top and sides of the head."
+	adjustable = CAN_CADJUST
+	icon_state = "ikettle_visor"
+	smeltresult = /obj/item/ingot/iron
+	max_integrity = ARMOR_INT_HELMET_IRON
+
+/obj/item/clothing/head/roguetown/helmet/kettle/iron/ComponentInitialize()
+	AddComponent(/datum/component/adjustable_clothing, (HEAD|EARS|HAIR), HIDEHAIR, null, 'sound/items/visor.ogg', null, UPD_HEAD)
+
+/obj/item/clothing/head/roguetown/helmet/kettle/wide
+	name = "wide kettle helmet"
+	desc = "A steel helmet which protects the top and sides of the head. This one looks wider than others."
+	icon_state = "kettlewide"
 
 /obj/item/clothing/head/roguetown/helmet/sallet
 	name = "sallet"
