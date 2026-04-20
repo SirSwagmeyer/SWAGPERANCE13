@@ -1381,7 +1381,7 @@
 	gripped_intents = null
 
 /obj/item/rogueweapon/sword/short/messer/knightcommander
-	name = "messer"
+	name = "perserdunian messer"
 	desc = "A \"Großesmesser\", meaning greatknife. A single-edged sword specialized for military use by low-ranking Perserdunian officers. \
 	The sharpened edge shines with a razor gleam, able to slice through soft armor with ease."
 	icon_state = "knightmesser"
