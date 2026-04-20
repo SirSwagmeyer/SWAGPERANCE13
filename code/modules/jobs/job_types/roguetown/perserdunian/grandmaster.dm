@@ -50,6 +50,8 @@
 	wrists = /obj/item/scomstone/garrison
 	gloves = /obj/item/clothing/gloves/roguetown/eastgloves1
 	cloak = /obj/item/clothing/cloak/perserduntabard
+	l_hand = /obj/item/rogueweapon/sword/rapier/grandmaster
+	r_hand = /obj/item/rogueweapon/scabbard/sheath/grandmaster
 	id = /obj/item/roguekey/perserdun
 	backr = /obj/item/storage/backpack/rogue/backpack/perserdun
 	backpack_contents = list(
