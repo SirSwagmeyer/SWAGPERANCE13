@@ -133,12 +133,27 @@
 
 	to_chat(world, "<BR><BR><BR><span class='reallybig'>So ends this war story.</span>")
 	get_end_reason()
-
+	var/list/end_songs = list(
+    'sound/music/dreamer_is_still_asleep.ogg',
+	'sound/music/jukeboxes/machine/machinealone.ogg',
+	'sound/music/jukeboxes/machine/machineclass.ogg',
+	'sound/music/jukeboxes/machine/machinedown.ogg',
+	'sound/music/jukeboxes/machine/machineface.ogg',
+	'sound/music/jukeboxes/machine/machineher.ogg',
+	'sound/music/jukeboxes/machine/machinelife.ogg',
+	'sound/music/jukeboxes/machine/machinemadness.ogg',
+	'sound/music/jukeboxes/machine/machinerain.ogg',
+	'sound/music/jukeboxes/machine/machinetoxic.ogg',
+	'sound/music/jukeboxes/gen/countdown.ogg',
+	'sound/music/jukeboxes/otherworld/song1.ogg',
+	'sound/music/jukeboxes/otherworld/song5.ogg',
+	)
+	var/end_song = pick(end_songs)
 	var/list/key_list = list()
 	for(var/client/C in GLOB.clients)
 		if(C.mob)
 			SSdroning.kill_droning(C)
-			C.mob.playsound_local(C.mob, 'sound/music/dreamer_is_still_asleep.ogg', 100, FALSE)
+			C.mob.playsound_local(C.mob, end_song, 100, FALSE)
 		if(isliving(C.mob) && C.ckey)
 			key_list += C.ckey
 //	if(key_list.len)
