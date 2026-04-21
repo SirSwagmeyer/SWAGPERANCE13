@@ -2316,7 +2316,7 @@
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
 "HD" = (
-/obj/item/clothing/head/roguetown/helmet/kettle/iron,
+/obj/item/clothing/head/roguetown/helmet/kettle/iron/soldato,
 /turf/open/water/swamp/deep,
 /area/rogue/outdoors/perserdun)
 "HF" = (
