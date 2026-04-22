@@ -72,7 +72,7 @@
 
 /obj/item/gun/ballistic/rifle/repeater/pistol 
 	name = "SiR 'Harland'"
-	desc = "A clip-loaded pistol. Mass produced, and issued to Risvon Soldats."
+	desc = "A clip-loaded pistol. Mass produced, and issued to Risvon Soldats. Chambered in 9mm."
 	icon_state = "pocketpistol"
 	item_state = "pocketpistol"
 	w_class = WEIGHT_CLASS_SMALL
@@ -85,10 +85,11 @@
 	recoil = 0.15
 	slot_flags = ITEM_SLOT_HIP
 	semi_auto = TRUE
+	sellprice = 12
 
 /obj/item/gun/ballistic/rifle/repeater/jackal 
 	name = "SPR 'Jackal'"
-	desc = "One of the few semi-automatic designs that's ever been produced. Comes with its own magazine, and fires a weak cartridge."
+	desc = "One of the few semi-automatic designs that's ever been produced. Comes with its own magazine, and fires a weak cartridge. Chambered in .22 LR."
 	icon_state = "handgun"
 	item_state = "handgun"
 	w_class = WEIGHT_CLASS_SMALL
@@ -102,10 +103,11 @@
 	recoil = 0.15
 	semi_auto = TRUE
 	slot_flags = ITEM_SLOT_HIP
+	sellprice = 30
 
 /obj/item/gun/ballistic/rifle/repeater/commandant
 	name = "ANL 'Liberation'"
-	desc = "Clip-loaded, semi-automatic pistol. Honor the Divegat."
+	desc = "Clip-loaded, semi-automatic pistol. Honor the Divegat. Chambered in 9mm."
 	icon_state = "machinepistol"
 	item_state = "machinepistol"
 	w_class = WEIGHT_CLASS_SMALL
@@ -118,10 +120,11 @@
 	recoil = 0.15
 	semi_auto = TRUE
 	slot_flags = ITEM_SLOT_BACK
+	sellprice = 160
 
 /obj/item/gun/ballistic/rifle/repeater/fury
 	name = "XOZ 'Fury'"
-	desc = "A rather rare semi-auto pistol."
+	desc = "A rather rare semi-auto pistol. Chambered in .45 ACP."
 	icon_state = "colt"
 	item_state = "colt"
 	w_class = WEIGHT_CLASS_SMALL
@@ -136,10 +139,11 @@
 	recoil = 0.15
 	semi_auto = TRUE
 	slot_flags = ITEM_SLOT_HIP
+	sellprice = 70
 
 /obj/item/gun/ballistic/rifle/repeater/broomhandle
 	name = "KR 'Trenchsweeper'"
-	desc = "Heavy and uncomfortable, almost requiring two hands to pull this thing up. Engraved with a golden 'KR'. Loads rifle rounds"
+	desc = "Heavy and uncomfortable, almost requiring two hands to pull this thing up. Engraved with a golden 'KR'. Chambered in 7.62mmR."
 	icon_state = "broomhandle"
 	item_state = "broomhandle"
 	w_class = WEIGHT_CLASS_SMALL
@@ -154,110 +158,117 @@
 	recoil = 0.2 //make it FEEL uncomfortable
 	semi_auto = TRUE
 	slot_flags = ITEM_SLOT_BACK
+	sellprice = 90
 
 /obj/item/gun/ballistic/rifle/repeater/luger
-	name = "KR 'Confessor'"
-	desc = "You know, they say that these guns are unique to King's Row - coming from an Outlet that hasn't been discovered by either of the two Nations."
-	icon_state = "officerluger"
-	item_state = "officerluger"
-	w_class = WEIGHT_CLASS_SMALL
-	mag_type = /obj/item/ammo_box/magazine/luger
-	slowdown = 0.15
-	spread = 0.5
-	force = 15 
-	pump_sound = 'sound/combat/ranged/pistol_cock.ogg'
-	fire_sound = PISTOLSHOT
-	load_sound = 'sound/combat/ranged/pistol_magin.ogg'
-	eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
-	recoil = 0.15
-	semi_auto = TRUE
-	slot_flags = ITEM_SLOT_HIP
+    name = "KR 'Confessor'"
+    desc = "You know, they say that these guns are unique to King's Row - coming from an Outlet that hasn't been discovered by either of the two Nations. Chambered in 9mm."
+    icon_state = "officerluger"
+    item_state = "officerluger"
+    w_class = WEIGHT_CLASS_SMALL
+    mag_type = /obj/item/ammo_box/magazine/luger
+    slowdown = 0.15
+    spread = 0.5
+    force = 15 
+    pump_sound = 'sound/combat/ranged/pistol_cock.ogg'
+    fire_sound = PISTOLSHOT
+    load_sound = 'sound/combat/ranged/pistol_magin.ogg'
+    eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
+    recoil = 0.15
+    semi_auto = TRUE
+    slot_flags = ITEM_SLOT_HIP
+    sellprice = 64
 
 /obj/item/gun/ballistic/rifle/repeater/offiseroluger
-	name = "ZOM 'Galinha'"
-	desc = "Straight from the Machine."
-	icon_state = "luger"
-	item_state = "luger"
-	w_class = WEIGHT_CLASS_SMALL
-	mag_type = /obj/item/ammo_box/magazine/luger
-	slowdown = 0.15
-	spread = 0.5
-	force = 15 
-	pump_sound = 'sound/combat/ranged/pistol_cock.ogg'
-	fire_sound = PISTOLSHOT
-	load_sound = 'sound/combat/ranged/pistol_magin.ogg'
-	eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
-	recoil = 0.15
-	semi_auto = TRUE
-	slot_flags = ITEM_SLOT_HIP
+    name = "ZOM 'Galinha'"
+    desc = "Straight from the Machine. Chambered in 9mm."
+    icon_state = "luger"
+    item_state = "luger"
+    w_class = WEIGHT_CLASS_SMALL
+    mag_type = /obj/item/ammo_box/magazine/luger
+    slowdown = 0.15
+    spread = 0.5
+    force = 15 
+    pump_sound = 'sound/combat/ranged/pistol_cock.ogg'
+    fire_sound = PISTOLSHOT
+    load_sound = 'sound/combat/ranged/pistol_magin.ogg'
+    eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
+    recoil = 0.15
+    semi_auto = TRUE
+    slot_flags = ITEM_SLOT_HIP
+    sellprice = 48
 
 /obj/item/gun/ballistic/rifle/repeater/artyluger
-	name = "KR 'Preacher'"
-	desc = "In-house modification of a Confessor, rather expensive."
-	icon_state = "artyluger"
-	item_state = "artyluger"
-	w_class = WEIGHT_CLASS_SMALL
-	mag_type = /obj/item/ammo_box/magazine/luger
-	slowdown = 0.2
-	spread = 0.5
-	force = 30 //it has a fat fucking stock lemme smack a motherfucker with it
-	pump_sound = 'sound/combat/ranged/pistol_cock.ogg'
-	fire_sound = PISTOLSHOT
-	load_sound = 'sound/combat/ranged/pistol_magin.ogg'
-	eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
-	recoil = 0.05 //stocked pistol
-	semi_auto = TRUE
+    name = "KR 'Preacher'"
+    desc = "In-house modification of a Confessor, rather expensive. Chambered in 9mm."
+    icon_state = "artyluger"
+    item_state = "artyluger"
+    w_class = WEIGHT_CLASS_SMALL
+    mag_type = /obj/item/ammo_box/magazine/luger
+    slowdown = 0.2
+    spread = 0.5
+    force = 30 //it has a fat fucking stock lemme smack a motherfucker with it
+    pump_sound = 'sound/combat/ranged/pistol_cock.ogg'
+    fire_sound = PISTOLSHOT
+    load_sound = 'sound/combat/ranged/pistol_magin.ogg'
+    eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
+    recoil = 0.05 //stocked pistol
+    semi_auto = TRUE
+    sellprice = 90
 
 /obj/item/gun/ballistic/rifle/repeater/infiltrator
-	name = "KR 'Infiltrator'"
-	desc = "A 20-round, semi-automatic pistol. It goes all in on the ammo capacity - meaning that the caliber's pretty weak, and it can't be reloaded."
-	icon_state = "mauser"
-	item_state = "mauser"
-	w_class = WEIGHT_CLASS_SMALL
-	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/infiltrator
-	slowdown = 0.15
-	spread = 0.5
-	force = 15 
-	pump_sound = 'sound/combat/ranged/pistol_cock.ogg'
-	fire_sound = CARBINESHOT
-	load_sound = 'sound/combat/ranged/pistol_magin.ogg'
-	eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
-	recoil = 0.15
-	semi_auto = TRUE
-	slot_flags = ITEM_SLOT_HIP
+    name = "KR 'Infiltrator'"
+    desc = "A 20-round, semi-automatic pistol. It goes all in on the ammo capacity - meaning that the caliber's pretty weak, and it can't be reloaded. Chambered in .30."
+    icon_state = "mauser"
+    item_state = "mauser"
+    w_class = WEIGHT_CLASS_SMALL
+    mag_type = /obj/item/ammo_box/magazine/internal/boltaction/infiltrator
+    slowdown = 0.15
+    spread = 0.5
+    force = 15 
+    pump_sound = 'sound/combat/ranged/pistol_cock.ogg'
+    fire_sound = CARBINESHOT
+    load_sound = 'sound/combat/ranged/pistol_magin.ogg'
+    eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
+    recoil = 0.15
+    semi_auto = TRUE
+    slot_flags = ITEM_SLOT_HIP
+    sellprice = 20 //assume people are going to be selling these empty
 
 /obj/item/gun/ballistic/rifle/repeater/mpcolt
-	name = "MP 'Certain Fury'"
-	desc = "In-fort modification of a Fury, fitted with a stock made from some other rifle, a grip, and with a flared magwell, allowing it to fit in bigger magazines."
-	icon = 'icons/roguetown/weapons/64guns.dmi'
-	icon_state = "mp1911"
-	item_state = "mp1911"
-	w_class = WEIGHT_CLASS_NORMAL
-	mag_type = /obj/item/ammo_box/magazine/cfmag
-	slowdown = 0.2
-	spread = 0.5
-	force = 30 //it has a fat fucking stock lemme smack a motherfucker with it
-	pump_sound = 'sound/combat/ranged/pistol_cock.ogg'
-	fire_sound = COLTSHOT
-	load_sound = 'sound/combat/ranged/coltmagin.ogg'
-	eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
-	recoil = 0.05 //stocked pistol
-	semi_auto = TRUE
+    name = "MP 'Certain Fury'"
+    desc = "In-fort modification of a Fury, fitted with a stock made from some other rifle, a grip, and with a flared magwell, allowing it to fit in bigger magazines. Chambered in .45 ACP."
+    icon = 'icons/roguetown/weapons/64guns.dmi'
+    icon_state = "mp1911"
+    item_state = "mp1911"
+    w_class = WEIGHT_CLASS_NORMAL
+    mag_type = /obj/item/ammo_box/magazine/cfmag
+    slowdown = 0.2
+    spread = 0.5
+    force = 30 //it has a fat fucking stock lemme smack a motherfucker with it
+    pump_sound = 'sound/combat/ranged/pistol_cock.ogg'
+    fire_sound = COLTSHOT
+    load_sound = 'sound/combat/ranged/coltmagin.ogg'
+    eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
+    recoil = 0.05 //stocked pistol
+    semi_auto = TRUE
+    sellprice = 64
 
 /obj/item/gun/ballistic/rifle/repeater/risvocarb
-	name = "KAR 'Marland' Pistol Carbine"
-	desc = "A modified Harland pistol fitted with a cheap stock, and with a much more expensive internal magazine."
-	icon = 'icons/roguetown/weapons/64guns.dmi'
-	icon_state = "m1912"
-	item_state = "m1912"
-	w_class = WEIGHT_CLASS_NORMAL
-	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/risvocarb
-	slowdown = 0.2
-	spread = 0.5
-	force = 30 //it has a fat fucking stock lemme smack a motherfucker with it
-	pump_sound = 'sound/combat/ranged/pistol_cock.ogg'
-	fire_sound = CARBINESHOT
-	load_sound = 'sound/combat/ranged/pistol_magin.ogg'
-	eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
-	recoil = 0.05 //stocked pistol
-	semi_auto = TRUE
+    name = "KAR 'Marland' Pistol Carbine"
+    desc = "A modified Harland pistol fitted with a cheap stock, and with a much more expensive internal magazine. Chambered in 9mm."
+    icon = 'icons/roguetown/weapons/64guns.dmi'
+    icon_state = "m1912"
+    item_state = "m1912"
+    w_class = WEIGHT_CLASS_NORMAL
+    mag_type = /obj/item/ammo_box/magazine/internal/boltaction/risvocarb
+    slowdown = 0.2
+    spread = 0.5
+    force = 30 //it has a fat fucking stock lemme smack a motherfucker with it
+    pump_sound = 'sound/combat/ranged/pistol_cock.ogg'
+    fire_sound = CARBINESHOT
+    load_sound = 'sound/combat/ranged/pistol_magin.ogg'
+    eject_sound = 'sound/combat/ranged/pistol_magout.ogg'
+    recoil = 0.05 //stocked pistol
+    semi_auto = TRUE
+    sellprice = 64

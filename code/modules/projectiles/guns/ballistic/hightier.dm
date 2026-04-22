@@ -1,6 +1,6 @@
 /obj/item/gun/ballistic/rifle/repeater/patience
 	name = "AMR 'Patience'"
-	desc = "The Empire loves weapons like these. Shreds through people, and kicks like a bitch."
+	desc = "The Empire loves weapons like these. Shreds through people, and kicks like a bitch. Chambered in .50."
 	icon_state = "heavysniper"
 	item_state = "heavysniper"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/patience
@@ -12,10 +12,11 @@
 	dist_fire_sound = DISTANTHEAVY
 	far_volume = 60 //60 is max, default 50
 	recoil = 4
+	sellprice = 180
 
 /obj/item/gun/ballistic/shotgun/eternal
 	name = "PAX 'Eternal'"
-	desc = "Paint some /real/ ugly holes into your enemies. Comes with a reinforced buttstock, for smashing."
+	desc = "Paint some /real/ ugly holes into your enemies. Comes with a reinforced buttstock, for smashing. Chambered in 12 gauge."
 	icon_state = "trenchgun"
 	item_state = "trenchgun"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/eternal
@@ -34,10 +35,11 @@
 		/datum/intent/mace/smash,
 		INTENT_GENERIC,
 		)
+	sellprice = 160
 
 /obj/item/gun/ballistic/rifle/reaper
 	name = "GRD 'Reaper'"
-	desc = "One of the few semi-automatic guns around. Shoots rifle rounds, and loads using a clip. Mind the scratchy bolt, it might not close by itself sometimes, give it a nice tug and send it home. The trigger might get stuck from time to time too, so try pulling it faster to force it to shoot. The name has a touch of irony to it, sure it kills, hell it ruins people.... but with how fast you dump the clip, you might as well be visiting the reaper yourself."
+	desc = "One of the few semi-automatic guns around- and a treasure for anyone who can get their hands on one. You can load it with special clips, or by hand. Chambered in 7.62mmR."
 	icon_state = "rsc"
 	item_state = "rsc"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/reaper
@@ -51,6 +53,7 @@
 	dist_fire_sound = DISTANTMEDIUM
 	recoil = 0.15
 	semi_auto = TRUE
+	sellprice = 140
 
 /obj/item/gun/ballistic/rifle/flamer
 	name = "MSD 'Scorcher'"
@@ -67,3 +70,4 @@
 	load_sound = 'sound/combat/ranged/flamer_remove.ogg'
 	semi_auto = TRUE
 	burst = 5
+	sellprice = 380

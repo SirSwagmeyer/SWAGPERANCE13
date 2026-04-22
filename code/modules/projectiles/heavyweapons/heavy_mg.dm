@@ -293,7 +293,7 @@
 //////////////////////
 /obj/item/gun/ballistic/heavy_mg/mark1
 	name = "'Mark 1' HMG"
-	desc = "A top of the line, universally feared machine-produced heavy machine gun. The national Risvon WAR machine very rarely produces these things."
+	desc = "A top of the line, universally feared machine-produced heavy machine gun. The national Risvon WAR MACHINE very rarely produces these things. Chambered in .303."
 	icon_state = "utes"
 	mag_type = /obj/item/ammo_box/magazine/hmg/a303
 	fire_sound = HMGGENERICSHOT
@@ -307,7 +307,7 @@
 
 /obj/item/gun/ballistic/heavy_mg/spandau
 	name = "'Spandau' HMG"
-	desc = "The feared 'Spandau' heavy machine gun. The rare pieces of machine-produced production the Imperials can get their hands on go into weapons like this."
+	desc = "The feared 'Spandau' heavy machine gun. The rare pieces of machine-produced production the Imperials can get their hands on go into weapons like this. Chambered in 7.62x59mm."
 	icon_state = "spandau"
 	mag_type = /obj/item/ammo_box/magazine/hmg/a762x59
 	fire_sound = HMGGENERICSHOT

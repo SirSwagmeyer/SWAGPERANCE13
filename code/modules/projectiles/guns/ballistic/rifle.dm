@@ -170,7 +170,7 @@
 
 /obj/item/gun/ballistic/rifle/repeater/perserdun
 	name = "SKT 'Order'"
-	desc = "A piece of shit reproduction rifle, trying to replicate those spat out by the WAR MACHINE. Made by Perserdunian forces."
+	desc = "A piece of shit reproduction rifle, trying to replicate those spat out by the WAR MACHINE. Made by Perserdunian forces and chambered in 7.62mmR."
 	defense
 	icon_state = "karabiner"
 	item_state = "karabiner"
@@ -181,10 +181,11 @@
 	fire_sound = RIFLESHOT
 	load_sound = 'sound/combat/ranged/rifleload.ogg'
 	recoil = 0.15
+	sellprice = 20
 
 /obj/item/gun/ballistic/rifle/repeater/leveraction
 	name = "'Ark' Kaye XLVII"
-	desc = "A genuine lever action, produced by a WAR MACHINE's outlet. Fires revolver rounds."
+	desc = "A genuine lever action, produced by a WAR MACHINE's outlet. Chambered in .44."
 	icon_state = "leverchester"
 	item_state = "leverchester"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/leverchester
@@ -195,10 +196,11 @@
 	fire_sound = REVOLVERSHOT
 	load_sound = 'sound/combat/ranged/leveractioninsert.ogg'
 	recoil = 0.15
+	sellprice = 42
 
 /obj/item/gun/ballistic/rifle/repeater/leverleg
 	name = "'Mare' Baye VII"
-	desc = "A genuine lever action, produced by a WAR MACHINE's outlet, cut down and let in a shelf for who knows how long Fires revolver rounds."
+	desc = "A genuine lever action, produced by a WAR MACHINE's outlet, cut down and let in a shelf for who knows how long. Chambered in .44."
 	icon_state = "sawn-leverchester"
 	item_state = "sawn-leverchester"
 	w_class = WEIGHT_CLASS_SMALL
@@ -210,10 +212,11 @@
 	fire_sound = REVOLVERSHOT
 	load_sound = 'sound/combat/ranged/leveractioninsert.ogg'
 	recoil = 0.15
+	sellprice = 26
 
 /obj/item/gun/ballistic/rifle/repeater/rattlesnake
 	name = "BRH 'Rattlesnake'"
-	desc = "A one-shot, breech-loaded rifle gifted by one of Dictate's few allies. Comes with a cloth, tucked in the RIGHT SIDE of the stock."
+	desc = "A one-shot, breech-loaded rifle gifted by one of Dictate's few allies. Comes with a cloth, tucked in the RIGHT SIDE of the stock. Chambered in .577 Blackout."
 	icon = 'icons/roguetown/weapons/64guns.dmi'
 	icon_state = "rattlesnake"
 	item_state = "rattlesnake"
@@ -230,6 +233,7 @@
 		/datum/intent/stab/militia,
 		INTENT_GENERIC,
 		)
+	sellprice = 65
 
 /obj/item/gun/ballistic/rifle/repeater/rattlesnake/rmb_self(mob/user)
 	user.changeNext_move(CLICK_CD_MELEE)
@@ -240,7 +244,7 @@
 
 /obj/item/gun/ballistic/rifle/repeater/mondragon
 	name = "YKA 'Dragoon'"
-	desc = "A weak, semi-automatic rifle. High capacity, low powder - comes suppressed."
+	desc = "A weak, semi-automatic rifle. High capacity, low powder - comes suppressed. Chambered in LP 7.62mm."
 	icon = 'icons/roguetown/weapons/48guns.dmi'
 	icon_state = "dragoon"
 	item_state = "dragoon"
@@ -252,10 +256,11 @@
 	load_sound = 'sound/combat/ranged/rifleload.ogg'
 	recoil = 0.15
 	semi_auto = TRUE
+	sellprice = 40
 
 /obj/item/gun/ballistic/rifle/repeater/springfield
 	name = "MFG 'Springer'"
-	desc = "A straight-bolt action rifle. Posed to replace the Harland, eventually."
+	desc = "A straight-bolt action rifle. Posed to replace the Harland, eventually. Chambered in 7.62mmR."
 	icon_state = "springfield"
 	item_state = "springfield"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/perserdun
@@ -265,10 +270,11 @@
 	fire_sound = RIFLESHOT
 	load_sound = 'sound/combat/ranged/rifleload.ogg'
 	recoil = 0.15
+	sellprice = 20
 
 /obj/item/gun/ballistic/rifle/repeater/enfield
 	name = "FKZ 'Flicker'"
-	desc = "Something similar to the Dragoon - though this one comes unsuppressed."
+	desc = "Something similar to the Dragoon - though this one comes unsuppressed. Chambered in LP 7.62mm."
 	icon_state = "enfield"
 	item_state = "enfield"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/mondragon
@@ -278,10 +284,11 @@
 	fire_sound = 'sound/combat/ranged/enfieldfire.ogg'
 	load_sound = 'sound/combat/ranged/rifleload.ogg'
 	recoil = 0.15
+	sellprice = 52
 
 /obj/item/gun/ballistic/rifle/repeater/lebel
 	name = "SOG 'Regal'"
-	desc = "A Kalarian bolt action rifle, Hold more rounds in the internal magazine, but it's still an utter pain to load."
+	desc = "A Kalarian bolt action rifle, Hold more rounds in the internal magazine, but it's still an utter pain to load. Chambered in 7.62mmR."
 	icon = 'icons/roguetown/weapons/64guns.dmi'
 	icon_state = "lebeler"
 	item_state = "lebeler"
@@ -292,10 +299,11 @@
 	fire_sound = 'sound/combat/ranged/enfieldfire.ogg'
 	load_sound = 'sound/combat/ranged/rifleload.ogg'
 	recoil = 0.25
+	sellprice = 26
 
 /obj/item/gun/ballistic/rifle/repeater/lewis
 	name = "KR 'Leonard'"
-	desc = "One of the only light machine guns produced the by WAR machine. This one sports a gun shield at the front. There is a tally mark for each man who's held it before you. It's at XII."
+	desc = "One of the only light machine guns produced the by WAR machine. Chambered in .30. This one sports a gun shield at the front. There is a tally mark for each man who's held it before you. It's at XII."
 	icon = 'icons/roguetown/weapons/64guns.dmi'
 	icon_state = "lewisgun"
 	item_state = "lewisgun"
@@ -322,10 +330,11 @@
 		/datum/intent/shield/block,
 		INTENT_GENERIC,
 		)
+	sellprice = 240
 
 /obj/item/gun/ballistic/rifle/repeater/dp47
 	name = "RSV 'Redeemer'"
-	desc = "A light machine gun, produced by the WAR MACHINE. Fires rifle rounds at a high rate of fire, with a dinner plate on top of it. It's one of a kind."
+	desc = "A light machine gun, produced by the WAR MACHINE. Fires rifle rounds at a high rate of fire, with a dinner plate on top of it. It's one of a kind. Chambered in 7.62 LP."
 	icon = 'icons/roguetown/weapons/64guns.dmi'
 	icon_state = "dp47"
 	item_state = "dp47"
@@ -340,3 +349,4 @@
 	recoil = 0.15
 	semi_auto = TRUE
 	burst = 2
+	sellprice = 240

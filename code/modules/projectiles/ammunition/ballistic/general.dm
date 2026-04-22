@@ -7,6 +7,7 @@
 	caliber = "a762"
 	projectile_type = /obj/projectile/bullet/a762
 	bullet_type = RIFLECASING
+	sellprice = 2
 
 /obj/item/ammo_casing/a577
 	name = ".577 blackout bullet piece"
@@ -15,6 +16,7 @@
 	caliber = "a577"
 	projectile_type = /obj/projectile/bullet/a577
 	bullet_type = RIFLECASING
+	sellprice = 3
 
 /obj/item/ammo_casing/a50
 	name = ".50 caliber bullet"
@@ -23,6 +25,7 @@
 	caliber = "a50"
 	projectile_type = /obj/projectile/bullet/a50
 	bullet_type = RIFLECASING
+	sellprice = 4
 
 // handguns
 
@@ -33,6 +36,7 @@
 	caliber = "a9mm"
 	projectile_type = /obj/projectile/bullet/a9mm
 	bullet_type = RIFLECASING
+	sellprice = 1
 
 /obj/item/ammo_casing/a44
 	name = ".44 bullet casing"
@@ -41,6 +45,7 @@
 	caliber = "a44"
 	projectile_type = /obj/projectile/bullet/a44
 	bullet_type = RIFLECASING
+	sellprice = 1
 
 /obj/item/ammo_casing/a22lr
 	name = ".22LR bullet casing"
@@ -49,6 +54,7 @@
 	caliber = "a22lr"
 	projectile_type = /obj/projectile/bullet/a22lr
 	bullet_type = RIFLECASING
+	sellprice = 1
 
 /obj/item/ammo_casing/a45acp
 	name = ".45 ACP bullet casing"
@@ -57,6 +63,7 @@
 	caliber = "a45acp"
 	projectile_type = /obj/projectile/bullet/a45acp
 	bullet_type = RIFLECASING
+	sellprice = 1
 
 /obj/item/ammo_casing/a380
     name = ".380 ACP bullet casing"
@@ -65,6 +72,7 @@
     caliber = "a380"
     projectile_type = /obj/projectile/bullet/a380
     bullet_type = RIFLECASING
+    sellprice = 1
 
 /obj/item/ammo_casing/a45lc
 	name = ".45 Long Colt bullet casing"
@@ -73,6 +81,7 @@
 	caliber = "a45lc"
 	projectile_type = /obj/projectile/bullet/a45lc
 	bullet_type = RIFLECASING
+	sellprice = 1
 
 /obj/item/ammo_casing/a30
 	name = ".30 light bullet casing"
@@ -81,6 +90,7 @@
 	caliber = "a30"
 	projectile_type = /obj/projectile/bullet/a30
 	bullet_type = RIFLECASING
+	sellprice = 1
 
 /obj/item/ammo_casing/a762lp
 	name = "LP 7.62mm bullet casing"
@@ -89,6 +99,7 @@
 	caliber = "a762lp"
 	projectile_type = /obj/projectile/bullet/a762lp
 	bullet_type = RIFLECASING
+	sellprice = 1
 
 //shotguns
 
@@ -99,17 +110,18 @@
 	caliber = "shotgun"
 	projectile_type = /obj/projectile/bullet/shotgun_slug
 	bullet_type = SHOTGUNCASING
+	sellprice = 2
 
 /obj/item/ammo_casing/shotgun/buckshot
 	name = "buckshot shell"
 	desc = "A plastic piece that shoots buckshot."
-	icon_state = "spent-casing_shotgun"
 	icon_state = "spent-casing_shotgun"
 	caliber = "shotgun"
 	projectile_type = /obj/projectile/bullet/pellet/shotgun_buckshot
 	pellets = 6
 	variance = 18
 	bullet_type = SHOTGUNCASING
+	sellprice = 2
 
 //other
 

@@ -138,7 +138,7 @@
 
 /obj/item/gun/ballistic/shotgun/risvon
 	name = "RTK 'Hero'"
-	desc = "Paint some ugly holes into your enemies. Two shots, plus one. Glory to the Risvonian WAR MACHINE."
+	desc = "Paint some ugly holes into your enemies. Two shots, plus one. Glory to the Risvonian WAR MACHINE. Chambered in 12 gauge."
 	icon_state = "risvshot"
 	item_state = "risvshot"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/risvon
@@ -148,10 +148,11 @@
 	pump_sound = 'sound/combat/ranged/shotgunpump.ogg'
 	recoil = 0.15
 	load_sound = SHOTGUNINSERT
+	sellprice = 64
 
 /obj/item/gun/ballistic/rifle/repeater/auto8
 	name = "AO-8 'Willbreaker'"
-	desc = "A pretty rare semi-automatic shotgun, made by the WAR MACHINE. It sacrifices the raw melee power of the Eternal in favor for an extended magazine."
+	desc = "Death comes slowly, then all at once. Chambered in 12 gauge."
 	icon = 'icons/roguetown/weapons/64guns.dmi'
 	icon_state = "auto8"
 	item_state = "auto8"
@@ -163,10 +164,11 @@
 	recoil = 0.15
 	load_sound = SHOTGUNINSERT
 	semi_auto = TRUE
+	sellprice = 300
 
 /obj/item/gun/ballistic/rifle/repeater/auto5
 	name = "AO-5 'Gloria'"
-	desc = "A modified AO-8, sawed down for convenience. 'Gloria' is engraved into the stock, for whatever reason."
+	desc = "A sawed-off AO-8 with a smaller tube. Strangely, these can be found in the WAR MACHINE already sawed off- but only very rarely. Chambered in 12 gauge."
 	icon = 'icons/roguetown/weapons/64guns.dmi'
 	icon_state = "auto5"
 	item_state = "auto5"
@@ -178,12 +180,13 @@
 	recoil = 0.15
 	load_sound = SHOTGUNINSERT
 	semi_auto = TRUE
+	sellprice = 180
 
 /obj/item/gun/ballistic/shotgun/levershotgun
 	name = "MNZ 'Hare'"
-	desc = "Somewhat similar to the Ark. It's a compact shotgun that can fit inside your bag - how neat!"
+	desc = "A lever action shotgun! These have recently acquired some fame after being adopted by the Voltigeurs. Chambered in 12 gauge."
 	icon = 'icons/roguetown/weapons/64guns.dmi'
-	w_class = WEIGHT_CLASS_NORMAL
+	w_class = WEIGHT_CLASS_BULKY
 	icon_state = "levershotgun"
 	item_state = "levershotgun"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/levershotgun
@@ -193,3 +196,4 @@
 	pump_sound = 'sound/combat/ranged/leveractioncock.ogg'
 	recoil = 0.15
 	load_sound = SHOTGUNINSERT
+	sellprice = 42
