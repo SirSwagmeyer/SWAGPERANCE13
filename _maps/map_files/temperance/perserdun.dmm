@@ -2316,7 +2316,7 @@
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
 "HD" = (
-/obj/item/clothing/head/roguetown/helmet/kettle/iron,
+/obj/item/clothing/head/roguetown/helmet/kettle/iron/soldato,
 /turf/open/water/swamp/deep,
 /area/rogue/outdoors/perserdun)
 "HF" = (
@@ -2415,6 +2415,10 @@
 /area/rogue/under/cave/warmachine)
 "Js" = (
 /turf/closed/wall/mineral/rogue/perserdun/outercorner/dir8,
+/area/rogue/indoors/perserdunbase)
+"Ju" = (
+/obj/machinery/gear_painter_nocolorwheel/persurdun,
+/turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
 "JE" = (
 /obj/structure/mineral_door/wood/wardoor,
@@ -32599,7 +32603,7 @@ Rq
 yW
 CQ
 CQ
-CQ
+Ju
 Qd
 CQ
 wg
@@ -33379,7 +33383,7 @@ Ql
 dc
 CQ
 CQ
-CQ
+Ju
 Qd
 eu
 CQ

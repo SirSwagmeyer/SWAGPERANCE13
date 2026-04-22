@@ -87,6 +87,7 @@
 
 
 /mob/living/death(gibbed, nocutscene = FALSE)
+	var/list/deathsounds = list('sound/misc/deth.ogg', 'sound/misc/doom.ogg', 'sound/misc/dying.ogg', 'sound/misc/lobotomy.ogg')
 	var/was_dead_before = stat == DEAD
 	stat = DEAD
 	unset_machine()
@@ -108,7 +109,7 @@
 	SSdroning.kill_loop(src.client)
 	SSdroning.kill_droning(src.client)
 	if(!nocutscene)
-		src.playsound_local(src, 'sound/misc/deth.ogg', 100)
+		src.playsound_local(src, deathsounds, 100)
 
 	set_drugginess(0)
 	set_disgust(0)

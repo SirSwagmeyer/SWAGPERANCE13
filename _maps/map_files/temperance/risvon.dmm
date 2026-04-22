@@ -4267,6 +4267,14 @@
 	},
 /turf/open/floor/rogue/warmetal,
 /area/rogue/under/cave/warmachine)
+"IB" = (
+/obj/structure/fluff/railing/sandbag{
+	dir = 1;
+	pixel_y = 11
+	},
+/obj/machinery/gear_painter_nocolorwheel/risvon,
+/turf/open/floor/rogue/risvon,
+/area/rogue/indoors/risvonbase)
 "IE" = (
 /obj/structure/mineral_door/wood{
 	lockid = "risvontag"
@@ -11408,7 +11416,7 @@ rc
 rc
 rc
 Tx
-xC
+IB
 VR
 rH
 NG
@@ -12838,7 +12846,7 @@ rc
 rc
 My
 Tx
-xC
+IB
 ej
 HT
 ej

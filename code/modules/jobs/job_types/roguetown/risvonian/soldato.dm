@@ -12,7 +12,7 @@
 	tutorial = "You are the backbone of the Risvon Dictate. You are typically a volunteer, or a conscript. \
 				Your main purpose is follow the orders of your superiors. They are your Oficiros, and your Commandant. \
 				For most of your life, you've been filled with a firm belief that the strong must rule. \
-				You are also a firm believer of the denial of one's desires, in favor for unity and a greater good." 
+				You are also a firm believer of the denial of one's desires, in favor for unity and a greater good."
 
 	outfit = /datum/outfit/job/roguetown/soldato
 	display_order = JDO_SOLDATO
@@ -43,7 +43,7 @@
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/ziggurate
 	cloak = /obj/item/clothing/cloak/templar/malumite
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants
-	head = /obj/item/clothing/head/roguetown/helmet/kettle/iron
+	head = /obj/item/clothing/head/roguetown/helmet/kettle/iron/soldato
 	mask = /obj/item/clothing/mask/rogue/gasmask/risvonmask
 	belt = /obj/item/storage/belt/rogue/leather/black/soldier
 	beltl = /obj/item/flashlight/flare/torch/lantern
