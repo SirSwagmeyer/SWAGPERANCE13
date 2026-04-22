@@ -75,7 +75,7 @@
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/iron //moved from plate.dm
 	name = "iron plate armor"
-	icon_state = "iplate"
+	icon_state = "grandknight"
 	desc = "Full iron plate armor. Slow to don and doff without the aid of an Armsman."
 	smeltresult = /obj/item/ingot/iron
 	armor = ARMOR_PLATE_GOOD
@@ -87,6 +87,7 @@
 	strip_delay = 2 SECONDS
 	smelt_bar_num = 4
 	max_integrity = ARMOR_INT_CHEST_PLATE_PSYDON
+	body_parts_covered = CHEST | GROIN | VITALS | LEGS | ARMS | NECK
 
 //light armor
 

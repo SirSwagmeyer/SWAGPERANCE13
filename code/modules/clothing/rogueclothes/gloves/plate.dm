@@ -20,7 +20,7 @@
 /obj/item/clothing/gloves/roguetown/plate/iron
 	name = "iron plate gauntlets"
 	desc = "Plate gauntlets made out of iron. Good all-around protection for the hands. Slightly less durable than its steel counterpart."
-	icon_state = "igauntlets"
+	icon_state = "grandknight"
 	smeltresult = /obj/item/ingot/iron
 	max_integrity = ARMOR_INT_SIDE_IRON
 

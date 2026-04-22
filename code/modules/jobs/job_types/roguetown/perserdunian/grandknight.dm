@@ -39,15 +39,14 @@
 
 
 /datum/outfit/job/roguetown/grandknight/pre_equip(mob/living/carbon/human/H)
-	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/lord
-	shoes = /obj/item/clothing/shoes/roguetown/boots/armor
+	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail/iron
+	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/grandknight
 	beltl = /obj/item/flashlight/flare/torch/lantern
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/full/iron
-	cloak = /obj/item/clothing/cloak/perserduntabard
+	cloak = /obj/item/clothing/cloak/perserduntabard/grandknight
 	pants = /obj/item/clothing/under/roguetown/platelegs/iron
 	head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket/iron
 	mask = /obj/item/clothing/mask/rogue/gasmask/perserdunmask
-	neck = /obj/item/clothing/neck/roguetown/chaincoif
 	belt = /obj/item/storage/belt/rogue/leather/black/soldier
 	beltl = /obj/item/flashlight/flare/torch/lantern
 	beltr = /obj/item/grenade/gas/poison
