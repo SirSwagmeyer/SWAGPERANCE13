@@ -19,6 +19,10 @@
 	always_votable = TRUE
 	color_theme = "#80ced8"
 
+	//Sets probability of roundstart antag to 0. One would think no character injection would be good enough, but here we are. This is also on other codebases psydon so prob the way to fix it.
+	guarantees_roundstart_roleset = FALSE
+	roundstart_prob = 0 //Sets probability of roundstart antag to 0. One would think no character injection would be good enough, but here we are. This is also on other codebases psydon so prob the way to fix it.
+
 	//Has no influence, your actions will not impact him his spawn rates. Cus he's asleep.
 	//Tl;dr - higher event spawn rates to keep stuff interesting, no god intervention, no antags. (Raids and omens will still happen at normal rate.)
 	point_gains_multipliers = list(
