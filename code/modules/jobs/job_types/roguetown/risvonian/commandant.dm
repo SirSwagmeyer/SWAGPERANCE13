@@ -58,7 +58,7 @@
 		/obj/item/ammo_box/clip/pistol = 6,
 		/obj/item/storage/belt/rogue/pouch/coins/rich,
 		/obj/item/bomb/dynamite = 2,
-		/obj/item/rogueweapon/stoneaxe/woodcut/risvon,
+		/obj/item/rogueweapon/stoneaxe/battle/commandant,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)

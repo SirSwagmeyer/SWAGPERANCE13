@@ -56,7 +56,7 @@
 		/obj/item/storage/belt/rogue/pouch/coins/mid,
 		/obj/item/grenade/gas/poison,
 		/obj/item/grenade/gas/smoke,
-		/obj/item/rogueweapon/sword/iron/short,
+		/obj/item/rogueweapon/sword/short/messer/knightcommander,
 		/obj/item/bomb/dynamite = 2,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)

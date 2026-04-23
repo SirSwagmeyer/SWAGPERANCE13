@@ -38,7 +38,8 @@
 		/obj/item/storage/belt/rogue/pouch/coins/rich,
 		/obj/item/reagent_containers/glass/bottle/rogue/healthpotnew,
 		/obj/item/lockpickring/mundane = 1,
-		/obj/item/flashlight/flare/torch/lantern
+		/obj/item/flashlight/flare/torch/lantern,
+		/obj/item/storage/keyring/merchant,
 	)
 	ADD_TRAIT(H, TRAIT_SEEPRICES, type)
 	ADD_TRAIT(H, TRAIT_CICERONE, TRAIT_GENERIC) //Makes up for loss of alchemy to see reagents.
@@ -50,7 +51,7 @@
 	beltl = /obj/item/storage/belt/rogue/pouch/coins/rich
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
 	id = /obj/item/clothing/ring/gold
-	neck = /obj/item/storage/keyring/merchant
+	neck = /obj/item/clothing/neck/roguetown/boa
 	backr = /obj/item/storage/backpack/rogue/satchel
 	backl = /obj/item/gun/ballistic/revolver/judge
 	wrists = /obj/item/scomstone/kingsrow
