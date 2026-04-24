@@ -1644,12 +1644,6 @@
 	},
 /turf/open/floor/rogue/grasscold,
 /area/rogue/under/cave)
-"jB" = (
-/obj/structure/handcart,
-/turf/open/floor/rogue/blocks{
-	dir = 8
-	},
-/area/rogue/outdoors/town)
 "jF" = (
 /obj/structure/chair/stool/rogue,
 /obj/machinery/light/rogue/wallfire/candle/weak/l,
@@ -4094,12 +4088,6 @@
 /obj/item/rogueweapon/flail,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
-"zV" = (
-/obj/machinery/light/rogue/wallfire/candle,
-/turf/open/floor/rogue/blocks{
-	dir = 4
-	},
-/area/rogue/outdoors/town)
 "Ac" = (
 /obj/item/reagent_containers/food/snacks/rogue/crackerscooked{
 	pixel_x = 3;
@@ -4514,12 +4502,6 @@
 "CF" = (
 /turf/open/floor/carpet/purple,
 /area/rogue/indoors/shelter/town)
-"CH" = (
-/obj/structure/handcart,
-/turf/open/floor/rogue/blocks{
-	dir = 1
-	},
-/area/rogue/outdoors/town)
 "CJ" = (
 /turf/open/water/bloody,
 /area/rogue/outdoors)
@@ -6697,14 +6679,6 @@
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/outdoors/beach/forest/south)
-"Qe" = (
-/obj/structure/fluff/walldeco/merchie{
-	pixel_y = -32
-	},
-/turf/open/floor/rogue/blocks{
-	dir = 8
-	},
-/area/rogue/outdoors/town)
 "Qf" = (
 /obj/structure/closet/crate/roguecloset/dark,
 /obj/item/kitchen/fork/iron,
@@ -71524,7 +71498,7 @@ ZA
 QB
 nz
 nz
-Qe
+Ir
 ii
 ii
 nz
@@ -71753,7 +71727,7 @@ YH
 nz
 Ov
 ii
-zV
+ii
 nz
 nz
 nz
@@ -74247,7 +74221,7 @@ zM
 Sm
 Uf
 Xs
-CH
+Ov
 ii
 Mo
 PD
@@ -74474,7 +74448,7 @@ NP
 xI
 xI
 Xs
-jB
+Ir
 Ir
 Ir
 cd
