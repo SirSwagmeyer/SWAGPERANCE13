@@ -118,6 +118,13 @@
 	user.update_inv_cloak()
 	user.update_inv_armor()
 
+/obj/item/clothing/cloak/perserduntabard/grandknight
+	name = "imperial sash"
+	desc = "For the Grand Knight."
+	color = null
+	icon_state = "grandknight"
+	item_state = "grandknight"
+
 /obj/item/clothing/cloak/psydontabard/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/storage/concrete/roguetown/cloak)

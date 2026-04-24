@@ -679,13 +679,15 @@
 	name = "gutted AMR 'Patience'";
 	desc = "Recovered from one of the local Outlets. The internals were sent to Vos Arderla to justify Perserdunian presence within the region.";
 	pixel_x = 12;
-	pixel_y = -25
+	pixel_y = -25;
+	anchored = 1
 	},
 /obj/item/gun/ballistic/rifle/repeater/patience{
 	name = "gutted AMR 'Patience'";
 	desc = "Recovered from one of the local Outlets. The internals were sent to Vos Arderla to justify Perserdunian presence within the region.";
 	pixel_x = 13;
-	pixel_y = -25
+	pixel_y = -25;
+	anchored = 1
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/perserdunbase)

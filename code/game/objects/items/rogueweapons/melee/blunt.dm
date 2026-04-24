@@ -479,3 +479,27 @@
 	penfactor = 80
 	damfactor = 0.9
 	item_d_type = "stab"
+
+
+/obj/item/rogueweapon/mace/cudgel/blackguard
+	name = "blackguard's handmace"
+	desc = "An enhanced, sleek cudgel for clandestine operations. Can be thrown in a pinch."
+	force = 25
+	icon_state = "blackguardcudgel"
+	force_wielded = 25
+	possible_item_intents = list(/datum/intent/mace/strike)
+	gripped_intents = list(/datum/intent/mace/smash, /datum/intent/mace/strike)
+	smeltresult = /obj/item/ash
+	wlength = WLENGTH_SHORT
+	w_class = WEIGHT_CLASS_NORMAL
+	wbalance = WBALANCE_SWIFT
+	minstr = 7
+	wdefense = 5
+	resistance_flags = FLAMMABLE
+	blade_dulling = DULLING_SHAFT_METAL
+	grid_width = 32
+	grid_height = 96
+	throwforce = 32 //You ever had a mace thrown at you? 
+	throw_speed = 6 //Daredevil LARP
+	armor_penetration = 30 // Slightly worse than tossblades
+	embedding = list("embedded_pain_multiplier" = 6, "embed_chance" = 50, "embedded_fall_chance" = 30) //high chance at embed, high chance to fall out on its own.

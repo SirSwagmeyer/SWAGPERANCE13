@@ -1365,3 +1365,27 @@
 	icon_state = "eastsword3"
 	max_integrity = 180
 	wdefense = 4
+
+/obj/item/rogueweapon/sword/rapier/grandmaster
+	name = "cane blade"
+	desc = "A steel blade with a gold handle, intended to be concealed inside of a cane, bears the visage of a vulture on its pommel."
+	icon = 'icons/roguetown/weapons/32.dmi'
+	icon_state = "caneblade"
+	sheathe_icon = "caneblade"
+	sellprice = 100 //Gold handle
+	grid_width = 32
+	grid_height = 64
+	dropshrink = 0
+	bigboy = FALSE
+	possible_item_intents = list(/datum/intent/sword/thrust/rapier, /datum/intent/sword/cut/rapier)
+	gripped_intents = null
+
+/obj/item/rogueweapon/sword/short/messer/knightcommander
+	name = "imperial messer"
+	desc = "Single-edged export from Yun. Sharp bit faces your target."
+	icon_state = "knightmesser"
+	sheathe_icon = "smesser"
+	force = 25
+	possible_item_intents = list(/datum/intent/sword/cut/sabre, /datum/intent/sword/thrust, /datum/intent/axe/chop, /datum/intent/sword/peel)
+	minstr = 5
+	wdefense = 4

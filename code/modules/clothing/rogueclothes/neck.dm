@@ -696,3 +696,35 @@
 		user.change_stat("fortune", -1) //how much luck stat taken away when unequipped
 		goodluckactivated = FALSE
 	return
+
+/obj/item/clothing/neck/roguetown/boa
+	name = "Boa"
+	desc = "A long boa made from surprisingly soft feathers."
+	icon_state = "boa"
+	item_state = "boa"
+	sewrepair = TRUE
+	color = "#483252"
+	adjustable = CAN_CADJUST
+	toggle_icon_state = TRUE
+
+/obj/item/clothing/neck/roguetown/boa/AdjustClothes(mob/user)
+    if(loc == user)
+        if(adjustable == CAN_CADJUST)
+            adjustable = CADJUSTED
+            if(toggle_icon_state)
+                if(ishuman(user))
+                    var/mob/living/carbon/H = user
+                    if(H.gender == FEMALE)
+                        icon_state = "[initial(icon_state)]_f_t"
+                    else
+                        icon_state = "[initial(icon_state)]_t"
+            if(ishuman(user))
+                var/mob/living/carbon/H = user
+                H.update_inv_neck()
+                H.update_inv_head()
+        else if(adjustable == CADJUSTED)
+            ResetAdjust(user)
+        if(ishuman(user))
+            var/mob/living/carbon/H = user
+            H.update_inv_neck()
+            H.update_inv_head()

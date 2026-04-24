@@ -14,6 +14,19 @@
 	l_sleeve_status = SLEEVE_NORMAL
 	experimental_inhand = FALSE
 
+/obj/item/clothing/suit/roguetown/shirt/robe/equipped(mob/user, slot, initial = FALSE)
+    . = ..()
+    if(slot == SLOT_CLOAK)
+        src.sleeved = null
+    else
+        src.sleeved = initial(src.sleeved) // just in case it bugs out somehow
+    update_icon()
+
+/obj/item/clothing/suit/roguetown/shirt/robe/dropped(mob/user)
+    . = ..()
+    src.sleeved = initial(src.sleeved)
+    update_icon()
+
 /obj/item/clothing/suit/roguetown/shirt/robe/astrata
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT|ITEM_SLOT_CLOAK
 	name = "sun robe"

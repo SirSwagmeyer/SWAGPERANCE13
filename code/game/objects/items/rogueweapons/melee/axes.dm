@@ -521,3 +521,16 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	wlength = WLENGTH_NORMAL
 	toolspeed = 2
+
+/obj/item/rogueweapon/stoneaxe/battle/commandant
+	name = "TYRANNY"
+	desc = "Commissioned from the helmets of insolent Soldatos. For the Dictate."
+	possible_item_intents = list(/datum/intent/axe/cut/battle ,/datum/intent/axe/chop/battle, /datum/intent/mace/warhammer/pick)
+	gripped_intents = list(/datum/intent/axe/cut/battle ,/datum/intent/axe/chop/battle, /datum/intent/mace/warhammer/pick, /datum/intent/mace/smash)
+	force = 23
+	force_wielded = 28
+	icon_state = "commandantaxe"
+	pixel_y = -10
+	pixel_x = 0
+	inhand_x_dimension = 64
+	inhand_y_dimension = 64

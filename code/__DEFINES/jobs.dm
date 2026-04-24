@@ -321,7 +321,7 @@
 	/datum/job/roguetown/grandknight,\
 	/datum/job/roguetown/knightcommander,\
 	/datum/job/roguetown/voltigeur,\
-  /datum/job/roguetown/blackguard,\
+	/datum/job/roguetown/blackguard,\
 	/datum/job/roguetown/auxiliar,\
 	/datum/job/roguetown/armsman,\
 	/datum/job/roguetown/chirurgeon,\
