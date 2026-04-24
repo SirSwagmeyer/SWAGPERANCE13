@@ -134,6 +134,16 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town)
+"aM" = (
+/obj/structure/table/wood/longreif{
+	dir = 4
+	},
+/obj/structure/bars/shop,
+/obj/structure/bars/passage/shutter{
+	redstone_id = "merchie"
+	},
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors/beach/forest/south)
 "aO" = (
 /obj/structure/fluff/railing/border/west,
 /obj/structure/fluff/railing/border/north,
@@ -332,6 +342,16 @@
 	},
 /turf/open/floor/rogue/brown,
 /area/rogue/outdoors/town)
+"bO" = (
+/obj/structure/table/wood/longreif{
+	dir = 1
+	},
+/obj/structure/bars/shop,
+/obj/structure/bars/passage/shutter{
+	redstone_id = "merchie"
+	},
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors/beach/forest/south)
 "bP" = (
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/ruinedwood/spiral,
@@ -711,7 +731,8 @@
 /area/rogue/indoors/shelter/town)
 "dY" = (
 /obj/effect/decal/carpet/kover_darkred{
-	pixel_y = 21
+	pixel_y = 32;
+	pixel_x = 19
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town)
@@ -742,6 +763,12 @@
 /obj/structure/table/wood/map/six,
 /turf/open/floor/rogue/brown,
 /area/rogue/indoors/shelter/town)
+"ef" = (
+/obj/machinery/light/rogue/wallfire/candle/l{
+	pixel_x = 32
+	},
+/turf/open/floor/rogue/brown,
+/area/rogue/outdoors/town)
 "eh" = (
 /obj/effect/decal/carpet/kover_black{
 	pixel_x = 14;
@@ -1727,8 +1754,7 @@
 "ks" = (
 /obj/effect/decal/carpet/kover_purple{
 	dir = 8;
-	pixel_x = 8;
-	pixel_y = -18
+	pixel_x = 32
 	},
 /turf/open/floor/rogue/brown,
 /area/rogue/indoors/shelter/town)
@@ -2346,7 +2372,8 @@
 "oX" = (
 /obj/structure/handcart,
 /obj/effect/decal/carpet/kover_darkred{
-	pixel_y = 21
+	pixel_y = 32;
+	pixel_x = 14
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town)
@@ -2829,6 +2856,14 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/shelter/town)
+"rN" = (
+/obj/structure/rack/rogue,
+/obj/effect/spawner/lootdrop/medicines,
+/obj/machinery/light/rogue/wallfire/candle{
+	pixel_y = -32
+	},
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors/shelter/town)
 "rP" = (
 /obj/structure/mineral_door/wood/donjon{
 	dir = 1;
@@ -2837,6 +2872,12 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town)
+"rR" = (
+/obj/machinery/light/rogue/firebowl/standing{
+	density = 0
+	},
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/beach/forest/south)
 "rT" = (
 /turf/open/water/cleanshallow,
 /area/rogue/indoors/shelter/town)
@@ -3501,6 +3542,13 @@
 	},
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
+"wh" = (
+/obj/machinery/light/rogue/firebowl/standing,
+/obj/machinery/light/rogue/firebowl/standing{
+	density = 0
+	},
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors/beach/forest/south)
 "wk" = (
 /obj/structure/chair/wood/rogue/generic2{
 	dir = 4
@@ -4739,6 +4787,12 @@
 "DW" = (
 /turf/closed/wall/mineral/rogue/scary/end,
 /area/rogue/under/cave/warmachine)
+"Ec" = (
+/obj/machinery/light/rogue/firebowl/standing,
+/turf/open/floor/rogue/blocks{
+	dir = 8
+	},
+/area/rogue/outdoors/town)
 "Ed" = (
 /obj/structure/fluff/clock{
 	pixel_y = 13
@@ -5036,6 +5090,7 @@
 /obj/structure/stairs{
 	dir = 1
 	},
+/obj/machinery/light/rogue/wallfire/candle,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town)
 "Gg" = (
@@ -6933,6 +6988,8 @@
 /turf/open/transparent/openspace,
 /area/rogue/outdoors)
 "Rt" = (
+/obj/structure/table/wood/longreif,
+/obj/structure/bars/shop,
 /obj/structure/bars/passage/shutter{
 	redstone_id = "merchie"
 	},
@@ -7158,6 +7215,9 @@
 	},
 /obj/structure/rack/rogue,
 /obj/effect/spawner/lootdrop/medicines,
+/obj/machinery/light/rogue/wallfire/candle{
+	pixel_y = -32
+	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town)
 "SR" = (
@@ -7489,8 +7549,7 @@
 "Vj" = (
 /obj/effect/decal/carpet/kover_purple{
 	dir = 8;
-	pixel_x = -14;
-	pixel_y = -16
+	pixel_x = -4
 	},
 /turf/open/floor/rogue/brown,
 /area/rogue/indoors/shelter/town)
@@ -7645,10 +7704,7 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town)
 "Wu" = (
-/obj/effect/decal/carpet/kover_black{
-	pixel_x = -16;
-	pixel_y = -17
-	},
+/obj/effect/decal/carpet/kover_black,
 /turf/open/floor/rogue/brown,
 /area/rogue/indoors/shelter/town)
 "Ww" = (
@@ -70100,7 +70156,7 @@ Fe
 Ub
 uj
 uj
-iQ
+uj
 Ub
 cq
 xB
@@ -72596,7 +72652,7 @@ fH
 cq
 Xj
 aT
-yY
+rN
 uf
 zl
 zl
@@ -72817,7 +72873,7 @@ tn
 tn
 xP
 xP
-Cd
+wh
 Mg
 Kf
 sU
@@ -72828,7 +72884,7 @@ GK
 Vp
 Vj
 Vp
-Ir
+Ec
 ii
 Ov
 ii
@@ -73273,7 +73329,7 @@ Rz
 tn
 Cd
 Cd
-Rt
+bO
 aT
 aT
 aT
@@ -73500,7 +73556,7 @@ tn
 tn
 xP
 Cd
-Rt
+aM
 aT
 dY
 aT
@@ -73725,7 +73781,7 @@ tn
 tn
 tn
 xP
-xP
+rR
 Mg
 Kf
 sU
@@ -73736,7 +73792,7 @@ Vw
 Vp
 Vp
 Vp
-ii
+cs
 Ir
 Ov
 ii
@@ -74414,7 +74470,7 @@ fT
 fT
 fT
 El
-xI
+ef
 xI
 xI
 Xs
