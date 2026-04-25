@@ -21,17 +21,17 @@
 	"Face" = 'sound/music/jukeboxes/machine/machineface.ogg',\
 ) // POP MUSIC ONLY FOR THE MACHINE -- NO CHUDMUSIC ALLOWED
 
-/datum/looping_sound/musloop
+/datum/looping_sound/radios
 	mid_sounds = list()
-	mid_length = 2400 // Whoever wrote this is giving me an aneurism
-	volume = 70
+	mid_length = 120000 // 20 minutes
+	volume = 100
 	extra_range = 8
 	falloff = 0
 	persistent_loop = TRUE
 	var/stress2give = /datum/stressevent/music
-	channel = CHANNEL_JUKEBOX
+	sound_group = /datum/sound_group/radios
 
-/datum/looping_sound/musloop/on_hear_sound(mob/M)
+/datum/looping_sound/radios/on_hear_sound(mob/M)
 	. = ..()
 	if(stress2give)
 		if(isliving(M))
@@ -46,7 +46,7 @@
 	density = TRUE
 	anchored = TRUE
 	max_integrity = 0
-	var/datum/looping_sound/musloop/soundloop
+	var/datum/looping_sound/radios/soundloop
 	var/list/init_curfile = list('sound/music/jukeboxes/gen/talkshow.ogg') // A list of songs that curfile is set to on init. MUST BE IN ONE OF THE MUSIC_TAVCAT_'s.
 	var/curfile // The current track that is playing right now
 	var/playing = FALSE // If music is playing or not. playmusic() deals with this don't mess with it.
