@@ -3261,6 +3261,7 @@
 	},
 /obj/structure/rack/rogue,
 /obj/effect/spawner/lootdrop/normalguns,
+/obj/effect/spawner/lootdrop/ammo,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town)
 "uQ" = (
@@ -4078,6 +4079,7 @@
 /obj/item/clothing/under/roguetown/heavy_leather_pants,
 /obj/item/clothing/shoes/roguetown/armor/ebboots/armored,
 /obj/item/clothing/gloves/roguetown/angle,
+/obj/item/clothing/neck/roguetown/coif,
 /turf/open/floor/rogue/brown,
 /area/rogue/indoors/shelter/town)
 "zQ" = (
@@ -7058,6 +7060,7 @@
 "Sm" = (
 /obj/structure/table/wood/long/mid,
 /obj/effect/spawner/lootdrop/normalguns,
+/obj/effect/spawner/lootdrop/ammo,
 /turf/open/floor/rogue/brown,
 /area/rogue/indoors/shelter/town)
 "So" = (
@@ -7394,6 +7397,7 @@
 /obj/structure/table/wood/long/east,
 /obj/effect/spawner/lootdrop/normalguns,
 /obj/item/storage/backpack/rogue/backpack,
+/obj/effect/spawner/lootdrop/ammo,
 /turf/open/floor/rogue/brown,
 /area/rogue/indoors/shelter/town)
 "Ul" = (
@@ -123029,8 +123033,8 @@ Mo
 Mo
 Mo
 Xs
-ph
-ph
+xI
+xI
 ph
 ph
 ph
@@ -123256,8 +123260,8 @@ Mo
 Mo
 Mo
 Xs
-ph
-ph
+xI
+xI
 ph
 ph
 ph
@@ -123483,8 +123487,8 @@ PD
 PD
 PD
 Mo
-ph
-ph
+xI
+xI
 ph
 ph
 ph
@@ -123710,8 +123714,8 @@ Mo
 Mo
 Mo
 Xs
-ph
-ph
+xI
+xI
 ph
 ph
 ph
@@ -125072,8 +125076,8 @@ Mo
 Mo
 Mo
 Xs
-ph
-ph
+xI
+xI
 ph
 ph
 ph
