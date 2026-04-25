@@ -1,4 +1,5 @@
 #define GARRISON_SCOM_COLOR "#FF4242"
+#define LEADER_SCOM_COLOR "#680c0c"
 #define RADIO_SOUNDS
 #define SCOMNET_EMPIRE "empire"
 #define SCOMNET_ZIGS "zigs"
@@ -819,7 +820,31 @@
 		input_text = "<small>[input_text]</small>"
 	for(var/obj/item/scomstone/S in SSroguemachine.scomm_machines)
 		if(S.faction_net == faction_net)
-			input_text = "<big><span style='color: [GARRISON_SCOM_COLOR]'>[input_text]</span></big>" //Prettying up for Garrison line
+			input_text = "<big><span style='color: [LEADER_SCOM_COLOR]'>[input_text]</span></big>"
 			S.repeat_message(input_text, src, usedcolor)
 
 /obj/item/scomstone/perlead
+	name = "communications device"
+	icon_state = "scomstoner1"
+	desc = "A wrist-mounted device used by the Empire."
+	messagereceivedsound = 'sound/misc/per_radio.ogg'
+	hearrange = 0
+	sellprice = 100
+	faction_net = SCOMNET_EMPIRE
+
+/obj/item/scomstone/perlead/attack_right(mob/living/carbon/human/user)
+	user.changeNext_move(CLICK_CD_INTENTCAP)
+	visible_message(span_notice ("[user] presses their ring against their mouth."))
+	var/input_text = input(user, "Enter your message:", "Message")
+	if(!input_text)
+		return
+	var/usedcolor = user.voice_color
+	if(user.voicecolor_override)
+		usedcolor = user.voicecolor_override
+	user.whisper(input_text)
+	if(length(input_text) > 100) //When these people talk too much, put that shit in slow motion, yeah
+		input_text = "<small>[input_text]</small>"
+	for(var/obj/item/scomstone/S in SSroguemachine.scomm_machines)
+		if(S.faction_net == faction_net)
+			input_text = "<big><span style='color: [LEADER_SCOM_COLOR]'>[input_text]</span></big>"
+			S.repeat_message(input_text, src, usedcolor)

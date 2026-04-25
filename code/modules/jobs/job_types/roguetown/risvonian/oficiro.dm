@@ -46,7 +46,7 @@
 	belt = /obj/item/storage/belt/rogue/leather/black/soldier
 	beltl = /obj/item/gun/ballistic/rifle/repeater/offiseroluger
 	beltr = /obj/item/storage/belt/rogue/pouch/ammobag
-	wrists = /obj/item/scomstone
+	wrists = /obj/item/scomstone/rislead
 	gloves = /obj/item/clothing/gloves/roguetown/eastgloves1
 	id = /obj/item/roguekey/risvon
 	backl = /obj/item/gun/ballistic/rifle/repeater/rattlesnake
@@ -75,6 +75,10 @@
 	H.adjust_skillrank(/datum/skill/craft/armorsmithing, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/weaponsmithing, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
+	if(H.mind)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/risholdingweak)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/risaimweak)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/rischargeweak)
 	H.change_stat("constitution", 1)
 	H.change_stat("endurance", 1)
 	H.change_stat("perception", 2)
