@@ -995,7 +995,11 @@
 /turf/open/floor/rogue/brown,
 /area/rogue/indoors/shelter/town)
 "fH" = (
-/turf/open/floor/rogue/cobblerock,
+/obj/structure/barbedwire{
+	pixel_x = 1;
+	pixel_y = -3
+	},
+/turf/open/floor/rogue/dirt,
 /area/rogue/indoors/shelter/town)
 "fI" = (
 /obj/structure/fluff/railing/corner/north_east,
@@ -1028,8 +1032,7 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town)
 "fT" = (
-/obj/structure/barbedwire,
-/turf/open/floor/rogue/dirt,
+/turf/open/floor/rogue/cobblerock,
 /area/rogue/indoors/shelter/town)
 "fV" = (
 /obj/structure/bed/rogue/inn/hay{
@@ -1808,16 +1811,6 @@
 	},
 /turf/open/floor/rogue/brown,
 /area/rogue/indoors/shelter/town)
-"lb" = (
-/obj/structure/fluff/walldeco/kingsrow{
-	pixel_y = -32
-	},
-/obj/structure/barbedwire{
-	pixel_x = 1;
-	pixel_y = -3
-	},
-/turf/open/floor/rogue/dirt,
-/area/rogue/indoors/shelter/town)
 "lc" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/r,
 /turf/closed/wall/mineral/rogue/kingsrow/horizontal,
@@ -1914,6 +1907,9 @@
 /obj/structure/barbedwire{
 	pixel_x = 1;
 	pixel_y = -3
+	},
+/obj/structure/fluff/walldeco/kingsrow{
+	pixel_y = -32
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/indoors/shelter/town)
@@ -2193,12 +2189,6 @@
 /obj/item/roguecoin/silver/pile,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
-"nD" = (
-/obj/machinery/light/rogue/firebowl/standing,
-/turf/open/floor/rogue/blocks{
-	dir = 4
-	},
-/area/rogue/indoors/shelter/town)
 "nK" = (
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/brown,
@@ -3349,6 +3339,16 @@
 	},
 /obj/effect/landmark/start/mortician,
 /turf/open/floor/rogue/med,
+/area/rogue/indoors/shelter/town)
+"vl" = (
+/obj/structure/fluff/walldeco/kingsrow{
+	pixel_y = -32
+	},
+/obj/structure/barbedwire{
+	pixel_x = 1;
+	pixel_y = -3
+	},
+/turf/open/floor/rogue/dirt,
 /area/rogue/indoors/shelter/town)
 "vn" = (
 /obj/effect/decal/cobbleedge{
@@ -5635,13 +5635,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
 "Kf" = (
-/obj/structure/barbedwire{
-	pixel_x = 1;
-	pixel_y = -3
-	},
-/obj/structure/fluff/walldeco/kingsrow{
-	pixel_y = -32
-	},
+/obj/structure/barbedwire,
 /turf/open/floor/rogue/dirt,
 /area/rogue/indoors/shelter/town)
 "Kh" = (
@@ -7037,6 +7031,12 @@
 /obj/effect/decal/cleanable/blood/gibs/up,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave)
+"RS" = (
+/obj/machinery/light/rogue/firebowl/standing,
+/turf/open/floor/rogue/blocks{
+	dir = 4
+	},
+/area/rogue/indoors/shelter/town)
 "RT" = (
 /turf/open/water/swamp/deep,
 /area/rogue)
@@ -68568,7 +68568,7 @@ tn
 xP
 mW
 iG
-lE
+fH
 uj
 Kj
 go
@@ -68795,7 +68795,7 @@ tn
 tn
 tn
 tn
-fT
+Kf
 uj
 Pi
 Vp
@@ -69022,7 +69022,7 @@ tn
 tn
 tn
 tn
-lE
+fH
 uj
 II
 bb
@@ -69249,7 +69249,7 @@ xP
 tn
 tn
 tn
-fT
+Kf
 wA
 Ub
 uj
@@ -69476,7 +69476,7 @@ tn
 tn
 tn
 Cd
-fH
+fT
 wz
 fF
 ar
@@ -69703,7 +69703,7 @@ xP
 tn
 Cd
 Cd
-fH
+fT
 fN
 ar
 fN
@@ -69930,7 +69930,7 @@ tn
 Cd
 Cd
 Cd
-fH
+fT
 ar
 ar
 La
@@ -70157,7 +70157,7 @@ Cd
 Cd
 Cd
 Cd
-lE
+fH
 Fe
 Ub
 uj
@@ -70384,7 +70384,7 @@ Cd
 Cd
 Cd
 tn
-fT
+Kf
 wA
 Yi
 bn
@@ -70611,7 +70611,7 @@ Cd
 Cd
 tn
 tn
-lE
+fH
 uj
 Pi
 Vp
@@ -70838,7 +70838,7 @@ Cd
 tn
 tn
 tn
-fT
+Kf
 uj
 Pi
 Vp
@@ -71065,7 +71065,7 @@ Cd
 fk
 tn
 tn
-lE
+fH
 uj
 Pi
 Vp
@@ -71292,7 +71292,7 @@ Cd
 Cd
 tn
 tn
-fT
+Kf
 Fe
 yi
 hh
@@ -71519,7 +71519,7 @@ Cd
 Cd
 tn
 tn
-lb
+vl
 uf
 iq
 sD
@@ -71746,7 +71746,7 @@ Cd
 Cd
 tn
 tn
-lE
+fH
 uf
 vY
 tN
@@ -71973,7 +71973,7 @@ Cd
 Cd
 Cd
 tn
-fT
+Kf
 cq
 Gy
 sA
@@ -72200,7 +72200,7 @@ Cd
 Cd
 Cd
 tn
-lE
+fH
 uf
 pP
 dy
@@ -73798,7 +73798,7 @@ Vw
 Vp
 Vp
 Vp
-nD
+RS
 Ir
 Ov
 ii
@@ -74243,7 +74243,7 @@ tn
 tn
 tn
 EB
-Kf
+lE
 uf
 aT
 zC
@@ -74470,7 +74470,7 @@ tn
 tn
 tn
 xP
-lE
+fH
 uf
 aT
 aT
@@ -74697,7 +74697,7 @@ xP
 cT
 tn
 xP
-lE
+fH
 cq
 sA
 sw
