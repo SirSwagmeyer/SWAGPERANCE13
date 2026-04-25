@@ -250,6 +250,16 @@
 	},
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave)
+"bz" = (
+/obj/structure/fluff/walldeco/kingsrow{
+	pixel_y = -32
+	},
+/obj/structure/barbedwire{
+	pixel_x = 1;
+	pixel_y = -3
+	},
+/turf/open/floor/rogue/dirt,
+/area/rogue/indoors/shelter/town)
 "bA" = (
 /obj/structure/fluff/railing/border{
 	dir = 8;
@@ -1905,10 +1915,14 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town)
 "lE" = (
-/obj/machinery/light/rogue/firebowl/standing,
-/turf/open/floor/rogue/blocks{
-	dir = 4
+/obj/structure/barbedwire{
+	pixel_x = 1;
+	pixel_y = -3
 	},
+/obj/structure/fluff/walldeco/kingsrow{
+	pixel_y = -32
+	},
+/turf/open/floor/rogue/dirt,
 /area/rogue/indoors/shelter/town)
 "lG" = (
 /obj/structure/closet/crate/chest/wicker,
@@ -2798,9 +2812,6 @@
 /turf/open/floor/rogue/blocks{
 	dir = 2
 	},
-/area/rogue/indoors/shelter/town)
-"ru" = (
-/turf/open/floor/rogue/cobblerock,
 /area/rogue/indoors/shelter/town)
 "rv" = (
 /obj/machinery/light/rogue/forge,
@@ -4089,16 +4100,6 @@
 /obj/item/clothing/neck/roguetown/coif,
 /turf/open/floor/rogue/brown,
 /area/rogue/indoors/shelter/town)
-"zP" = (
-/obj/structure/barbedwire{
-	pixel_x = 1;
-	pixel_y = -3
-	},
-/obj/structure/fluff/walldeco/kingsrow{
-	pixel_y = -32
-	},
-/turf/open/floor/rogue/dirt,
-/area/rogue/indoors/shelter/town)
 "zQ" = (
 /obj/structure/table/wood/perserdunsmall,
 /obj/item/rogueweapon/huntingknife/chefknife{
@@ -4893,6 +4894,9 @@
 /obj/structure/closet/crate/drawer,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/shelter/town)
+"Fb" = (
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/indoors/shelter/town)
 "Fe" = (
 /turf/closed/wall/mineral/rogue/kingsrow/end{
 	dir = 8
@@ -5635,14 +5639,10 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
 "Kf" = (
-/obj/structure/fluff/walldeco/kingsrow{
-	pixel_y = -32
+/obj/machinery/light/rogue/firebowl/standing,
+/turf/open/floor/rogue/blocks{
+	dir = 4
 	},
-/obj/structure/barbedwire{
-	pixel_x = 1;
-	pixel_y = -3
-	},
-/turf/open/floor/rogue/dirt,
 /area/rogue/indoors/shelter/town)
 "Kh" = (
 /obj/structure/fluff/railing/corner,
@@ -69476,7 +69476,7 @@ tn
 tn
 tn
 Cd
-ru
+Fb
 wz
 fF
 ar
@@ -69703,7 +69703,7 @@ xP
 tn
 Cd
 Cd
-ru
+Fb
 fN
 ar
 fN
@@ -69930,7 +69930,7 @@ tn
 Cd
 Cd
 Cd
-ru
+Fb
 ar
 ar
 La
@@ -71519,7 +71519,7 @@ Cd
 Cd
 tn
 tn
-Kf
+bz
 uf
 iq
 sD
@@ -73798,7 +73798,7 @@ Vw
 Vp
 Vp
 Vp
-lE
+Kf
 Ir
 Ov
 ii
@@ -74243,7 +74243,7 @@ tn
 tn
 tn
 EB
-zP
+lE
 uf
 aT
 zC
