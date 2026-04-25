@@ -760,6 +760,7 @@
 #include "code\datums\status_effects\rogue\temperance\tempbuff.dm"
 #include "code\datums\storytellers\_base.dm"
 #include "code\datums\storytellers\gods.dm"
+#include "code\datums\storytellers\temperance.dm"
 #include "code\datums\stress\_stressevent.dm"
 #include "code\datums\stress\negative_events.dm"
 #include "code\datums\stress\positive_events.dm"

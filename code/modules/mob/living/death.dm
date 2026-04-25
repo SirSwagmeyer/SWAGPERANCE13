@@ -87,7 +87,7 @@
 
 
 /mob/living/death(gibbed, nocutscene = FALSE)
-	var/list/deathsounds = list('sound/misc/deth.ogg', 'sound/misc/doom.ogg', 'sound/misc/dying.ogg', 'sound/misc/lobotomy.ogg')
+	var/list/deathsounds = list('sound/misc/doom.ogg')
 	var/was_dead_before = stat == DEAD
 	stat = DEAD
 	unset_machine()

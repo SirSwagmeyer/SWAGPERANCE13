@@ -267,7 +267,7 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 	harmful = TRUE
 
 /datum/reagent/berrypoison/on_mob_life(mob/living/carbon/M)
-	if(volume > 0.09)
+	if(volume > 0.09 && !HAS_TRAIT(M, TRAIT_NASTY_EATER))
 		M.add_nausea(3) // so one berry or one dose (one clunk of extracted poison, 5u) will make you really sick and a hair away from crit.
 		M.adjustToxLoss(2)
 	return ..()

@@ -20,7 +20,7 @@
 	min_pq = 0
 	max_pq = null
 
-	cmode_music = 'sound/music/combat_kaspafisto.ogg'
+	cmode_music = 'sound/music/combat_flamsoldato.ogg'
 
 /datum/job/roguetown/flamsoldato/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()

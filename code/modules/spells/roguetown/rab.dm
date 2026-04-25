@@ -197,7 +197,7 @@
 	damage = 70
 	armor_penetration = 50
 	damage_type = BRUTE
-	woundclass = BCLASS_PIERCE
+	woundclass = BCLASS_CUT
 	nodamage = FALSE
 	speed = 0.3
 	flag = "magic"

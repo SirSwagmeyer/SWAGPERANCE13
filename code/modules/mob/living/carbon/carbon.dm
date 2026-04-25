@@ -668,6 +668,24 @@
 	if(dna)
 		dna.real_name = real_name
 
+/mob/living/carbon/proc/update_crit_music() //THIS SHOULD REALLY BE A SIGNAL FOR WHEN YOU EXIT/ENTER CRIT DO NOT USE THIS UNLESS YOU ARE MAKING IT A SIGNAL
+	if(!src.client)
+		return
+	if(src.stat == DEAD) //prevents it from playing after death. don't ask me why it does
+		return
+	if(SSticker.round_end)
+		return
+	var/client/listener = src.client
+	var/critmusic = 'sound/music/iamdying.ogg'
+	if(src.DisplayCrit()) //same check as for 'dying' to appear on your screen
+		if (listener.last_droning_sound == critmusic)
+			return
+		else
+			SSdroning.play_crit_music(critmusic, listener)
+	else
+		if(listener.last_droning_sound == critmusic)
+			SSdroning.kill_droning(listener)
+
 /mob/living/carbon/update_mobility()
 	. = ..()
 	if(!(mobility_flags & MOBILITY_STAND))
@@ -703,7 +721,6 @@
 	staminaloss = round(total_stamina, DAMAGE_PRECISION)
 	update_stat()
 	update_mobility()
-
 	if(stat == SOFT_CRIT)
 		add_movespeed_modifier(MOVESPEED_ID_CARBON_SOFTCRIT, TRUE, multiplicative_slowdown = SOFTCRIT_ADD_SLOWDOWN)
 	else
@@ -828,7 +845,7 @@
 	else
 		clear_fullscreen("CMODE")
 
-	if(health <= crit_threshold || ((blood_volume in -INFINITY to BLOOD_VOLUME_SURVIVE) && !HAS_TRAIT(src, TRAIT_BLOODLOSS_IMMUNE)))
+	if(DisplayCrit())
 		var/severity = 0
 		switch(health)
 			if(-20 to -10)

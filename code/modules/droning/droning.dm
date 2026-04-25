@@ -32,7 +32,12 @@ SUBSYSTEM_DEF(droning)
 /datum/controller/subsystem/droning/proc/play_area_sound(area/area_player, client/listener)
 	if(!area_player || !listener)
 		return
-	
+
+	if(ishuman(listener.mob))
+		var/mob/living/carbon/human/H = listener.mob
+		if(H.DisplayCrit())//don't play normal droning music if we're Fucking Dying
+			return
+
 	if(SSticker.current_state >= GAME_STATE_FINISHED) //stop drones in round end
 		return
 
@@ -81,6 +86,10 @@ SUBSYSTEM_DEF(droning)
 /datum/controller/subsystem/droning/proc/play_combat_music(music = null, client/dreamer)
 	if(!music || !dreamer)
 		return
+	if(ishuman(dreamer.mob))
+		var/mob/living/carbon/human/H = dreamer.mob
+		if(H.DisplayCrit()) //don't play normal combat music if we're Fucking Dying
+			return
 
 	var/frenq = 1
 
@@ -111,9 +120,12 @@ SUBSYSTEM_DEF(droning)
 		shouldskip = TRUE
 	if(listener?.mob.cmode)
 		shouldskip = TRUE
+	if(ishuman(listener.mob))
+		var/mob/living/carbon/human/H = listener.mob
+		if(H.DisplayCrit())//don't play normal droning music if we're Fucking Dying
+			shouldskip = TRUE
 	if(shouldskip)
 		var/sound/droning = sound(pick(area_player.droning_sound_current), area_player.droning_repeat, area_player.droning_wait, area_player.droning_channel, listener?.prefs.musicvol)
-
 
 		if(HAS_TRAIT(listener.mob, TRAIT_SCHIZO_AMBIENCE))
 			droning.file = 'sound/music/dreamer_is_still_asleep.ogg'
@@ -203,3 +215,29 @@ SUBSYSTEM_DEF(droning)
 	var/sound/loop_sound = sound(pick(amb_sound_list), repeat = TRUE, wait = 0, channel = CHANNEL_RAIN, volume = dreamer?.prefs.musicvol)
 	SEND_SOUND(dreamer, loop_sound)
 	dreamer.rain_sound = TRUE
+
+/datum/controller/subsystem/droning/proc/play_crit_music(music = null, client/dreamer)
+	if(!music || !dreamer)
+		return
+
+	var/frenq = 1
+
+	if(HAS_TRAIT(dreamer.mob, TRAIT_DRUQK))
+		frenq = -1
+
+	if(ishuman(dreamer.mob))
+		var/mob/living/carbon/human/H = dreamer.mob
+		if(H.has_status_effect(/datum/status_effect/buff/moondust))
+			frenq = 2
+		if(H.has_status_effect(/datum/status_effect/buff/weed))
+			frenq = 0.5
+
+	//kill the previous droning sound
+	kill_droning(dreamer)
+	var/sound/dying_music = sound(music, repeat = TRUE, wait = 0, channel = CHANNEL_BUZZ, volume = (dreamer?.prefs.musicvol)*1.2)
+	dying_music.frequency = frenq
+	if(!HAS_TRAIT(dreamer.mob, TRAIT_DRUQK))
+		dying_music.pitch = 1 / dying_music.frequency
+	SEND_SOUND(dreamer, dying_music)
+	dreamer.droning_sound = dying_music
+	dreamer.last_droning_sound = dying_music.file
