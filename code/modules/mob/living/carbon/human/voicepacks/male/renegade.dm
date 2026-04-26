@@ -9,6 +9,8 @@
 			used = list('sound/vo/male/zeth/sigh (1).ogg','sound/vo/male/zeth/sigh (2).ogg','sound/vo/male/zeth/sigh (3).ogg')
 		if("grumble")
 			used = list('sound/vo/male/renegade/grumble.ogg')
+		if ("yawn")
+			used = list('sound/vo/male/renegade/yawn.ogg', 'sound/vo/male/renegade/yawn(2).ogg', 'sound/vo/male/renegade/yawn.ogg(3)')
 		if("scream")
 			used = list ('sound/vo/male/renegade/scream (1).ogg', 'sound/vo/male/renegade/scream (2).ogg')
 		if("laugh")
@@ -16,7 +18,7 @@
 		if("clearthroat")
 			used = list('sound/vo/male/renegade/clearthroat.ogg', 'sound/vo/male/renegade/clearthroat (2).ogg')
 		if("pain")
-			used = 'sound/vo/male/renegade/death.ogg'
+			used = list('sound/vo/male/renegade/death.ogg', 'sound/vo/male/renegade/scream (2).ogg', 'sound/vo/male/renegade/scream (1).ogg')
 		if("whimper")
 			used = list('sound/vo/male/renegade/whimper.ogg')
 		if("cough")
