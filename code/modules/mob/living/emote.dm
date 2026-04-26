@@ -1184,6 +1184,7 @@
 	key = "me"
 	key_third_person = "custom"
 	show_runechat = TRUE
+	stat_allowed = UNCONSCIOUS
 #ifdef MATURESERVER
 	message_param = "%t"
 #endif
