@@ -7,7 +7,7 @@
 	horse = /mob/living/simple_animal/hostile/retaliate/rogue/saiga/saigabuck/tame/saddled
 	maximum_possible_slots = 5
 	traits_applied = list(TRAIT_OUTLANDER)
-	category_tags = list(CTAG_ADVENTURER, CTAG_COURTAGENT)
+	category_tags = list(CTAG_DISABLED) //dont enable this or i'll be very cross - zera
 	classes = list("Perpretrator" = "In all honesty, you're probably a criminal. You have a double-barreled shotgun.",
 					"Desperado" = "You might just be a bandit, or a cowboy lover. You carry a mass-produced revolver.",
 					"Gangster" = "You're probably from a gang. Or, you happened to kill whoever held the pistol before you. Make some money, grab some guns. Try not to die.",
