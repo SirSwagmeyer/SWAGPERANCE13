@@ -13,10 +13,10 @@
 #define STORYTELLERS_ALL (DIVINE_STORYTELLERS + INHUMEN_STORYTELLERS)
 
 /datum/storyteller/psydon
-	name = "STANDARD"
+	name = "Psydon"
 	desc = "You have been given the right to vote for.. NOTHING! The standard Temperance 13 experience."
 	weight = 6
-	always_votable = TRUE
+	always_votable = FALSE
 	color_theme = "#80ced8"
 
 	//Sets probability of roundstart antag to 0. One would think no character injection would be good enough, but here we are. This is also on other codebases psydon so prob the way to fix it.

@@ -15,7 +15,7 @@
 	charging_slowdown = 2
 	chargedloop = /datum/looping_sound/invokeradio
 	associated_skill = /datum/skill/magic/arcane
-	spell_tier = 3
+	spell_tier = 5
 	gesture_required = TRUE
 	range = 7
 	var/delay = 10

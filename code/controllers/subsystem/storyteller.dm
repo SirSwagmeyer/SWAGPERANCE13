@@ -23,7 +23,7 @@ SUBSYSTEM_DEF(gamemode)
 	/// Our storyteller. They progresses our trackboards and picks out events
 	var/datum/storyteller/current_storyteller
 	/// Result of the storyteller vote/pick. Defaults to Astrata.
-	var/selected_storyteller = /datum/storyteller/psydon
+	var/selected_storyteller = /datum/storyteller/standard
 	/// List of all the storytellers. Populated at init. Associative from type
 	var/list/storytellers = list()
 	/// Next process for our storyteller. The wait time is STORYTELLER_WAIT_TIME
@@ -1278,7 +1278,7 @@ SUBSYSTEM_DEF(gamemode)
 	var/total_influence = get_follower_influence(chosen_storyteller)
 	for(var/influence_factor in initialized_storyteller.influence_factors)
 		total_influence += calculate_specific_influence(chosen_storyteller, influence_factor)
-	
+
 	total_influence += initialized_storyteller.bonus_points
 
 	return total_influence

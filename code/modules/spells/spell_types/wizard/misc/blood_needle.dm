@@ -34,13 +34,13 @@
 	if(!proximity)
 		return
 	user.say(catchphrase, forced = "spell")
-	playsound(get_turf(user), on_use_sound,50,TRUE)
 	charges--
 	if(charges <= 0)
 		qdel(src)
 
 /obj/item/needle/touch_attack/Destroy()
 	if(attached_spell)
+		playsound(get_turf(src), on_use_sound,50,TRUE)
 		attached_spell.on_hand_destroy(src)
 	return ..()
 

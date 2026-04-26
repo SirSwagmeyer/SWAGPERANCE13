@@ -95,7 +95,8 @@
 	glass_desc = ""
 
 /datum/reagent/consumable/poisonberryjuice/on_mob_life(mob/living/carbon/M)
-	M.adjustToxLoss(1, 0)
+	if(!HAS_TRAIT(M, TRAIT_NASTY_EATER))
+		M.adjustToxLoss(1, 0)
 	. = 1
 	..()
 

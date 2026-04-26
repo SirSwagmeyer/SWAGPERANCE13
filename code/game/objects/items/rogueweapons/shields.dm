@@ -86,9 +86,10 @@
 /datum/intent/shield/block
 	name = "block"
 	icon_state = "inblock"
-	tranged = 1 //we can't attack directly with this intent, but we can charge it
+	tranged = 1 //we can't attack directly with this intent, but we can charge it | whoever fucking wrote this was a liar.
 	tshield = 1
 	chargetime = 1
+	damfactor = 0.2 // to discourage people from attacking with this
 	hitsound = list('sound/combat/shieldbash_wood.ogg')
 	warnie = "shieldwarn"
 	item_d_type = "blunt"
@@ -199,24 +200,27 @@
 				return list("shrink" = 0.6,"sx" = 1,"sy" = 4,"nx" = 1,"ny" = 2,"wx" = 3,"wy" = 3,"ex" = 0,"ey" = 2,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 8,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
 
 /obj/item/rogueweapon/shield/tower/metal
-	name = "kite shield"
-	desc = "A kite-shaped iron shield. Reliable and sturdy."
+	name = "manufactured shield"
+	desc = "A heavy shield, made by machine, requires two hands to wield effectively."
 	icon_state = "kitesh"
-	force = 20
-	throwforce = 10
+	force = 10
+	force_wielded = 30
+	throwforce = 60 // this is so funny to think about
 	throw_speed = 1
-	throw_range = 3
-	possible_item_intents = list(SHIELD_BASH_METAL, SHIELD_BLOCK, SHIELD_SMASH_METAL)
+	throw_range = 5
+	possible_item_intents = list(SHIELD_BASH_METAL, SHIELD_SMASH_METAL)
+	gripped_intents = list(SHIELD_BASH_METAL, SHIELD_BLOCK, SHIELD_SMASH_METAL)
 	wlength = WLENGTH_NORMAL
 	resistance_flags = null
 	flags_1 = CONDUCT_1
-	wdefense = 11
-	coverage = 50
+	wdefense = 7
+	coverage = 20
 	attacked_sound = list('sound/combat/parry/shield/metalshield (1).ogg','sound/combat/parry/shield/metalshield (2).ogg','sound/combat/parry/shield/metalshield (3).ogg')
 	parrysound = list('sound/combat/parry/shield/metalshield (1).ogg','sound/combat/parry/shield/metalshield (2).ogg','sound/combat/parry/shield/metalshield (3).ogg')
-	max_integrity = 240
+	max_integrity = 500
 	blade_dulling = DULLING_SHAFT_METAL
 	sellprice = 30
+
 
 /obj/item/rogueweapon/shield/tower/metal/getonmobprop(tag)
 	if(tag)
@@ -225,8 +229,8 @@
 				return list("shrink" = 0.6,"sx" = -5,"sy" = -1,"nx" = 6,"ny" = -1,"wx" = 0,"wy" = -2,"ex" = 0,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0)
 			if("onback")
 				return list("shrink" = 0.6,"sx" = 1,"sy" = 4,"nx" = 1,"ny" = 2,"wx" = 3,"wy" = 3,"ex" = 0,"ey" = 2,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 8,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
-	return ..()
-
+			if("wielded")
+				return list("shrink" = 0.7,"sx" = -1,"sy" = -2,"nx" = 6,"ny" = -1,"wx" = 0,"wy" = -2,"ex" = 0,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0)
 /obj/item/rogueweapon/shield/tower/metal/alloy
 	name = "decrepit shield"
 	desc = "A decrepit, worn out shield. Aeon's grasp is upon it."

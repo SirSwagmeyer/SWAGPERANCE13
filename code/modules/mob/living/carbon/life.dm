@@ -20,6 +20,7 @@
 	handle_embedded_objects()
 	handle_blood()
 	handle_roguebreath()
+	update_crit_music() //THIS SHOULD REALLY BE A SIGNAL FOR WHEN YOU EXIT/ENTER CRIT DO NOT USE THIS UNLESS YOU ARE MAKING IT A SIGNAL
 	var/bprv = handle_bodyparts()
 	if(bprv & BODYPART_LIFE_UPDATE_HEALTH)
 		update_stamina() //needs to go before updatehealth to remove stamcrit
