@@ -21,7 +21,7 @@
 	user.sexcon.show_progress = 0
 
 /datum/sex_action/grind_body/on_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
-	var/do_subtle
+	var/do_subtle = user.sexcon.do_subtle_action
 	var/zone_text
 	if(user.sexcon.force < SEX_FORCE_MID && user.sexcon.speed < SEX_SPEED_MID) // always subtle
 		do_subtle = 1

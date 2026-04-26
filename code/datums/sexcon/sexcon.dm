@@ -12,6 +12,10 @@
 	var/mob/living/carbon/human/user
 	/// Target of our actions, can be ourself
 	var/mob/living/carbon/human/target
+	/// Who is targeting us
+	// Disabled as it'd require properly stopping actions when the popup is closed.
+	// Different behavior which might be invasive.
+	//var/receiving = list()
 	/// Whether the user desires to stop his current action
 	var/desire_stop = FALSE
 	/// What is the current performed action
@@ -28,6 +32,17 @@
 	var/charge = SEX_MAX_CHARGE
 	/// Whether we want to screw until finished, or non stop
 	var/do_until_finished = TRUE
+	/// The bed (if) we're occupying, update on starting an action
+	var/obj/structure/bed/rogue/bed = null
+	var/target_on_bed = FALSE
+	/// The table/pillory (if) target is lying/latching on, update on starting an action
+	var/obj/structure/table_or_pillory = null
+	/// The bush (if) we're on top of, update on starting an action
+	var/obj/structure/flora/roguegrass/grassy_knoll = null
+	/// If this person has a collar that rings on
+	var/collar_bell_user = FALSE
+	var/collar_bell_target = FALSE
+	var/list/collar_sounds = SFX_COLLARJINGLE
 	/// Arousal won't change if active.
 	var/arousal_frozen = FALSE
 	var/last_arousal_increase_time = 0
@@ -43,6 +58,10 @@
 	var/action_category = SEX_CATEGORY_MISC
 	/// Show progress bar
 	var/show_progress = 1
+	/// When TRUE, try_do_moan does nothing (used for actions that can be done subtly)
+	var/suppress_moan = FALSE
+	/// Allow players to decide if they want to subtly do this action or not (only for actions that can be done subtly)
+	var/do_subtle_action = FALSE
 	/// Knot based variables
 	var/do_knot_action = FALSE
 	var/knotted_status = KNOTTED_NULL // knotted state and used to prevent multiple knottings when we do not handle that case
@@ -53,6 +72,7 @@
 	var/tugging_knot_blocked = FALSE
 	var/mob/living/carbon/knotted_owner = null // whom has the knot
 	var/mob/living/carbon/knotted_recipient = null // whom took the knot
+	/// Allow crotch to be exposed and bypass clothes check
 	var/bottom_exposed = FALSE
 
 /datum/sex_controller/New(mob/living/carbon/human/owner)
@@ -793,7 +813,11 @@
 	var/performed_action_type = current_action
 	var/datum/sex_action/action = SEX_ACTION(current_action)
 	show_progress = 1
+	suppress_moan = FALSE
+	do_subtle_action = TRUE // always start subtle supported actions with subtle mode on
 	action.on_start(user, target)
+	find_occupying_furniture()
+	find_occupying_grass()
 	while(TRUE)
 		if(!isnull(target.client) && target.client.prefs.sexable == FALSE) //Vrell - Needs changed to let me test sex mechanics solo
 			break
@@ -809,6 +833,7 @@
 			break
 		if(desire_stop)
 			break
+		find_ringing_collar()
 		action.on_perform(user, target)
 		// It could want to finish afterwards the performed action
 		if(action.is_finished(user, target))
@@ -823,9 +848,76 @@
 	var/datum/sex_action/action = SEX_ACTION(action_type)
 	if(!inherent_perform_check(action_type, incapacitated))
 		return FALSE
+	if(action_blocked_by_intimate_state(action))
+		return FALSE
 	if(!action.can_perform(user, target))
 		return FALSE
 	return TRUE
+
+/datum/sex_controller/proc/action_blocked_by_intimate_state(datum/sex_action/action, menu_check = FALSE)
+	if(!action || !user)
+		return FALSE
+	if(action.intimate_check_flags == SEX_ACTION_INTIMATE_CHECK_NONE)
+		return FALSE
+
+	var/user_part = action.user_sex_part & (SEX_PART_COCK | SEX_PART_CUNT | SEX_PART_ANUS)
+	if((action.intimate_check_flags & SEX_ACTION_INTIMATE_CHECK_USER) && user_part)
+		if(SEND_SIGNAL(user, COMSIG_CARBON_SEX_ACTION_VALIDATE, action, target, user_part, TRUE, menu_check) & COMPONENT_SEX_ACTION_BLOCK)
+			return TRUE
+
+	var/target_part = action.target_sex_part & (SEX_PART_COCK | SEX_PART_CUNT | SEX_PART_ANUS)
+	if(target && (action.intimate_check_flags & SEX_ACTION_INTIMATE_CHECK_TARGET) && target_part)
+		if(SEND_SIGNAL(target, COMSIG_CARBON_SEX_ACTION_VALIDATE, action, user, target_part, FALSE, menu_check) & COMPONENT_SEX_ACTION_BLOCK)
+			return TRUE
+
+	return FALSE
+
+/datum/sex_controller/proc/find_occupying_furniture()
+	if(bed || table_or_pillory)
+		return
+	if(istype(user.loc, /obj/structure/closet) || istype(user.loc, /obj/structure/handcart)) // tom cruise, come out of the closet
+		table_or_pillory = user.loc
+		return
+	if(target && isturf(target.loc)) // find target's bed/table
+		if(!(target.mobility_flags & MOBILITY_STAND)) // if target is lying down
+			bed = locate() in target.loc
+			target_on_bed = TRUE
+			if(!bed) // bed not found, try finding a table
+				var/obj/structure/table/wood/table = locate() in target.loc
+				table_or_pillory = table
+		else // target standing up, check for pillory
+			var/obj/structure/pillory/pillory = locate() in target.loc
+			table_or_pillory = pillory
+	if(!bed && !(user.mobility_flags & MOBILITY_STAND) && isturf(user.loc)) // find our bed
+		bed = locate() in user.loc
+
+/datum/sex_controller/proc/find_occupying_grass()
+	if(grassy_knoll)
+		return
+	if(isturf(user.loc)) // find our grass
+		grassy_knoll = locate() in user.loc
+
+/datum/sex_controller/proc/find_ringing_collar()
+	var/obj/item/clothing/neck/roguetown/collar/collar
+	collar = user.get_item_by_slot(SLOT_NECK)
+	if(collar && istype(collar) && collar.bellsound)
+		collar_bell_user = TRUE
+		var/datum/component/squeak/bell = collar.GetComponent(/datum/component/squeak)
+		if(bell && LAZYLEN(bell.override_squeak_sounds))
+			collar_sounds = bell.override_squeak_sounds
+		else
+			collar_sounds = SFX_COLLARJINGLE
+	if(!target)
+		collar_bell_target = FALSE
+		return
+	collar = target.get_item_by_slot(SLOT_NECK)
+	if(collar && istype(collar) && collar.bellsound)
+		collar_bell_target = TRUE
+		var/datum/component/squeak/bell = collar.GetComponent(/datum/component/squeak)
+		if(bell && LAZYLEN(bell.override_squeak_sounds))
+			collar_sounds = bell.override_squeak_sounds
+		else
+			collar_sounds = SFX_COLLARJINGLE
 
 /datum/sex_controller/proc/inherent_perform_check(action_type, incapacitated)
 	var/datum/sex_action/action = SEX_ACTION(action_type)

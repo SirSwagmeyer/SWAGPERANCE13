@@ -25,6 +25,8 @@
 	var/target_sex_part = SEX_PART_NULL
 	/// Only allow select actions to end with a knot-tie
 	var/knot_on_finish = FALSE
+	/// Central intimate-state validation participation. Generic actions default to both roles
+	var/intimate_check_flags = SEX_ACTION_INTIMATE_CHECK_BOTH
 
 /datum/sex_action/proc/can_perform(mob/living/carbon/human/user, mob/living/carbon/human/target)
 	return TRUE

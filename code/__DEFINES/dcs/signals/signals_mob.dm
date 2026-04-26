@@ -33,3 +33,8 @@
 /// Called from the base of '/obj/item/bodypart/proc/drop_limb(special)' ()
 #define COMSIG_MOB_DISMEMBER "mob_drop_limb"
 	#define COMPONENT_CANCEL_DISMEMBER (1<<0) //cancel the drop limb
+
+/// Pre-validation hook emitted on an involved carbon during sex action menu/execution checks (datum/sex_action/action, mob/living/carbon/human/other, checked_part, is_user_role, menu_check)
+#define COMSIG_CARBON_SEX_ACTION_VALIDATE "carbon_sex_action_validate"
+	/// Return to hide or block the action.
+	#define COMPONENT_SEX_ACTION_BLOCK (1<<0)
