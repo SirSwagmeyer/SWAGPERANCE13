@@ -43,7 +43,7 @@
 	desc = "Discovered within one of LOVE's catacombs, this funny little piece allows for telecommunications. It can even play some pre-recorded music."
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "music0"
-	density = TRUE
+	density = FALSE
 	anchored = FALSE
 	max_integrity = 0
 	var/datum/looping_sound/radios/soundloop
