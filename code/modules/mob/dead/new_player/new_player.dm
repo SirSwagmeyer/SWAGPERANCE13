@@ -166,9 +166,9 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 				if(length(client.prefs.flavortext) < MINIMUM_FLAVOR_TEXT)
 					to_chat(src, span_boldwarning("You need a minimum of [MINIMUM_FLAVOR_TEXT] characters in your flavor text in order to play."))
 					return
-				if(length(client.prefs.ooc_notes) < MINIMUM_OOC_NOTES)
-					to_chat(src, span_boldwarning("You need at least a few words in your OOC notes in order to play."))
-					return
+//				if(length(client.prefs.ooc_notes) < MINIMUM_OOC_NOTES)
+//					to_chat(src, span_boldwarning("You need at least a few words in your OOC notes in order to play."))
+//					return
 
 			if(ready != tready)
 				ready = tready
@@ -258,9 +258,9 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 			to_chat(usr, span_boldwarning("You need a minimum of [MINIMUM_FLAVOR_TEXT] characters in your flavor text in order to play."))
 			return
 
-		if(length(client.prefs.ooc_notes) < MINIMUM_OOC_NOTES)
-			to_chat(src, span_boldwarning("You need at least a few words in your OOC notes in order to play."))
-			return
+//		if(length(client.prefs.ooc_notes) < MINIMUM_OOC_NOTES)
+//			to_chat(src, span_boldwarning("You need at least a few words in your OOC notes in order to play."))
+//			return
 
 		AttemptLateSpawn(href_list["SelectedJob"])
 		return
