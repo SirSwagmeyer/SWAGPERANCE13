@@ -2312,6 +2312,7 @@
 #include "code\modules\spells\spell_types\wizard\invoked_aoe\perscommand.dm"
 #include "code\modules\spells\spell_types\wizard\invoked_aoe\radiocommands.dm"
 #include "code\modules\spells\spell_types\wizard\invoked_aoe\repulse.dm"
+#include "code\modules\spells\spell_types\wizard\invoked_aoe\riscommand.dm"
 #include "code\modules\spells\spell_types\wizard\invoked_aoe\snap_freeze.dm"
 #include "code\modules\spells\spell_types\wizard\invoked_aoe\thunderstrike.dm"
 #include "code\modules\spells\spell_types\wizard\invoked_aoe\wither.dm"

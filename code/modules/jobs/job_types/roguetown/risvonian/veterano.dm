@@ -72,6 +72,10 @@
 	H.adjust_skillrank(/datum/skill/combat/shotguns, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/armorsmithing, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
+	if(H.mind)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/risholdingweak)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/risaimweak)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/rischargeweak)
 	H.change_stat("strength", 1) // roid rage mfs on them 24/7 percs
 	H.change_stat("constitution", 1)
 	H.change_stat("endurance", 1)

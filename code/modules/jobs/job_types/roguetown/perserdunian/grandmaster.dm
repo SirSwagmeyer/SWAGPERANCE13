@@ -47,7 +47,7 @@
 	belt = /obj/item/storage/belt/rogue/leather/black/soldier
 	beltl = /obj/item/flashlight/flare/torch/lantern
 	beltr = /obj/item/gun/ballistic/revolver/grandmaster
-	wrists = /obj/item/scomstone/garrison
+	wrists = /obj/item/scomstone/perlead
 	gloves = /obj/item/clothing/gloves/roguetown/eastgloves1
 	cloak = /obj/item/clothing/cloak/perserduntabard
 	l_hand = /obj/item/rogueweapon/sword/rapier/grandmaster
