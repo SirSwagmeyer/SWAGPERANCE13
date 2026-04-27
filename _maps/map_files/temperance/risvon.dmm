@@ -2489,7 +2489,7 @@
 /area/rogue/indoors/shelter/town/sargoth)
 "ue" = (
 /obj/structure/table/vtable,
-/obj/structure/roguemachine/musicbox/tavern{
+/obj/item/roguemachine/musicbox/tavern{
 	pixel_y = 6
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
@@ -2920,7 +2920,7 @@
 /area/rogue/under/cave/warmachine)
 "ye" = (
 /obj/structure/table/wood/long_table/right,
-/obj/structure/roguemachine/musicbox/tavern{
+/obj/item/roguemachine/musicbox/tavern{
 	pixel_y = 6
 	},
 /turf/open/floor/rogue/risvon,

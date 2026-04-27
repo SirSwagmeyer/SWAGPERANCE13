@@ -2934,7 +2934,7 @@
 "QA" = (
 /obj/machinery/light/rogue/wallfire/candle/r,
 /obj/structure/table/wood/perserdunsmall/smallmetal3,
-/obj/structure/roguemachine/musicbox/tavern{
+/obj/item/roguemachine/musicbox/tavern{
 	pixel_x = 3;
 	pixel_y = 8
 	},
@@ -3170,7 +3170,7 @@
 "Uj" = (
 /obj/machinery/light/rogue/wallfire/candle/r,
 /obj/structure/table/wood/perserdunsmall/smallmetal3,
-/obj/structure/roguemachine/musicbox/tavern{
+/obj/item/roguemachine/musicbox/tavern{
 	pixel_x = 3;
 	pixel_y = 8
 	},
