@@ -32,7 +32,7 @@
 		if("paincrit")
 			used = list('sound/vo/male/young/paincrit (1).ogg','sound/vo/male/young/paincrit (2).ogg','sound/vo/male/young/paincrit (3).ogg')
 		if("painscream")
-			used = list('sound/vo/male/renegade/painscream (1).ogg','sound/vo/male/wilhelm_scream.ogg', 'sound/vo/male/renegade/painscream (2).ogg')
+			used = list('sound/vo/male/renegade/painscream (1).ogg', 'sound/vo/male/renegade/painscream (2).ogg')
 		if("rage")
 			used = list('sound/vo/male/renegade/rage (2).ogg', 'sound/vo/male/renegade/rage.ogg')
 	if(!used)
