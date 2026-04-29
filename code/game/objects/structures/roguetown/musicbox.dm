@@ -19,6 +19,13 @@
 	"Rain" = 'sound/music/jukeboxes/machine/machinerain.ogg',\
 	"Down" = 'sound/music/jukeboxes/machine/machinedown.ogg',\
 	"Face" = 'sound/music/jukeboxes/machine/machineface.ogg',\
+	"Void" = 'sound/music/jukeboxes/machine/machinevoid.ogg',\
+	"Need" = 'sound/music/jukeboxes/machine/machineneed.ogg',\
+	"Escape" = 'sound/music/jukeboxes/machine/machineescape.ogg',\
+	"Judas" = 'sound/music/jukeboxes/machine/machinejudas.ogg',\
+	"Jane" = 'sound/music/jukeboxes/machine/machinejane.ogg',\
+	"Juliet" = 'sound/music/jukeboxes/machine/machinejuliet.ogg',\
+	"Underground" = 'sound/music/jukeboxes/machine/machineunderground.ogg',\
 ) // POP MUSIC ONLY FOR THE MACHINE -- NO CHUDMUSIC ALLOWED
 
 /datum/looping_sound/radios
