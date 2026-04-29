@@ -25,6 +25,7 @@
 	"Judas" = 'sound/music/jukeboxes/machine/machinejudas.ogg',\
 	"Jane" = 'sound/music/jukeboxes/machine/machinejane.ogg',\
 	"Juliet" = 'sound/music/jukeboxes/machine/machinejuliet.ogg',\
+	"Underground" = 'sound/music/jukeboxes/machine/machineunderground.ogg',\
 ) // POP MUSIC ONLY FOR THE MACHINE -- NO CHUDMUSIC ALLOWED
 
 /datum/looping_sound/radios
