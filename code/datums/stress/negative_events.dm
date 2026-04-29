@@ -73,7 +73,7 @@
 	desc = list(span_red("I think I'm bleeding."),span_red("I'm bleeding."))
 
 /datum/stressevent/bleeding/can_apply(mob/living/user)
-	if(user.has_flaw(/datum/charflaw/masochist))
+	if(user.has_flaw(/datum/charflaw/addiction/masochist))
 		return FALSE
 	return TRUE
 
@@ -83,7 +83,7 @@
 	desc = span_red("THE PAIN!")
 
 /datum/stressevent/painmax/can_apply(mob/living/user)
-	if(user.has_flaw(/datum/charflaw/masochist))
+	if(user.has_flaw(/datum/charflaw/addiction/masochist))
 		return FALSE
 	return TRUE
 

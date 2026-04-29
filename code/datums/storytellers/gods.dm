@@ -245,7 +245,6 @@
 
 	influence_factors = list(
 		STATS_KISSES_MADE = list("points" = 7, "capacity" = 70),
-		STATS_PLEASURES = list("points" = 5, "capacity" = 50),	//We nerf this cus not uncommon to see a fair amount of pleasures.
 		STATS_HUGS_MADE = list("points" = 2, "capacity" = 50),
 		STATS_CLINGY_PEOPLE = list("points" = 3, "capacity" = 70),
 	)

@@ -640,6 +640,7 @@
 	item_state = "collar"
 	resistance_flags = FIRE_PROOF
 	dropshrink = 0.5
+	bellsound = FALSE
 
 /obj/item/clothing/neck/roguetown/collar/forlorn
 	name = "light forlorn collar"
@@ -650,6 +651,7 @@
 	name = "bell collar"
 	desc = "A band of leather with a bell that protects the local zads from the local catfolk."
 	icon_state = "bell_collar"
+	bellsound = TRUE
 
 /obj/item/clothing/neck/roguetown/collar/bell_collar/Initialize(mapload)
 	. = ..()

@@ -116,7 +116,6 @@
 
 //Eora
 #define STATS_KISSES_MADE "kisses_made"
-#define STATS_PLEASURES "pleasures"
 #define STATS_HUGS_MADE "hugs_made"
 #define STATS_CLINGY_PEOPLE "clingy_people"
 
@@ -249,7 +248,6 @@ GLOBAL_LIST_INIT(azure_round_stats, list(
 	STATS_ALIVE_CLERGY = 0,
 	STATS_ALIVE_TRADESMEN = 0,
 	STATS_LUX_REVIVALS = 0,
-	STATS_PLEASURES = 0,
 	STATS_SKILLS_DREAMED = 0,
 ))
 
