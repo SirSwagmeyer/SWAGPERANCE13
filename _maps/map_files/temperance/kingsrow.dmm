@@ -568,7 +568,7 @@
 /area/rogue/indoors/shelter/town)
 "cZ" = (
 /obj/structure/table/wood/perserdunsmall/woodtablefine,
-/obj/structure/roguemachine/musicbox{
+/obj/item/roguemachine/musicbox{
 	pixel_y = 5
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,

@@ -7553,7 +7553,7 @@
 /obj/structure/table/wood{
 	icon_state = "tablewood3"
 	},
-/obj/structure/roguemachine/musicbox,
+/obj/item/roguemachine/musicbox,
 /turf/open/floor/rogue/carpet,
 /area/rogue/indoors/town/tavern)
 "ham" = (
@@ -9235,7 +9235,7 @@
 	icon_state = "borderfall";
 	dir = 1
 	},
-/obj/structure/roguemachine/musicbox{
+/obj/item/roguemachine/musicbox{
 	pixel_y = 16
 	},
 /obj/structure/table/wood{
