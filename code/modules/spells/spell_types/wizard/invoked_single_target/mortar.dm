@@ -14,7 +14,7 @@
 	charging_slowdown = 2
 	chargedloop = /datum/looping_sound/invokeascendant
 	associated_skill = /datum/skill/magic/arcane
-	spell_tier = 3
+	spell_tier = 5
 	invocation = "MORTUM!"
 	invocation_type = "shout"
 	glow_color = GLOW_COLOR_ARTILLERY
@@ -33,17 +33,17 @@
 	for(var/turf/affected_turf in view(area_of_effect, T))
 		if(affected_turf.density)
 			continue
-			
+
 
 	for(var/turf/affected_turf in view(area_of_effect, T))
-	
+
 		new /obj/effect/temp_visual/mortarmark(affected_turf)
-	
+
 		playsound(T, 'sound/magic/artilleryload.ogg', 80, TRUE, soundping = FALSE)
 
 		sleep(delay)
 		new /obj/effect/temp_visual/mortarmark(affected_turf)
-		for(var/mob/living/L in affected_turf.contents) 
+		for(var/mob/living/L in affected_turf.contents)
 			if(L.anti_magic_check())
 				visible_message(span_warning("The marker fades away! [L] "))  //antimagic needs some testing
 				playsound(get_turf(L),'sound/magic/magic_nulled.ogg', 100)

@@ -333,7 +333,7 @@
 	effectedstats = list("speed" = 3)
 	duration = 1 MINUTES
 
-	/datum/status_effect/buff/order/holdweak
+/datum/status_effect/buff/order/holdweak
 	id = "holdweak"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/order/hold
 	effectedstats = list("endurance" = 2, "constitution" = 2)

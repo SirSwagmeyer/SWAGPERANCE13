@@ -10,7 +10,7 @@
 	alert_type = /atom/movable/screen/alert/status_effect/buff/bloodhealing
 	duration = 30 SECONDS
 	examine_text = "SUBJECTPRONOUN is surrounded by strands of blood!"
-	var/healing_on_tick = 1
+	var/healing_on_tick = 2
 	var/outline_colour = "#681010"
 
 /datum/status_effect/buff/bloodhealing/on_creation(mob/living/new_owner, new_healing_on_tick)
@@ -30,7 +30,16 @@
 	var/list/wCount = owner.get_wounds()
 	if(!owner.construct)
 		if(wCount.len > 0)
-			owner.heal_wounds(healing_on_tick)
+			owner.heal_wounds(healing_on_tick, list(
+			/datum/wound/artery,
+			/datum/wound/bite,
+			/datum/wound/dismemberment,
+			/datum/wound/facial,
+			/datum/wound/lashing,
+			/datum/wound/puncture,
+			/datum/wound/scarring,
+			/datum/wound/slash,
+			))
 			owner.update_damage_overlays()
 
 /datum/status_effect/buff/bloodhealing/on_remove()

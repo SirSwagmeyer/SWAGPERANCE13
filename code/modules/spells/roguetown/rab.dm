@@ -90,7 +90,7 @@
 	invocation_type = "none"
 	associated_skill = /datum/skill/magic/blood
 	antimagic_allowed = FALSE
-	recharge_time = 45 SECONDS
+	recharge_time = 5 SECONDS
 	var/blood_price = 5
 	var/blood_vol_restore = 7.5 //30 every 2 seconds.
 	var/vol_per_skill = 1	//54 with legendary

@@ -454,10 +454,6 @@
 	name = "Nitori"
 	icon_state = "nitori"
 
-/datum/sprite_accessory/hair/head/newyou
-	name = "New You"
-	icon_state = "newyou"
-
 /datum/sprite_accessory/hair/head/odango
 	name = "Odango"
 	icon_state = "odango"
@@ -766,6 +762,10 @@
 	name = "Hyena Mane"
 	icon_state = "hyenamane"
 
+/datum/sprite_accessory/hair/head/hyenamaneshort
+	name = "Hyena Mane Short"
+	icon_state = "hyenamaneshort"
+
 /datum/sprite_accessory/hair/head/forelock
 	name = "Forelock"
 	icon_state = "forelock"
@@ -802,10 +802,6 @@
 	name = "Bog"
 	icon_state = "bog"
 
-/datum/sprite_accessory/hair/head/scout
-	name = "Scout"
-	icon_state = "scout"
-
 /datum/sprite_accessory/hair/head/son2
 	name = "Son (Alt)"
 	icon_state = "son2"
@@ -817,10 +813,6 @@
 /datum/sprite_accessory/hair/head/amazon
 	name = "Amazon"
 	icon_state = "amazon"
-
-/datum/sprite_accessory/hair/head/longstraightponytail
-	name = "Long Ponytail"
-	icon_state = "longstraightponytail"
 
 /datum/sprite_accessory/hair/head/barmaid
 	name = "Barmaid"
@@ -1132,23 +1124,23 @@
 
 /datum/sprite_accessory/hair/head/mcsqueeb
 	name = "Ye Old McSqueeb"
-	icon_state = "mcsqueeb"	
+	icon_state = "mcsqueeb"
 
 /datum/sprite_accessory/hair/head/highlander
 	name = "Highlander"
-	icon_state = "highlander"	
+	icon_state = "highlander"
 
 /datum/sprite_accessory/hair/head/royalcurls
 	name = "Royal Curls"
-	icon_state = "royalcurls"	
+	icon_state = "royalcurls"
 
 /datum/sprite_accessory/hair/head/dreadlocksmessy
 	name = "Dreadlocks Messy"
-	icon_state = "dreadlong"	
+	icon_state = "dreadlong"
 
 /datum/sprite_accessory/hair/head/suave
 	name = "Suave"
-	icon_state = "suave"	
+	icon_state = "suave"
 
 /datum/sprite_accessory/hair/head/kusanagi_alt
 	name = "Kusanagi (Alt)"
@@ -1514,10 +1506,6 @@
 	name = "Emperor"
 	icon_state = "emperor"
 
-/datum/sprite_accessory/hair/head/female
-	name = "Female"
-	icon_state = "female"
-
 /datum/sprite_accessory/hair/head/empress
 	name = "Empress"
 	icon_state = "empress"
@@ -1541,10 +1529,6 @@
 /datum/sprite_accessory/hair/head/martyr
 	name = "Martyr"
 	icon_state = "martyr"
-
-/datum/sprite_accessory/hair/head/neuter
-	name = "Neuter"
-	icon_state = "neuter"
 
 /datum/sprite_accessory/hair/head/hprotagonist
 	name = "Hprotagonist"
