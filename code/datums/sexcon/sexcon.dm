@@ -119,7 +119,6 @@
 	animate(pixel_x = oldx, pixel_y = oldy, time = time)
 	if(bed && force > SEX_FORCE_MID)
 		if(!istype(bed) || QDELETED(bed))
-		if(!istype(bed) || QDELETED(bed))
 			bed = null
 			target_on_bed = FALSE
 			return
@@ -698,17 +697,6 @@
 	if(!penor.functional)
 		return FALSE
 	return TRUE
-
-/datum/sex_controller/proc/double_penis_type()
-	var/obj/item/organ/penis/penis = user.getorganslot(ORGAN_SLOT_PENIS)
-	if(!penis)
-		return FALSE
-	if(!penis.functional)
-		return FALSE
-	switch(penis.penis_type)
-		if(PENIS_TYPE_TAPERED_DOUBLE,PENIS_TYPE_TAPERED_DOUBLE_KNOTTED)
-			return TRUE
-	return FALSE
 
 /datum/sex_controller/proc/considered_limp()
 	if(arousal >= AROUSAL_HARD_ON_THRESHOLD)
