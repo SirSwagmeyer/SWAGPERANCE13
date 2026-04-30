@@ -132,6 +132,7 @@
 	firelevel -= 2 //reduce the intensity by 2 per tick
 	return
 
+//40MM GRENADES
 /obj/projectile/bullet/flare
 	name = "flare"
 	damage = 0
@@ -141,7 +142,7 @@
 	speed = 0.2
 
 /obj/projectile/bullet/flare/on_hit(target)
-	. = ..()
+	..()
 	new /obj/item/flashlight/flare/flaregun(get_turf(src))
 
 /obj/item/flashlight/flare/flaregun
@@ -164,7 +165,7 @@
 	sellprice = 2
 
 /obj/item/flashlight/flare/flaregun/Initialize()
-	. = ..()
+	..()
 	START_PROCESSING(SSobj, src)
 
 
@@ -206,3 +207,50 @@
 		uwu.playsound_local(get_turf(uwu), 'sound/misc/flaregun_high_ignite.ogg', volumetoplay, FALSE)
 	loud_message("You hear a flare ignite in the air", hearing_distance = 60) //This really should be based on solely range and having sight, not hearing, but these flares are already driving me mad. Fix it later
 	qdel(src)
+
+/obj/projectile/bullet/a40mmhe
+	name = "40mm grenade"
+	damage = 0
+	armor_penetration = 0
+	hitscan = FALSE
+	spread = 0
+	speed = 0.2
+
+/obj/projectile/bullet/a40mmhe/on_hit(target)
+	..()
+	explosion(src, devastation_range = 0, heavy_impact_range = 2, light_impact_range = 2, flash_range = 1, smoke = FALSE, soundin = pick('sound/misc/explode/arty1.ogg','sound/misc/explode/arty2.ogg','sound/misc/explode/arty3.ogg','sound/misc/explode/arty4.ogg','sound/misc/explode/arty5.ogg','sound/misc/explode/arty6.ogg'))
+
+/obj/projectile/bullet/a40mmsmoke
+	name = "40mm grenade"
+	damage = 0
+	armor_penetration = 0
+	hitscan = FALSE
+	spread = 0
+	speed = 0.2
+
+/obj/projectile/bullet/a40mmsmoke/on_hit(target)
+	..()
+	var/datum/effect_system/smoke_spread/S = new /datum/effect_system/smoke_spread/bad
+	var/turf/T = src.loc
+	S.set_up(3, T)
+	S.start()
+	playsound(src, 'sound/misc/explode/smokeexplosion.ogg', 100, FALSE, 0)
+
+/obj/projectile/bullet/a40mmfrag
+	name = "40mm grenade"
+	damage = 0
+	armor_penetration = 0
+	hitscan = FALSE
+	spread = 0
+	speed = 0.2
+
+/obj/projectile/bullet/a40mmfrag/on_hit(target)
+	..()
+	var/obj/effect/shrapnel/uwu //it's my code and i get to name the variables what i want
+	uwu = new /obj/effect/shrapnel()
+	var turftarget = get_turf(src)
+	uwu.projectile_type = /obj/projectile/bullet/shrapnel
+	uwu.radius = 5
+	uwu.override_projectile_range = 6
+	uwu.do_shrapnel(src, turftarget)
+	explosion(src, devastation_range = 0, heavy_impact_range = 0, light_impact_range = 2, flash_range = 0, smoke = FALSE, soundin = pick('sound/misc/explode/arty1.ogg','sound/misc/explode/arty2.ogg','sound/misc/explode/arty3.ogg','sound/misc/explode/arty4.ogg','sound/misc/explode/arty5.ogg','sound/misc/explode/arty6.ogg'))

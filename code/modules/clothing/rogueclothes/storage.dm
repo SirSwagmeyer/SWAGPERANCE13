@@ -552,12 +552,12 @@
 
 /obj/item/storage/belt/rogue/pouch/ammobag/flare 
 	populate_contents = list(
-		/obj/item/ammo_box/handfuls/flare,
-		/obj/item/ammo_box/handfuls/flare,
-		/obj/item/ammo_box/handfuls/flare,
-		/obj/item/ammo_box/handfuls/flare,
-		/obj/item/ammo_box/handfuls/flareh,
-		/obj/item/ammo_box/handfuls/flareh,
+		/obj/item/ammo_box/handfuls/a40mm/flare,
+		/obj/item/ammo_box/handfuls/a40mm/flare,
+		/obj/item/ammo_box/handfuls/a40mm/flare,
+		/obj/item/ammo_box/handfuls/a40mm/flare,
+		/obj/item/ammo_box/handfuls/a40mm/flareh,
+		/obj/item/ammo_box/handfuls/a40mm/flareh,
 	)
 
 /obj/item/storage/belt/rogue/pouch/ammobag/amr

@@ -123,3 +123,21 @@
 	cost = 20
 	contains = list(/obj/item/ammo_box/handfuls/mercy,
 	/obj/item/ammo_box/handfuls/mercy)
+
+/datum/supply_pack/rogue/ammunition/a40mmflare
+	name = "FG-1 flare handful (x2)"
+	cost = 30
+	contains = list(/obj/item/ammo_box/handfuls/a40mm/flare,
+	/obj/item/ammo_box/handfuls/a40mm/flare)
+
+/datum/supply_pack/rogue/ammunition/a40mmflareh
+	name = "FG-2 flare handful (x2)"
+	cost = 80
+	contains = list(/obj/item/ammo_box/handfuls/a40mm/flareh,
+	/obj/item/ammo_box/handfuls/a40mm/flareh)
+
+/datum/supply_pack/rogue/ammunition/a40mmsmoke
+	name = "40mm smoke handful (x3)"
+	cost = 50
+	contains = list(/obj/item/ammo_box/handfuls/a40mm/smoke,
+	/obj/item/ammo_box/handfuls/a40mm/smoke)
