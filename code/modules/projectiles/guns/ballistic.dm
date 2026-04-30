@@ -270,6 +270,7 @@
 		if (bolt_type == BOLT_TYPE_NO_BOLT || internal_magazine)
 			if (chambered && !chambered.BB)
 				chambered.forceMove(drop_location())
+				chambered.update_icon()
 				chambered = null
 			var/num_loaded = magazine.attackby(A, user, params, TRUE)
 			if (num_loaded)
