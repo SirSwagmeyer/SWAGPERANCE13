@@ -104,14 +104,14 @@
 	H.adjust_skillrank(/datum/skill/combat/rifles, 4, TRUE)
 	H.change_stat("perception", 2)
 
-/datum/advclass/bulwark/lmg
+/datum/advclass/bulwark/gunner
 	name = "Gunner"
 	tutorial = "You've selected one of the ONLY machineguns in Kingsrow possession. Armed with a KR 'Leonard,' your territory is all in support. The gun's been modified to take smaller rounds, conserve your ammo, if you can."
-	outfit = /datum/outfit/job/roguetown/bulwark/lmg
+	outfit = /datum/outfit/job/roguetown/bulwark/gunner
 	category_tags = list(CTAG_BULWARK)
 
-/datum/outfit/job/roguetown/bulwark/rifle/pre_equip(mob/living/carbon/human/H)
-	backl = /obj/item/gun/ballistic/rifle/lewis
+/datum/outfit/job/roguetown/bulwark/gunner/pre_equip(mob/living/carbon/human/H)
+	backl = /obj/item/gun/ballistic/rifle/repeater/lewis
 	backr = /obj/item/storage/backpack/rogue/backpack
 	r_hand = /obj/item/storage/belt/rogue/pouch/panbag/lewis
 	backpack_contents = list(
@@ -122,3 +122,4 @@
 		/obj/item/ammo_box/magazine/luger = 3,
 	)
 	H.adjust_skillrank(/datum/skill/combat/rifles, 4, TRUE)
+	H.change_stat("speed", -4)
