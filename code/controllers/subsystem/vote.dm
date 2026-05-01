@@ -37,6 +37,10 @@ SUBSYSTEM_DEF(vote)
 
 
 /datum/controller/subsystem/vote/proc/reset()
+	switch(mode)
+		if("endround")
+			log_game("LOG VOTE: ROUNDVOTECANCEL [REALTIMEOFDAY]")
+			SSgamemode.roundvoteend = FALSE
 	initiator = null
 	time_remaining = 0
 	custom_vote_period = 0

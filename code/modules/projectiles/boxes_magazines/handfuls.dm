@@ -36,8 +36,8 @@
 	icon_state = "pistol-handful"
 
 /obj/item/ammo_box/handfuls/mercy
-	name = "handful of custom bullets"
-	desc = "A handful of small low caliber pistol bullets."
+	name = "handful of tiny bullets"
+	desc = "A handful of small, low caliber pistol bullets."
 	ammo_type = /obj/item/ammo_casing/a22lr
 	caliber = "a22lr"
 	max_ammo = 7

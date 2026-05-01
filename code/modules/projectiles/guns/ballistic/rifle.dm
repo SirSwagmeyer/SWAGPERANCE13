@@ -38,6 +38,7 @@
 	internal_magazine = TRUE 
 	semi_auto = FALSE
 	dry_fire_sound = 'sound/combat/ranged/gun_empty.ogg'
+	longarm = TRUE
 
 /obj/item/gun/ballistic/rifle/process_chamber(mob/living/user, empty_chamber = 0)
 	return ..() //changed argument value

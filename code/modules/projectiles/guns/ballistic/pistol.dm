@@ -86,6 +86,7 @@
 	slot_flags = ITEM_SLOT_HIP
 	semi_auto = TRUE
 	sellprice = 12
+	longarm = FALSE
 
 /obj/item/gun/ballistic/rifle/repeater/jackal 
 	name = "SPR 'Jackal'"
@@ -104,6 +105,7 @@
 	semi_auto = TRUE
 	slot_flags = ITEM_SLOT_HIP
 	sellprice = 30
+	longarm = FALSE
 
 /obj/item/gun/ballistic/rifle/repeater/commandant
 	name = "ANL 'Liberation'"
@@ -143,7 +145,7 @@
 
 /obj/item/gun/ballistic/rifle/repeater/broomhandle
 	name = "KR 'Trenchsweeper'"
-	desc = "Heavy and uncomfortable, almost requiring two hands to pull this thing up. Engraved with a golden 'KR'. Chambered in 7.62mmR."
+	desc = "Heavy and uncomfortable, requiring two hands to fire. Engraved with a golden 'KR'. Chambered in 7.62mmR."
 	icon_state = "broomhandle"
 	item_state = "broomhandle"
 	w_class = WEIGHT_CLASS_SMALL
@@ -178,6 +180,7 @@
 	semi_auto = TRUE
 	slot_flags = ITEM_SLOT_HIP
 	sellprice = 64
+	longarm = FALSE
 
 /obj/item/gun/ballistic/rifle/repeater/offiseroluger
 	name = "ZOM 'Galinha'"
@@ -197,6 +200,7 @@
 	semi_auto = TRUE
 	slot_flags = ITEM_SLOT_HIP
 	sellprice = 48
+	longarm = FALSE
 
 /obj/item/gun/ballistic/rifle/repeater/artyluger
 	name = "KR 'Preacher'"
