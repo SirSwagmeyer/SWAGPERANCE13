@@ -259,15 +259,18 @@
 	. = ..()
 	set_holdable(/obj/item/ammo_box/magazine/hmg)
 
-/datum/component/storage/concrete/grid/lmg
+/datum/component/storage/concrete/grid/panbag
 	screen_max_rows = 4
 	screen_max_columns = 8
 	insert_preposition = "in"
 
-/datum/component/storage/concrete/grid/lmg/New(datum/P, ...)
+/datum/component/storage/concrete/grid/panbag/New(datum/P, ...)
 	. = ..()
-	set_holdable(/obj/item/ammo_box/magazine/lewis,
-	/obj/item/ammo_box/magazine/dp47,)
+	set_holdable(list(
+		/obj/item/ammo_box/magazine/lewis,
+		/obj/item/ammo_box/magazine/dp47,
+		/obj/item/ammo_box/magazine,
+	))
 
 /datum/component/storage/concrete/grid/amr
 	max_w_class = WEIGHT_CLASS_SMALL
