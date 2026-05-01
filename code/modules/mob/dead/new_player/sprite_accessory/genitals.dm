@@ -3,7 +3,7 @@
 	color_keys = 2
 	color_key_names = list("Member", "Skin")
 	relevant_layers = list(BODY_BEHIND_LAYER, BODY_FRONT_LAYER) //Vrell - Yes I know this is hacky but it works for now
-	var/uses_size_sprites = TRUE
+	var/uses_size_sprites = FALSE
 
 /datum/sprite_accessory/penis/adjust_appearance_list(list/appearance_list, obj/item/organ/organ, obj/item/bodypart/bodypart, mob/living/carbon/owner)
 	generic_gender_feature_adjust(appearance_list, organ, bodypart, owner, OFFSET_BELT, OFFSET_BELT_F)
@@ -30,9 +30,9 @@
 			return "[icon_state]_1_[min(pp.penis_size, 2)]"
 	else
 		if(pp.erect_state == ERECT_STATE_HARD)
-			return "[icon_state]_2"
+			return "[icon_state]_[min(3,pp.penis_size+1)]"
 		else
-			return "[icon_state]_1"
+			return "[icon_state]_[pp.penis_size]"
 
 /datum/sprite_accessory/penis/is_visible(obj/item/organ/organ, obj/item/bodypart/bodypart, mob/living/carbon/owner)
 	if(owner.sexcon && owner.sexcon.bottom_exposed == TRUE)
@@ -77,6 +77,7 @@
 	icon_state = "taperedknot"
 	name = "Tapered, Knotted"
 	default_colors = list("C52828", "C52828")
+	uses_size_sprites = TRUE
 
 /datum/sprite_accessory/penis/taperedknot_mammal
 	icon_state = "taperedknot"
