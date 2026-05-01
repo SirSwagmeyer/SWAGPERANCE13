@@ -1,0 +1,10 @@
+{
+    "map_name": "Kingsworld",
+    "map_path": "map_files/kingsworld",
+    "map_file": "kingsworld.dmm",
+	"traits": [{"Name": "Kingsworld", "Up": true}, {"Up": true, "Down": true}, {"Down": true}],
+	"minetype": null,
+	"space_empty_levels": 0,
+	"space_ruin_levels": 0,
+	"shuttles": {}
+}

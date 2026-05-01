@@ -28,6 +28,6 @@ map temperance
 	votable
 endmap
 
-map big_temperance
+map kingsworld
 	votable
 endmap
