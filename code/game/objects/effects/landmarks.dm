@@ -748,6 +748,18 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	jobspawn_override = list("Towner")
 	delete_after_roundstart = FALSE
 
+//Shocktroop spawns
+
+/obj/effect/landmark/start/flamsoldato
+	name = "Flamsoldato"
+	icon_state = "arrow"
+	delete_after_roundstart = FALSE
+
+/obj/effect/landmark/start/radiotrooper
+	name = "Radio Officer"
+	icon_state = "arrow"
+	delete_after_roundstart = FALSE
+
 //Antagonist spawns
 
 /obj/effect/landmark/start/wizard
