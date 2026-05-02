@@ -59,7 +59,7 @@
 		/obj/item/rogueweapon/sword/short/messer/knightcommander,
 		/obj/item/bomb/dynamite = 2,
 	)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
