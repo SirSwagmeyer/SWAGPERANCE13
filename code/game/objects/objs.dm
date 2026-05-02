@@ -58,6 +58,21 @@
 	/// Icon to use as a 32x32 preview in crafting menus and such
 	var/icon_state_preview
 
+	/// For doors, chests, pillories. etc, tracks whether this object has a keyed lock installed.
+	/// Certain vending machines do not use this variable at present.
+	/// If TRUE: Doors, closets, chests will use a random lockhash for (un)locking, generated & accessed based on the object's lockid.
+	var/keylock = FALSE
+	/// The lock ID, used with keys and lockable objects.
+	/// Used for getting the corresponding lockhash.
+	/// If unset but keylock is TRUE, an unconnected lockhash will be generated.
+	/// Type is STRING.
+	var/lockid
+	/// The lockhash corresponding to a key's lockid. Initialized 
+	/// Type is NUMBER.
+	var/lockhash
+	/// Is this object currently locked? TRUE or FALSE.
+	var/locked
+
 	vis_flags = VIS_INHERIT_PLANE
 
 /obj/vv_edit_var(vname, vval)

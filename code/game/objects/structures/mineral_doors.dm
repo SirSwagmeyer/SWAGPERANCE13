@@ -28,12 +28,14 @@
 	var/windowed = FALSE
 	var/base_state = null
 
-	var/locked = FALSE
+	locked = FALSE
 	var/last_bump = null
+	/// Used to help prevent double-toggling of the lock by accident (i.e. when bumping and clicking).
+	var/last_locktoggle = 0
 	var/brokenstate = 0
-	var/keylock = FALSE
-	var/lockhash = 0
-	var/lockid = null
+	keylock = FALSE
+	lockhash = 0
+	lockid = null
 	var/lockbroken = 0
 	var/locksound = 'sound/foley/doors/woodlock.ogg'
 	var/unlocksound = 'sound/foley/doors/woodlock.ogg'
@@ -364,7 +366,7 @@
 /obj/structure/mineral_door/attackby(obj/item/I, mob/user, autobump = FALSE)
 	user.changeNext_move(CLICK_CD_FAST)
 	if(istype(I, /obj/item/roguekey) || istype(I, /obj/item/storage/keyring))
-		if(!locked)
+		if(keylock && !locked)
 			to_chat(user, span_warning("It won't turn this way. Try turning to the right."))
 			door_rattle()
 			return
@@ -444,47 +446,40 @@
 
 /obj/structure/mineral_door/attack_right(mob/user)
 	user.changeNext_move(CLICK_CD_FAST)
-	var/obj/item = user.get_active_held_item()
-	if(istype(item, /obj/item/roguekey) || istype(item, /obj/item/storage/keyring))
-		if(locked)
-			to_chat(user, span_warning("It won't turn this way. Try turning to the left."))
-			door_rattle()
-			return
-		trykeylock(item, user)
-	else
+
+	// Skip key stuff for simple turn-deadbolt type doors, we don't have dual key-and-turn deadbolt functionality yet
+	if(istype(src, /obj/structure/mineral_door/wood/deadbolt))
 		return ..()
+
+	if(keylock)
+		var/obj/item/held_key = user.get_active_held_item()
+		if(istype(held_key, /obj/item/roguekey) || istype(held_key, /obj/item/storage/keyring))
+			trykeylock(held_key, user)
+			return
+		// Check if user has a key, either in the other hand, or within valid equipment slots
+		var/obj/item/key_item = find_key_for_door(user)
+		if(key_item)
+			trykeylock(key_item, user)
+			return
+		to_chat(user, span_warning("None of my equipped keys can turn the lock."))
+		door_rattle()
+	else
+		to_chat(user, span_warning("This door doesn't have a lock."))
+
+	return ..()
 
 /obj/structure/mineral_door/proc/trykeylock(obj/item/I, mob/user, autobump = FALSE)
 	if(door_opened || isSwitchingStates)
 		return
 	if(!keylock)
 		return
+	if((last_locktoggle + 0.2 SECONDS) > world.time)
+		return
 	if(lockbroken)
 		to_chat(user, span_warning("The lock to this door is broken."))
 	user.changeNext_move(CLICK_CD_INTENTCAP)
-	if(istype(I,/obj/item/storage/keyring))
-		var/obj/item/storage/keyring/R = I
-		if(!R.contents.len)
-			return
-		var/list/keysy = shuffle(R.contents.Copy())
-		for(var/obj/item/roguekey/K in keysy)
-			if(user.cmode)
-				if(!do_after(user, 10, TRUE, src))
-					break
-			if(K.lockhash == lockhash)
-				lock_toggle(user)
-				if(autobump && !locked)
-					src.Open()
-					addtimer(CALLBACK(src, PROC_REF(Close), FALSE, TRUE), 25)
-					src.last_bumper = user
-				return
-			else
-				if(user.cmode)
-					door_rattle()
-		to_chat(user, span_warning("None of the keys on my keyring go to this door."))
-		door_rattle()
-		return
-	else
+
+	if(istype(I, /obj/item/roguekey))
 		var/obj/item/roguekey/K = I
 		if(K.lockhash == lockhash || istype(K, /obj/item/roguekey/lord)) //master key cares not for lockhashes
 			lock_toggle(user)
@@ -494,8 +489,46 @@
 				src.last_bumper = user
 			return
 		else
-			to_chat(user, span_warning("This is not the correct key that goes to this door."))
+			to_chat(user, span_warning("This is not the correct key."))
 			door_rattle()
+			return
+
+	// Handle belt items that contain keys
+	if(!istype(I, /obj/item/storage/keyring))
+		if(I.contents && I.contents.len)
+			var/obj/item/found_key = null
+			for(var/obj/item/contained_item in I.contents)
+				if(istype(contained_item, /obj/item/roguekey))
+					var/obj/item/roguekey/K = contained_item
+					if(K.lockhash == lockhash || istype(K, /obj/item/roguekey/lord))
+						found_key = contained_item
+						break
+				if(istype(contained_item, /obj/item/storage/keyring))
+					if(keyring_has_matching_key(contained_item))
+						found_key = contained_item
+						break
+
+			if(found_key)
+				// Use the found key instead of the belt
+				trykeylock(found_key, user, autobump)
+				return
+			else
+				to_chat(user, span_warning("No matching key found in [I]."))
+				door_rattle()
+				return
+
+	// The item I is a keyring
+	else
+		var/obj/item/storage/keyring/keyring = I
+		if(keyring_has_matching_key(keyring))
+			lock_toggle(user)
+			if(autobump && !locked)
+				src.Open()
+				addtimer(CALLBACK(src, PROC_REF(Close), FALSE, TRUE), 25)
+				src.last_bumper = user
+			return
+		to_chat(user, span_warning("None of the keys on [keyring] can turn the lock."))
+		door_rattle()
 		return
 
 /obj/structure/mineral_door/proc/trypicklock(obj/item/I, mob/user)
@@ -570,6 +603,8 @@
 /obj/structure/mineral_door/proc/lock_toggle(mob/user)
 	if(isSwitchingStates || door_opened)
 		return
+	if((last_locktoggle + 0.2 SECONDS) > world.time)
+		return
 	if(locked)
 		user.visible_message(span_warning("[user] unlocks [src]."), \
 			span_notice("I unlock [src]."))
@@ -580,6 +615,7 @@
 			span_notice("I lock [src]."))
 		playsound(src, locksound, 100)
 		locked = 1
+	last_locktoggle = world.time
 
 /obj/structure/mineral_door/setAnchored(anchorvalue) //called in default_unfasten_wrench() chain
 	. = ..()

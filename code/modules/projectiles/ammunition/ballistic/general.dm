@@ -123,6 +123,55 @@
 	bullet_type = SHOTGUNCASING
 	sellprice = 2
 
+//grenade launchers
+
+/obj/item/ammo_casing/a40mm
+	name ="FUUUUUUUUCK" //this is a root item do NOT spawn this
+	desc = "one of the 'mins or devs fucked up go tell someone"
+	icon_state = "40mmincen-handful-1"
+	caliber = "40mm"
+	bullet_type = SHOTGUNCASING //these aren't shotguns but the shotgun sound is fine
+	dropshrink = 0.3
+
+
+/obj/item/ammo_casing/a40mm/flare
+	name = "\improper FG-1 flare"
+	desc = "A low intensity 40mm flare. These came from the LOVE MACHINE along with the flare gun, but the Dictate and Empire can both make these on their own nowadays."
+	icon_state = "flare-handful-1"
+	projectile_type = /obj/projectile/bullet/flare
+	sellprice = 4
+
+
+/obj/item/ammo_casing/a40mm/flareh
+	name = "\improper FG-2 flare"
+	desc = "A high intensity 40mm flare. These came from the LOVE MACHINE along with the flare gun, and burn brighter than any flares made today by either side. For some reason, they can't be ignited unless high in the air."
+	icon_state = "flareh-handful-1"
+	projectile_type = /obj/projectile/bullet/flare //we shouldn't be using this projectile so it can stay as-is
+	sellprice = 10
+
+
+/obj/item/ammo_casing/a40mm/he
+	name = "\improper 40mm HE grenade"
+	desc = "A 40mm HE grenade. These are a rare gift of the WAR MACHINE- albeit some have been saying Perserdun's researchers are figuring out how to reverse-engineer the explosives inside it."
+	icon_state = "40mmhe-handful-1"
+	projectile_type = /obj/projectile/bullet/a40mmhe 
+	sellprice = 12
+
+
+/obj/item/ammo_casing/a40mm/smoke
+	name = "\improper 40mm smoke grenade"
+	desc = "A 40mm smoke grenade. Strangely more common than other types of 40mm grenades, so Perserdun tends to issue them to their Voltigeurs."
+	icon_state = "40mmsmoke-handful-1"
+	projectile_type = /obj/projectile/bullet/a40mmsmoke
+	sellprice = 5
+
+/obj/item/ammo_casing/a40mm/frag
+	name = "\improper 40mm frag grenade"
+	desc = "A 40mm frag grenade. Found in the WAR MACHINE, but some limited prototypes are hand-produced- albeit, they're very inconsistent. Fortunately, these seem to be actual WAR MACHINE grenades."
+	icon_state = "40mmfrag-handful-1"
+	projectile_type = /obj/projectile/bullet/a40mmfrag
+	sellprice = 7
+
 //other
 
 /obj/item/ammo_casing/flamer
@@ -133,22 +182,4 @@
 	projectile_type = /obj/projectile/bullet/flamer
 	bullet_type = FLAMECASING
 
-/obj/item/ammo_casing/flare
-	name = "\improper FG-1 flare"
-	desc = "A low intensity flare. These came from the LOVE MACHINE along with the flare gun, but the Dictate and Empire can both make these on their own nowadays."
-	icon_state = "flare-handful-1"
-	caliber = "flare"
-	projectile_type = /obj/projectile/bullet/flare
-	bullet_type = SHOTGUNCASING //these aren't shotguns but the shotgun sound is fine
-	sellprice = 4
-	dropshrink = 0.3
 
-/obj/item/ammo_casing/flareh
-	name = "\improper FG-2 flare"
-	desc = "A high intensity flare. These came from the LOVE MACHINE along with the flare gun, and burn brighter than any flares made today by either side. For some reason, they can't be ignited unless high in the air."
-	icon_state = "flareh-handful-1"
-	caliber = "flare"
-	projectile_type = /obj/projectile/bullet/flare //we shouldn't be using this projectile so it can stay as-is
-	bullet_type = SHOTGUNCASING //these aren't shotguns but the shotgun sound is fine
-	sellprice = 10
-	dropshrink = 0.3

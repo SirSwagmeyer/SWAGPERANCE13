@@ -19,13 +19,20 @@
 	"Rain" = 'sound/music/jukeboxes/machine/machinerain.ogg',\
 	"Down" = 'sound/music/jukeboxes/machine/machinedown.ogg',\
 	"Face" = 'sound/music/jukeboxes/machine/machineface.ogg',\
+	"Void" = 'sound/music/jukeboxes/machine/machinevoid.ogg',\
+	"Need" = 'sound/music/jukeboxes/machine/machineneed.ogg',\
+	"Escape" = 'sound/music/jukeboxes/machine/machineescape.ogg',\
+	"Judas" = 'sound/music/jukeboxes/machine/machinejudas.ogg',\
+	"Jane" = 'sound/music/jukeboxes/machine/machinejane.ogg',\
+	"Juliet" = 'sound/music/jukeboxes/machine/machinejuliet.ogg',\
+	"Underground" = 'sound/music/jukeboxes/machine/machineunderground.ogg',\
 ) // POP MUSIC ONLY FOR THE MACHINE -- NO CHUDMUSIC ALLOWED
 
 /datum/looping_sound/radios
 	mid_sounds = list()
 	mid_length = 120000 // 20 minutes
 	volume = 100
-	extra_range = 8
+	extra_range = 10
 	falloff = 0
 	persistent_loop = TRUE
 	var/stress2give = /datum/stressevent/music
@@ -38,13 +45,13 @@
 			var/mob/living/carbon/L = M
 			L.add_stress(stress2give)
 
-/obj/structure/roguemachine/musicbox
+/obj/item/roguemachine/musicbox
 	name = "metal radio"
 	desc = "Discovered within one of LOVE's catacombs, this funny little piece allows for telecommunications. It can even play some pre-recorded music."
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "music0"
-	density = TRUE
-	anchored = TRUE
+	density = FALSE
+	anchored = FALSE
 	max_integrity = 0
 	var/datum/looping_sound/radios/soundloop
 	var/list/init_curfile = list('sound/music/jukeboxes/gen/talkshow.ogg') // A list of songs that curfile is set to on init. MUST BE IN ONE OF THE MUSIC_TAVCAT_'s.
@@ -53,27 +60,40 @@
 	var/curvol = 50 // The current volume at which audio is played. MAPPERS MAY TOUCH THIS.
 	var/playuponspawn = FALSE // Does the music box start playing music when it first spawns in? MAPPERS MAY TOUCH THIS.
 
-/obj/structure/roguemachine/musicbox/Initialize()
+/obj/item/roguemachine/musicbox/Initialize()
 	. = ..()
 	curfile = pick(init_curfile)
 	soundloop = new(src, FALSE)
 	if(playuponspawn)
 		start_playing()
 
-/obj/structure/roguemachine/musicbox/Destroy()
+/obj/item/roguemachine/musicbox/Destroy()
 	. = ..()
 	qdel(soundloop) //jesus fuck who is using hard dels in this day and age
 
-/obj/structure/roguemachine/musicbox/update_icon()
+/obj/item/roguemachine/musicbox/update_icon()
 	icon_state = "music[playing]"
 
-/obj/structure/roguemachine/musicbox/proc/toggle_music()
+/obj/item/roguemachine/musicbox/attack_self(mob/user)
+	. = ..()
+	if(.)
+		return
+	open_controls(user)
+
+/obj/item/roguemachine/musicbox/Click(location, control, params)
+	. = ..()
+
+	if(params && findtext(params, "right=1"))
+		open_controls(usr)
+		return
+
+/obj/item/roguemachine/musicbox/proc/toggle_music()
 	if(!playing)
 		start_playing()
 	else
 		stop_playing()
 
-/obj/structure/roguemachine/musicbox/proc/start_playing()
+/obj/item/roguemachine/musicbox/proc/start_playing()
 	playing = TRUE
 	soundloop.mid_sounds = list(curfile)
 	soundloop.cursound = null
@@ -82,14 +102,13 @@
 	testing("Music: V[soundloop.volume] C[soundloop.cursound] T[soundloop.thingshearing]")
 	update_icon()
 
-/obj/structure/roguemachine/musicbox/proc/stop_playing()
+/obj/item/roguemachine/musicbox/proc/stop_playing()
 	playing = FALSE
 	soundloop.stop()
 	update_icon()
 
-/obj/structure/roguemachine/musicbox/attack_hand(mob/living/user)
-	. = ..()
-	if(.)
+/obj/item/roguemachine/musicbox/proc/open_controls(mob/user)
+	if(!user)
 		return
 
 	user.changeNext_move(CLICK_CD_INTENTCAP)
@@ -150,7 +169,7 @@
 		stop_playing()
 		start_playing()
 
-/obj/structure/roguemachine/musicbox/tavern
+/obj/item/roguemachine/musicbox/tavern
 	init_curfile = list(\
 		'sound/music/jukeboxes/gen/talkshow.ogg',\
 		'sound/music/jukeboxes/gen/countdown.ogg',\
@@ -161,7 +180,7 @@
 	curvol = 65
 	playuponspawn = TRUE
 /* The fuck is this
-/obj/structure/roguemachine/musicbox/Initialize()
+/obj/item/roguemachine/musicbox/Initialize()
 	. = ..()
 	soundloop.extra_range = 12
 	soundloop.falloff = 6

@@ -13,7 +13,7 @@
 	can be meek & timid, stammering their way along. They tend to be incredibly fragile, often missing chunks\
 	of plastic that expose their inner workings. They're usually recovered and reactivated by the nations, \
 	although some have crawled out of the Machines by their own.\
-	(-2 Strength, +2 Intelligence, +1 Speed)"
+	(-2 Strength, +2 Intelligence, +1 Speed, Hungerless, Insomnia, Bloodless. Extremely fragile.)"
 
 
 	construct = 1

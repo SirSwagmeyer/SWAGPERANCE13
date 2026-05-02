@@ -13,7 +13,7 @@
 	var/secure = FALSE //secure locker or not, also used if overriding a non-secure locker with a secure door overlay to add fancy lights
 	var/opened = FALSE
 	var/welded = FALSE
-	var/locked = FALSE
+	locked = FALSE
 	var/large = TRUE
 	var/wall_mounted = 0 //never solid (You can always pass over it)
 	var/breakout_time = 1200
@@ -35,9 +35,9 @@
 	var/delivery_icon = "deliverycloset" //which icon to use when packagewrapped. null to be unwrappable.
 	var/anchorable = TRUE
 	var/icon_welded = "welded"
-	var/keylock = FALSE
-	var/lockhash
-	var/lockid = null
+	keylock = FALSE
+	lockhash = 0
+	lockid = null
 	var/masterkey = FALSE
 	var/lock_strength = 100
 	throw_speed = 1
@@ -288,31 +288,53 @@
 		to_chat(user, span_warning("There's no lock on this."))
 		return
 	if(obj_broken)
-		to_chat(user, span_warning("The lock is obj_broken."))
+		to_chat(user, span_warning("[src] is broken."))
 		return
-	if(istype(I,/obj/item/storage/keyring))
-		var/obj/item/storage/keyring/R = I
-		if(!R.contents.len)
-			return
-		var/list/keysy = shuffle(R.contents.Copy())
-		for(var/obj/item/roguekey/K in keysy)
-			if(user.cmode)
-				if(!do_after(user, 10, TRUE, src))
-					break
-			if(K.lockhash == lockhash)
-				togglelock(user)
-				break
-			else
-				if(user.cmode)
-					playsound(src, 'sound/foley/doors/lockrattle.ogg', 100)
-		return
-	else
+	user.changeNext_move(CLICK_CD_INTENTCAP)
+
+	if(istype(I, /obj/item/roguekey))
 		var/obj/item/roguekey/K = I
 		if(K.lockhash == lockhash || istype(K, /obj/item/roguekey/lord))
 			togglelock(user)
 			return
 		else
+			to_chat(user, span_warning("This is not the correct key."))
 			playsound(src, 'sound/foley/doors/lockrattle.ogg', 100)
+		return
+
+	// Handle belt items that contain keys
+	if(!istype(I, /obj/item/storage/keyring))
+		if(I.contents && I.contents.len)
+			var/obj/item/found_key = null
+			for(var/obj/item/contained_item in I.contents)
+				if(istype(contained_item, /obj/item/roguekey))
+					var/obj/item/roguekey/K = contained_item
+					if(K.lockhash == lockhash || istype(K, /obj/item/roguekey/lord))
+						found_key = contained_item
+						break
+				if(istype(contained_item, /obj/item/storage/keyring))
+					if(keyring_has_matching_key(contained_item))
+						found_key = contained_item
+						break
+
+			if(found_key)
+				// Use the found key instead of the belt
+				trykeylock(found_key, user)
+				return
+			else
+				to_chat(user, span_warning("No matching key found in [I]."))
+				playsound(src, 'sound/foley/doors/lockrattle.ogg', 100)
+				return
+
+	// The item I is a keyring
+	else
+		var/obj/item/storage/keyring/keyring = I
+		if(keyring_has_matching_key(keyring))
+			togglelock(user)
+			return
+		to_chat(user, span_warning("None of the keys on [keyring] can turn the lock."))
+		playsound(src, 'sound/foley/doors/lockrattle.ogg', 100)
+		return
 
 /obj/structure/closet/proc/trypicklock(obj/item/I, mob/user)
 	if(opened)
@@ -440,6 +462,26 @@
 		return
 	user.changeNext_move(CLICK_CD_INTENTCAP)
 	toggle(user)
+
+/obj/structure/closet/attack_right(mob/user)
+	user.changeNext_move(CLICK_CD_FAST)
+	
+	if(keylock)
+		var/obj/item/held_key = user.get_active_held_item()
+		if(istype(held_key, /obj/item/roguekey) || istype(held_key, /obj/item/storage/keyring))
+			trykeylock(held_key, user)
+			return
+		// Check if user has a key, either in the other hand, or within valid equipment slots
+		var/obj/item/key_item = find_key_for_door(user)
+		if(key_item)
+			trykeylock(key_item, user)
+			return
+		to_chat(user, span_warning("None of my equipped keys can turn the lock."))
+		playsound(src, 'sound/foley/doors/lockrattle.ogg', 100)
+	else
+		to_chat(user, span_warning("[src] doesn't have a lock."))
+	
+	return ..()
 
 /obj/structure/closet/attack_paw(mob/user)
 	return attack_hand(user)

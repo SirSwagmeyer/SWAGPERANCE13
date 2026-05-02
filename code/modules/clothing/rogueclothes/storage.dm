@@ -506,7 +506,7 @@
 	desc = "A strap on bag meant to hold light machine gun ammo pans. It's a bit of a heavy item, but it does its job well."
 	icon_state = "strapbag"
 	item_state = "strapbag"
-	component_type = /datum/component/storage/concrete/grid/lmg
+	component_type = /datum/component/storage/concrete/grid/panbag
 
 /obj/item/storage/belt/rogue/pouch/panbag/dp47 //shocktrooper only, that's why they get 16 pans, they're NOT getting that ammo back.
 	populate_contents = list(
@@ -552,12 +552,12 @@
 
 /obj/item/storage/belt/rogue/pouch/ammobag/flare 
 	populate_contents = list(
-		/obj/item/ammo_box/handfuls/flare,
-		/obj/item/ammo_box/handfuls/flare,
-		/obj/item/ammo_box/handfuls/flare,
-		/obj/item/ammo_box/handfuls/flare,
-		/obj/item/ammo_box/handfuls/flareh,
-		/obj/item/ammo_box/handfuls/flareh,
+		/obj/item/ammo_box/handfuls/a40mm/flare,
+		/obj/item/ammo_box/handfuls/a40mm/flare,
+		/obj/item/ammo_box/handfuls/a40mm/flare,
+		/obj/item/ammo_box/handfuls/a40mm/flare,
+		/obj/item/ammo_box/handfuls/a40mm/flareh,
+		/obj/item/ammo_box/handfuls/a40mm/flareh,
 	)
 
 /obj/item/storage/belt/rogue/pouch/ammobag/amr

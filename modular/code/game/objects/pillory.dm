@@ -14,9 +14,9 @@
 	layer = ABOVE_ALL_MOB_LAYER
 	plane = GAME_PLANE_UPPER
 	var/latched = FALSE
-	var/locked = FALSE
+	locked = FALSE
 	var/base_icon = "pillory_single"
-	var/list/lockid = list()
+	var/list/lockids = list()
 
 /obj/structure/pillory/double
 	icon_state = "pillory_double"
@@ -27,16 +27,16 @@
 	base_icon = "pillory_reinforced"
 
 /obj/structure/pillory/town_square
-	lockid = list("keep_dungeon", "keep_barracks", "town_dungeon", "town_barracks", "bog_dungeon", "bog_barracks", "church")
+	lockids = list("keep_dungeon", "keep_barracks", "town_dungeon", "town_barracks", "bog_dungeon", "bog_barracks", "church")
 
 /obj/structure/pillory/reinforced/keep_dungeon
-	lockid = list("keep_dungeon")
+	lockids = list("keep_dungeon")
 
 /obj/structure/pillory/reinforced/town_dungeon
-	lockid = list("town_dungeon")
+	lockids = list("town_dungeon")
 
 /obj/structure/pillory/reinforced/bog_dungeon
-	lockid = list("bog_dungeon")
+	lockids = list("bog_dungeon")
 
 
 /obj/structure/pillory/Initialize()
@@ -71,7 +71,7 @@
 		return
 	if(istype(P, /obj/item/roguekey))
 		var/obj/item/roguekey/K = P
-		if(K.lockid in lockid)
+		if(K.lockid in lockids)
 			togglelock(user)
 			return
 		else
@@ -81,7 +81,7 @@
 	if(istype(P, /obj/item/storage/keyring))
 		var/obj/item/storage/keyring/K = P
 		for(var/obj/item/roguekey/KE in K.keys)
-			if(KE.lockid in lockid)
+			if(KE.lockid in lockids)
 				togglelock(user)
 				return
 

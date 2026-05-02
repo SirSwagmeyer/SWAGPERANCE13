@@ -23,11 +23,11 @@
 	anchored = TRUE
 	layer = BELOW_OBJ_LAYER
 	var/list/held_items = list()
-	var/locked = FALSE
+	locked = FALSE
 	var/budget = 0
 	var/upgrade_flags
 	var/current_cat = "1"
-	var/lockid = "merchant"
+	lockid = "merchant"
 	var/list/categories = list(
 		"Alcohols",
 		"Apparel",
@@ -133,6 +133,24 @@
 
 
 /obj/structure/roguemachine/goldface/attackby(obj/item/P, mob/user, params)
+	try_key_lock(P, user)
+
+	if(istype(P, /obj/item/roguecoin))
+		budget += P.get_real_price()
+		qdel(P)
+		update_icon()
+		playsound(loc, 'sound/misc/machinevomit.ogg', 100, TRUE, -1)
+		return attack_hand(user)
+	..()
+
+/obj/structure/roguemachine/goldface/attack_right(mob/user)
+	var/obj/item/P = user.get_active_held_item()
+	if(P)
+		try_key_lock(P, user)
+	..()
+
+/// Checks if the active hand contains the relevant key, then toggles the lock if so.
+/obj/structure/roguemachine/goldface/proc/try_key_lock(obj/item/P, mob/user)
 	if(istype(P, /obj/item/roguekey))
 		var/obj/item/roguekey/K = P
 		if(K.lockid == lockid)
@@ -155,13 +173,6 @@
 		if(!right_key)
 			to_chat(user, span_warning("Wrong key."))
 			return
-	if(istype(P, /obj/item/roguecoin))
-		budget += P.get_real_price()
-		qdel(P)
-		update_icon()
-		playsound(loc, 'sound/misc/machinevomit.ogg', 100, TRUE, -1)
-		return attack_hand(user)
-	..()
 
 /obj/structure/roguemachine/goldface/Topic(href, href_list)
 	. = ..()

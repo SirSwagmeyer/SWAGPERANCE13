@@ -41,6 +41,7 @@
 	var/burst_delay = 2 //amount of deciseconds between each shot if bursting
 	var/pb_knockback = 0
 
+	var/longarm = FALSE//used to determine if you can shoot it one-handed
 
 
 /obj/item/gun/Destroy()
@@ -132,6 +133,11 @@
 	if(!can_shoot()) //Just because you can pull the trigger doesn't mean it can shoot.
 		shoot_with_empty_chamber(user)
 		return
+	if(longarm == TRUE)
+		if(user.get_inactive_held_item() != null)
+			to_chat(user, "<span class='warning'>I can't fire [src] one-handed!</span>")
+			return	
+		
 
 	if(user?.used_intent.arc_check() && target.z != user.z) //temporary fix for openspace arrow dupe
 		target = get_turf(locate(target.x, target.y, user.z))

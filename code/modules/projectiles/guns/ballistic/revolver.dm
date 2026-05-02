@@ -180,6 +180,7 @@
 	experimental_inhand = FALSE
 	slot_flags = ITEM_SLOT_BACK
 	sellprice = 40
+	longarm = TRUE
 
 /obj/item/gun/ballistic/revolver/sawedoff
 	name = "TIZ 'Persuader' Pocket Shotgun"
@@ -199,6 +200,7 @@
 	experimental_inhand = FALSE
 	slot_flags = ITEM_SLOT_HIP
 	sellprice = 20
+	longarm = FALSE //it's a pocket gun with one round, it should be okay
 
 /obj/item/gun/ballistic/revolver/judge
 	name = "TYK 'Judge' Revolving Rifle"
@@ -220,6 +222,7 @@
 	experimental_inhand = FALSE
 	slot_flags = ITEM_SLOT_BACK
 	sellprice = 64
+	longarm = TRUE
 
 /obj/item/gun/ballistic/revolver/mercy
 	name = "LC 'Mercy' Revolver"

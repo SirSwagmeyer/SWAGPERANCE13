@@ -1142,7 +1142,6 @@ SUBSYSTEM_DEF(gamemode)
 	GLOB.azure_round_stats[STATS_ALCOHOLICS] = 0
 	GLOB.azure_round_stats[STATS_JUNKIES] = 0
 	GLOB.azure_round_stats[STATS_GREEDY_PEOPLE] = 0
-	GLOB.azure_round_stats[STATS_PLEASURES] = 0
 
 	// Gender count
 	GLOB.azure_round_stats[STATS_MALE_POPULATION] = 0

@@ -11,9 +11,9 @@
 /area/rogue/outdoors/indoors/persunbaseoutlook // for jukeboxes
 	name = "perserdun outdoors"
 	icon_state = "town"
-	droning_sound = null
-	droning_sound_dusk = null
-	droning_sound_night = null
+	droning_sound = 'sound/silence.ogg'
+	droning_sound_dusk = 'sound/silence.ogg'
+	droning_sound_night = 'sound/silence.ogg'
 	converted_type = /area/rogue/outdoors/exposed/town
 
 /area/rogue/outdoors/exposed/perserdunbase
@@ -36,9 +36,9 @@
 /area/rogue/indoors/risvonbasebar
 	name = "risvon indoors"
 	icon_state = "town"
-	droning_sound = null
-	droning_sound_dusk = null
-	droning_sound_night = null
+	droning_sound = 'sound/silence.ogg'
+	droning_sound_dusk = 'sound/silence.ogg'
+	droning_sound_night = 'sound/silence.ogg'
 	converted_type = /area/rogue/outdoors/exposed/town
 	town_area = TRUE
 

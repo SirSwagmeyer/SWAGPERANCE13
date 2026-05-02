@@ -117,8 +117,8 @@
 /obj/item/ammo_box/magazine/internal/revolver/flaregun
 	name = "Flare Gun internal magazine"
 	desc = "You should probably tell an admin."
-	ammo_type = /obj/item/ammo_casing/flare
-	caliber = "flare"
+	ammo_type = /obj/item/ammo_casing/a40mm/flare
+	caliber = "40mm"
 	max_ammo = 1
 	multiload = 0
 

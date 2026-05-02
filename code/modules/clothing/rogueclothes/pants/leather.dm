@@ -51,6 +51,8 @@
 /obj/item/clothing/under/roguetown/trou/artipants
 	name = "thick trousers"
 	desc = "Thick leather trousers. They're supposed to help with the long march."
+	armor = ARMOR_LEATHER_GOOD
+	max_integrity = ARMOR_INT_LEG_HARDLEATHER
 	icon_state = "artipants"
 	item_state = "artipants"
 

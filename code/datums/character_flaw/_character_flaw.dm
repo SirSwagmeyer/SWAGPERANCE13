@@ -10,7 +10,7 @@ GLOBAL_LIST_INIT(character_flaws, list(
 	"Narcoleptic"=/datum/charflaw/narcoleptic,
 	"Nymphomaniac"=/datum/charflaw/addiction/lovefiend,
 	"Sadist"=/datum/charflaw/addiction/sadist,
-	"Masochist"=/datum/charflaw/masochist,
+	"Masochist"=/datum/charflaw/addiction/masochist,
 	"Paranoid"=/datum/charflaw/paranoid,
 	"Clingy"=/datum/charflaw/clingy,
 	"Isolationist"=/datum/charflaw/isolationist,
@@ -420,16 +420,16 @@ GLOBAL_LIST_INIT(character_flaws, list(
 #define MASO_THRESHOLD_THREE 3
 #define MASO_THRESHOLD_FOUR 4
 
-/datum/charflaw/masochist
+/datum/charflaw/addiction/masochist
 	name = "Masochist"
 	desc = "I love the feeling of pain, so much I can't get enough of it."
 	var/next_paincrave = 0
 	var/last_pain_threshold = NONE
 
-/datum/charflaw/masochist/on_mob_creation(mob/living/carbon/human/user)
+/datum/charflaw/addiction/masochist/on_mob_creation(mob/living/carbon/human/user)
 	next_paincrave = world.time + rand(15 MINUTES, 25 MINUTES)
 
-/datum/charflaw/masochist/flaw_on_life(mob/living/carbon/human/user)
+/datum/charflaw/addiction/masochist/flaw_on_life(mob/living/carbon/human/user)
 	if(next_paincrave > world.time)
 		last_pain_threshold = NONE
 		return
@@ -462,7 +462,7 @@ GLOBAL_LIST_INIT(character_flaws, list(
 		user.remove_status_effect(/datum/status_effect/debuff/addiction)
 
 
-/datum/charflaw/masochist/proc/get_pain_threshold(pain_amt)
+/datum/charflaw/addiction/masochist/proc/get_pain_threshold(pain_amt)
 	switch(pain_amt)
 		if(-INFINITY to 50)
 			return MASO_THRESHOLD_ONE

@@ -9,10 +9,10 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 
-	tutorial = "You are an Armsman, given the honor of being a Voltigeur. You are expected to serve as a scout and skirmisher. \
+	tutorial = "You are an Armsman, given the honor of being a Voltigeur. You are expected to serve as a specialist. \
 				Having done intense physical training in the mountains of Osk Averwael, you've passed the rigorous selection to get this position.\
-				While Voltigeurs were always flankers and scouts, the guns are fairly new; replacing crossbows with weapons from the WAR MACHINE. \
-				Be careful not to get caught on your own. Try to always stay on the flanks of another battle. \
+				While Voltigeurs were always above traditional Armsman, the guns are fairly new; replacing crossbows with weapons from the WAR MACHINE. \
+				Be careful not to get caught on your own. Use your grenade launcher to help your allies move around safely. \
 				Voltigeurs have a reputation as the best of Armsman; try to live up to that standard, and take pride in your role." 
 
 	outfit = /datum/outfit/job/roguetown/voltigeur
@@ -46,19 +46,20 @@
 	mask = /obj/item/clothing/mask/rogue/gasmask/perserdunmask
 	belt = /obj/item/storage/belt/rogue/leather/black/soldier
 	beltl = /obj/item/flashlight/flare/torch/lantern
-	beltr = /obj/item/storage/belt/rogue/pouch/ammobag/shotgun
-	backl = /obj/item/gun/ballistic/shotgun/levershotgun
+	beltr = /obj/item/storage/belt/rogue/pouch/ammobag/rifle
+	backl = /obj/item/gun/ballistic/rifle/repeater/lebel
 	wrists = /obj/item/scomstone/garrison
 	gloves = /obj/item/clothing/gloves/roguetown/eastgloves1
 	backr = /obj/item/storage/backpack/rogue/backpack/perserdun
 	id = /obj/item/roguekey/perserdun
 	backpack_contents = list(
-		/obj/item/storage/belt/rogue/pouch/coins/poor,
+		/obj/item/storage/belt/rogue/pouch/coins/mid,
 		/obj/item/grenade/gas/poison,
-		/obj/item/grenade/gas/smoke,
 		/obj/item/rogueweapon/sword/iron/short,
 		/obj/item/gun/ballistic/revolver/flaregun,
 		/obj/item/storage/belt/rogue/pouch/ammobag/flare,
+		/obj/item/ammo_box/handfuls/a40mm/smoke,
+		/obj/item/ammo_box/handfuls/a40mm/smoke,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
@@ -70,8 +71,8 @@
 	H.adjust_skillrank(/datum/skill/misc/tracking, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/rifles, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shotguns, 4, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/rifles, 4, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/shotguns, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/armorsmithing, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
@@ -79,13 +80,12 @@
 	H.adjust_skillrank(/datum/skill/craft/traps, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/crossbows, 4, TRUE)
 	H.change_stat("strength", 1)
-	H.change_stat("constitution", -1)
-	H.change_stat("intelligence", -1)
-	H.change_stat("endurance", 0)
+	H.change_stat("constitution", 1)
+	H.change_stat("intelligence", 0)
+	H.change_stat("endurance", 1)
 	H.change_stat("perception", 3)
-	H.change_stat("speed", 5)
+	H.change_stat("speed", 2)
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_SLEUTH, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_WOODWALKER, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_OUTDOORSMAN, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_LONGSTRIDER, TRAIT_GENERIC)

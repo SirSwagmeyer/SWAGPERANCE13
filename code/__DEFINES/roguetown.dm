@@ -24,7 +24,7 @@
 #define ARMOR_INT_CHEST_PLATE_ANTAG 700
 #define ARMOR_INT_CHEST_PLATE_BLACKSTEEL 600
 #define ARMOR_INT_CHEST_PLATE_STEEL 500
-#define ARMOR_INT_CHEST_PLATE_BRIGANDINE 150 //can't be worse than a regular iron breastplate
+#define ARMOR_INT_CHEST_PLATE_BRIGANDINE 150
 #define ARMOR_INT_CHEST_PLATE_PSYDON 400 // You get free training, less int
 #define ARMOR_INT_CHEST_PLATE_IRON 250
 #define ARMOR_INT_CHEST_PLATE_DECREPIT 250
@@ -32,7 +32,7 @@
 // MEDIUM
 #define ARMOR_INT_CHEST_MEDIUM_STEEL 200
 #define ARMOR_INT_CHEST_MEDIUM_HATANGA 250
-#define ARMOR_INT_CHEST_MEDIUM_IRON 125 //adjusted 4 temp13
+#define ARMOR_INT_CHEST_MEDIUM_IRON 175 //adjusted 4 temp13
 #define ARMOR_INT_CHEST_MEDIUM_SCALE 200 // More coverage, less integrity
 #define ARMOR_INT_CHEST_FENCER_STEEL 170
 #define ARMOR_INT_CHEST_MEDIUM_DECREPIT 150
@@ -85,7 +85,7 @@
 #define ARMOR_LIGHTCUIRASS list("blunt" = 30, "slash" = 70, "stab" = 70, "piercing" = 20, "fire" = 0, "acid" = 0)	
 
 #define ARMOR_LEATHER list("blunt" = 60, "slash" = 50, "stab" = 40, "piercing" = 20, "fire" = 0, "acid" = 0)
-#define ARMOR_LEATHER_GOOD list("blunt" = 100, "slash" = 70, "stab" = 50, "piercing" = 30, "fire" = 0, "acid" = 0)
+#define ARMOR_LEATHER_GOOD list("blunt" = 100, "slash" = 70, "stab" = 50, "piercing" = 50, "fire" = 0, "acid" = 0)
 #define ARMOR_LEATHER_STUDDED list("blunt" = 80, "slash" = 80, "stab" = 60, "piercing" = 20, "fire" = 0, "acid" = 0)
 
 // Medium AC | Chest
@@ -436,7 +436,8 @@ GLOBAL_LIST_EMPTY(round_join_times)
 #define HMGM2SHOT list('sound/combat/ranged/m2hb.ogg')
 #define LEVERSHOT list('sound/combat/ranged/leveractionfire1.ogg', 'sound/combat/ranged/leveractionfire2.ogg', 'sound/combat/ranged/leveractionfire3.ogg', 'sound/combat/ranged/leveractionfire4.ogg')
 #define AUTOSGSHOT list('sound/combat/ranged/autosgfire.ogg', 'sound/combat/ranged/autosg2fire.ogg')
-#define FLARESHOT list('sound/combat/ranged/flaregunfire.ogg')
+#define FLARESHOT list('sound/combat/ranged/flaregunfire.ogg') //unused for now
+#define GRENADESHOT list('sound/combat/ranged/40mm_fire.ogg')
 //distant sounds
 #define DISTANTLIGHT list('sound/combat/ranged/light_distant2.ogg', 'sound/combat/ranged/light_distant3.ogg')
 #define DISTANTMEDIUM list('sound/combat/ranged/distant_generic1.ogg', 'sound/combat/ranged/distant_generic2.ogg', 'sound/combat/ranged/distant_generic3.ogg', 'sound/combat/ranged/distant_generic4.ogg', 'sound/combat/ranged/distant_generic5.ogg')

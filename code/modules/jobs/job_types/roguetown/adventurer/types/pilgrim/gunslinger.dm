@@ -107,6 +107,7 @@
 			H.change_stat("speed", 1)
 			H.set_blindness(0)
 			H.cmode_music = 'sound/music/cmode/adventurer/combat_debt.ogg'
+			H.dna.species.soundpack_m = new /datum/voicepack/male/renegade()
 
 		if("Old-Boy")
 			

@@ -16900,7 +16900,7 @@
 /area/rogue/under/town/sewer)
 "fxf" = (
 /obj/structure/table/wood/poor,
-/obj/structure/roguemachine/musicbox{
+/obj/item/roguemachine/musicbox{
 	pixel_y = 12
 	},
 /turf/open/floor/rogue/wood,

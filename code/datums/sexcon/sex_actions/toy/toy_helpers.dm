@@ -6,4 +6,3 @@
 			continue
 		return thing
 	return null
-

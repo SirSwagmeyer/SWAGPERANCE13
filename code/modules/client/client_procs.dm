@@ -552,7 +552,6 @@ GLOBAL_LIST_EMPTY(respawncounts)
 	data += god_ui_block("EORA", "#663366", "#ddaaff", "\
 		Number of followers: [eora_followers] ([get_colored_influence_value(SSgamemode.get_follower_influence(eora_storyteller))])<br>\
 		Kisses made: [GLOB.azure_round_stats[STATS_KISSES_MADE]] ([get_colored_influence_value(SSgamemode.calculate_specific_influence(eora_storyteller, STATS_KISSES_MADE))])<br>\
-		Pleasures had: [GLOB.azure_round_stats[STATS_PLEASURES]] ([get_colored_influence_value(SSgamemode.calculate_specific_influence(eora_storyteller, STATS_PLEASURES))])<br>\
 		Hugs made: [GLOB.azure_round_stats[STATS_HUGS_MADE]] ([get_colored_influence_value(SSgamemode.calculate_specific_influence(eora_storyteller, STATS_HUGS_MADE))])<br>\
 		Clingy people: [GLOB.azure_round_stats[STATS_CLINGY_PEOPLE]] ([get_colored_influence_value(SSgamemode.calculate_specific_influence(eora_storyteller, STATS_CLINGY_PEOPLE))])", eora_storyteller)
 

@@ -2,14 +2,14 @@
 	race = /datum/species/demihuman
 
 /datum/species/demihuman
-	name = "Beastmen"
+	name = "Liumang"
 	id = "demihuman"
-	desc = "<b>Beastmen</b><br>\
-	Beastmen are created through the union of Xiaoren and humans/elves. \
+	desc = "<b>Liumang</b><br>\
+	Liumang are created through the union of Xiaoren and humans/elves. \
 	They sport the animalistic features of their progenitor, and usually make for better combatants at the cost of severe mental instability. \
 	This typically manifests in the form of impulsiveness, violent mood swings, and a noticeable lack of critical thinking. \
 	They are noticeably rarer than humans and elves, due to inherited genetic defects that make them incapable of crossbreeding with other races. \
-	Along with that, Beastmen typically have chronic bouts of pain, and are usually medicated on morphine or some other type of painkiller. \
+	Along with that, Liumang typically have chronic bouts of pain, and are usually medicated on morphine or some other type of painkiller. \
 	(+1 Constitution, +1 Perception, -2 Intelligence)"
 	skin_tone_wording = "Ancestry"
 	default_color = "FFFFFF"

@@ -149,6 +149,43 @@
 	if(!fou)
 		to_chat(AM, "<b>It is a dead end.</b>")
 
+/obj/structure/fluff/traveltile/proc/try_living_travel(obj/structure/fluff/traveltile/T, mob/living/L)
+	if(!can_go(L))
+		return FALSE
+	if(L.pulledby)
+		return FALSE
+	to_chat(L, "<b>I begin to travel...</b>")
+	if(do_after(L, 50, needhand = FALSE, target = src))
+		if(L.pulledby)
+			to_chat(L, span_warning("I can't go, something's holding onto me."))
+			return FALSE
+		perform_travel(T, L)
+		return TRUE
+	return FALSE
+
+/obj/structure/fluff/traveltile/proc/perform_travel(obj/structure/fluff/traveltile/T, mob/living/L)
+	if(!L.restrained(ignore_grab = TRUE)) // heavy-handedly prevents using prisoners to metagame camp locations. pulledby would stop this but prisoners can also be kicked/thrown into the tile repeatedly
+		for(var/mob/living/carbon/human/H in hearers(6,src))
+			if(!HAS_TRAIT(H, required_trait) && !HAS_TRAIT(H, TRAIT_BLIND))
+				to_chat(H, "<b>I watch [L.name? L : "someone"] go through a well-hidden entrance.</b>")
+				if(!(H.m_intent == MOVE_INTENT_SNEAK))
+					to_chat(L, "<b>[H.name ? H : "Someone"] watches me pass through the entrance.</b>")
+				ADD_TRAIT(H, required_trait, TRAIT_GENERIC)
+
+	var/atom/movable/pullingg = L.pulling
+
+	L.recent_travel = world.time
+	if(pullingg)
+		pullingg.recent_travel = world.time
+		pullingg.forceMove(T.loc)
+
+	L.forceMove(T.loc)
+
+	if(pullingg)
+		L.start_pulling(pullingg, supress_message = TRUE)
+
+	return
+
 /obj/structure/fluff/traveltile/bandit
 	required_trait = TRAIT_BANDITCAMP
 /obj/structure/fluff/traveltile/vampire

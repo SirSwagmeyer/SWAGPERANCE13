@@ -475,3 +475,21 @@
 	desc = "I was on the sermon. My patron is not proud of me."
 	icon_state = "debuff"
 	color ="#af9f9f"
+
+/datum/status_effect/debuff/no_coom_cheating //Gets triggered when someone sets their arousal, prevents orgasms from sating vice/giving mood boosts
+	id = "nocoomcheating"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/no_coom_cheating
+	duration = 30 SECONDS
+
+/atom/movable/screen/alert/status_effect/debuff/no_coom_cheating
+	name = "Arousal Imbalanced"
+	desc = "My arousal level changed drastically, any orgasm I have now will not be satisfactory."
+	icon_state = "arousalimbalance"
+
+/datum/status_effect/debuff/no_coom_cheating/on_apply()
+	. = ..()
+	ADD_TRAIT(owner, TRAIT_UNSATISFIED, id)
+
+/datum/status_effect/debuff/no_coom_cheating/on_remove()
+	. = ..()
+	REMOVE_TRAIT(owner, TRAIT_UNSATISFIED, id)

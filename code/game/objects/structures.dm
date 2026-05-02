@@ -12,6 +12,8 @@
 	var/climb_offset = 0 //offset up when climbed
 	var/mob/living/structureclimber
 	var/hammer_repair
+	keylock = FALSE
+	lockhash = 0
 //	move_resist = MOVE_FORCE_STRONG
 
 /obj/structure/Initialize()
@@ -188,3 +190,71 @@
 				return  "It looks pretty damaged."
 			if(1 to 25)
 				return  span_warning("It's about to break.")
+
+
+/// Helper proc to find a matching key or keyring in certain equipment slots on a mob.
+/obj/structure/proc/find_key_for_door(mob/user)
+	if(!user || !keylock)
+		return null
+
+	// Try the inactive hand first
+	var/obj/item/O = user.get_inactive_held_item()
+	if(O && (istype(O, /obj/item/roguekey) || istype(O, /obj/item/storage/keyring)))
+		if(istype(O, /obj/item/roguekey))
+			var/obj/item/roguekey/K = O
+			if(K.lockhash == lockhash || istype(K, /obj/item/roguekey/lord))
+				return O
+		if(istype(O, /obj/item/storage/keyring))
+			if(keyring_has_matching_key(O))
+				return O
+
+	// Check possible key slots if human
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		var/list/key_slots = list(
+			H.get_item_by_slot(SLOT_RING),
+			H.get_item_by_slot(SLOT_NECK),
+			H.get_item_by_slot(SLOT_WRISTS),
+			H.get_item_by_slot(SLOT_BELT),
+			H.get_item_by_slot(SLOT_BELT_L),
+			H.get_item_by_slot(SLOT_BELT_R)
+		)
+
+		for(var/obj/item/I in key_slots)
+			if(!I) continue
+
+			// Check if the belt item itself is a key or keyring
+			if(istype(I, /obj/item/roguekey))
+				var/obj/item/roguekey/K = I
+				if(K.lockhash == lockhash || istype(K, /obj/item/roguekey/lord))
+					return I
+			if(istype(I, /obj/item/storage/keyring))
+				if(keyring_has_matching_key(I))
+					return I
+
+			// Check inside the belt item if it has contents (storage belts, etc.)
+			if(I.contents && I.contents.len)
+				for(var/obj/item/contained_item in I.contents)
+					if(istype(contained_item, /obj/item/roguekey))
+						var/obj/item/roguekey/K = contained_item
+						if(K.lockhash == lockhash || istype(K, /obj/item/roguekey/lord))
+							return I // Return the belt item that contains the key
+					if(istype(contained_item, /obj/item/storage/keyring))
+						if(keyring_has_matching_key(contained_item))
+							return I // Return the belt item that contains the keyring
+
+	return null
+
+/// Helper proc to check if a keyring on a mob contains a match for this structure's lockhash.
+/obj/structure/proc/keyring_has_matching_key(obj/item/storage/keyring/keyring)
+	if(!istype(keyring))
+		return FALSE
+
+	for(var/obj/item/I in keyring.contents)
+		if(istype(I, /obj/item/roguekey))
+			var/obj/item/roguekey/K = I
+			if(K.lockhash == lockhash)
+				return TRUE
+
+	return FALSE
+
