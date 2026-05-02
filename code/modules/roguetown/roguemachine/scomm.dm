@@ -364,9 +364,6 @@
 	for(var/obj/item/scomstone/S in SSroguemachine.scomm_machines)
 		if(S.faction_net == faction_net)
 			S.repeat_message(input_text, src, usedcolor)
-	for(var/obj/item/scomstone/rislead/D in SSroguemachine.scomm_machines)
-		if(D.faction_net == faction_net)
-			D.repeat_message(input_text, src, usedcolor)
 
 /obj/item/scomstone/MiddleClick(mob/user)
 	if(.)
