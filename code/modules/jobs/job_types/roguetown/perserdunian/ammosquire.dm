@@ -11,7 +11,7 @@
 
 	tutorial = "You are the ammo bearer for your detachment's Rook. \
 				Your main purpose is to listen to the Rook and provide your ammo for their machine gun. \
-				Typically, munition squires are comprised of notably weak-willed or unruly armsmen, or in rare cases hasily deployed recruits." 
+				Typically, munition squires are comprised of notably weak-willed or unruly armsmen, or in rare cases hasily deployed recruits."
 
 	outfit = /datum/outfit/job/roguetown/ammosquire
 	display_order = JDO_AMMOSQUIRE
@@ -73,4 +73,4 @@
 	H.change_stat("endurance", 1)
 	H.change_stat("perception", 2)
 	H.change_stat("speed", 1)
-	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)

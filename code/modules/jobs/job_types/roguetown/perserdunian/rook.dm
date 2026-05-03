@@ -11,7 +11,7 @@
 
 	tutorial = "You are an armsman with the informal title of Rook, an Imperial weapons bearer. \
 				Your main purpose is to work with your squire to lay down covering fire with your machine gun. \
-				Otherwise, you have the same responsibilities as an armsman." 
+				Otherwise, you have the same responsibilities as an armsman."
 
 	outfit = /datum/outfit/job/roguetown/rook
 	display_order = JDO_ROOK
@@ -73,4 +73,4 @@
 	H.change_stat("constitution", 1)
 	H.change_stat("endurance", 1)
 	H.change_stat("perception", 3)
-	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
