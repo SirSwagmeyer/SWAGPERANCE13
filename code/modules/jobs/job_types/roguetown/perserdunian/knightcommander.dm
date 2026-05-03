@@ -80,4 +80,4 @@
 	H.change_stat("endurance", 2)
 	H.change_stat("perception", 2)
 	H.change_stat("speed", 1)
-	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
