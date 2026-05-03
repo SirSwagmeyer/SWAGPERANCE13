@@ -606,3 +606,4 @@
 	block2add = FOV_BEHIND
 	smeltresult = /obj/item/ingot/iron
 	smelt_bar_num = 2
+	armor = ARMOR_PLATE_GOOD

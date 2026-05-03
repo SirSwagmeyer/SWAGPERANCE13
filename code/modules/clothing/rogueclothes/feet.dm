@@ -245,6 +245,7 @@
 /obj/item/clothing/shoes/roguetown/boots/armor/grandknight
 	icon_state = "grandknight"
 	item_state = "grandknight"
+	armor = ARMOR_PLATE_GOOD
 
 /obj/item/clothing/shoes/roguetown/boots/armor/graggar
 	name = "vicious boots"
