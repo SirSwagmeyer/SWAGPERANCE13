@@ -619,6 +619,7 @@
 /obj/structure/chair/wood/rogue/generic2{
 	dir = 4
 	},
+/obj/effect/landmark/start/commandantlate,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/risvonbasebar)
 "aIp" = (
@@ -731,6 +732,7 @@
 /area/rogue/indoors/shelter/town/sargoth)
 "aRk" = (
 /obj/effect/landmark/start/bastiono,
+/obj/effect/landmark/start/bastionolate,
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
 "aRn" = (
@@ -910,6 +912,7 @@
 	density = 0
 	},
 /obj/effect/landmark/start/soldato,
+/obj/effect/landmark/start/soldatolate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/risvonbase)
 "aYf" = (
@@ -1472,6 +1475,7 @@
 	pixel_x = -6
 	},
 /obj/effect/landmark/start/campfollower,
+/obj/effect/landmark/start/campfollowerlate,
 /turf/open/floor/carpet/purple,
 /area/rogue/indoors/risvonbase)
 "bvK" = (
@@ -1608,6 +1612,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start/auxiliarist,
+/obj/effect/landmark/start/auxiliaristlate,
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
 "bDk" = (
@@ -2380,6 +2385,7 @@
 "cDR" = (
 /obj/machinery/light/rogue/wallfire/candle/l,
 /obj/effect/landmark/start/auxiliarist,
+/obj/effect/landmark/start/auxiliaristlate,
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
 "cEd" = (
@@ -2910,6 +2916,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start/oficiro,
+/obj/effect/landmark/start/oficirolate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/risvonbase)
 "deK" = (
@@ -3098,6 +3105,7 @@
 	pixel_y = 13
 	},
 /obj/effect/landmark/start/partisan,
+/obj/effect/landmark/start/partisanlate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/perserdunbase)
 "dnb" = (
@@ -3240,6 +3248,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start/envoy,
+/obj/effect/landmark/start/envoylate,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/perserdunbase)
 "dwt" = (
@@ -4532,6 +4541,7 @@
 	dir = 2
 	},
 /obj/effect/landmark/start/ammosquire,
+/obj/effect/landmark/start/ammosquirelate,
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
 "eYp" = (
@@ -4608,18 +4618,6 @@
 "fcT" = (
 /obj/machinery/light/rogue/wallfire/candle/weak/r,
 /obj/machinery/light/rogue/wallfire/candle/l,
-/obj/effect/landmark/start/campfollowerlate,
-/obj/effect/landmark/start/soldatolate,
-/obj/effect/landmark/start/mulolate,
-/obj/effect/landmark/start/pafantolate,
-/obj/effect/landmark/start/veteranolate,
-/obj/effect/landmark/start/oficirolate,
-/obj/effect/landmark/start/commandantlate,
-/obj/effect/landmark/start/consulolate,
-/obj/effect/landmark/start/kaspafistolate,
-/obj/effect/landmark/start/bastionolate,
-/obj/effect/landmark/start/curacistolate,
-/obj/effect/landmark/start/servistolate,
 /obj/effect/landmark/start/flamsoldato,
 /obj/effect/landmark/start/flamsoldatolate,
 /turf/open/floor/rogue/risvon,
@@ -5472,6 +5470,7 @@
 	density = 0
 	},
 /obj/effect/landmark/start/soldato,
+/obj/effect/landmark/start/soldatolate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/risvonbase)
 "gdH" = (
@@ -5614,6 +5613,7 @@
 	pixel_x = -6
 	},
 /obj/effect/landmark/start/campfollower,
+/obj/effect/landmark/start/campfollowerlate,
 /turf/open/floor/carpet/purple,
 /area/rogue/indoors/risvonbase)
 "gmZ" = (
@@ -5642,6 +5642,7 @@
 	dir = 2;
 	pixel_x = 10
 	},
+/obj/effect/landmark/start/curacistolate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/risvonbase)
 "goh" = (
@@ -5870,6 +5871,7 @@
 /obj/structure/fluff/walldeco/leibware{
 	pixel_x = 32
 	},
+/obj/effect/landmark/start/soldatolate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/risvonbase)
 "gBh" = (
@@ -6741,6 +6743,7 @@
 	density = 0
 	},
 /obj/effect/landmark/start/soldato,
+/obj/effect/landmark/start/soldatolate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/risvonbase)
 "hDI" = (
@@ -7067,6 +7070,7 @@
 	density = 0
 	},
 /obj/effect/landmark/start/veterano,
+/obj/effect/landmark/start/veteranolate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/risvonbase)
 "hUG" = (
@@ -7492,6 +7496,8 @@
 /obj/effect/landmark/start/armsman,
 /obj/effect/landmark/start/jaeger,
 /obj/effect/decal/cleanable/dirt/grime/grime4,
+/obj/effect/landmark/start/armsmanlate,
+/obj/effect/landmark/start/jaegerlate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/perserdunbase)
 "iuz" = (
@@ -8662,6 +8668,7 @@
 	light_color = "#505f7a"
 	},
 /obj/effect/landmark/start/knightcommander,
+/obj/effect/landmark/start/knightcommanderlate,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/perserdunbase)
 "jJP" = (
@@ -8928,6 +8935,7 @@
 /obj/structure/chair/wood/rogue/throne,
 /obj/machinery/light/rogue/wallfire/candle,
 /obj/effect/landmark/start/grandknight,
+/obj/effect/landmark/start/grandknightlate,
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/perserdunbase)
 "jZR" = (
@@ -9868,6 +9876,7 @@
 	},
 /obj/machinery/light/rogue/wallfire/candle,
 /obj/effect/landmark/start/soldato,
+/obj/effect/landmark/start/soldatolate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/risvonbase)
 "lhd" = (
@@ -10211,6 +10220,7 @@
 /obj/structure/fluff/walldeco/ugly{
 	pixel_x = 30
 	},
+/obj/effect/landmark/start/servistolate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/risvonbase)
 "lEh" = (
@@ -11684,6 +11694,7 @@
 	name = "la sangre"
 	},
 /obj/effect/landmark/start/warpriest,
+/obj/effect/landmark/start/warpriestlate,
 /turf/open/floor/rogue/metal/barograte/open,
 /area/rogue/indoors/perserdunbase)
 "nlq" = (
@@ -13191,6 +13202,7 @@
 	dir = 8;
 	pixel_x = -9
 	},
+/obj/effect/landmark/start/servistolate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/risvonbase)
 "oIR" = (
@@ -14202,6 +14214,20 @@
 /obj/structure/flora/roguegrass/herb/euphrasia,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors)
+"pWc" = (
+/obj/structure/bed/rogue{
+	dir = 8
+	},
+/obj/structure/bed/rogue{
+	dir = 8;
+	pixel_y = 13
+	},
+/obj/effect/landmark/start/armsman,
+/obj/effect/landmark/start/jaeger,
+/obj/effect/decal/cleanable/dirt/grime/grime4,
+/obj/effect/landmark/start/jaegerlate,
+/turf/open/floor/carpet/royalblack,
+/area/rogue/indoors/perserdunbase)
 "pWm" = (
 /turf/closed/wall/mineral/rogue/risvon/end{
 	dir = 1
@@ -14626,6 +14652,7 @@
 	},
 /obj/effect/landmark/start/armsman,
 /obj/machinery/light/rogue/wallfire/candle/blue/r,
+/obj/effect/landmark/start/armsmanlate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/perserdunbase)
 "qqF" = (
@@ -14804,6 +14831,7 @@
 	pixel_x = -4
 	},
 /obj/effect/landmark/start/campfollower,
+/obj/effect/landmark/start/campfollowerlate,
 /turf/open/floor/carpet/purple,
 /area/rogue/indoors/risvonbase)
 "qCn" = (
@@ -14915,6 +14943,7 @@
 "qJO" = (
 /obj/structure/bed/rogue,
 /obj/effect/landmark/start/voltigeur,
+/obj/effect/landmark/start/voltigeurlate,
 /turf/open/floor/rogue/tile,
 /area/rogue/outdoors/perserdun)
 "qKk" = (
@@ -15594,6 +15623,7 @@
 	pixel_x = -4
 	},
 /obj/effect/landmark/start/campfollower,
+/obj/effect/landmark/start/campfollowerlate,
 /turf/open/floor/carpet/purple,
 /area/rogue/indoors/risvonbase)
 "rEc" = (
@@ -15942,6 +15972,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start/knightcommander,
+/obj/effect/landmark/start/knightcommanderlate,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/perserdunbase)
 "rYt" = (
@@ -16119,6 +16150,7 @@
 	},
 /obj/effect/landmark/start/chirurgeon,
 /obj/machinery/light/rogue/wallfire/candle/blue/l,
+/obj/effect/landmark/start/chirurgeonlate,
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
 "sjp" = (
@@ -16998,6 +17030,7 @@
 "tnM" = (
 /obj/structure/chair/stool/rogue,
 /obj/effect/landmark/start/mulo,
+/obj/effect/landmark/start/mulolate,
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
 "tnO" = (
@@ -17039,6 +17072,7 @@
 	dir = 2
 	},
 /obj/effect/landmark/start/rook,
+/obj/effect/landmark/start/rooklate,
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
 "tsb" = (
@@ -17430,6 +17464,7 @@
 	pixel_y = 13
 	},
 /obj/effect/landmark/start/armsman,
+/obj/effect/landmark/start/armsmanlate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/perserdunbase)
 "tMA" = (
@@ -17455,6 +17490,7 @@
 "tNI" = (
 /obj/structure/chair/stool/rogue,
 /obj/effect/landmark/start/pafanto,
+/obj/effect/landmark/start/pafantolate,
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
 "tNZ" = (
@@ -17854,6 +17890,7 @@
 	pixel_x = -32
 	},
 /obj/effect/landmark/start/consulo,
+/obj/effect/landmark/start/consulolate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/risvonbase)
 "uiD" = (
@@ -17913,6 +17950,7 @@
 	density = 0
 	},
 /obj/effect/landmark/start/soldato,
+/obj/effect/landmark/start/soldatolate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/risvonbase)
 "umM" = (
@@ -18325,19 +18363,6 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/under/cave/warmachine)
 "uMm" = (
-/obj/effect/landmark/start/armsmanlate,
-/obj/effect/landmark/start/knightcommanderlate,
-/obj/effect/landmark/start/voltigeurlate,
-/obj/effect/landmark/start/grandknightlate,
-/obj/effect/landmark/start/grandmasterlate,
-/obj/effect/landmark/start/envoylate,
-/obj/effect/landmark/start/partisanlate,
-/obj/effect/landmark/start/chirurgeonlate,
-/obj/effect/landmark/start/auxiliaristlate,
-/obj/effect/landmark/start/warpriestlate,
-/obj/effect/landmark/start/ammosquirelate,
-/obj/effect/landmark/start/rooklate,
-/obj/effect/landmark/start/jaegerlate,
 /obj/effect/landmark/start/radiotrooper,
 /obj/effect/landmark/start/radiotrooperlate,
 /turf/open/floor/rogue/warmetal,
@@ -18749,6 +18774,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start/chirurgeon,
+/obj/effect/landmark/start/chirurgeonlate,
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
 "viN" = (
@@ -18811,6 +18837,8 @@
 /obj/effect/landmark/start/jaeger,
 /obj/effect/decal/cleanable/dirt/grime/grime4,
 /obj/effect/landmark/start/armsmanlate,
+/obj/effect/landmark/start/armsmanlate,
+/obj/effect/landmark/start/jaegerlate,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/perserdunbase)
 "vni" = (
@@ -19170,6 +19198,7 @@
 	},
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/landmark/start/kaspafisto,
+/obj/effect/landmark/start/kaspafistolate,
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
 "vMo" = (
@@ -19797,6 +19826,7 @@
 /obj/machinery/light/rogue/wallfire/candle/blue{
 	light_color = "#505f7a"
 	},
+/obj/effect/landmark/start/grandmasterlate,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/perserdunbase)
 "wwV" = (
@@ -315071,7 +315101,7 @@ paE
 oAG
 oAG
 mNJ
-iun
+pWc
 rHD
 tPP
 hTv
