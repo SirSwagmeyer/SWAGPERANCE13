@@ -24,7 +24,6 @@
 	experimental_onback = FALSE
 	possible_item_intents = list(
 		/datum/intent/shoot/rifle,
-		/datum/intent/arc/rifle,
 		INTENT_GENERIC,
 		)
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/
@@ -230,7 +229,6 @@
 	recoil = 2
 	possible_item_intents = list(
 		/datum/intent/shoot/rifle,
-		/datum/intent/arc/rifle,
 		/datum/intent/stab/militia,
 		INTENT_GENERIC,
 		)
@@ -328,7 +326,6 @@
 	max_integrity = 150
 	possible_item_intents = list(
 		/datum/intent/shoot/rifle,
-		/datum/intent/arc/rifle,
 		/datum/intent/shield/smash,
 		INTENT_GENERIC,
 		)
