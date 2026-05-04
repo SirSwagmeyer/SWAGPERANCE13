@@ -630,12 +630,14 @@
 	created_item = /obj/item/clothing/suit/roguetown/armor/plate/half/fluted
 	craftdiff = 3
 
+/*
 /datum/anvil_recipe/armor/steel/cuirass/fluted/ornate
 	name = "Psydonian Cuirass (+1 Blessed Silver)"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/silverblessed)
 	created_item = /obj/item/clothing/suit/roguetown/armor/plate/half/fluted/ornate
 	craftdiff = 3
+*/
 
 /datum/anvil_recipe/armor/steel/scalemail
 	name = "Scalemail (+1 Steel)"
