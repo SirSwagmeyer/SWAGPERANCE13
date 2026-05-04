@@ -104,6 +104,8 @@
 	H.adjust_skillrank(/datum/skill/combat/rifles, 4, TRUE)
 	H.change_stat("perception", 2)
 
+
+/*
 /datum/advclass/bulwark/gunner
 	name = "Gunner"
 	tutorial = "You've selected one of the ONLY machineguns in Kingsrow possession. Armed with a KR 'Leonard,' your territory is all in support. The gun's been modified to take smaller rounds, conserve your ammo, if you can."
@@ -124,3 +126,4 @@
 	)
 	H.adjust_skillrank(/datum/skill/combat/rifles, 4, TRUE)
 	H.change_stat("speed", -4)
+*/
