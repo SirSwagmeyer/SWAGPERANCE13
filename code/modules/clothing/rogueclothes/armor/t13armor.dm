@@ -91,7 +91,7 @@
 
 //light armor
 
-/obj/item/clothing/suit/roguetown/armor/leather/grandmaster
+/obj/item/clothing/suit/roguetown/armor/leather/heavy/grandmaster
 	name = "master's cloak"
 	desc = "A full-body suit, stolen from a WAR MACHINE. Rather expensive. Comes with a decorative tin shoulder."
 	icon_state = "grandmaster"
@@ -169,10 +169,11 @@
 	armor = list("blunt" = 100, "slash" = 70, "stab" = 50, "piercing" = 50, "fire" = 100, "acid" = 0)
 
 /obj/item/clothing/suit/roguetown/armor/plate/hauberk
-	name = "plated hauberk"
+	name = "mailled hauberk"
 	icon_state = "cuirasshauberk"
-	desc = "A thick iron breastplate over a sturdy hauberk. Difficult to take off."
-	smeltresult = /obj/item/ingot/iron
+	desc = "A maille-aketon of steel, comfortably fitted beneath a matching cuirass. Best paired with an arming jacket and a stiff drink with your fellow soldiers."
+	smeltresult = /obj/item/ingot/steel
+	slot_flags = ITEM_SLOT_ARMOR
 	armor = ARMOR_CUIRASS
 	allowed_race = ALL_RACES_TYPES
 	prevent_crits = list(BCLASS_TWIST)
@@ -181,5 +182,46 @@
 	equip_delay_other = 0.5 SECONDS
 	strip_delay = 1 SECONDS
 	smelt_bar_num = 2
-	max_integrity = ARMOR_INT_CHEST_PLATE_IRON
+	max_integrity = ARMOR_INT_CHEST_PLATE_IRON + 100
 	body_parts_covered = CHEST | GROIN | VITALS | LEGS | ARMS | NECK
+
+/obj/item/clothing/suit/roguetown/armor/plate/hauberk/iron
+	name = "iron mailled hauberk"
+	desc = "A maille-aketon of iron, snuggly fitted beneath a matching cuirass."
+	slot_flags = ITEM_SLOT_ARMOR
+	icon_state = "icuirasshauberk"
+	item_state = "icuirasshauberk"
+	armor_class = ARMOR_CLASS_HEAVY
+	max_integrity = ARMOR_INT_CHEST_PLATE_IRON + 50
+
+///////// CRAFTING DATUMS FOR MAILLED HAUBERK /////////
+
+/datum/crafting_recipe/roguetown/survival/mailledhauberk
+	name = "layer a steel cuirass atop hauberk"
+	result = list(/obj/item/clothing/suit/roguetown/armor/plate/hauberk)
+	reqs = list(/obj/item/clothing/suit/roguetown/armor/plate/half = 1,
+	            /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk = 1)
+	craftdiff = 0 //Straight-forward. Note that this is a copy of Draganfruit's helmet-and-hat combination system, which also has the slight caveat..
+	req_table = TRUE //..of resetting the durability of both items, when crafted and uncrafted. This check helps to reduce a lot of potential cheese, but should be tweaked later.
+
+/datum/crafting_recipe/roguetown/survival/mailledhauberk/off
+	name = "take steel cuirass off the hauberk"
+	result = list(/obj/item/clothing/suit/roguetown/armor/plate/half = 1, /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk = 1)
+	reqs = list(/obj/item/clothing/suit/roguetown/armor/plate/hauberk = 1)
+	craftdiff = 0
+	req_table = TRUE
+
+/datum/crafting_recipe/roguetown/survival/ironmailledhauberk
+	name = "layer a iron cuirass atop hauberk"
+	result = list(/obj/item/clothing/suit/roguetown/armor/plate/hauberk/iron)
+	reqs = list(/obj/item/clothing/suit/roguetown/armor/plate/half/iron = 1,
+	            /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/iron = 1)
+	craftdiff = 0
+	req_table = TRUE
+
+/datum/crafting_recipe/roguetown/survival/ironmailledhauberk/off
+	name = "take iron cuirass off the hauberk"
+	result = list(/obj/item/clothing/suit/roguetown/armor/plate/half/iron = 1, /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/iron = 1)
+	reqs = list(/obj/item/clothing/suit/roguetown/armor/plate/hauberk/iron = 1)
+	craftdiff = 0
+	req_table = TRUE

@@ -79,7 +79,7 @@
 	item_state = "studleather"
 	blocksound = SOFTHIT
 	armor = ARMOR_LEATHER_STUDDED
-	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_BLUNT, BCLASS_CHOP, BCLASS_SMASH)
+	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_BLUNT, BCLASS_CHOP, BCLASS_SMASH, BCLASS_PIERCE)
 	nodismemsleeves = TRUE
 	body_parts_covered = COVERAGE_TORSO
 	max_integrity = ARMOR_INT_CHEST_LIGHT_MASTER
@@ -117,7 +117,7 @@
 
 /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat/steppe
 	name = "fur-woven hatanga coat"
-	desc = "A finely woven hatagna coat, replacing much of its scaled armor with fine furs and reinforced padding for lighter rides."
+	desc = "A finely woven coat, opting for padded comfort over the stiff and unwieldy MACHINE plate. The reinforced padding provides excellent protection while maintaining mobility."
 	icon_state = "hatangafur"
 	item_state = "hatangafur"
 
