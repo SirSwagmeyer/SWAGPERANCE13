@@ -234,12 +234,10 @@
 /obj/effect/decal/cleanable/dirt/grime/dust,
 /turf/open/floor/rogue/warmetal,
 /area/rogue/under/cave/warmachine)
-<<<<<<< HEAD
 "ajL" = (
 /obj/item/clothing/cloak/perserduntrenchcoat,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/exposed/risvonbase)
-=======
 "ajE" = (
 /obj/effect/decal/cleanable/blood/gibs/old,
 /turf/open/floor/rogue/dirt/road,
@@ -255,12 +253,10 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/perserdun)
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "aka" = (
 /obj/structure/toilet,
 /turf/open/floor/rogue/carpet,
 /area/rogue/indoors/perserdunbase)
-<<<<<<< HEAD
 "ako" = (
 /obj/effect/decal/cleanable/blood{
 	icon_state = "floor6-old"
@@ -278,7 +274,6 @@
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/exposed/risvonbase)
-=======
 "akb" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/saiga/saigabuck,
 /turf/open/floor/rogue/snowpatchy,
@@ -287,7 +282,6 @@
 /obj/structure/table/wood/long_table/mid/alt,
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "akJ" = (
 /obj/structure/table/wood/long_table,
 /obj/item/reagent_containers/glass/cup/golden/poison{
@@ -677,7 +671,6 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town)
-<<<<<<< HEAD
 "azI" = (
 /obj/structure/flora/roguegrass/herb/symphitum,
 /turf/open/floor/rogue/dirt,
@@ -686,7 +679,6 @@
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/exposed/risvonbase)
-=======
 "azr" = (
 /obj/structure/fluff/railing/sandbag,
 /obj/structure/fluff/railing/sandbag{
@@ -706,7 +698,6 @@
 /obj/effect/decal/remains/corpse/oldbody,
 /turf/closed/wall/mineral/rogue/stone/blue_moss,
 /area/rogue/indoors/cave)
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "aAg" = (
 /obj/structure/bed/rogue/inn/double,
 /obj/item/bedsheet/rogue/fabric_double,
@@ -894,7 +885,6 @@
 	},
 /turf/open/floor/rogue/warmetal,
 /area/rogue/under/cave/warmachine)
-<<<<<<< HEAD
 "aNi" = (
 /obj/structure/mineral_door/wood{
 	name = "CADRE B";
@@ -908,8 +898,6 @@
 	},
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors/exposed/risvonbase)
-=======
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "aNY" = (
 /obj/structure/closet/crate/chest/neu_iron,
 /turf/open/floor/rogue/brown,
@@ -2927,7 +2915,6 @@
 	},
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
-<<<<<<< HEAD
 "czQ" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 6
@@ -2979,8 +2966,6 @@
 	},
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
-=======
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "cBE" = (
 /turf/closed/wall/mineral/rogue/risvon/outercorner/dir1{
 	dir = 8
@@ -3013,7 +2998,6 @@
 	dir = 8
 	},
 /area/rogue/indoors/risvonbase)
-<<<<<<< HEAD
 "cDa" = (
 /obj/structure/chair/bench/comfychair{
 	dir = 4
@@ -3021,12 +3005,10 @@
 /obj/structure/fluff/walldeco/chains,
 /turf/open/floor/carpet/red,
 /area/rogue/outdoors/exposed/risvonbase)
-=======
 "cCW" = (
 /obj/structure/table/wood/long_table/right,
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "cDf" = (
 /obj/effect/decal/remains/wolf{
 	pixel_x = -9;
@@ -4860,14 +4842,12 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town)
-<<<<<<< HEAD
 "emR" = (
 /obj/effect/decal/mossy{
 	dir = 1
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/exposed/risvonbase)
-=======
 "emj" = (
 /obj/structure/fluff/railing/sandbag{
 	dir = 8
@@ -4877,7 +4857,6 @@
 	},
 /turf/open/floor/rogue/dirt/ambush,
 /area/rogue/outdoors/beach/forest/south)
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "emW" = (
 /obj/effect/decal/carpet/kover_darkred{
 	pixel_y = 21;
@@ -4965,13 +4944,11 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/dirt,
-<<<<<<< HEAD
 /area/rogue/indoors/shelter/town/sargoth)
 "eqI" = (
 /obj/structure/fluff/walldeco/rush,
 /turf/closed/wall/mineral/rogue/risvon/outercorner/dir1,
 /area/rogue/outdoors/exposed/risvonbase)
-=======
 /area/rogue/outdoors/perserdun)
 "eqN" = (
 /obj/structure/closet/crate/roguecloset/metal,
@@ -5013,7 +4990,6 @@
 /obj/effect/spawner/lootdrop/roguetown/dungeon/weapons,
 /turf/open/floor/rogue/twig,
 /area/rogue/outdoors/beach/forest/south)
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "erc" = (
 /obj/machinery/light/rogue/oven/south,
 /turf/open/floor/rogue/blocks,
@@ -5547,7 +5523,6 @@
 	},
 /turf/open/floor/rogue/brown,
 /area/rogue/indoors/shelter/town)
-<<<<<<< HEAD
 "eLz" = (
 /turf/closed/wall/mineral/rogue/risvon/outercorner/dir1{
 	dir = 4
@@ -5566,8 +5541,6 @@
 /obj/effect/decal/cleanable/debris/woody,
 /turf/open/floor/rogue/perdun,
 /area/rogue/outdoors/beach/forest/south)
-=======
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "eMw" = (
 /obj/effect/spawner/lootdrop/medium_armor_spawner,
 /turf/open/floor/rogue/dirt,
@@ -6039,7 +6012,6 @@
 	},
 /turf/closed/wall/mineral/rogue/wooddark,
 /area/rogue/outdoors/beach/forest/south)
-<<<<<<< HEAD
 "fgf" = (
 /obj/structure/spike_pit,
 /turf/open/floor/rogue/dirt/road,
@@ -6063,8 +6035,6 @@
 "fhq" = (
 /turf/open/water/river/flow/west,
 /area/rogue/indoors/cave)
-=======
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "fhs" = (
 /obj/structure/fluff/railing/sandbag{
 	dir = 4
@@ -6103,7 +6073,6 @@
 "fjq" = (
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/caves)
-<<<<<<< HEAD
 "fjs" = (
 /obj/structure/glowshroom,
 /turf/open/floor/rogue/dirt/road,
@@ -6114,13 +6083,11 @@
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/exposed/risvonbase)
-=======
 "fjw" = (
 /obj/structure/barbedwire,
 /obj/effect/decal/mossy,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/perserdun)
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "fjF" = (
 /obj/structure/stairs/stone{
 	dir = 8
@@ -6916,7 +6883,6 @@
 /obj/item/roguebin/water,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town)
-<<<<<<< HEAD
 "fSQ" = (
 /turf/closed/wall/mineral/rogue/risvon/outercorner/dir1{
 	dir = 8
@@ -6926,8 +6892,6 @@
 /obj/structure/stairs,
 /turf/open/floor/rogue/woodturned,
 /area/rogue/outdoors/risvon)
-=======
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "fTX" = (
 /mob/living/carbon/human/species/skeleton/npc/no_equipment,
 /turf/open/floor/carpet/royalblack,
@@ -9283,7 +9247,6 @@
 /obj/item/roguecoin/silver/pile,
 /turf/open/floor/rogue/blocks/platform,
 /area/rogue/outdoors)
-<<<<<<< HEAD
 "iap" = (
 /obj/item/chair/rogue/fancy,
 /turf/open/floor/rogue/wood,
@@ -9321,14 +9284,12 @@
 "ibq" = (
 /mob/living/carbon/human/species/human/northern/deserters/better_gear,
 /turf/open/floor/rogue/brown,
-=======
 "iay" = (
 /turf/closed/wall/mineral/rogue/scary/vertical,
 /area/rogue/under/cave/umamusume)
 "ibG" = (
 /obj/item/chair/stool/bar/rogue,
 /turf/open/floor/rogue/twig,
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 /area/rogue/outdoors)
 "icM" = (
 /turf/closed/wall/mineral/rogue/kingsrow,
@@ -9340,7 +9301,6 @@
 /obj/structure/table/wood/large_table/north_east,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
-<<<<<<< HEAD
 "idD" = (
 /obj/structure/noose{
 	name = "ESCAPE"
@@ -9355,12 +9315,10 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/rogue/twig,
 /area/rogue/outdoors/beach/forest/south)
-=======
 "iei" = (
 /obj/structure/hotspring/border/eight,
 /turf/open/floor/rogue/grasscold,
 /area/rogue/outdoors/rtfield/eora)
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "iep" = (
 /obj/structure/chair/bench/church/smallbench,
 /obj/effect/decal/cleanable/dirt/grime/grime2,
@@ -11471,7 +11429,6 @@
 /obj/machinery/light/rogue/wallfire/candle/blue/l,
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
-<<<<<<< HEAD
 "jXp" = (
 /obj/effect/decal/cleanable/debris/glassy,
 /turf/open/floor/rogue/grassyel,
@@ -11482,7 +11439,6 @@
 	},
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/exposed/risvonbase)
-=======
 "jXM" = (
 /obj/effect/decal/cleanable/blood/drip{
 	icon_state = "floor5-old"
@@ -11497,7 +11453,6 @@
 /obj/item/flowercrown/rosa,
 /turf/open/floor/rogue/blocks/platform,
 /area/rogue/outdoors)
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "jYB" = (
 /obj/machinery/light/rogue/firebowl,
 /turf/open/floor/rogue/risvon,
@@ -11599,12 +11554,10 @@
 /obj/machinery/light/rogue/wallfire/candle/blue/r,
 /turf/open/floor/rogue/warmetal,
 /area/rogue/indoors/perserdunbase)
-<<<<<<< HEAD
 "kdO" = (
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/exposed/risvonbase)
-=======
 "kcV" = (
 /obj/machinery/light/rogue/torchholder,
 /turf/closed/wall/mineral/rogue/wooddark/vertical,
@@ -11627,7 +11580,6 @@
 /obj/item/reagent_containers/powder/ozium,
 /turf/open/floor/rogue/warmetal,
 /area/rogue/under/cave/warmachine)
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "kdW" = (
 /obj/structure/fluff/railing/border/north,
 /obj/structure/flora/roguegrass,
@@ -11824,7 +11776,6 @@
 /mob/living/carbon/human/species/skeleton/npc/hard,
 /turf/open/floor/rogue/tile/harem,
 /area/rogue/outdoors/beach/forest/south)
-<<<<<<< HEAD
 "kle" = (
 /obj/structure/flora/roguegrass,
 /obj/effect/decal/mossy{
@@ -11841,13 +11792,11 @@
 /obj/item/ammo_box/handfuls/rifle,
 /obj/item/ammo_box/handfuls/rifle,
 /obj/item/ammo_box/handfuls/rifle,
-=======
 "knb" = (
 /turf/closed/wall/mineral/rogue/kingsrow/light,
 /area/rogue/outdoors)
 "kno" = (
 /obj/structure/fluff/railing/fence,
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 /turf/open/floor/rogue/warmetal,
 /area/rogue/outdoors/perserdun)
 "knL" = (
@@ -13179,7 +13128,6 @@
 /obj/effect/decal/cleanable/dirt/grime/grime2,
 /turf/closed/wall/mineral/rogue/scary/horizontal,
 /area/rogue/under/cave/warmachine)
-<<<<<<< HEAD
 "lyn" = (
 /obj/structure/fluff/statue/knight/interior/r,
 /mob/living/carbon/human/species/skeleton/npc/hard,
@@ -13201,7 +13149,6 @@
 /obj/effect/decal/remains/corpse/body/body3,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/exposed/risvonbase)
-=======
 "lyq" = (
 /obj/structure/fluff/railing/corner/south_west,
 /turf/open/floor/rogue/dirt/road,
@@ -13211,7 +13158,6 @@
 /obj/structure/fluff/railing/wood/east,
 /turf/open/floor/rogue/twig/platform,
 /area/rogue/outdoors/perserdun)
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "lzd" = (
 /obj/structure/table/wood/long_table/mid/alt,
 /obj/effect/decal/carpet/kover_black{
@@ -13223,7 +13169,6 @@
 /obj/structure/rack/rogue,
 /obj/effect/spawner/lootdrop/hightierguns,
 /turf/open/floor/rogue/dirt,
-<<<<<<< HEAD
 /area/rogue/outdoors/risvon)
 "lAm" = (
 /obj/effect/decal/mossy{
@@ -13237,9 +13182,7 @@
 	},
 /turf/closed/wall/mineral/rogue/wooddark,
 /area/rogue/outdoors/caves)
-=======
 /area/rogue/outdoors)
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "lAw" = (
 /obj/machinery/light/rogue/wallfire/candle/l,
 /turf/open/floor/rogue/blocks{
@@ -14414,7 +14357,6 @@
 	},
 /turf/open/water/swamp/deep,
 /area/rogue/under/cave)
-<<<<<<< HEAD
 "mIP" = (
 /obj/structure/bed/rogue/inn,
 /obj/item/bedsheet/rogue/wool,
@@ -14425,11 +14367,9 @@
 /obj/effect/spawner/lootdrop/hightierammooutlet,
 /obj/structure/closet/crate/roguecloset/metal/metal2{
 	plane = -5
-=======
 "mIV" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/trufflepig{
 	name = "Buck"
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 	},
 /obj/effect/decal/cleanable/blood/gibs/down,
 /turf/open/floor/rogue/dirt,
@@ -15481,7 +15421,6 @@
 /obj/structure/table/wood/perserdunsmall,
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
-<<<<<<< HEAD
 "nBH" = (
 /obj/effect/decal/mossy,
 /turf/open/floor/rogue/grassred,
@@ -15490,8 +15429,6 @@
 /mob/living/carbon/human/species/human/northern/deserters,
 /turf/open/floor/rogue/twig/platform,
 /area/rogue/outdoors)
-=======
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "nBT" = (
 /obj/structure/fluff/railing/border{
 	dir = 8;
@@ -15647,7 +15584,6 @@
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/open/floor/rogue/grass,
 /area/rogue/indoors/shelter/town)
-<<<<<<< HEAD
 "nHY" = (
 /mob/living/carbon/human/species/human/northern/deserters,
 /obj/effect/spawner/lootdrop/normalguns,
@@ -15664,8 +15600,6 @@
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/risvon)
-=======
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "nIn" = (
 /obj/structure/table/wood/large_table/north_west,
 /obj/effect/spawner/lootdrop/cheap_tableware_spawner,
@@ -16349,7 +16283,6 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town)
-<<<<<<< HEAD
 "oqd" = (
 /obj/structure/fluff/walldeco/sad,
 /turf/closed/wall/mineral/rogue/risvon/outercorner/dir1{
@@ -16358,7 +16291,6 @@
 /area/rogue/outdoors/exposed/risvonbase)
 "oqh" = (
 /obj/structure/fluff/railing/border/west,
-=======
 "opE" = (
 /obj/structure/table/wood/longreif{
 	dir = 4
@@ -16374,7 +16306,6 @@
 "oqe" = (
 /obj/structure/fluff/railing/border/north,
 /obj/structure/fluff/railing/wood/west,
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 /turf/open/floor/rogue/twig/platform,
 /area/rogue/outdoors/perserdun)
 "oqC" = (
@@ -16631,20 +16562,17 @@
 /obj/structure/rack/rogue/shelf,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
-<<<<<<< HEAD
 "oyN" = (
 /obj/effect/decal/cleanable/blood{
 	icon_state = "floor6-old"
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/exposed/risvonbase)
-=======
 "oyK" = (
 /obj/structure/rack/rogue,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/weapons,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "ozp" = (
 /obj/effect/decal/mailbox,
 /obj/effect/decal/ob,
@@ -16869,7 +16797,6 @@
 /obj/structure/fluff/railing/border/east,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town)
-<<<<<<< HEAD
 "oEC" = (
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors/exposed/risvonbase)
@@ -16879,7 +16806,6 @@
 /obj/effect/spawner/lootdrop/general_loot_low/x3,
 /turf/open/floor/rogue/warmetal,
 /area/rogue/under/cave/warmachine)
-=======
 "oDS" = (
 /obj/structure/closet/crate/chest/wicker,
 /obj/item/flashlight/flare/torch/lantern,
@@ -16905,7 +16831,6 @@
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors/shelter/town/sargoth)
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "oFh" = (
 /obj/effect/decal/cobbleedge{
 	pixel_y = -25
@@ -18239,7 +18164,6 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town)
-<<<<<<< HEAD
 "pOa" = (
 /obj/structure/fluff/railing/wood,
 /obj/effect/decal/cleanable/blood,
@@ -18249,14 +18173,12 @@
 /obj/structure/flora/roguegrass/herb/urtica,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/exposed/risvonbase)
-=======
 "pNd" = (
 /obj/machinery/light/rogue/torchholder{
 	dir = 8
 	},
 /turf/open/floor/rogue/brown,
 /area/rogue/outdoors)
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "pOm" = (
 /obj/effect/decal/cobbleedge{
 	pixel_y = -25;
@@ -18307,7 +18229,6 @@
 	},
 /turf/open/floor/rogue/metal/barograte,
 /area/rogue/indoors/risvonbase)
-<<<<<<< HEAD
 "pRQ" = (
 /obj/structure/table/wood,
 /turf/open/floor/rogue/dirt,
@@ -18322,12 +18243,10 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/exposed/risvonbase)
-=======
 "pQP" = (
 /obj/structure/flora/roguetree/stump/log,
 /turf/open/floor/rogue/grassyel,
 /area/rogue/outdoors/beach/forest/south)
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "pSQ" = (
 /obj/effect/decal/bodies{
 	dir = 4
@@ -18974,7 +18893,6 @@
 /obj/structure/flora/roguegrass/bush,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/risvon)
-<<<<<<< HEAD
 "qrx" = (
 /obj/effect/decal/cleanable/dirt/grime/grime4,
 /turf/open/floor/rogue/warmetal,
@@ -18984,8 +18902,6 @@
 	dir = 4
 	},
 /area/rogue/outdoors/exposed/risvonbase)
-=======
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "qrP" = (
 /mob/living/carbon/human/species/skeleton/npc/hard,
 /obj/effect/decal/cleanable/dirt/grime/dust,
@@ -19826,7 +19742,6 @@
 /obj/structure/spider/stickyweb/mirespider,
 /turf/open/floor/rogue/warmetal,
 /area/rogue/under/cave/warmachine)
-<<<<<<< HEAD
 "rhU" = (
 /obj/structure/closet/crate/chest/wicker,
 /obj/item/flashlight/flare/torch/lantern,
@@ -19838,8 +19753,6 @@
 /obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/exposed/risvonbase)
-=======
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "ris" = (
 /obj/effect/decal/carpet/kover_black{
 	pixel_y = 21
@@ -20256,7 +20169,6 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/town)
-<<<<<<< HEAD
 "rBo" = (
 /obj/effect/decal/cobble/mossy,
 /turf/open/floor/rogue/cobble/mossy,
@@ -20265,8 +20177,6 @@
 /obj/machinery/light/rogue/torchholder,
 /turf/closed/wall/mineral/rogue/kingsrow,
 /area/rogue/outdoors)
-=======
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "rCb" = (
 /obj/structure/mineral_door/wood/wardoor{
 	name = "MORGUE"
@@ -20536,7 +20446,6 @@
 	dir = 1
 	},
 /area/rogue/indoors/perserdunbase)
-<<<<<<< HEAD
 "rPc" = (
 /obj/effect/decal/mossy{
 	dir = 1
@@ -20549,11 +20458,9 @@
 "rPg" = (
 /turf/closed/wall/mineral/rogue/tent{
 	dir = 4
-=======
 "rQc" = (
 /obj/structure/fluff/railing/corner{
 	dir = 6
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 	},
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/beach/forest/south)
@@ -21044,11 +20951,9 @@
 	dir = 4
 	},
 /area/rogue/outdoors/town)
-<<<<<<< HEAD
 "skR" = (
 /turf/closed/wall/mineral/rogue/risvon/outercorner/dir1,
 /area/rogue/outdoors/exposed/risvonbase)
-=======
 "skS" = (
 /obj/effect/decal/cleanable/debris/woody,
 /turf/open/floor/rogue/cobble/mossy,
@@ -21072,7 +20977,6 @@
 /obj/effect/decal/remains/human,
 /turf/open/floor/rogue/blocks/platform,
 /area/rogue/outdoors)
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "slc" = (
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/carpet/purple,
@@ -21164,7 +21068,6 @@
 "srL" = (
 /turf/closed/wall/mineral/rogue/perserdun/end,
 /area/rogue/outdoors/beach/forest/south)
-<<<<<<< HEAD
 "srK" = (
 /obj/effect/decal/mossy,
 /obj/effect/decal/mossy{
@@ -21184,8 +21087,6 @@
 	},
 /turf/open/floor/rogue/warmetal,
 /area/rogue/under/cave/warmachine)
-=======
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "ssn" = (
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/risvon,
@@ -22055,7 +21956,6 @@
 /obj/effect/decal/cleanable/dirt/grime/dust,
 /turf/open/floor/rogue/risvon,
 /area/rogue/indoors/risvonbase)
-<<<<<<< HEAD
 "teK" = (
 /obj/structure/flora/roguegrass/herb/calendula,
 /turf/open/floor/rogue/dirt,
@@ -22064,8 +21964,6 @@
 /obj/structure/hotspring/border/eleven,
 /turf/open/floor/rogue/grasscold,
 /area/rogue/outdoors/rtfield/eora)
-=======
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "tfc" = (
 /obj/structure/bed/rogue{
 	dir = 8
@@ -22290,7 +22188,6 @@
 /obj/item/reagent_containers/food/snacks/rogue/meat/mince/beef,
 /turf/open/floor/rogue/perdun,
 /area/rogue/indoors/perserdunbase)
-<<<<<<< HEAD
 "tpv" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/trufflepig{
 	name = "Buck"
@@ -22310,8 +22207,6 @@
 	dir = 1
 	},
 /area/rogue/outdoors/exposed/risvonbase)
-=======
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "tqs" = (
 /obj/effect/decal/carpet/kover_black,
 /turf/open/floor/rogue/herringbone,
@@ -23269,7 +23164,6 @@
 	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/shelter/town)
-<<<<<<< HEAD
 "ues" = (
 /obj/structure/mineral_door/bars{
 	lockid = "risvontag";
@@ -23285,7 +23179,6 @@
 "ueI" = (
 /turf/open/floor/rogue/wardouble,
 /area/rogue/outdoors/risvon)
-=======
 "uew" = (
 /obj/structure/glowshroom,
 /turf/open/floor/rogue/blocks,
@@ -23297,7 +23190,6 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/caves)
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "ueQ" = (
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave/umamusume)
@@ -23483,7 +23375,6 @@
 "ulU" = (
 /turf/closed/wall/mineral/rogue/perserdun/outercorner,
 /area/rogue/indoors/perserdunbase)
-<<<<<<< HEAD
 "ulX" = (
 /obj/effect/decal/cobble/mossy,
 /turf/open/floor/rogue/grassred,
@@ -23493,7 +23384,6 @@
 	dir = 1
 	},
 /area/rogue/outdoors/risvon)
-=======
 "umg" = (
 /obj/structure/closet/crate/roguecloset/inn/chest,
 /obj/effect/spawner/lootdrop/medicines,
@@ -23504,7 +23394,6 @@
 "umB" = (
 /turf/closed/wall/mineral/rogue/perserdun/end/east,
 /area/rogue/outdoors/beach/forest/south)
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "umH" = (
 /obj/effect/mine/explosive,
 /turf/open/floor/rogue/cobble,
@@ -26502,17 +26391,14 @@
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/beach/forest/south)
-<<<<<<< HEAD
 "xgO" = (
 /obj/structure/soil,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/exposed/risvonbase)
-=======
 "xgm" = (
 /obj/effect/decal/cleanable/blood/gibs/body,
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/risvon)
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "xgX" = (
 /obj/structure/fluff/walldeco/bigpainting/lake,
 /turf/open/floor/rogue/ruinedwood/spiral,
@@ -26800,7 +26686,6 @@
 /obj/structure/fluff/railing/fence{
 	dir = 4
 	},
-<<<<<<< HEAD
 /obj/effect/spawner/lootdrop/normalgunsoutlet,
 /obj/item/roguecoin/silver/pile,
 /turf/open/floor/rogue/redlight,
@@ -26809,12 +26694,10 @@
 /obj/structure/flora/roguegrass/bush/wall/tall,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/exposed/risvonbase)
-=======
 /obj/effect/decal/cleanable/dirt/grime/grime2,
 /obj/item/cigbutt/roach,
 /turf/open/floor/rogue/warmetal,
 /area/rogue/outdoors/perserdun)
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 "xuu" = (
 /obj/effect/decal/carpet/kover_black{
 	dir = 4;
@@ -191781,19 +191664,16 @@ nBm
 uLE
 uLE
 iGz
-<<<<<<< HEAD
 uLE
 uLE
 uLE
 hyS
 hyS
-=======
 oim
 oim
 oim
 ihx
 ihx
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 ahZ
 kOo
 ihx
@@ -192389,21 +192269,18 @@ vbM
 vbM
 vbM
 vbM
-<<<<<<< HEAD
 fUV
 srK
 rBo
 sXL
 lpu
 hyS
-=======
 qSc
 qSc
 qSc
 sUh
 uQp
 ihx
->>>>>>> daf0cf905aa25e249e99f528e2716ea827f69d8f
 oim
 ihx
 ihx
