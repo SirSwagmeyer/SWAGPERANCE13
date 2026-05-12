@@ -27,6 +27,13 @@
 	body_parts_covered = COVERAGE_ALL_BUT_LEGS
 	allowed_sex = list(MALE, FEMALE)
 
+/obj/item/clothing/suit/roguetown/armor/gambeson/lord/leech
+	name = "collared gambeson"
+	desc = "A gambeson with a collar, typically reserved for Leeches of the Perserdunian force."
+	icon_state = "collargamb"
+	body_parts_covered = COVERAGE_ALL_BUT_LEGS
+	allowed_sex = list(MALE, FEMALE)
+
 /obj/item/clothing/suit/roguetown/armor/gambeson/shadowrobe
 	name = "stalker robe"
 	desc = "A thick robe in royal purple, befitting the hand, while remaining easy for them to slip about in.."

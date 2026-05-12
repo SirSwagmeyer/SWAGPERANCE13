@@ -36,14 +36,14 @@
 			S.name = " [index]'s dogtag"
 
 /datum/outfit/job/roguetown/auxiliarist/pre_equip(mob/living/carbon/human/H)
-	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/lord
+	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/lord/leech
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	beltl = /obj/item/flashlight/flare/torch/lantern
 	id = /obj/item/roguekey/perserdun
 	armor = /obj/item/clothing/suit/roguetown/armor/brigandine/light
-	cloak = /obj/item/clothing/cloak/perserduntrenchcoat
+	cloak = /obj/item/clothing/cloak/leech
 	pants = /obj/item/clothing/under/roguetown/trou/artipants
-	mask = /obj/item/clothing/mask/rogue/gasmask/perserdunmask
+	mask = /obj/item/clothing/mask/rogue/gasmask/perserdunmask/strap
 	wrists = /obj/item/scomstone/garrison
 	belt = /obj/item/storage/belt/rogue/leather/black/soldier
 	beltr = /obj/item/storage/belt/rogue/pouch/stim
@@ -59,6 +59,7 @@
 		/obj/item/natural/cloth,
 		/obj/item/rogueweapon/sword/iron/short,
 		/obj/item/rope,
+		/obj/item/clothing/head/roguetown/helmet/leather/leech,
 	)
 	H.adjust_skillrank(/datum/skill/misc/medicine, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)

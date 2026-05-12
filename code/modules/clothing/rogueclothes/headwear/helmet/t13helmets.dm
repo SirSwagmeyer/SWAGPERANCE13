@@ -90,10 +90,6 @@
 	desc = "A handcrafted cap, following the fashion style produced by the LOVE MACHINE. Has a metal plate on the front."
 	icon_state = "grandhat"
 	item_state = "grandhat"
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/32x48/greatcap.dmi'
-	bloody_icon = 'icons/effects/blood64.dmi'
-	worn_x_dimension = 32
-	worn_y_dimension = 44
 	experimental_inhand = FALSE
 	experimental_onhip = FALSE
 	flags_inv = HIDE_HEADTOP
@@ -106,6 +102,15 @@
 	experimental_inhand = FALSE
 	experimental_onhip = FALSE
 	sellprice = 200
+	flags_inv = HIDE_HEADTOP
+
+/obj/item/clothing/head/roguetown/helmet/leather/leech
+	name = "leech's softcap"
+	desc = "A softcap with a badge denoting the wearer as a leech of the Perserdunian forces, it slightly droops on the head."
+	icon_state = "leechcap"
+	item_state = "leechcap"
+	experimental_inhand = FALSE
+	experimental_onhip = FALSE
 	flags_inv = HIDE_HEADTOP
 
 /obj/item/clothing/head/roguetown/veil

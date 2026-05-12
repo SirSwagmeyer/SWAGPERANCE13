@@ -1910,3 +1910,49 @@
 	else
 		alternate_worn_layer = UNDER_ARMOR_LAYER
 	user.update_inv_cloak()
+
+/obj/item/clothing/cloak/perserduntrenchcoat/voltigeur
+	name = "voltigeur trenchcoat"
+	desc = "A shorter variant of the standard Perserdunian trenchcoat for the illustrious Voltigeurs of their ranks. Adorned with golden buttons."
+	color = null
+	icon_state = "voltigeur"
+	item_state = "voltigeur"
+	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_armor.dmi'
+	sleevetype = "voltigeur"
+
+/obj/item/clothing/cloak/leech
+	name = "leech's apron"
+	desc = "A sterile apron made of latex to keep the blood away from your clothes, dyed in a deep Perserdunian blue."
+	color = null
+	icon_state = "leech"
+	item_state = "leech"
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
+	alternate_worn_layer = TABARD_LAYER
+	body_parts_covered = CHEST|GROIN
+	boobed = TRUE
+	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
+	flags_inv = HIDECROTCH|HIDEBOOB
+	var/open_wear = FALSE
+	var/overarmor = TRUE
+
+/obj/item/clothing/cloak/leech/ComponentInitialize()
+	. = ..()
+	AddComponent(/datum/component/storage/concrete/roguetown/cloak)
+
+/obj/item/clothing/cloak/leech/dropped(mob/living/carbon/human/user)
+	..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	if(STR)
+		var/list/things = STR.contents()
+		for(var/obj/item/I in things)
+			STR.remove_from_storage(I, get_turf(src))
+
+/obj/item/clothing/cloak/leech/MiddleClick(mob/user)
+	overarmor = !overarmor
+	to_chat(user, span_info("I [overarmor ? "wear the apron over my armor" : "wear the apron under my armor"]."))
+	if(overarmor)
+		alternate_worn_layer = TABARD_LAYER
+	else
+		alternate_worn_layer = UNDER_ARMOR_LAYER
+	user.update_inv_cloak()
+	user.update_inv_armor()
