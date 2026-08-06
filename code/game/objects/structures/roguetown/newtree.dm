@@ -214,6 +214,8 @@
 	static_debris = list(/obj/item/grown/log/tree/stick = 1)
 	density = FALSE
 	max_integrity = 30
+	plane = FLOOR_PLANE
+
 
 /obj/structure/flora/newbranch/update_icon()
 	icon_state = ""

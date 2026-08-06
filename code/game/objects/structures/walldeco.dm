@@ -567,3 +567,53 @@
 	name = "hunger"
 	desc = "Of his own son."
 	icon_state = "saturn"
+
+/obj/structure/fluff/walldeco/hardblood
+	name = "crystaline blood"
+	desc = "Encased, yet translucent."
+	icon_state = "hardblood1"
+
+/obj/structure/fluff/walldeco/hardblood/open
+	name = "crystalized blood"
+	desc = "...It shall cascade."
+	icon_state = "hardblood2"
+
+/obj/structure/fluff/walldeco/hardblood/orb
+	name = "sphere"
+	desc = "Nihil."
+	icon_state = "hardblood3"
+
+/obj/structure/fluff/walldeco/hardblood/creation
+	name = "display"
+	desc = "WHHAAAAT THE HEEEEEEEELL?!"
+	icon_state = "creation4"
+	density = TRUE
+
+/obj/structure/fluff/walldeco/statue
+	name = "statue"
+	desc = "Hello."
+	icon_state = "statue1"
+
+/obj/structure/fluff/walldeco/statue/ears
+	icon_state = "statue2"
+
+/obj/structure/fluff/walldeco/statue/bell
+	icon_state = "statue3"
+
+/obj/structure/fluff/walldeco/statue/rod1
+	icon_state = "statue4"
+
+/obj/structure/fluff/walldeco/statue/rod2
+	icon_state = "statue5"
+
+/obj/structure/fluff/walldeco/pedestal
+	name = "pedestal"
+	desc = "How quaint."
+	icon_state = "pedestal"
+	density = TRUE
+
+
+/obj/structure/fluff/walldeco/vosarderla
+	name = "Vos Arderla"
+	desc = "The flag of the Old City."
+	icon_state = "arderla"

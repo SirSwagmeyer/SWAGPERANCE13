@@ -16,3 +16,10 @@
 	contains = list(/obj/item/reagent_containers/glass/bottle/alchemical/meth,
 	/obj/item/reagent_containers/glass/bottle/alchemical/meth,
 	/obj/item/reagent_containers/glass/bottle/alchemical/meth)
+
+/datum/supply_pack/rogue/drugs/morphine
+	name = "Morphine (x3)"
+	cost = 84
+	contains = list(/obj/item/reagent_containers/pill/patch/syringe/painkiller,
+	/obj/item/reagent_containers/pill/patch/syringe/painkiller,
+	/obj/item/reagent_containers/pill/patch/syringe/painkiller)

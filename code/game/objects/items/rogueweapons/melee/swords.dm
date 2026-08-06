@@ -1372,7 +1372,7 @@
 
 /obj/item/rogueweapon/sword/rapier/grandmaster
 	name = "cane blade"
-	desc = "A steel blade with a gold handle, intended to be concealed inside of a cane, bears the visage of a vulture on its pommel."
+	desc = "A steel blade with a gold handle. Bears the visage of a vulture on its pommel."
 	icon = 'icons/roguetown/weapons/32.dmi'
 	icon_state = "caneblade"
 	sheathe_icon = "caneblade"

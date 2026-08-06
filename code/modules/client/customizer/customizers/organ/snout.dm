@@ -24,6 +24,7 @@
 		/datum/sprite_accessory/snout/front/round,
 		/datum/sprite_accessory/snout/front/sharplight,
 		/datum/sprite_accessory/snout/front/roundlight,
+		/datum/sprite_accessory/snout/shortnosed,
 		/datum/sprite_accessory/snout/stubby,
 		/datum/sprite_accessory/snout/stubbyalt,
 		)
@@ -99,6 +100,7 @@
 		/datum/sprite_accessory/snout/front/round,
 		/datum/sprite_accessory/snout/front/sharplight,
 		/datum/sprite_accessory/snout/front/roundlight,
+		/datum/sprite_accessory/snout/shortnosed,
 		/datum/sprite_accessory/snout/stubby,
 		/datum/sprite_accessory/snout/stubbyalt,
 		)
@@ -167,6 +169,7 @@
 		/datum/sprite_accessory/snout/roundlight,
 		/datum/sprite_accessory/snout/front/roundlight,
 		/datum/sprite_accessory/snout/roundlightdualcolor,
+		/datum/sprite_accessory/snout/shortnosed,
 		/datum/sprite_accessory/snout/stubby,
 		/datum/sprite_accessory/snout/stubbyalt,
 		)
@@ -188,6 +191,7 @@
 		/datum/sprite_accessory/snout/front/round,
 		/datum/sprite_accessory/snout/front/sharplight,
 		/datum/sprite_accessory/snout/front/roundlight,
+		/datum/sprite_accessory/snout/shortnosed,
 		/datum/sprite_accessory/snout/stubby,
 		/datum/sprite_accessory/snout/stubbyalt,
 		)

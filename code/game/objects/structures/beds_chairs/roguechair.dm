@@ -118,26 +118,38 @@
 /obj/structure/chair/wood/rogue/chair3
 	icon_state = "chair3"
 	icon = 'icons/roguetown/misc/structure.dmi'
-	item_chair = /obj/item/chair/rogue
+	item_chair = /obj/item/chair/rogue/chair3
 	blade_dulling = DULLING_BASHCHOP
 	destroy_sound = 'sound/combat/hits/onwood/destroyfurniture.ogg'
 	attacked_sound = "woodimpact"
+
+/obj/item/chair/rogue/chair3
+	icon_state = "chair3"
+	origin_type = /obj/structure/chair/wood/rogue/chair3
 
 /obj/structure/chair/wood/rogue/chair4
 	icon_state = "chair4"
 	icon = 'icons/roguetown/misc/structure.dmi'
-	item_chair = /obj/item/chair/rogue
+	item_chair = /obj/item/chair/rogue/chair4
 	blade_dulling = DULLING_BASHCHOP
 	destroy_sound = 'sound/combat/hits/onwood/destroyfurniture.ogg'
 	attacked_sound = "woodimpact"
 
+/obj/item/chair/rogue/chair4
+	icon_state = "chair4"
+	origin_type = /obj/structure/chair/wood/rogue/chair4
+
 /obj/structure/chair/wood/rogue/chair5
 	icon_state = "chair5"
 	icon = 'icons/roguetown/misc/structure.dmi'
-	item_chair = /obj/item/chair/rogue
+	item_chair = /obj/item/chair/rogue/chair5
 	blade_dulling = DULLING_BASHCHOP
 	destroy_sound = 'sound/combat/hits/onwood/destroyfurniture.ogg'
 	attacked_sound = "woodimpact"
+
+/obj/item/chair/rogue/chair5
+	icon_state = "chair5"
+	origin_type = /obj/structure/chair/wood/rogue/chair5
 
 /obj/structure/chair/wood/rogue/throne
 	icon_state = "thronechair"
@@ -527,5 +539,7 @@
 	item_chair = null
 
 /obj/structure/chair/bench/cavethrone
+	name = "black throne"
+	desc = "You, who could never understand our thirst..."
 	icon_state = "cave_throne"
 	item_chair = null

@@ -246,7 +246,9 @@
 					M_job = "Observer"
 				else
 					M_job = "Ghost"
-
+			var/M_vetstatus = "Unverified"
+			if(M.check_agevet())
+				M_vetstatus = "Verified"
 			var/M_name = html_encode(M.name)
 			var/M_rname = html_encode(M.real_name)
 			var/M_key = html_encode(M.key)
@@ -266,7 +268,7 @@
 						<a id='link[i]'
 						onmouseover='expand("item[i]","[M_job]","[M_name]","[M_rname]","[previous_names]","[M_key]","[M.lastKnownIP]",[is_antagonist],"[REF(M)]")'
 						>
-						<b id='search[i]'>[M_name] - [M_rname] - [M_key] ([M_job])</b>
+						<b id='search[i]'>[M_name] - [M_rname] - [M_key] ([M_job]) - [M_vetstatus]</b>
 						<span hidden class='filter_data'>[M_name] [M_rname] [M_key] [M_job] [previous_names]</span>
 						</a>
 						<br><span id='item[i]'></span>

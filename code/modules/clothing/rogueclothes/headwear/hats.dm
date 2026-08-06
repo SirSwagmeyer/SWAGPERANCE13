@@ -178,11 +178,21 @@
 	dynamic_hair_suffix = null
 
 /obj/item/clothing/head/roguetown/inqhat
-	name = "inquisitorial hat"
-	desc = "To keep ones vision away from the heavens, and focused on the sin beneath the soil."
+	name = "imperial galerum"
+	desc = "Commonly worn by Perserdunian Field Bishops. Designed to keep one's eyes away from the heavens, and focus on the blood upon the soil."
 	icon_state = "inqhat"
 	item_state = "inqhat"
 	sewrepair = TRUE
+	sleevetype = null
+	sleeved = null
+	body_parts_covered = HEAD|EARS
+	slot_flags = ITEM_SLOT_HEAD
+	armor = ARMOR_PADDED_GOOD
+	prevent_crits = list(BCLASS_CUT)
+	blocksound = SOFTHIT
+	max_integrity = ARMOR_INT_HELMET_CLOTH
+	color = null
+	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/head/roguetown/headband/red
 	color = CLOTHING_RED

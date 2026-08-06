@@ -33,7 +33,7 @@
 	backl = /obj/item/storage/backpack/rogue/satchel
 	wrists = /obj/item/scomstone/kingsrow
 	backpack_contents = list(
-		/obj/item/reagent_containers/glass/bottle/rogue/healthpot = 2,
+		/obj/item/reagent_containers/pill/patch/syringe/health = 4,
 		/obj/item/natural/worms/leech/cheele = 1,
 		/obj/item/reagent_containers/glass/bottle/waterskin = 1,
 		/obj/item/recipe_book/alchemy = 1,

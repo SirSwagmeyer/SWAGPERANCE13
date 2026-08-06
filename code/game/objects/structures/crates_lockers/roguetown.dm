@@ -98,6 +98,10 @@
 	base_icon_state = "closetdark"
 	icon_state = "closetdark"
 
+/obj/structure/closet/crate/roguecloset/fancy
+	base_icon_state = "fancyc_"
+	icon_state = "fancyc_"
+
 /obj/structure/closet/crate/roguecloset/metal
 	base_icon_state = "intermetal"
 	icon_state = "intermetal"

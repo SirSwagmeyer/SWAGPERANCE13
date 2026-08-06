@@ -1,0 +1,79 @@
+/datum/job/roguetown/risvonconscript
+	title = "Risvonian Conscript"
+	flag = RISVON_CONSCRIPT
+	department_flag = RISVON
+	faction = "Station"
+	total_positions = 0
+	spawn_positions = 0
+	allowed_races = RACES_CONSCRIPT
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
+
+	tutorial = "You are the backbone of the Risvon Dictate. You are typically a volunteer, or a conscript. \
+				Your main purpose is follow the orders of your superiors. They are your Oficiros, and your Commandant. \
+				For most of your life, you've been filled with a firm belief that the strong must rule. \
+				You are also a firm believer of the denial of one's desires, in favor for unity and a greater good."
+
+	outfit = /datum/outfit/job/roguetown/risvonconscript
+	display_order = JDO_RISVONCONSCRIPT
+	give_bank_account = TRUE
+	min_pq = 0
+	max_pq = null
+
+	cmode_music = 'sound/music/combat_soldato.ogg'
+
+/datum/job/roguetown/risvonconscript/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+	..()
+	if(ishuman(L))
+		var/mob/living/carbon/human/H = L
+		if(istype(H.wear_ring, /obj/item/roguekey/risvon))
+			var/obj/item/clothing/S = H.wear_ring
+			var/index = findtext(H.real_name, " ")
+			if(index)
+				index = copytext(H.real_name, 1,index)
+			if(!index)
+				index = H.real_name
+			S.name = " [index]'s nailtag"
+
+
+
+/datum/outfit/job/roguetown/risvonconscript/pre_equip(mob/living/carbon/human/H)
+	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/lord
+	shoes = /obj/item/clothing/shoes/roguetown/boots/leather/reinforced
+	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron/ziggurate
+	cloak = /obj/item/clothing/cloak/templar/malumite
+	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants
+	head = /obj/item/clothing/head/roguetown/helmet/kettle/iron/soldato
+	belt = /obj/item/storage/belt/rogue/leather/black/soldier
+	beltl = /obj/item/flashlight/flare/torch/lantern
+	beltr = /obj/item/storage/belt/rogue/pouch/ammobag/pistol
+	wrists = /obj/item/scomstone
+	gloves = /obj/item/clothing/gloves/roguetown/eastgloves1
+	id = /obj/item/roguekey/risvon
+	backl = /obj/item/rogueweapon/stoneaxe/woodcut/risvon
+	backr = /obj/item/storage/backpack/rogue/backpack/risvon
+	backpack_contents = list(
+		/obj/item/storage/belt/rogue/pouch/coins/poor,
+		/obj/item/rope,
+	)
+	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/axes, 3, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/pistols, 3, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/rifles, 4, TRUE)
+	H.adjust_skillrank(/datum/skill/craft/armorsmithing, 3, TRUE)
+	H.adjust_skillrank(/datum/skill/craft/weaponsmithing, 3, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
+	H.change_stat("constitution", 1)
+	H.change_stat("endurance", 1)
+	H.change_stat("perception", 2)
+	H.change_stat("speed", 2)
+	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_LONGSTRIDER, TRAIT_GENERIC)

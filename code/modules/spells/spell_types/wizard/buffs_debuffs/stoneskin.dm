@@ -11,7 +11,7 @@
 	recharge_time = 1 MINUTES
 	warnie = "spellwarning"
 	school = "transmutation"
-	spell_tier = 2
+	spell_tier = 5
 	invocation = "LIKE STONE..!"
 	invocation_type = "whisper"
 	glow_color = GLOW_COLOR_BUFF

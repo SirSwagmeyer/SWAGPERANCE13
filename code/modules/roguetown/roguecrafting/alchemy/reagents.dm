@@ -10,7 +10,7 @@
 	reagent_state = LIQUID
 	color = "#ff0000"
 	taste_description = "lifeblood"
-	overdose_threshold = 0
+	overdose_threshold = 70 //You can chug an entire vial with no risk, but you risk overdosing if you drink more than 3 doses (15u) in a short time.
 	metabolization_rate = REAGENTS_METABOLISM
 	alpha = 173
 
@@ -28,6 +28,7 @@
 		M.adjustOxyLoss(-1.25, 0)
 		M.adjustOrganLoss(ORGAN_SLOT_BRAIN, -5*REM)
 		M.adjustCloneLoss(-1.75*REM, 0)
+		M.adjust_nutrition(-1.5*REM)
 	..()
 
 /datum/reagent/medicine/stronghealth
@@ -35,6 +36,7 @@
 	description = "Quickly regenerates all types of damage."
 	color = "#820000be"
 	taste_description = "rich lifeblood"
+	overdose_threshold = 28 //Anything more than two injections at once risks overdose, but you can chug an entire vial with no risk.
 	metabolization_rate = REAGENTS_METABOLISM * 3
 
 /datum/reagent/medicine/stronghealth/on_mob_life(mob/living/carbon/M)
@@ -54,7 +56,38 @@
 		M.adjustOxyLoss(-5, 0)
 		M.adjustOrganLoss(ORGAN_SLOT_BRAIN, -5*REM)
 		M.adjustCloneLoss(-7*REM, 0)
+		M.adjust_nutrition(-2.5*REM)
 	..()
+	. = 1
+
+/datum/reagent/medicine/healthpot/overdose_start(mob/living/M)
+	M.playsound_local(M, 'sound/misc/heroin_rush.ogg', 100, FALSE)
+	M.visible_message(span_warning("Blood runs from [M]'s nose."))
+	. = 1
+
+/datum/reagent/medicine/healthpot/overdose_process(mob/living/M)
+	M.adjustToxLoss(2, 0)
+	..()
+	. = 1
+
+/datum/reagent/medicine/healthpot/overdose_start(mob/living/M)
+	M.playsound_local(M, 'sound/misc/heroin_rush.ogg', 100, FALSE)
+	M.visible_message(span_warning("A gush of blood runs from [M]'s nose and eyes!"))
+	. = 1
+
+/datum/reagent/medicine/stronghealth/overdose_start(mob/living/M)
+	M.playsound_local(M, 'sound/misc/heroin_rush.ogg', 100, FALSE)
+	M.visible_message(span_warning("Blood runs from [M]'s nose."))
+	. = 1
+
+/datum/reagent/medicine/stronghealth/overdose_process(mob/living/M)
+	M.adjustToxLoss(10, 0)
+	..()
+	. = 1
+
+/datum/reagent/medicine/stronghealth/overdose_start(mob/living/M)
+	M.playsound_local(M, 'sound/misc/heroin_rush.ogg', 100, FALSE)
+	M.visible_message(span_warning("A gush of blood runs from [M]'s nose and eyes!"))
 	. = 1
 
 /datum/reagent/medicine/manapot

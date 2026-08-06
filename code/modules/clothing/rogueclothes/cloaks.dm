@@ -1396,7 +1396,7 @@
 	slot_flags = ITEM_SLOT_CLOAK
 
 /obj/item/clothing/cloak/battlenun
-	name = "nun vestments"
+	name = "bishop's vestments"
 	desc = "Chaste, righteous, merciless to the wicked."
 	color = null
 	icon_state = "battlenun"
@@ -1980,3 +1980,17 @@
 		alternate_worn_layer = UNDER_ARMOR_LAYER
 	user.update_inv_cloak()
 	user.update_inv_armor()
+
+/obj/item/clothing/cloak/half/bishopcloak
+	name = "bishop's vestibule"
+	desc = "A heavy leather cloak held together by a gilded pin, depicting a bloody needle in front of a silver tree. The sign of a faithful servant of RAB."
+	icon_state = "bishopcloak"
+	color = null
+	allowed_race = NON_DWARVEN_RACE_TYPES
+
+/obj/item/clothing/cloak/huntabard
+	name = "ratty tabard"
+	desc = "A patchwork and darkened cloth tabard, certainly not a product of the MACHINES."
+	icon_state = "huntabard"
+	color = null
+	allowed_race = NON_DWARVEN_RACE_TYPES

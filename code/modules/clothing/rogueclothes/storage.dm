@@ -65,7 +65,8 @@
 /obj/item/storage/belt/rogue/leather/black/soldier
 	populate_contents = list(
 		/obj/item/rogueweapon/huntingknife/idagger/steel,
-		/obj/item/reagent_containers/glass/bottle/rogue/healthpotnew,
+		/obj/item/reagent_containers/pill/patch/syringe/health,
+		/obj/item/reagent_containers/pill/patch/syringe/health,
 	)
 
 /obj/item/storage/belt/rogue/leather/black/butler
@@ -487,8 +488,12 @@
 	item_state = "medsatchel"
 	component_type = /datum/component/storage/concrete/grid/stimbag
 	populate_contents = list(
-		/obj/item/reagent_containers/glass/bottle/rogue/healthpotnew = 2,
-		/obj/item/reagent_containers/glass/bottle/rogue/healthpot = 2,
+		/obj/item/reagent_containers/pill/patch/syringe/health,
+		/obj/item/reagent_containers/pill/patch/syringe/healthexpired,
+		/obj/item/reagent_containers/pill/patch/syringe/health,
+		/obj/item/reagent_containers/pill/patch/syringe/healthexpired,
+		/obj/item/reagent_containers/pill/patch/syringe/health,
+		/obj/item/reagent_containers/pill/patch/syringe/healthexpired,
 	)
 
 /obj/item/storage/belt/rogue/pouch/ammobag

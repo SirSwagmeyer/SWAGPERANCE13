@@ -857,6 +857,18 @@
 /obj/structure/fluff/statue/aasimar
 	icon_state = "aasimar"
 
+/obj/structure/fluff/statue/rack
+	name = "rack"
+	icon_state = "rack"
+
+/obj/structure/fluff/statue/banner
+	name = "arderlan banner"
+	icon_state = "banner"
+
+/obj/structure/fluff/statue/banner/brown
+	name = "old banner"
+	icon_state = "brownbanner"
+
 /obj/structure/fluff/statue/gargoyle/candles
 	icon_state = "gargoyle_candles"
 
@@ -1414,3 +1426,31 @@
 	stake.forceMove(drop_location())
 	stake = null
 	qdel(src)
+
+
+/obj/structure/fluff/statue/stag
+	name = "pale stag"
+	desc = "Drained of blood."
+	icon_state = "white_stag"
+	icon = 'icons/roguetown/misc/tallandwide.dmi'
+
+/obj/structure/fluff/statue/gabbr
+	icon_state = "gabbr"
+
+/obj/structure/fluff/statue/spider
+	icon_state = "spider"
+
+/obj/structure/fluff/statue/sun
+	icon_state = "sun"
+
+/obj/structure/fluff/statue/tris
+	icon_state = "tris"
+
+/obj/structure/fluff/statue/ifrit
+	icon_state = "ifrit"
+
+/obj/structure/fluff/statue/greg
+	icon_state = "greg"
+
+/obj/structure/fluff/statue/trick
+	icon_state = "trick"

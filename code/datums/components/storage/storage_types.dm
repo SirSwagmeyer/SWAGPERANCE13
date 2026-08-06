@@ -211,8 +211,11 @@
 
 /datum/component/storage/concrete/grid/stimbag/New(datum/P, ...)
 	. = ..()
-	set_holdable(/obj/item/reagent_containers/glass/bottle/rogue)
-
+	set_holdable(list(
+		/obj/item/reagent_containers/glass/bottle/rogue,
+		/obj/item/reagent_containers/pill/patch/syringe/health,
+		/obj/item/reagent_containers/pill/patch/syringe/healthexpired,
+	))
 /datum/component/storage/concrete/grid/ammobag
 	max_w_class = WEIGHT_CLASS_SMALL
 	screen_max_rows = 3

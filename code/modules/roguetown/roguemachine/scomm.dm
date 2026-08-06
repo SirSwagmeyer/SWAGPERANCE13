@@ -3,6 +3,7 @@
 #define SCOMNET_EMPIRE "empire"
 #define SCOMNET_ZIGS "zigs"
 #define SCOMNET_KINGS "kings"
+#define SCOMNET_HUNTERS "hunters"
 
 /obj/structure/roguemachine/scomm
 	name = "SCOM"
@@ -834,6 +835,62 @@
 	faction_net = SCOMNET_EMPIRE
 
 /obj/item/scomstone/perlead/attack_right(mob/living/carbon/human/user)
+	user.changeNext_move(CLICK_CD_INTENTCAP)
+	visible_message(span_notice ("[user] presses their ring against their mouth."))
+	var/input_text = input(user, "Enter your message:", "Message")
+	if(!input_text)
+		return
+	var/usedcolor = user.voice_color
+	if(user.voicecolor_override)
+		usedcolor = user.voicecolor_override
+	user.whisper(input_text)
+	if(length(input_text) > 100) //When these people talk too much, put that shit in slow motion, yeah
+		input_text = "<small>[input_text]</small>"
+	for(var/obj/item/scomstone/S in SSroguemachine.scomm_machines)
+		if(S.faction_net == faction_net)
+			input_text = "<span style='color: [GARRISON_SCOM_COLOR]'>[input_text]</span>"
+			S.repeat_message(input_text, src, usedcolor)
+
+/obj/item/scomstone/hunter
+	name = "communications device"
+	icon_state = "scomstoner1"
+	desc = "A wrist-mounted device used by the Huntsman's Party."
+	var/garrisonline = TRUE
+	hearrange = 0
+	sellprice = 100
+	faction_net = SCOMNET_HUNTERS
+
+/obj/item/scomstone/hunter/attack_right(mob/living/carbon/human/user)
+	user.changeNext_move(CLICK_CD_INTENTCAP)
+	visible_message(span_notice ("[user] presses their ring against their mouth."))
+	var/input_text = input(user, "Enter your message:", "Message")
+	if(!input_text)
+		return
+	var/usedcolor = user.voice_color
+	if(user.voicecolor_override)
+		usedcolor = user.voicecolor_override
+	user.whisper(input_text)
+	if(length(input_text) > 100) //When these people talk too much, put that shit in slow motion, yeah
+		input_text = "<small>[input_text]</small>"
+	if(garrisonline)
+		for(var/obj/item/scomstone/bad/garrison/S in SSroguemachine.scomm_machines)
+			S.repeat_message(input_text, src, usedcolor)
+		for(var/obj/item/scomstone/garrison/S in SSroguemachine.scomm_machines)
+			S.repeat_message(input_text, src, usedcolor)
+		for(var/obj/item/scomstone/perlead/D in SSroguemachine.scomm_machines)
+			if(D.faction_net == faction_net)
+				D.repeat_message(input_text, src, usedcolor)
+		return
+
+/obj/item/scomstone/huntlead
+	name = "communications device"
+	icon_state = "scomstoner1"
+	desc = "A wrist-mounted device used by the Huntsman's Party."
+	hearrange = 0
+	sellprice = 100
+	faction_net = SCOMNET_HUNTERS
+
+/obj/item/scomstone/huntlead/attack_right(mob/living/carbon/human/user)
 	user.changeNext_move(CLICK_CD_INTENTCAP)
 	visible_message(span_notice ("[user] presses their ring against their mouth."))
 	var/input_text = input(user, "Enter your message:", "Message")

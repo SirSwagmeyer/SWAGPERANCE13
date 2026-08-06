@@ -21,6 +21,9 @@
 	icon_state = "stonestairs"
 	max_integrity = 600
 
+/obj/structure/stairs/stone/old
+	icon_state = "stonestairs_old"
+
 //	climb_offset = 10
 	//RTD animate climbing offset so this can be here
 

@@ -164,11 +164,13 @@
 
 //............... Physicians Hood ............... //
 /obj/item/clothing/head/roguetown/roguehood/phys
-	name = "physicker's hood"
-	desc = "My cure is mostly effective."
+	name = "leather hood"
+	desc = "A tattered black leather hood, lovingly hand sewn. Violently mangled."
 	icon_state = "surghood"
 	item_state = "surghood"
 	body_parts_covered = HEAD|EARS|NOSE
+	armor = ARMOR_HEAD_LEATHER
+	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST)
 	color = null
 
 /obj/item/clothing/head/roguetown/roguehood/psydon

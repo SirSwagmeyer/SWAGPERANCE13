@@ -9,7 +9,7 @@
 	spookynight = SPOOKY_FOREST
 	droning_sound = 'sound/music/area/forest.ogg'
 	droning_sound_dusk = 'sound/music/area/septimus.ogg'
-	droning_sound_night = 'sound/music/area/sleeping.ogg'
+	droning_sound_night = list('sound/music/area/nite1.ogg', 'sound/music/area/nite2.ogg', 'sound/music/area/nite3.ogg', 'sound/music/area/nite4.ogg')
 	soundenv = 15
 	ambush_times = list("night","dusk")
 	ambush_types = list(

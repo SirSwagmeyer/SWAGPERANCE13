@@ -329,6 +329,8 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 	switch(retval)
 		if(JOB_AVAILABLE)
 			return "[jobtitle] is available."
+		if(JOB_UNAVAILABLE_AGEVET)
+			return "[jobtitle] is restricted to agevetted players."
 		if(JOB_UNAVAILABLE_GENERIC)
 			return "[jobtitle] is unavailable."
 		if(JOB_UNAVAILABLE_BANNED)
@@ -394,6 +396,8 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 	if(CONFIG_GET(flag/usewhitelist))
 		if(job.whitelist_req && !client.whitelisted())
 			return JOB_UNAVAILABLE_GENERIC
+	if(job.agevet_req && !(ckey in GLOB.agevetted_list))
+		return JOB_UNAVAILABLE_AGEVET
 	if(!job.bypass_jobban)
 		if(is_banned_from(ckey, rank))
 			return JOB_UNAVAILABLE_BANNED
@@ -575,6 +579,7 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 	omegalist += list(GLOB.perserdun_positions)
 	omegalist += list(GLOB.risvon_positions)
 	omegalist += list(GLOB.kingsrow_positions)
+	omegalist += list(GLOB.hunter_positions)
 	omegalist += list(GLOB.nonaffiliated_positions)
 
 	for(var/list/category in omegalist)
@@ -622,6 +627,8 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 					cat_name = "Risvon Dictate"
 				if (KINGSROW)
 					cat_name = "King's Row"
+				if (HUNTERS)
+					cat_name = "Hunter's Party"
 				if (UNAFFILIATED)
 					cat_name = "Unaffiliated Nobodies"
 			//	if (GOBLIN)

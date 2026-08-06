@@ -313,6 +313,13 @@ GLOBAL_LIST_EMPTY(chosen_names)
 
 			dat += "</table>"
 
+			var/agevetted = user.check_agevet()
+			dat += "<td style='width:33%;text-align:right'>"
+			dat += "<a href='?_src_=prefs;preference=agevet'><b>VERIFIED:</b></a> [agevetted ? "<font color='#74cde0'>YAE!</font>" : "<font color='#897472'>NAE?</font>"]"
+			dat += "</td>"
+
+			dat += "</table>"
+
 			if(CONFIG_GET(flag/roundstart_traits))
 				dat += "<center><h2>Quirk Setup</h2>"
 				dat += "<a href='?_src_=prefs;preference=trait;task=menu'>Configure Quirks</a><br></center>"
@@ -1267,6 +1274,12 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 	else if(href_list["preference"] == "playerquality")
 		check_pq_menu(user.ckey)
 
+	else if(href_list["preference"] == "agevet")
+		if(!user.check_agevet())
+			to_chat(usr, span_info("- You are currently not <b>AGE-VERIFIED</b> limiting your access to the server. To get access to more features, age-verify through the discord."))
+		else
+			to_chat(usr, span_love("- You have been successfully <b>AGE-VERIFIED!</b>"))
+
 	else if(href_list["preference"] == "markings")
 		ShowMarkings(user)
 		return
@@ -1892,7 +1905,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 							charflaw = C
 							if(charflaw.desc)
 								to_chat(user, "<span class='info'>[charflaw.desc]</span>")
-					else 
+					else
 						var/result = input(user, "Select a flaw", "Roguetown") as null|anything in elf_flaw
 						if(result)
 							result = elf_flaw[result]

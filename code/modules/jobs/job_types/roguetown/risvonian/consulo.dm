@@ -6,7 +6,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	allowed_races = RACES_TEMPERANCE_NONCOMBATANT
-	allowed_sexes = list(MALE)
+	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 
 	tutorial = "You're a diplomat to the local Caprito. \
@@ -37,7 +37,7 @@
 
 /datum/outfit/job/roguetown/consulo/pre_equip(mob/living/carbon/human/H)
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/lord
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/consulo
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/consulo2
 	cloak = /obj/item/clothing/cloak/templar/malumite
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather/reinforced
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants

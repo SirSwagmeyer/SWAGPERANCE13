@@ -56,6 +56,7 @@
 #define JOB_UNAVAILABLE_JOB_COOLDOWN 11
 #define JOB_UNAVAILABLE_SLOTFULL 12
 #define JOB_UNAVAILABLE_VIRTUESVICE 13
+#define JOB_UNAVAILABLE_AGEVET 14
 
 #define DEFAULT_RELIGION "Christianity"
 #define DEFAULT_DEITY "Space Jesus"
@@ -224,6 +225,7 @@
 #define PARTISAN (1<<11)
 #define ENVOY (1<<12)
 #define RADIOTROOPER (1<<13)
+#define PERSERDUN_CONSCRIPT (1<<14) //tester role
 
 #define RISVON	(1<<13)
 
@@ -235,11 +237,12 @@
 #define TUORO (1<<5)
 #define PAFANTO (1<<6) //heavy weapon technician - melee weapon and machine gun
 #define MULO (1<<7) // heavy weapon ammo bearer - stripped down soldato gear and ammo storage
-#define SERVISTO (1<<8) //support role - can probably shit meds out the wazoo 
+#define SERVISTO (1<<8) //support role - can probably shit meds out the wazoo
 #define CURACISTO (1<<9)
 #define CAMPFOLLOWER (1<<10)
 #define CONSULO (1<<11)
 #define FLAMSOLDATO (1<<12)
+#define RISVON_CONSCRIPT (1<<13) //tester role
 
 #define KINGSROW (1<<14)
 
@@ -253,10 +256,19 @@
 #define HOUSEKEEPER (1<<6)
 #define MANORSERVANT (1<<8)
 
-#define UNAFFILIATED (1<<15)
+#define HUNTERS (1<<15)
+
+#define HUNTMASTER (1<<0) // 1 slot leadership with scale armor drip
+#define HEDGEBORN (1<<1) // 1 slot plate role. Inbetween GK and KCDR in terms of power
+#define HUNTSTEWARD (1<<2) // 3 slot officer role
+#define MOUNTEBANK (1<<3) // 3 slot medic role
+#define HUNTSMAN (1<<4) // 16 slot standard soldier. Can select risvon/perserdun origin for loadout adjustments
+
+#define UNAFFILIATED (1<<16)
 
 #define FOREIGNER (1<<0)
 #define PIONEER (1<<2)
+#define ZOMBIE 	(1<<3)
 
 
 #define JCOLOR_NOBLE "#aa83b9"
@@ -272,6 +284,7 @@
 #define JCOLOR_RISVON "#913333"
 #define JCOLOR_KINGSROW "#31437c"
 #define JCOLOR_UNAFFILIATE "#929159"
+#define JCOLOR_HUNTER "#3b473b"
 
 // job display orders //
 
@@ -290,6 +303,7 @@
 #define JDO_PARTISAN 1.91
 #define JDO_ENVOY 1.92
 #define JDO_RADIOTROOPER 1.93
+#define JDO_PERSERDUN_CONSCRIPT 1.94
 
 // RISVON
 #define JDO_COMMANDANT 2.0
@@ -305,6 +319,7 @@
 #define JDO_CAMPFOLLOWER 2.10
 #define JDO_CONSULO 2.11
 #define JDO_FLAMSOLDATO 2.12
+#define JDO_RISVONCONSCRIPT 2.13
 
 // KINGSROW
 #define JDO_HIERARCH 3
@@ -320,6 +335,14 @@
 // UNAFFILIATED
 #define JDO_FOREIGNER 4.0
 #define JDO_PIONEER 4.1
+#define JDO_ZOMBIE 4.2
+
+// HUNTERS PARTY
+#define JDO_HUNTMASTER 5
+#define JDO_HEDGEBORN 5.1
+#define JDO_HUNTSTEWARD 5.2
+#define JDO_MOUNTEBANK 5.3
+#define JDO_HUNTSMAN 5.4
 
 #define PERSERDUN_ROLES \
 	/datum/job/roguetown/grandmaster,\
@@ -332,7 +355,8 @@
 	/datum/job/roguetown/armsman,\
 	/datum/job/roguetown/chirurgeon,\
 	/datum/job/roguetown/partisan,\
-	/datum/job/roguetown/envoy
+	/datum/job/roguetown/envoy,\
+	/datum/job/roguetown/perserconscript
 
 #define RISVON_ROLES \
 	/datum/job/roguetown/commandant,\
@@ -346,7 +370,8 @@
 	/datum/job/roguetown/tuoro,\
 	/datum/job/roguetown/pafanto,\
 	/datum/job/roguetown/municioteknikosto,\
-	/datum/job/roguetown/kaspafisto
+	/datum/job/roguetown/kaspafisto,\
+	/datum/job/roguetown/risvonconscript
 
 #define KINGSROW_ROLES \
 	/datum/job/roguetown/hierarch,\
@@ -361,4 +386,12 @@
 
 #define UNAFFILIATED_ROLES \
 	/datum/job/roguetown/adventurer,\
-	/datum/job/roguetown/pioneer
+	/datum/job/roguetown/pioneer,\
+	/datum/job/roguetown/deadite
+
+#define HUNTER_ROLES \
+	/datum/job/roguetown/huntmaster,\
+	/datum/job/roguetown/hedgeborn,\
+	/datum/job/roguetown/huntsteward,\
+	/datum/job/roguetown/mountebank,\
+	/datum/job/roguetown/huntmaster

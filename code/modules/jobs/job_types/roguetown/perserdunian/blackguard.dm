@@ -62,14 +62,14 @@
 		/obj/item/ammo_box/speedloader/magnum = 3,
 		/obj/item/bomb/dynamite = 3,
 		/obj/item/bomb/molotov = 2,
-		/obj/item/rogueweapon/knuckles/bronzeknuckles,
-	)
+		/obj/item/rogueweapon/huntingknife/combat/blackguard,
+		)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 5, TRUE) 
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE) //Same tier as Veteranos
 	H.adjust_skillrank(/datum/skill/combat/maces, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/revolvers, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/knives, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
@@ -78,6 +78,7 @@
 	H.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/tracking, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/traps, 4, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/sneaking, 4, TRUE)
 	H.change_stat("strength", 1)
 	H.change_stat("endurance", 2)
 	H.change_stat("constitution", 1)

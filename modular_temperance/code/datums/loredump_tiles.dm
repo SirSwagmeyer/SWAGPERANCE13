@@ -94,3 +94,7 @@ Very handy, eh?
 /obj/effect/loretile/code6
 	name = "Code 6 Lore Tile"
 	lore = /datum/loreblurb/code6
+
+/obj/effect/loretile/kingsrow
+	name = "King's Row Lore Tile"
+	lore = /datum/loreblurb/kingsrow

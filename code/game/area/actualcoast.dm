@@ -7,7 +7,7 @@
 	ambientnight = AMB_BEACH
 	droning_sound = 'sound/music/area/townstreets.ogg'
 	droning_sound_dusk = 'sound/music/area/septimus.ogg'
-	droning_sound_night = 'sound/music/area/sleeping.ogg'
+	droning_sound_night = list('sound/music/area/nite1.ogg', 'sound/music/area/nite2.ogg', 'sound/music/area/nite3.ogg', 'sound/music/area/nite4.ogg')
 	converted_type = /area/rogue/under/lake
 	first_time_text = "CENTRAL COAST"
 

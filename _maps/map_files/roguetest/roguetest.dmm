@@ -499,6 +499,9 @@
 /obj/machinery/tanningrack,
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors)
+"pe" = (
+/turf/open/floor/rogue/fleshfloor,
+/area/rogue/outdoors)
 "pH" = (
 /obj/structure/table/wood{
 	icon_state = "longtable_mid";
@@ -747,6 +750,9 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors)
+"yw" = (
+/turf/open/floor/rogue/fleshfloor/mouths,
+/area/rogue/outdoors)
 "zf" = (
 /obj/structure/roguemachine/stockpile,
 /turf/open/floor/rogue/grass,
@@ -931,6 +937,9 @@
 /obj/item/rogueweapon/eaglebeak/lucerne,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors)
+"Im" = (
+/turf/open/floor/rogue/fleshfloor/mouths/bigmouth,
+/area/rogue/outdoors)
 "IA" = (
 /obj/item/rogueweapon/hoe,
 /obj/item/rogueweapon/sickle,
@@ -1164,6 +1173,13 @@
 "PE" = (
 /turf/closed/mineral/rogue/bedrock,
 /area/rogue/indoors/cave)
+"PV" = (
+/obj/structure/fluff/customsign{
+	name = "ugly fucking disgusting things";
+	desc = "you can jump, walk & get bit by the tiles"
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors)
 "PW" = (
 /obj/structure/closet/crate/chest/neu,
 /obj/item/ingot/iron,
@@ -1303,6 +1319,9 @@
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/rogue/hay,
 /area/rogue/indoors)
+"Wt" = (
+/turf/open/floor/rogue/fleshfloor/eyes,
+/area/rogue/outdoors)
 "Wy" = (
 /obj/structure/table/wood{
 	dir = 1;
@@ -2658,11 +2677,11 @@ zp
 HA
 HA
 zZ
-BJ
-BJ
-BJ
-BJ
-BJ
+PV
+pe
+Wt
+yw
+Im
 HA
 zp
 HA

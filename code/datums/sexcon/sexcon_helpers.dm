@@ -61,6 +61,16 @@
 	if(!user?.client?.prefs.sexable)
 		to_chat(user, "<span class='warning'>I don't want to touch [target]. (Your ERP preference, in the options)</span>")
 		return
+	if(!user.check_agevet())
+		to_chat(user, "<span class='warning'>You're not age verified.</span>")
+		log_combat(user, target, "tried ERP while non verified")
+		message_admins("[ADMIN_LOOKUPFLW(user)] has tried to use the ERP panel despite not being vetted.")
+		log_admin("[key_name(user)] has tried to use the ERP panel despite not being vetted.")
+		return
+	if(!target.check_agevet())
+		to_chat(user, "<span class='warning'>[target] is not age verified.</span>")
+		log_combat(user, target, "tried ERP against non verified")
+		return
 	if(!target?.client?.prefs)
 		to_chat(user, span_warning("[target] is simply not there. I can't do this."))
 		log_combat(user, target, "tried ERP menu against d/ced")
@@ -180,7 +190,7 @@
 	if(my_demihuman || their_demihuman)
 		return (my_demihuman && their_demihuman)
 	return TRUE
-	
+
 /mob/living/carbon/human/proc/try_impregnate(mob/living/carbon/human/wife)
 	var/obj/item/organ/testicles/testes = getorganslot(ORGAN_SLOT_TESTICLES)
 	if(!testes)

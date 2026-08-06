@@ -410,6 +410,7 @@ GLOBAL_LIST_EMPTY(round_join_times)
 
 #define CTAG_SERVICU 	"CAT_SERVICUS"		// Servicus classes 
 #define CTAG_BULWARK 	"CAT_BULWARK"		// Bulwark guns
+#define CTAG_HUNTSMAN	"CAT_HUNTSMAN"		// Huntsman origins
 
 /*
 	Defines for the triumph buy datum categories

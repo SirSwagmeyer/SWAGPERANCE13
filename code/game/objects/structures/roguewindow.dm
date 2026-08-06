@@ -129,6 +129,11 @@
 	icon_state = "harem3-solid"
 	base_state = "harem3-solid"
 
+/obj/structure/roguewindow/haremblood
+	name = "crimson window"
+	icon_state = "haremblood-solid"
+	base_state = "haremblood-solid"
+
 /obj/structure/roguewindow/openclose/Initialize()
 	lockdir = dir
 	icon_state = base_state

@@ -409,3 +409,14 @@
 /obj/item/clothing/suit/roguetown/armor/plate/scale/inqcoat/ComponentInitialize()	//No movement rustle component.
 	return
  
+/obj/item/clothing/suit/roguetown/armor/plate/scale/huntmaster
+	name = "huntmaster duster"
+	desc = "Chipped and torn from tooth and claw. Leather over iron remains after all these years."
+	body_parts_covered = COVERAGE_FULL
+	icon_state = "bleathercoat"
+	item_state = "bleathercoat"
+	sleevetype = "shirt"
+	detail_tag = "_det"
+	detail_color = CLOTHING_BLACK
+	boobed = FALSE
+	blocksound = SOFTHIT

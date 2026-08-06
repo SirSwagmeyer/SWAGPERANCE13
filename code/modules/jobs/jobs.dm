@@ -227,6 +227,15 @@ GLOBAL_LIST_INIT(kingsrow_positions, list(
 GLOBAL_LIST_INIT(nonaffiliated_positions, list(
 	"Foreigner",
 	"Pioneer",
+	"Deadite",
+))
+
+GLOBAL_LIST_INIT(hunter_positions, list(
+	"Huntmaster",
+	"Hedgeborn",
+	"Huntsteward",
+	"Mountebank",
+	"Huntsman",
 ))
 
 GLOBAL_LIST_INIT(job_assignment_order, get_job_assignment_order())
@@ -237,6 +246,7 @@ GLOBAL_LIST_INIT(job_assignment_order, get_job_assignment_order())
 	sorting_order += GLOB.risvon_positions
 	sorting_order += GLOB.kingsrow_positions
 	sorting_order += GLOB.nonaffiliated_positions
+	sorting_order += GLOB.hunter_positions
 	return sorting_order
 
 GLOBAL_LIST_INIT(exp_jobsmap, list(

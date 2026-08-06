@@ -1713,3 +1713,176 @@
 	clawfootstep = FOOTSTEP_HARD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	footstepstealth = TRUE
+
+/turf/open/floor/rogue/stoney
+	icon_state = "stoney"
+	name = "stone flooring"
+	desc = "It smells like iron."
+	footstep = FOOTSTEP_STONE
+	barefootstep = FOOTSTEP_HARD_BAREFOOT
+	clawfootstep = FOOTSTEP_HARD_CLAW
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	landsound = 'sound/foley/jumpland/stoneland.wav'
+	neighborlay = "cobbleedge"
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	footstepstealth = TRUE
+
+/turf/open/floor/rogue/stoneold
+	icon_state = "stone_old"
+	name = "stone flooring"
+	desc = "It smells like iron."
+	footstep = FOOTSTEP_STONE
+	barefootstep = FOOTSTEP_HARD_BAREFOOT
+	clawfootstep = FOOTSTEP_HARD_CLAW
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	landsound = 'sound/foley/jumpland/stoneland.wav'
+	neighborlay = "cobbleedge"
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	footstepstealth = TRUE
+
+/turf/open/floor/rogue/stoning
+	icon_state = "stoning"
+	name = "stone flooring"
+	desc = "It smells like iron."
+	footstep = FOOTSTEP_STONE
+	barefootstep = FOOTSTEP_HARD_BAREFOOT
+	clawfootstep = FOOTSTEP_HARD_CLAW
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	landsound = 'sound/foley/jumpland/stoneland.wav'
+	neighborlay = "cobbleedge"
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	footstepstealth = TRUE
+
+/turf/open/floor/rogue/crawlspace
+	icon_state = "crawlspace_1"
+	landsound = 'sound/foley/jumpland/metalland.wav'
+	footstep = FOOTSTEP_PLATING
+	barefootstep = FOOTSTEP_HARD_BAREFOOT
+	clawfootstep = FOOTSTEP_HARD_CLAW
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	footstepstealth = TRUE
+
+/turf/open/floor/rogue/crawlspace/Initialize()
+	. = ..()
+	icon_state = "crawlspace_[rand(1,3)]"
+
+/turf/open/floor/rogue/fmetal
+	icon_state = "fmetal1"
+	landsound = 'sound/foley/jumpland/metalland.wav'
+	footstep = FOOTSTEP_PLATING
+	barefootstep = FOOTSTEP_HARD_BAREFOOT
+	clawfootstep = FOOTSTEP_HARD_CLAW
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	footstepstealth = TRUE
+
+
+/turf/open/floor/rogue/fmetal/right
+	icon_state = "fmetal2"
+
+/turf/open/floor/rogue/fmetal/south
+	icon_state = "fmetal3"
+
+/turf/open/floor/rogue/fmetal/north
+	icon_state = "fmetal4"
+
+/turf/open/floor/rogue/fmetal/quads
+	icon_state = "fmetal6"
+
+/turf/open/floor/rogue/fmetal/square
+	icon_state = "fmetal7"
+
+/turf/open/floor/rogue/fmetal/southeast
+	icon_state = "fmetal8"
+
+/turf/open/floor/rogue/fmetal/southwest
+	icon_state = "fmetal9"
+
+/turf/open/floor/rogue/fmetal/northwest
+	icon_state = "fmetal10"
+
+/turf/open/floor/rogue/fmetal/northeast
+	icon_state = "fmetal11"
+
+
+/turf/open/floor/carpet
+	name = "carpet"
+	desc = "Plush fabric softens your step. Did you remember to wipe your shoes?"
+	icon = 'icons/turf/floors/carpet.dmi'
+	icon_state = "carpet"
+	broken_states = list("damaged")
+	smooth = SMOOTH_TRUE
+	canSmoothWith = list(/turf/open/floor/carpet)
+	flags_1 = NONE
+	bullet_bounce_sound = 'sound/blank.ogg'
+	footstep = FOOTSTEP_CARPET
+	barefootstep = FOOTSTEP_SOFT_BAREFOOT
+	clawfootstep = FOOTSTEP_SOFT_BAREFOOT
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	tiled_dirt = FALSE
+
+
+/turf/open/floor/rogue/vcarpet
+	name = "carpet"
+	desc = "Rather grim, isn't it?"
+	icon_state = "carpet1"
+	landsound = 'sound/foley/jumpland/carpetland.wav'
+	footstep = FOOTSTEP_CARPET
+	barefootstep = FOOTSTEP_SOFT_BAREFOOT
+	clawfootstep = FOOTSTEP_SOFT_BAREFOOT
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	tiled_dirt = FALSE
+
+
+/turf/open/floor/rogue/vcarpet/right
+	icon_state = "carpet2"
+
+/turf/open/floor/rogue/vcarpet/south
+	icon_state = "carpet3"
+
+/turf/open/floor/rogue/vcarpet/north
+	icon_state = "carpet4"
+
+/turf/open/floor/rogue/vcarpet/quads
+	icon_state = "carpet6"
+
+/turf/open/floor/rogue/vcarpet/square
+	icon_state = "carpet7"
+
+
+/turf/open/floor/rogue/fleshfloor
+	name = "flesh"
+	desc = "..Hoooooly fuck."
+	icon_state = "flesh_floor-1"
+	footstep = FOOTSTEP_MUD
+	barefootstep = FOOTSTEP_MUD
+	heavyfootstep = FOOTSTEP_MUD
+	landsound = 'sound/gore/flesh_eat_05.ogg'
+
+/turf/open/floor/rogue/fleshfloor/eyes
+	icon_state = "flesh_floor-2"
+	landsound = 'sound/gore/flesh_eat_05.ogg'
+
+
+//yeah so ur gonna have to create the actual bitey mouths (in barbedwire.dm). srry im just a lazy pos 
+/turf/open/floor/rogue/fleshfloor/mouths
+	icon_state = "flesh_floor-3"
+	landsound = 'sound/foley/splatty.ogg'
+
+/turf/open/floor/rogue/fleshfloor/mouths/bigmouth
+	icon_state = "flesh_floor-4"
+	landsound = 'sound/foley/scream.ogg'
+
+
+/obj/effect/decal/edge
+	name = "stone edge"
+	desc = "A piece of stone used to border city roads."
+	icon = 'icons/turf/roguefloor.dmi'
+	icon_state = "border"
+	mouse_opacity = 0
+
+/obj/effect/decal/edge_corner
+	name = "stone edge corner"
+	desc = "A piece of stone used to border city roads."
+	icon = 'icons/turf/roguefloor.dmi'
+	icon_state = "border_corner"
+	mouse_opacity = 0

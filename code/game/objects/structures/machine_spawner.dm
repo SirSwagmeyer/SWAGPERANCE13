@@ -14,6 +14,7 @@
 	var/list/turfsy = list()
 	var/list/blockers = list()
 	var/count = 0
+	var/off = FALSE
 
 /obj/structure/machine/spawner/delay
 	delay = TRUE
@@ -55,7 +56,9 @@
 /obj/structure/machine/spawner/proc/spawnitem()
 	STOP_PROCESSING(SSprocessing, src)
 	playsound(src, 'sound/misc/loops/machinedone.ogg', 100)
-	var/obj/new_type 
+	var/obj/new_type
+	if(off)
+		return
 	if(prob(90))
 		new_type = pick(
 			/obj/effect/spawner/lootdrop/machine/rifleammo,
@@ -94,6 +97,7 @@
 			spawnitem()
 			count += 1
 		else
+			off = TRUE
 			visible_message("The FURNACE seems to be empty. Better luck next time.")
 			STOP_PROCESSING(SSprocessing, src)
 

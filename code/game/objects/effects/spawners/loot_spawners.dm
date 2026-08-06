@@ -485,10 +485,11 @@
 /obj/effect/spawner/lootdrop/medicines
 	name = "medicines"
 	icon_state = "meds"
-	lootcount = 3
+	lootcount = 4
 	loot = list(
-		/obj/item/reagent_containers/glass/bottle/rogue/healthpotnew = 1,
-		/obj/item/reagent_containers/glass/bottle/rogue/healthpot = 2,
+		/obj/item/reagent_containers/pill/patch/syringe/health = 2,
+		/obj/item/reagent_containers/pill/patch/syringe/healthexpired = 4,
+		/obj/item/reagent_containers/pill/patch/syringe/painkiller = 1,
 	)
 
 /obj/effect/spawner/lootdrop/t13armor

@@ -28,6 +28,18 @@
 	clickcd = 8
 	item_d_type = "stab"
 
+/datum/intent/dagger/thrust/combat
+	name = "wedged thrust"
+	icon_state = "instab"
+	attack_verb = list("gouges")
+	animname = "stab"
+	blade_class = BCLASS_STAB
+	hitsound = list('sound/combat/hits/bladed/genstab (1).ogg', 'sound/combat/hits/bladed/genstab (2).ogg', 'sound/combat/hits/bladed/genstab (3).ogg')
+	damfactor = 0.9
+	chargetime = 0
+	clickcd = 8
+	item_d_type = "stab"
+
 /datum/intent/dagger/thrust/pick
 	name = "icepick stab"
 	icon_state = "inpick"
@@ -870,3 +882,65 @@
 			qdel(item)
 			user.mind.add_sleep_experience(/datum/skill/misc/sewing, (user.STAINT))
 	return ..()
+
+/datum/intent/dagger/cut/rend
+	name = "wicked slice"
+	icon_state = "inrend"
+	attack_verb = list("slices", "dices")
+	animname = "cut"
+	blade_class = BCLASS_CHOP
+	reach = 1
+	swingdelay = 10
+	damfactor = 2
+	clickcd = 14
+	no_early_release = TRUE
+	hitsound = list('sound/combat/hits/bladed/genslash (1).ogg', 'sound/combat/hits/bladed/genslash (2).ogg', 'sound/combat/hits/bladed/genslash (3).ogg')
+	item_d_type = "slash"
+	misscost = 5 
+	intent_intdamage_factor = 0.05
+
+/datum/intent/dagger/cut/heavy
+	name = "heavy cut"
+	damfactor = 1.2
+	penfactor = 35
+	clickcd = 11
+
+/datum/intent/dagger/sucker_punch/wallop
+	name = "wallop"
+	blade_class = BCLASS_TWIST
+	attack_verb = list("wallops", "thwacks", "thwamps")
+	damfactor = 1.1
+	intent_intdamage_factor = 0.6
+	hitsound = list('sound/combat/hits/punch/punch_hard (1).ogg', 'sound/combat/hits/punch/punch_hard (2).ogg', 'sound/combat/hits/punch/punch_hard (3).ogg')
+	chargetime = 0
+	clickcd = 8
+	swingdelay = 0
+	icon_state = "inpunch"
+	item_d_type = "blunt"
+
+/obj/item/rogueweapon/huntingknife/combat/blackguard 
+	force = 25 
+	name = "Avowal"
+	desc = "A modified imperial messer, sawed down and cut to size. The handguard's spikes have been worn down into blunted knobs."
+	possible_item_intents = list(/datum/intent/dagger/cut/heavy, /datum/intent/dagger/cut/rend, /datum/intent/dagger/sucker_punch/wallop, /datum/intent/dagger/thrust/combat)
+	icon_state = "blackguardknife"
+	sheathe_icon = "combatknife"
+	icon = 'icons/roguetown/weapons/32.dmi'
+	parrysound = list('sound/combat/parry/bladed/bladedmedium (1).ogg','sound/combat/parry/bladed/bladedmedium (2).ogg','sound/combat/parry/bladed/bladedmedium (3).ogg')
+	swingsound = list('sound/combat/wooshes/bladed/wooshmed (1).ogg','sound/combat/wooshes/bladed/wooshmed (2).ogg','sound/combat/wooshes/bladed/wooshmed (3).ogg')
+	throwforce = 16
+	minstr = 9
+	wdefense = 8
+	slot_flags = ITEM_SLOT_HIP
+	thrown_bclass = BCLASS_CHOP
+	w_class = WEIGHT_CLASS_NORMAL
+	smeltresult = /obj/item/ingot/steel
+
+/obj/item/rogueweapon/huntingknife/combat/blackguard/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.5,"sx" = -10,"sy" = -8,"nx" = 13,"ny" = -8,"wx" = -8,"wy" = -7,"ex" = 7,"ey" = -8,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 90,"sturn" = -90,"wturn" = -80,"eturn" = 81,"nflip" = 0,"sflip" = 8,"wflip" = 8,"eflip" = 0)
+			if("onbelt")
+				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)

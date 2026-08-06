@@ -35,6 +35,12 @@
 	. = ..()
 	AddComponent(/datum/component/layeredarmor/ebarmor)
 
+/obj/item/clothing/head/roguetown/helmet/heavy/barbute/visor/hedge
+	name = "iron roundface helmet"
+	desc = "An iron helmet of an obscure shape. Supposedly smithed after the visage of beasts of old."
+	icon_state = "iroundface"
+	item_state = "iroundface"
+	max_integrity = ARMOR_INT_HELMET_HEAVY_IRON
 
 // medium helmets
 /obj/item/clothing/head/roguetown/helmet/kettle/iron/soldato

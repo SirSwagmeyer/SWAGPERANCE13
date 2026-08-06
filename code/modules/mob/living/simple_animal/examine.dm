@@ -4,7 +4,7 @@
 	var/t_is = p_are()
 
 	. = list("<span class='info'>✠ ------------ ✠\nThis is \a <EM>[src]</EM>.")
-
+	. += "[src.desc]"
 	var/m1 = "[t_He] [t_is]"
 	var/m2 = "[t_his]"
 	if(user == src)
@@ -43,7 +43,7 @@
 				msg += span_artery("[m1] pale.")
 			if(BLOOD_VOLUME_OKAY to BLOOD_VOLUME_SAFE)
 				msg += span_artery("[m1] a little pale.")
-	
+
 		// Bleeding
 		if(bleed_rate)
 			var/bleed_wording = "bleeding"
@@ -70,7 +70,7 @@
 	//Grabbing
 	if(pulledby && pulledby.grab_state)
 		msg += "[m1] being grabbed by [pulledby]."
-	
+
 	if(stat >= UNCONSCIOUS)
 		msg += "[m1] unconscious."
 

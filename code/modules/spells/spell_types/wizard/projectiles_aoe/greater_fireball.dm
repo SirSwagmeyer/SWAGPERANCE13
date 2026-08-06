@@ -12,7 +12,7 @@
 	chargetime = 25
 	recharge_time = 15 SECONDS
 	warnie = "spellwarning"
-	spell_tier = 4 // Highest tier AOE
+	spell_tier = 5
 	invocation = "Maior Sphaera Ignis!"
 	invocation_type = "shout"
 	glow_color = GLOW_COLOR_FIRE

@@ -14,7 +14,7 @@
 	no_early_release = TRUE
 	movement_interrupt = FALSE
 	charging_slowdown = 3
-	spell_tier = 3 // AOE
+	spell_tier = 5
 	invocation = "Sphaera Ignis!"
 	invocation_type = "shout"
 	glow_color = GLOW_COLOR_FIRE

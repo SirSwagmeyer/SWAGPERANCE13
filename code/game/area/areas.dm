@@ -76,10 +76,10 @@
 	var/we_looping_here = TRUE
 
 	var/droning_sound_current = null
-	var/droning_sound_dawn = null
-	var/droning_sound = null
-	var/droning_sound_dusk = null
-	var/droning_sound_night = null
+	var/list/droning_sound_dawn = null
+	var/list/droning_sound = null
+	var/list/droning_sound_dusk = null
+	var/list/droning_sound_night = null
 	var/droning_vary = 0
 	var/droning_repeat = TRUE
 	var/droning_wait = 0

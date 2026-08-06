@@ -8,8 +8,8 @@ GLOBAL_VAR_INIT(adventurer_hugbox_duration_still, 3 MINUTES)
 	flag = FOREIGNER
 	department_flag = UNAFFILIATED
 	faction = "Station"
-	total_positions = 20
-	spawn_positions = 20
+	total_positions = 3
+	spawn_positions = 3
 	allowed_races = ALL_RACES_TYPES
 	tutorial = "You're a complete nobody, with a sword - or a gun. Try to make a name for yourself, or just survive. I guess."
 	selection_color = JCOLOR_UNAFFILIATE

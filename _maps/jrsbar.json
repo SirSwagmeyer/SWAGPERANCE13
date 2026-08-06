@@ -1,0 +1,10 @@
+{
+    "map_name": "Juniors Bar",
+    "map_path": "map_files/jrsbar",
+    "map_file": "jrsbar.dmm",
+	"traits": [{"Name": "Juniors Bar", "Up": true}, {"Up": true, "Down": true}, {"Down": true}],
+	"minetype": null,
+	"space_empty_levels": 0,
+	"space_ruin_levels": 0,
+	"shuttles": {}
+}

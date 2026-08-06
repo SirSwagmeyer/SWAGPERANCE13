@@ -29,5 +29,7 @@
 		/datum/job/roguetown/hierarch,
 		/datum/job/roguetown/merchant,
 		/datum/job/roguetown/bulwark,
-		/datum/job/roguetown/barkeep
+		/datum/job/roguetown/barkeep,
+		/datum/job/roguetown/risvonconscript,
+		/datum/job/roguetown/perserconscript
 	)

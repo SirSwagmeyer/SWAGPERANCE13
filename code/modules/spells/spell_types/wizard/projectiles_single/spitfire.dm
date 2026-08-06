@@ -16,7 +16,7 @@
 	warnie = "spellwarning"
 	no_early_release = TRUE
 	movement_interrupt = FALSE
-	spell_tier = 2
+	spell_tier = 5
 	invocation = "Evomere Flammas!"
 	invocation_type = "shout"
 	glow_color = GLOW_COLOR_FIRE

@@ -5,13 +5,14 @@
 	faction = "Station"
 	total_positions = 16
 	spawn_positions = 16
+	agevet_req = FALSE
 	allowed_races = RACES_CONSCRIPT
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 
 	tutorial = "You are the rank and file soldier of the Great Empire of Perserdun. \
 				Your main purpose is to bundle together with other Armsmen and to kill the enemies of the Empire. \
-				Typically, Armsmen are filled with a great love for their nation and volunteer. Others are conscripted, or are convicts." 
+				Typically, Armsmen are filled with a great love for their nation and volunteer. Others are conscripted, or are convicts."
 
 	outfit = /datum/outfit/job/roguetown/armsman
 	display_order = JDO_ARMSMAN

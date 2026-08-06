@@ -108,6 +108,19 @@
 	body_parts_covered = COVERAGE_FULL
 	sellprice = 800 //kill the enemy's diplomat for insane amounts of money
 
+/obj/item/clothing/suit/roguetown/armor/leather/consulo2
+	name = "consulo's silk coat"
+	desc = "A stylish, padded coat, made of fine silk and leather. With luck, it'll only be stained with ink, not blood."
+	icon_state = "noblecoat"
+	item_state = "noblecoat"
+	sleevetype = "noblecoat"
+	detail_tag = "_detail"
+	detail_color = "#4A310E"
+	color = "#681818"
+	boobed = TRUE
+	body_parts_covered = COVERAGE_FULL
+	sellprice = 400
+
 /obj/item/clothing/suit/roguetown/armor/leather/envoy
 	name = "envoy's coat"
 	desc = "A stylish piece, meant to showcase Perserdun's strong economy."
@@ -236,3 +249,9 @@
 	smelt_bar_num = 2
 	max_integrity = ARMOR_INT_CHEST_PLATE_IRON
 	body_parts_covered = CHEST | GROIN | VITALS | LEGS | ARMS | NECK
+
+// Mechanically no different, this just uses the iron hauberk sprite from Azure, so it looks different
+
+/obj/item/clothing/suit/roguetown/armor/plate/hauberk/alt
+	desc = "A thick iron breastplate over a sturdy hauberk. This one has seen a plethora of use."
+	icon_state = "icuirasshauberk"

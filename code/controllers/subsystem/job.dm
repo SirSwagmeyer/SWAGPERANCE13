@@ -164,9 +164,14 @@ SUBSYSTEM_DEF(job)
 		if(!job.special_job_check(player))
 			JobDebug("FOC player did not pass special check, Player: [player], Job:[job.title]")
 			continue
+		if(job.agevet_req && !(player.client.ckey in GLOB.agevetted_list))
+			JobDebug("FOC player is not agevetted, Player: [player], Job: [job.title]")
+			continue
+
 		if(CONFIG_GET(flag/usewhitelist))
 			if(job.whitelist_req && (!player.client.whitelisted()))
 				continue
+
 		if(player.client.prefs.job_preferences[job.title] == level)
 			JobDebug("FOC pass, Player: [player], Level:[level]")
 			candidates += player
@@ -250,6 +255,10 @@ SUBSYSTEM_DEF(job)
 
 		if(!job.special_job_check(player))
 			JobDebug("GRJ player did not pass special check, Player: [player], Job:[job.title]")
+			continue
+
+		if(job.agevet_req && !(player.client.ckey in GLOB.agevetted_list))
+			JobDebug("GRJ player is not agevetted, Player: [player], Job: [job.title]")
 			continue
 
 		if(CONFIG_GET(flag/usewhitelist))

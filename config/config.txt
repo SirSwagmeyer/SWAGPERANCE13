@@ -471,6 +471,9 @@ MINUTE_CLICK_LIMIT 400
 
 #CHANNEL_ANNOUNCE_NEW_GAME_MESSAGE A new round is beggining!!
 
+## Send a message to the chat when a ckey  is removed or added to verified
+#CHAT_ANNOUNCE_VERIFY verify
+
 ## Allow admin hrefs that don't use the new token system, will eventually be removed
 DEBUG_ADMIN_HREFS
 

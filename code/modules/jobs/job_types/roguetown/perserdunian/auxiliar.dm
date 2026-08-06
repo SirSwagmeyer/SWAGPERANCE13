@@ -52,7 +52,8 @@
 	backl = /obj/item/gun/ballistic/rifle/repeater/perserdun
 	backr = /obj/item/storage/backpack/rogue/backpack/perserdun
 	backpack_contents = list(
-		/obj/item/reagent_containers/glass/bottle/rogue/healthpotnew = 3,
+		/obj/item/reagent_containers/pill/patch/syringe/health = 2,
+		/obj/item/reagent_containers/pill/patch/syringe/painkiller,
 		/obj/item/storage/belt/rogue/pouch/ammobag/rifle,
 		/obj/item/storage/belt/rogue/pouch/coins/poor,
 		/obj/item/grenade/gas/poison = 2,

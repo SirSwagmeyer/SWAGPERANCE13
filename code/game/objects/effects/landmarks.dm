@@ -800,6 +800,78 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	jobspawn_override = list("Radio Officer")
 	delete_after_roundstart = FALSE
 
+//Hunter Spawns
+
+/obj/effect/landmark/start/huntmaster
+	name = "Huntmaster"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/huntmasterlate
+	name = "Huntmaster"
+	icon_state = "arrow"
+	jobspawn_override = list("Huntmaster")
+	delete_after_roundstart = FALSE
+
+/obj/effect/landmark/start/hedgeborn
+	name = "Hedgeborn"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/hedgebornlate
+	name = "Hedgeborn"
+	icon_state = "arrow"
+	jobspawn_override = list("Hedgeborn")
+	delete_after_roundstart = FALSE
+
+/obj/effect/landmark/start/huntsteward
+	name = "Huntsteward"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/huntstewardlate
+	name = "Huntsteward"
+	icon_state = "arrow"
+	jobspawn_override = list("Huntsteward")
+	delete_after_roundstart = FALSE
+
+/obj/effect/landmark/start/mountebank
+	name = "Mountebank"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/mountebanklate
+	name = "Mountebank"
+	icon_state = "arrow"
+	jobspawn_override = list("Mountebank")
+	delete_after_roundstart = FALSE
+
+/obj/effect/landmark/start/huntsman
+	name = "Huntsman"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/huntsmanlate
+	name = "Huntsman"
+	icon_state = "arrow"
+	jobspawn_override = list("Huntsman")
+	delete_after_roundstart = FALSE
+
+/obj/effect/landmark/start/perconscript
+	name = "Perserdunian Conscript"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/perconscriptlate
+	name = "Perserdunian Conscript"
+	icon_state = "arrow"
+	jobspawn_override = list("Perserdunian Conscript")
+	delete_after_roundstart = FALSE
+
+/obj/effect/landmark/start/risconscript
+	name = "Risvonian Conscript"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/risconscriptlate
+	name = "Risvonian Conscript"
+	icon_state = "arrow"
+	jobspawn_override = list("Risvonian Conscript")
+	delete_after_roundstart = FALSE
+
 //Antagonist spawns
 
 /obj/effect/landmark/start/wizard

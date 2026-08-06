@@ -49,27 +49,27 @@ SUBSYSTEM_DEF(droning)
 
 		if(GLOB.tod == "dawn")
 			if(area_player.droning_sound_dawn)
-				used_sound = area_player.droning_sound_dawn
+				used_sound = pick(area_player.droning_sound_dawn)
 			else
-				used_sound = area_player.droning_sound
+				used_sound = pick(area_player.droning_sound)
 
 		if(GLOB.tod == "day")
 			if(area_player.droning_sound)
-				used_sound = area_player.droning_sound
+				used_sound = pick(area_player.droning_sound)
 			else
 				used_sound = null
 
 		if(GLOB.tod == "dusk")
 			if(area_player.droning_sound_dusk)
-				used_sound = area_player.droning_sound_dusk
+				used_sound = pick(area_player.droning_sound_dusk)
 			else
-				used_sound = area_player.droning_sound
+				used_sound = pick(area_player.droning_sound)
 
 		if(GLOB.tod == "night")
 			if(area_player.droning_sound_night)
-				used_sound = area_player.droning_sound_night
+				used_sound = pick(area_player.droning_sound_night)
 			else
-				used_sound = area_player.droning_sound
+				used_sound = pick(area_player.droning_sound)
 
 		if(HAS_TRAIT(listener.mob, TRAIT_SCHIZO_AMBIENCE))
 			used_sound = list('sound/music/dreamer_is_still_asleep.ogg')
