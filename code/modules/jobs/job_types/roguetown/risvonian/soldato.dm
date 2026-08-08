@@ -48,16 +48,17 @@
 	mask = /obj/item/clothing/mask/rogue/gasmask/risvonmask
 	belt = /obj/item/storage/belt/rogue/leather/black/soldier
 	beltl = /obj/item/flashlight/flare/torch/lantern
-	beltr = /obj/item/storage/belt/rogue/pouch/ammobag/pistol
+	beltr = /obj/item/storage/belt/rogue/pouch/ammobag/rifle
 	wrists = /obj/item/scomstone
 	gloves = /obj/item/clothing/gloves/roguetown/eastgloves1
 	id = /obj/item/roguekey/risvon
-	backl = /obj/item/rogueweapon/stoneaxe/woodcut/risvon
+	backl = /obj/item/gun/ballistic/rifle/repeater/springfield
 	backr = /obj/item/storage/backpack/rogue/backpack/risvon
 	backpack_contents = list(
 		/obj/item/storage/belt/rogue/pouch/coins/poor,
 		/obj/item/grenade/gas/smoke = 1,
 		/obj/item/rope,
+		/obj/item/rogueweapon/stoneaxe/woodcut/risvon,
 		/obj/item/gun/ballistic/rifle/repeater/pistol,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
