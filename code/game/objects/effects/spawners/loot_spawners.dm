@@ -44,7 +44,6 @@
 		/obj/item/roguecoin/copper/pile = 3,
 		/obj/item/roguecoin/silver/pile = 1,
 		//junk
-		/obj/item/rogue/instrument/flute = 3,
 		/obj/item/ash = 5,
 		/obj/item/natural/glass_shard = 5,
 		/obj/item/candle/yellow = 3,
@@ -187,7 +186,6 @@
 		/obj/item/roguecoin/copper/pile = 3,
 		/obj/item/roguecoin/silver/pile = 1,
 		//junk
-		/obj/item/rogue/instrument/flute = 3,
 		/obj/item/ash = 5,
 		/obj/item/natural/glass_shard = 5,
 		/obj/item/candle/yellow = 3,
