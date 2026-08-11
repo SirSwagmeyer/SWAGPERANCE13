@@ -377,6 +377,7 @@
 #define JDO_VETERINARIANREBEL 6.9
 #define JDO_TAILORREBEL 6.10
 #define JDO_SMITHYREBEL 6.11
+#define JDO_VAGRANTREBEL 6.12
 
 #define PERSERDUN_ROLES \
 	/datum/job/roguetown/grandmaster,\

@@ -38,7 +38,11 @@
 				index = H.real_name
 			S.name = " [index]'s dogtag"
 
-/datum/job/roguetown/suppressionist/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/suppressionist
+	name = "Protectorate Triumverate"
+	jobtype = /datum/job/roguetown/suppressionist
+
+/datum/outfit/job/roguetown/suppressionist/pre_equip(mob/living/carbon/human/H)
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy
 	shoes = /obj/item/clothing/shoes/roguetown/grenzelhoft
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/full/riot

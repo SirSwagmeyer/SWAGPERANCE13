@@ -1680,7 +1680,6 @@
 #include "code\modules\jobs\job_types\roguetown\rebels\vagrantrebel.dm"
 #include "code\modules\jobs\job_types\roguetown\rebels\veteranrebel.dm"
 #include "code\modules\jobs\job_types\roguetown\rebels\veterinarianrebel.dm"
-#include "code\modules\jobs\job_types\roguetown\rebels\rebel.dm\rebel_leader.dm"
 #include "code\modules\jobs\job_types\roguetown\risvonian\campfollower.dm"
 #include "code\modules\jobs\job_types\roguetown\risvonian\commandant.dm"
 #include "code\modules\jobs\job_types\roguetown\risvonian\consulo.dm"
