@@ -25,7 +25,8 @@
 
 /datum/outfit/job/roguetown/rebelleader/pre_equip(mob/living/carbon/human/H)
 	shoes = /obj/item/clothing/shoes/roguetown/grenzelhoft
-	shirt = /obj/item/clothing/suit/roguetown/shirt/freifechter
+	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/freifechter
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/heavy/freifechter
 	cloak = /obj/item/clothing/cloak/half/rebel
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants/otavan/generic
 	head = /obj/item/flowercrown/rosa

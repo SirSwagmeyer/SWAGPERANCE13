@@ -39,7 +39,7 @@
 			S.name = " [index]'s dogtag"
 
 /datum/outfit/job/roguetown/protectorate/pre_equip(mob/living/carbon/human/H)
-	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/lord
+	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/freifechter
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather/reinforced
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/riot
 	pants = /obj/item/clothing/under/roguetown/tights/riot

@@ -220,3 +220,26 @@
 	color = null
 	allowed_sex = list(MALE, FEMALE)
 	allowed_race = NON_DWARVEN_RACE_TYPES
+
+/obj/item/clothing/suit/roguetown/armor/leather/heavy/freifechter
+	name = "tailored jacket"
+	desc = "A light, flexible button-up leather jacket that will keep your vitals out of harm's way."
+	icon_state = "freijacket"
+	item_state = "freijacket"
+	max_integrity = ARMOR_INT_CHEST_LIGHT_MEDIUM
+	detail_tag = "_detail"
+	color = "#5E4440"
+	detail_color = "#c08955"
+
+/obj/item/clothing/suit/roguetown/armor/leather/heavy/freifechter/update_icon()
+	cut_overlays()
+	if(get_detail_tag())
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
+
+/obj/item/clothing/suit/roguetown/armor/leather/heavy/freifechter/Initialize()
+	..()
+	update_icon()

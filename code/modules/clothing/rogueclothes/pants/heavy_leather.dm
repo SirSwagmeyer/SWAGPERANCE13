@@ -34,12 +34,12 @@
 	allowed_race = NON_DWARVEN_RACE_TYPES
 
 /obj/item/clothing/under/roguetown/heavy_leather_pants/otavan/generic
-	name = "padded breeches"
+	name = "fencing breeches"
 	desc = "A pair of loose breeches with leather reinforcements on the waist and legs. Worn with a cup."
 	icon_state = "fencingbreeches"
 	detail_tag = "_detail"
 	color = "#FFFFFF"
-	detail_color = "#3b2b29"
+	detail_color = "#5E4440"
 
 /obj/item/clothing/under/roguetown/heavy_leather_pants/otavan/generic/update_icon()
 	cut_overlays()
@@ -49,6 +49,10 @@
 		if(get_detail_color())
 			pic.color = get_detail_color()
 		add_overlay(pic)
+
+/obj/item/clothing/under/roguetown/heavy_leather_pants/otavan/generic/Initialize()
+	..()
+	update_icon()
 
 /obj/item/clothing/under/roguetown/heavy_leather_pants/grenzelpants
 	name = "canvassed trousers"

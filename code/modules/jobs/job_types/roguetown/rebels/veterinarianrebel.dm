@@ -28,7 +28,7 @@
 	..()
 	mask = /obj/item/clothing/mask/rogue/sterilemask
 	neck = /obj/item/storage/belt/rogue/pouch/coins/mid
-	shirt = /obj/item/clothing/suit/roguetown/shirt/freifechter
+	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/freifechter
 	gloves = /obj/item/clothing/gloves/roguetown/leather/latex
 	pants = /obj/item/clothing/under/roguetown/tights
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather/reinforced
@@ -36,7 +36,7 @@
 	belt = /obj/item/storage/belt/rogue/leather/black
 	beltl = /obj/item/storage/belt/rogue/surgery_bag/full/physician
 	beltr = /obj/item/storage/belt/rogue/pouch/stim
-	wrists = /obj/item/scomstone
+	wrists = /obj/item/scomstone/kingsrow
 	backl = /obj/item/storage/backpack/rogue/satchel/black
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/syringe/health = 2,
