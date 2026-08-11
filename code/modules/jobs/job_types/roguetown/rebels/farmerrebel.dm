@@ -10,6 +10,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	cmode_music = 'sound/music/cmode/towner/combat_towner2.ogg'
+	agevet_req = FALSE
 
 	tutorial = "You used to live a simple life. You had a farm, perhaps a loving partner, and plenty of cattle and crops to tend to. But the Empire and their damned wars, taxes, and conscriptions left you with nothing. You are a Rebel Farmer, a simple fellow who has taken up arms to fight back against the Empire. You may not have the training of a soldier, but you have the heart of a fighter. You will use whatever means necessary to defend your home and your people."
 

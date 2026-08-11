@@ -8,6 +8,7 @@
 	allowed_races = RACES_CONSCRIPT_NONCOMBATANT
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
+	agevet_req = FALSE
 
 	tutorial = "Another disgruntled white-collar nobody - you aren't much of a fighter, but you make up the bulk of the rebellion forces. \
 				An officer worker in the Vos Arderla bursar's office, you handled the paperwork for the Empire's war effort, \

@@ -10,6 +10,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	cmode_music = 'sound/music/cmode/towner/combat_towner2.ogg'
+	agevet_req = FALSE
 
 	tutorial = "Your skills once armed the Perserdunian forces with tempered iron - but now, through one grudge or another, you've joined the rebel cause, and now arm them with your crafted weapons and armor."
 

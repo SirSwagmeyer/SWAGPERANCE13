@@ -8,6 +8,7 @@
 	allowed_races = RACES_CONSCRIPT_NONCOMBATANT
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
+	agevet_req = FALSE
 
 	tutorial = "You're nobody special - you simply had the charisma to inspire others, and managed to discover a MACHINE compound beneath your home. \
 				Arming the others with communication rings, you've found yourself in the position of leading the rebellion of Vos Arderla; \

@@ -7,6 +7,7 @@
 	spawn_positions = 1
 	selection_color = JCOLOR_PEASANT
 	display_order = JDO_VETERINARIANREBEL
+	agevet_req = FALSE
 
 	allowed_races = RACES_ALL_KINDS
 	allowed_sexes = list(MALE, FEMALE)

@@ -10,6 +10,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	cmode_music = 'sound/music/cmode/towner/combat_towner2.ogg'
+	agevet_req = FALSE
 
 	tutorial = "You were a hunter, although such a term means little anymore, with the Empire encroaching on every corner of the land. You are a Rebel Hunter, skilled in tracking, trapping, and surviving in the wild. You will use your abilities to fight back against the Empire and protect your home."
 

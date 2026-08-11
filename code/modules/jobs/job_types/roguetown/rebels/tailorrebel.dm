@@ -10,6 +10,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	cmode_music = 'sound/music/cmode/towner/combat_towner2.ogg'
+	agevet_req = FALSE
 
 	tutorial = "You have worked sleepless nights on honing your craft. From sacks, to tapestry and luxurious clothing, there is little you cannot sew into existence. How demeaning, now, that you've been employed by the rebel cause to mend their tattered gambesons."
 

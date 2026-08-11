@@ -8,6 +8,7 @@
 	allowed_races = RACES_CONSCRIPT_NONCOMBATANT
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
+	agevet_req = FALSE
 
 	tutorial = "You did your part in the war, but you were given a medical discharge - a bullet to the knee. Damn Kaspas. \
 				Your early retirement meant nothing to the Empire - they left you with nothing but the clothes on your back and a limp knee. \

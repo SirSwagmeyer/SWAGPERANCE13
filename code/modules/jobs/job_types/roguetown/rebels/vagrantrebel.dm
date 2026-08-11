@@ -10,6 +10,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	cmode_music = 'sound/music/cmode/towner/combat_towner2.ogg'
+	agevet_req = FALSE
 
 	tutorial = "You were a vagrant, wandering the streets and alleys of the town, eking out a living as best you could. This rebellion is a perfect opportunity for some upward mobility - not that you really have any other choice."
 

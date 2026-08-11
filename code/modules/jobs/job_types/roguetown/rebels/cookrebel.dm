@@ -10,6 +10,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	cmode_music = 'sound/music/cmode/towner/combat_towner2.ogg'
+	agevet_req = FALSE
 
 	tutorial = "There are many mouths to feed in town, and most look to you for it. Although you once worked for innkeepers and tavern owners, you have now joined the rebel cause, and your culinary skills are needed to keep the rebels fed."
 	outfit = /datum/outfit/job/roguetown/cookrebel
