@@ -14,7 +14,7 @@
 		/datum/job/roguetown/minerrebel = 3,
 		/datum/job/roguetown/vagrantrebel = 12,
 		/datum/job/roguetown/rebelleader = 1,
-		/datum/job/roguetown/officerrebel = 10,
+		/datum/job/roguetown/officerebel = 10,
 		/datum/job/roguetown/veteranrebel = 2,
 		/datum/job/roguetown/lumberjackrebel = 3,
 		/datum/job/roguetown/butcherrebel = 1,
