@@ -193,14 +193,6 @@
 /obj/item/bedsheet/rogue/fabric_double,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/outdoors/town)
-"aiG" = (
-/obj/structure/fluff/walldeco/computer/shuttle{
-	desc = "A MACHINE-made central computing system. This one contains mobilization plans with other rebel enclaves across other cities. DESTROY IT TO CRIPPLE  THE REBEL CAUSE. THIS WILL WIN THE ROUND FOR PERSERDUN.";
-	name = "STRATEGIST";
-	max_integrity = 999
-	},
-/turf/open/floor/rogue/herringbone,
-/area/rogue)
 "aiR" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -2300,10 +2292,6 @@
 /obj/structure/closet/dirthole/grave,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors/town)
-"ckQ" = (
-/obj/effect/decal/bodies,
-/turf/open/floor/rogue/herringbone,
-/area/rogue)
 "clf" = (
 /obj/structure/table/wood{
 	icon_state = "longtable"
@@ -2569,6 +2557,10 @@
 "cBv" = (
 /turf/open/floor/rogue/grassyel,
 /area/rogue/indoors/town)
+"cBE" = (
+/obj/effect/decal/bodies,
+/turf/open/floor/rogue/herringbone,
+/area/rogue)
 "cBI" = (
 /obj/structure/fluff/railing/corner/north_east,
 /obj/structure/flora/roguegrass,
@@ -2578,6 +2570,14 @@
 	},
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town)
+"cCF" = (
+/obj/structure/fluff/walldeco/computer/request{
+	desc = "A MACHINE-made central computing system. This one maintains supply systems with other rebel enclaves across other cities. DESTROY IT TO CRIPPLE  THE REBEL CAUSE. THIS WILL WIN THE ROUND FOR PERSERDUN.";
+	name = "SUPPLIER";
+	max_integrity = 999
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue)
 "cCJ" = (
 /obj/structure/chair/wood/rogue/chair3{
 	dir = 8
@@ -5527,6 +5527,15 @@
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town)
+"fpe" = (
+/obj/effect/decal/bodies{
+	dir = 2
+	},
+/obj/effect/decal/remains/corpse/charred/charred5{
+	pixel_y = -2
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue)
 "fpz" = (
 /obj/structure/flora/roguegrass/bush,
 /obj/effect/decal/cobbleedge{
@@ -5669,10 +5678,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/town)
 "fuT" = (
-/obj/structure/mineral_door/wood{
-	locked = 1;
-	max_integrity = 70
-	},
+/obj/structure/mineral_door/wood,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -7239,6 +7245,14 @@
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/town)
+"hik" = (
+/obj/structure/roguemachine/vaultbank{
+	max_integrity = 999;
+	name = "\improper BANKER";
+	desc = "A MACHINE-made central computing system. This one maintains the economic banking of the rebel forces. DESTROY IT TO CRIPPLE  THE REBEL CAUSE. THIS WILL WIN THE ROUND FOR PERSERDUN."
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue)
 "hiU" = (
 /obj/structure/stairs{
 	dir = 8
@@ -9620,6 +9634,12 @@
 /obj/effect/mine/explosive,
 /turf/open/floor/rogue/woodturned,
 /area/rogue/outdoors/town)
+"jxC" = (
+/obj/effect/decal/bodies{
+	dir = 8
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue)
 "jxK" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1
@@ -10246,12 +10266,6 @@
 	},
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town)
-"kfp" = (
-/obj/effect/decal/bodies{
-	dir = 4
-	},
-/turf/open/floor/rogue/herringbone,
-/area/rogue)
 "kfI" = (
 /obj/structure/fluff/railing/border/west,
 /turf/open/floor/rogue/herringbone,
@@ -10686,6 +10700,15 @@
 /obj/structure/fluff/railing/border/north,
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/outdoors/town)
+"kzU" = (
+/obj/effect/decal/bodies{
+	dir = 1
+	},
+/obj/effect/decal/remains/corpse/charred/charred5{
+	pixel_y = -3
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue)
 "kAb" = (
 /obj/structure/fluff/railing/fence{
 	dir = 8
@@ -11926,13 +11949,6 @@
 /obj/structure/bars/grille,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/indoors/town)
-"lLX" = (
-/obj/effect/decal/bodiesflipped{
-	pixel_y = 1;
-	dir = 4
-	},
-/turf/open/floor/rogue/herringbone,
-/area/rogue)
 "lOd" = (
 /obj/structure/fluff/railing/border{
 	dir = 4
@@ -13667,6 +13683,14 @@
 /obj/structure/stairs/d,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town)
+"nqP" = (
+/obj/structure/fluff/walldeco/computer/shuttle{
+	desc = "A MACHINE-made central computing system. This one contains mobilization plans with other rebel enclaves across other cities. DESTROY IT TO CRIPPLE  THE REBEL CAUSE. THIS WILL WIN THE ROUND FOR PERSERDUN.";
+	name = "STRATEGIST";
+	max_integrity = 999
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue)
 "nqV" = (
 /obj/effect/decal/edge{
 	color = "#3f3f3f";
@@ -15081,6 +15105,12 @@
 	},
 /turf/open/floor/rogue/herringbone,
 /area/rogue)
+"oQN" = (
+/obj/effect/decal/bodies{
+	dir = 4
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue)
 "oRr" = (
 /obj/effect/decal/mossy{
 	dir = 8
@@ -15369,14 +15399,6 @@
 	},
 /turf/open/floor/rogue/twig/platform,
 /area/rogue/outdoors/town)
-"pbw" = (
-/obj/structure/fluff/walldeco/computer/request{
-	desc = "A MACHINE-made central computing system. This one maintains supply systems with other rebel enclaves across other cities. DESTROY IT TO CRIPPLE  THE REBEL CAUSE. THIS WILL WIN THE ROUND FOR PERSERDUN.";
-	name = "SUPPLIER";
-	max_integrity = 999
-	},
-/turf/open/floor/rogue/herringbone,
-/area/rogue)
 "pbM" = (
 /turf/open/water/swamp/deep,
 /area/rogue/outdoors/town)
@@ -15461,14 +15483,6 @@
 	},
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
-"pfB" = (
-/obj/structure/roguemachine/vaultbank{
-	max_integrity = 999;
-	name = "\improper BANKER";
-	desc = "A MACHINE-made central computing system. This one maintains the economic banking of the rebel forces. DESTROY IT TO CRIPPLE  THE REBEL CAUSE. THIS WILL WIN THE ROUND FOR PERSERDUN."
-	},
-/turf/open/floor/rogue/herringbone,
-/area/rogue)
 "pgl" = (
 /turf/open/floor/rogue/twig{
 	dir = 2
@@ -15872,6 +15886,16 @@
 /obj/structure/table/wood/map/five,
 /turf/open/floor/rogue/herringbone,
 /area/rogue)
+"pva" = (
+/obj/machinery/light/rogue/wallfire/candle/blue,
+/obj/structure/fluff/walldeco/computer/largeb,
+/obj/structure/fluff/walldeco/computer/cameras{
+	name = "OPERATOR";
+	desc = "A MACHINE-made central computing system. This one maintains communications with other rebel enclaves across other cities. DESTROY IT TO CRIPPLE  THE REBEL CAUSE. THIS WILL WIN THE ROUND FOR PERSERDUN.";
+	max_integrity = 999
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue)
 "pve" = (
 /obj/effect/decal/mossy{
 	dir = 1
@@ -16134,6 +16158,10 @@
 	},
 /turf/open/floor/rogue/tile/harem,
 /area/rogue/outdoors/town)
+"pIk" = (
+/obj/structure/mineral_door/wood,
+/turf/open/floor/rogue/blocks,
+/area/rogue/indoors/town)
 "pIn" = (
 /obj/structure/closet/crate/chest,
 /obj/effect/spawner/lootdrop/ammo,
@@ -16177,6 +16205,13 @@
 /obj/structure/fluff/wallclock,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town)
+"pKj" = (
+/obj/effect/decal/bodiesflipped{
+	pixel_y = 1;
+	dir = 4
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue)
 "pKC" = (
 /obj/effect/decal/edge{
 	color = "#3f3f3f";
@@ -16249,13 +16284,6 @@
 	},
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town)
-"pNx" = (
-/obj/structure/fluff/walldeco/vent/vent3{
-	dir = 4;
-	pixel_x = -12
-	},
-/turf/closed/wall/mineral/rogue/perserdun,
-/area/rogue)
 "pNR" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -17020,15 +17048,6 @@
 /obj/structure/barricade/rogue/tanktrap,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors/town)
-"qxJ" = (
-/obj/effect/decal/bodies{
-	dir = 2
-	},
-/obj/effect/decal/remains/corpse/charred/charred5{
-	pixel_y = -2
-	},
-/turf/open/floor/rogue/herringbone,
-/area/rogue)
 "qxK" = (
 /obj/structure/fluff/railing/border/north,
 /obj/effect/decal/cobbleedge{
@@ -17679,10 +17698,7 @@
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town)
 "rfm" = (
-/obj/structure/mineral_door/wood{
-	locked = 1;
-	max_integrity = 70
-	},
+/obj/structure/mineral_door/wood,
 /turf/open/floor/rogue/fmetal/quads,
 /area/rogue/indoors/town)
 "rfn" = (
@@ -18309,12 +18325,11 @@
 /turf/open/floor/rogue/hay,
 /area/rogue/indoors/town)
 "rOA" = (
-/obj/structure/mineral_door/wood{
-	locked = 1;
-	max_integrity = 70
+/obj/structure/fluff/walldeco/vent/vent3{
+	pixel_y = 12
 	},
-/turf/open/floor/rogue/concrete,
-/area/rogue/indoors/town)
+/turf/closed/wall/mineral/rogue/perserdun,
+/area/rogue)
 "rPf" = (
 /obj/structure/fluff/railing/corner/south_east,
 /obj/structure/flora/roguegrass,
@@ -18327,12 +18342,6 @@
 "rPN" = (
 /turf/open/floor/rogue/concrete,
 /area/rogue/outdoors/town)
-"rQj" = (
-/obj/structure/fluff/walldeco/vent/vent3{
-	pixel_y = 12
-	},
-/turf/closed/wall/mineral/rogue/perserdun,
-/area/rogue)
 "rQk" = (
 /obj/structure/flora/roguegrass,
 /obj/structure/flora/ausbushes/brflowers,
@@ -19343,16 +19352,6 @@
 /obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town)
-"sNx" = (
-/obj/machinery/light/rogue/wallfire/candle/blue,
-/obj/structure/fluff/walldeco/computer/largeb,
-/obj/structure/fluff/walldeco/computer/cameras{
-	name = "OPERATOR";
-	desc = "A MACHINE-made central computing system. This one maintains communications with other rebel enclaves across other cities. DESTROY IT TO CRIPPLE  THE REBEL CAUSE. THIS WILL WIN THE ROUND FOR PERSERDUN.";
-	max_integrity = 999
-	},
-/turf/open/floor/rogue/herringbone,
-/area/rogue)
 "sND" = (
 /obj/structure/fluff/railing/border/west,
 /turf/open/transparent/openspace,
@@ -19889,15 +19888,6 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/outdoors/town)
-"tsD" = (
-/obj/effect/decal/bodies{
-	dir = 1
-	},
-/obj/effect/decal/remains/corpse/charred/charred5{
-	pixel_y = -3
-	},
-/turf/open/floor/rogue/herringbone,
-/area/rogue)
 "tsF" = (
 /turf/open/floor/rogue/rooftop/green{
 	dir = 4
@@ -20484,10 +20474,7 @@
 /obj/structure/fluff/walldeco/church/line{
 	dir = 1
 	},
-/obj/structure/mineral_door/wood{
-	locked = 1;
-	max_integrity = 70
-	},
+/obj/structure/mineral_door/wood,
 /turf/open/floor/rogue/churchrough,
 /area/rogue/indoors/town)
 "tZb" = (
@@ -20655,6 +20642,13 @@
 	pixel_y = 4
 	},
 /turf/open/floor/rogue/cobblerock,
+/area/rogue)
+"uga" = (
+/obj/structure/fluff/walldeco/vent/vent3{
+	dir = 4;
+	pixel_x = -12
+	},
+/turf/closed/wall/mineral/rogue/perserdun,
 /area/rogue)
 "ugY" = (
 /obj/structure/fermentation_keg/water,
@@ -21579,12 +21573,6 @@
 	},
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors/town)
-"uYl" = (
-/obj/effect/decal/bodies{
-	dir = 8
-	},
-/turf/open/floor/rogue/herringbone,
-/area/rogue)
 "uZd" = (
 /obj/effect/decal/cobble/mossy{
 	dir = 6
@@ -34072,11 +34060,11 @@ moE
 moE
 moE
 blX
-pfB
+hik
 qPy
 qPy
-kfp
-qxJ
+oQN
+fpe
 blX
 moE
 moE
@@ -34299,12 +34287,12 @@ moE
 moE
 moE
 blX
-pbw
+cCF
 qPy
 qPy
-uYl
-tsD
-rQj
+jxC
+kzU
+rOA
 moE
 moE
 moE
@@ -34526,7 +34514,7 @@ moE
 moE
 moE
 blX
-sNx
+pva
 qPy
 qPy
 qPy
@@ -34753,12 +34741,12 @@ moE
 moE
 moE
 blX
-aiG
+nqP
 qPy
 qPy
 qPy
 qPy
-rQj
+rOA
 moE
 moE
 moE
@@ -34980,11 +34968,11 @@ moE
 moE
 moE
 blX
-pfB
+hik
 qPy
-kfp
-ckQ
-lLX
+oQN
+cBE
+pKj
 blX
 moE
 moE
@@ -35207,11 +35195,11 @@ moE
 moE
 moE
 blX
-pNx
+uga
 blX
-pNx
+uga
 blX
-pNx
+uga
 blX
 moE
 moE
@@ -80628,7 +80616,7 @@ gow
 gow
 gCB
 wnd
-mrW
+eyn
 wnd
 aNh
 wnd
@@ -81730,7 +81718,7 @@ wnd
 laW
 laW
 wnd
-bXc
+pIk
 gCB
 etg
 iog
@@ -83314,7 +83302,7 @@ vAt
 gIF
 rIh
 gIF
-rOA
+mOB
 abS
 xzG
 xzG
@@ -84043,7 +84031,7 @@ wnd
 gCB
 ezI
 uic
-rOA
+mOB
 abS
 xzG
 xzG
@@ -85594,7 +85582,7 @@ mOd
 iwj
 gCB
 wnd
-rOA
+mOB
 wnd
 wnd
 wnd
@@ -85803,7 +85791,7 @@ fnM
 kpB
 wBK
 rsq
-bXc
+pIk
 pwZ
 djg
 scp
@@ -86246,7 +86234,7 @@ fzK
 wkO
 pcl
 pcl
-rOA
+mOB
 xah
 xzG
 xzG
@@ -88970,7 +88958,7 @@ wnd
 nkF
 kVf
 rIh
-fBi
+sbz
 xah
 xzG
 xzG
@@ -89665,7 +89653,7 @@ gpT
 hPM
 bKL
 lCf
-rOA
+mOB
 dFB
 efZ
 xzG

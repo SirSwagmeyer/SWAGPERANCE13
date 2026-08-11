@@ -124,7 +124,7 @@
 
 
 /obj/item/clothing/suit/roguetown/shirt/freifechter
-	name = "padded fencing shirt"
+	name = "padded shirt"
 	desc = "A strong loosely worn quilted shirt that places little weight on the arms, usually worn underneath a flexible leather vest. It won't cover your legs."
 	icon = 'icons/roguetown/clothing/armor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
@@ -160,7 +160,7 @@
 
 /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/grenzelhoft
 	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
-	name = "grenzelhoftian hip-shirt"
+	name = "tailored hip-shirt"
 	desc = "Padded shirt for extra comfort and protection, adorned in vibrant colors."
 	body_parts_covered = COVERAGE_ALL_BUT_LEGS
 	icon_state = "grenzelshirt"

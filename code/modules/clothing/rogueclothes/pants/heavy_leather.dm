@@ -28,13 +28,13 @@
 	body_parts_covered = GROIN
 
 /obj/item/clothing/under/roguetown/heavy_leather_pants/otavan
-	name = "otavan leather trousers"
-	desc = "padded leather armor made by Otavan tailors, its quality is remarkable."
+	name = "Arderlian leather trousers"
+	desc = "padded leather armor made by Arderlian tailors, its quality is remarkable."
 	icon_state = "fencerpants"
 	allowed_race = NON_DWARVEN_RACE_TYPES
 
 /obj/item/clothing/under/roguetown/heavy_leather_pants/otavan/generic
-	name = "fencing breeches"
+	name = "padded breeches"
 	desc = "A pair of loose breeches with leather reinforcements on the waist and legs. Worn with a cup."
 	icon_state = "fencingbreeches"
 	detail_tag = "_detail"
@@ -51,7 +51,7 @@
 		add_overlay(pic)
 
 /obj/item/clothing/under/roguetown/heavy_leather_pants/grenzelpants
-	name = "grenzelhoftian paumpers"
+	name = "canvassed trousers"
 	desc = "Padded pants for extra comfort and protection, adorned in vibrant colors."
 	icon_state = "grenzelpants"
 	item_state = "grenzelpants"
@@ -92,6 +92,6 @@
 
 /obj/item/clothing/under/roguetown/heavy_leather_pants/eastpants2
 	name = "strange ripped pants"
-	desc = "Weird pants typically worn by the destitute in Kazengun. Or, those looking to make a fashion statement."
+	desc = "Weird pants typically worn by the destitute. Or, those looking to make a fashion statement."
 	icon_state = "eastpants2"
 	allowed_race = NON_DWARVEN_RACE_TYPES

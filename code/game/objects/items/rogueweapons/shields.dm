@@ -373,3 +373,23 @@
 	coverage = 15
 	max_integrity = 200
 	possible_item_intents = list(SHIELD_BLOCK, FENCER_DAZE) */
+
+/obj/item/rogueweapon/shield/tower/metal/ballistic
+	name = "protectorate ballistic shield"
+	desc = "A heavy MACHINED shield, designed with the express purpose of stopping bullets. Expensive, and sparingly used exclusively for Protectorate soldiers."
+	icon_state = "ballistic"
+	force = 25
+	throwforce = 10
+	throw_speed = 1
+	throw_range = 3
+	possible_item_intents = list(SHIELD_BASH_METAL, SHIELD_BLOCK, SHIELD_SMASH_METAL)
+	wlength = WLENGTH_NORMAL
+	resistance_flags = null
+	flags_1 = CONDUCT_1
+	wdefense = 11
+	coverage = 70
+	attacked_sound = list('sound/combat/parry/shield/metalshield (1).ogg','sound/combat/parry/shield/metalshield (2).ogg','sound/combat/parry/shield/metalshield (3).ogg')
+	parrysound = list('sound/combat/parry/shield/metalshield (1).ogg','sound/combat/parry/shield/metalshield (2).ogg','sound/combat/parry/shield/metalshield (3).ogg')
+	max_integrity = 300
+	blade_dulling = DULLING_SHAFT_METAL
+	sellprice = 30

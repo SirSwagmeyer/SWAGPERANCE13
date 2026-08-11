@@ -1,0 +1,68 @@
+/datum/job/roguetown/lumberjackrebel
+	title = "Rebel Lumberjack"
+	flag = LUMBERJACKREBEL
+	department_flag = REBELS
+	faction = "Station"
+	total_positions = 3
+	spawn_positions = 3
+	allowed_races = RACES_CONSCRIPT_NONCOMBATANT
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
+
+	tutorial = "You did your part in the war, but you were given a medical discharge - a bullet to the knee. Damn Kaspas. \
+				Your early retirement meant nothing to the Empire - they left you with nothing but the clothes on your back and a limp knee. \
+				Stewing in hate and bitterness at the Empire's abandonment, you join the local resistance. \
+				You may be crippled, but you're one of the only rebels around with actual combat experience - the rebels look to you for field leadership." 
+
+	outfit = /datum/outfit/job/roguetown/lumberjackrebel
+	display_order = JDO_LUMBERJACKREBEL
+	give_bank_account = TRUE
+	min_pq = 0
+	max_pq = null
+
+	cmode_music = 'sound/music/combat_backliner.ogg'
+
+/datum/outfit/job/roguetown/lumberjackrebel/pre_equip(mob/living/carbon/human/H)
+	..()
+	H.adjust_skillrank(/datum/skill/combat/axes, 4, TRUE) // AXE MEN! GIVE ME SPLINTERS!
+	H.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/craft/carpentry, 1, TRUE)
+	H.adjust_skillrank(/datum/skill/craft/masonry, 1, TRUE)
+	H.adjust_skillrank(/datum/skill/craft/engineering, 1, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
+	H.adjust_skillrank(/datum/skill/labor/butchering, 1, TRUE)
+	H.adjust_skillrank(/datum/skill/labor/lumberjacking, 4, TRUE)
+	H.adjust_skillrank(/datum/skill/craft/traps, 1, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
+	H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+	belt = /obj/item/storage/belt/rogue/leather
+	head = /obj/item/clothing/head/roguetown/roguehood
+	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
+	backr = /obj/item/storage/backpack/rogue/satchel
+	backl = /obj/item/rogueweapon/stoneaxe/woodcut/steel/woodcutter		//Unique axe, not craftable purposefully. Good axe, but not end-all be-all for combat.
+	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
+	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+	beltr = /obj/item/rogueweapon/handsaw
+	beltl = /obj/item/rogueweapon/hammer/wood
+	backpack_contents = list(
+						/obj/item/flint = 1,
+						/obj/item/flashlight/flare/torch = 1,
+						/obj/item/rogueweapon/huntingknife = 1,
+						/obj/item/recipe_book/builder = 1,
+						/obj/item/recipe_book/survival = 1,
+						)
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/trophyfur
+	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants/otavan
+	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random
+	H.change_stat("strength", 2)
+	H.change_stat("endurance", 3)
+	H.change_stat("constitution", 2)
+	H.change_stat("perception", 1)
