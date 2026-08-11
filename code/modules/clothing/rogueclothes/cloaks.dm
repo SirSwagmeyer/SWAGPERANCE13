@@ -1995,7 +1995,7 @@
 	color = null
 	allowed_race = NON_DWARVEN_RACE_TYPES
 
-/obj/item/clothing/cloak/cape/rebel
+/obj/item/clothing/cloak/half/rebel
 	name = "revolutionary cape"
 	desc = "\"Cover me in the linen of the workers, red with the blood of the oppressed.\""
 	color = null
@@ -2003,6 +2003,8 @@
 	item_state = "rebelcloak"
 	alternate_worn_layer = CLOAK_BEHIND_LAYER
 	boobed = TRUE
+	icon = 'icons/roguetown/clothing/cloaks.dmi'
+	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	sleevetype = "shirt"
 	nodismemsleeves = TRUE

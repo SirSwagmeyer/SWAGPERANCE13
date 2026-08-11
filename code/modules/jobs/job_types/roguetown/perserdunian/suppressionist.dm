@@ -44,7 +44,7 @@
 
 /datum/outfit/job/roguetown/suppressionist/pre_equip(mob/living/carbon/human/H)
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy
-	shoes = /obj/item/clothing/shoes/roguetown/grenzelhoft
+	shoes = /obj/item/clothing/shoes/roguetown/boots/leather/reinforced
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/full/riot
 	pants = /obj/item/clothing/under/roguetown/tights/riot
 	head = /obj/item/clothing/head/roguetown/helmet/riot

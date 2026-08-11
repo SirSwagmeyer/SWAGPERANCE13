@@ -171,6 +171,7 @@
 	name = "protectorate pot-helm"
 	desc = "A MACHINED helmet with a chin-strap to ensure stability. Exposes the face."
 	body_parts_covered = HEAD|HAIR|EARS
+	flags_inv = HIDEEARS|HIDEHAIR
 	armor = ARMOR_HEAD_HELMET
 	prevent_crits = list(BCLASS_TWIST)
 	allowed_race = ALL_RACES_TYPES

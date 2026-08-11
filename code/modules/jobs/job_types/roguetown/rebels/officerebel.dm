@@ -25,6 +25,7 @@
 /datum/outfit/job/roguetown/officerebel/pre_equip(mob/living/carbon/human/H)
 	shoes = /obj/item/clothing/shoes/roguetown/boots/otavan
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants/otavan
+	shirt = /obj/item/clothing/suit/roguetown/shirt/officeshirt4
 	head = /obj/item/clothing/head/roguetown/headband
 	belt = /obj/item/storage/belt/rogue/leather/steel
 	beltl = /obj/item/flashlight/flare/torch/lantern
@@ -57,13 +58,13 @@
 	H.change_stat("intelligence", 4)
 	H.change_stat("perception", 3)
 	H.change_stat("speed", 3)
-	if(prob(20))
+	if(prob(50))
 		shirt = /obj/item/clothing/suit/roguetown/shirt/officeshirt1
-	if(prob(20))
+	if(prob(50))
 		shirt = /obj/item/clothing/suit/roguetown/shirt/officeshirt2
-	if(prob(20))
+	if(prob(50))
 		shirt = /obj/item/clothing/suit/roguetown/shirt/officeshirt3
-	if(prob(20))
+	if(prob(50))
 		shirt = /obj/item/clothing/suit/roguetown/shirt/officeshirt4
-	if(prob(20))
+	if(prob(50))
 		shirt = /obj/item/clothing/suit/roguetown/shirt/officeshirt5

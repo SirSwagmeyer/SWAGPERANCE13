@@ -275,6 +275,7 @@
 	smeltresult = /obj/item/ingot/steel
 	armor = ARMOR_PLATE_GOOD
 	allowed_race = ALL_RACES_TYPES
+	flags_inv = HIDEJUMPSUIT
 	prevent_crits = list(BCLASS_PIERCE, BCLASS_TWIST)
 	equip_delay_self = 5 SECONDS
 	unequip_delay_self = 10 SECONDS
