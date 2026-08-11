@@ -36,6 +36,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
 	cloak = /obj/item/clothing/cloak/apron
 	wrists = /obj/item/scomstone/kingsrow
+	pants = /obj/item/clothing/under/roguetown/trou/leather
 	shirt = /obj/item/clothing/suit/roguetown/shirt/officeshirt5
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 	backpack_contents = list(
