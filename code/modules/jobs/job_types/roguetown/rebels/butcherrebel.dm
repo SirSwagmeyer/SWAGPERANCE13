@@ -34,7 +34,7 @@
 	beltl = /obj/item/rogueweapon/huntingknife/cleaver // old tbutcher had no knife. as a butcher.
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
 	cloak = /obj/item/clothing/cloak/apron
-	wrists = /obj/item/scomstone
+	wrists = /obj/item/scomstone/kingsrow
 	shirt = /obj/item/clothing/suit/roguetown/shirt/officeshirt5
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 	backpack_contents = list(
@@ -48,3 +48,4 @@
 	H.change_stat("strength", 2)	//Stat spread is decent; not great but decent. 
 	H.change_stat("endurance", 2)
 	H.change_stat("constitution", 2)
+	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)

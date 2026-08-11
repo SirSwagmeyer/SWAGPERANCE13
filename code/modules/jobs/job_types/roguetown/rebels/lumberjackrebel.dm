@@ -49,7 +49,7 @@
 	backr = /obj/item/storage/backpack/rogue/satchel
 	backl = /obj/item/rogueweapon/stoneaxe/woodcut/steel/woodcutter		//Unique axe, not craftable purposefully. Good axe, but not end-all be-all for combat.
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+	wrists = /obj/item/scomstone/kingsrow
 	beltr = /obj/item/rogueweapon/handsaw
 	beltl = /obj/item/rogueweapon/hammer/wood
 	backpack_contents = list(
@@ -66,3 +66,4 @@
 	H.change_stat("endurance", 3)
 	H.change_stat("constitution", 2)
 	H.change_stat("perception", 1)
+	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)

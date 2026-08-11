@@ -44,7 +44,7 @@
 	head = /obj/item/clothing/head/roguetown/cookhat
 	shoes = /obj/item/clothing/shoes/roguetown/shortboots
 	neck = /obj/item/storage/belt/rogue/pouch/coins/mid
-	wrists = /obj/item/scomstone
+	wrists = /obj/item/scomstone/kingsrow
 	shirt = /obj/item/clothing/suit/roguetown/shirt/officeshirt3
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	backpack_contents = list(

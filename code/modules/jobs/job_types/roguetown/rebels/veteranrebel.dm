@@ -27,6 +27,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather/reinforced
 	cloak = /obj/item/clothing/cloak/huntabard
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants
+	mask = /obj/item/clothing/mask/rogue/gasmask/perserdunmask
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron
 	head = /obj/item/clothing/head/roguetown/helmet/sallet/visored/iron
 	belt = /obj/item/storage/belt/rogue/leather/black/soldier
@@ -62,3 +63,8 @@
 	H.change_stat("endurance", 2)
 	H.change_stat("perception", 2)
 	H.change_stat("speed", -3)
+	if(H.mind)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/holdingweak)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/aimweak)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/chargeweak)
+	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)

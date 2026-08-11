@@ -12,7 +12,6 @@
 	cmode_music = 'sound/music/cmode/towner/combat_towner2.ogg'
 
 	tutorial = "You were a vagrant, wandering the streets and alleys of the town, eking out a living as best you could. This rebellion is a perfect opportunity for some upward mobility - not that you really have any other choice."
-F
 
 	outfit = /datum/outfit/job/roguetown/vagrantrebel
 	give_bank_account = 17

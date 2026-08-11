@@ -392,7 +392,7 @@
 	/datum/job/roguetown/envoy,\
 	/datum/job/roguetown/perserconscript,\
 	/datum/job/roguetown/protectorate,\
-	/datum/job/roguetown/suppresionist
+	/datum/job/roguetown/suppressionist
 
 #define RISVON_ROLES \
 	/datum/job/roguetown/commandant,\

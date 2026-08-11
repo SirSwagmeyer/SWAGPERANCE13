@@ -1,5 +1,5 @@
 /datum/job/roguetown/suppressionist
-	title = "Protectorate Suppressionist"
+	title = "Protectorate Triumverate"
 	flag = SUPPRESSIONIST
 	department_flag = PERSERDUN
 	faction = "Station"
@@ -11,10 +11,10 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 
 	tutorial = "CIVIL UNREST HAS ESCALATED INTO A REBELLION. \
-				YOU ARE A PROTECTORATE SUPPRESSIONIST - A ELITE ENFORCER A STEP ABOVE THE GUARDSMEN. \
-				YOU ARE EQUIPPED TO HANDLE HEAVY FIREPOWER, BUT YOU ARE NO GRAND KNIGHT. \
-				YOU ARE A FORCE MULTIPLIER - CAPABLE OF TURNING THE TIDE OF BATTLE. \
-				YOU ARE A PROMOTED GUARDSMAN, ELEVATED ABOVE THE ORDINARY RANKS THROUGH SHEER EFFORT. \
+				YOU ARE ONE OF THREE - A MEMBER OF THE PROTECTORATE TRIUMVERATE. \
+				YOU ARE EQUIPPED TO HANDLE HEAVY FIREPOWER, AND LEAD WITH THE TWO OTHER SUPPRESSIONISTS. \
+				YOU ARE A FORCE MULTIPLIER - CAPABLE OF TURNING THE TIDE OF BATTLE, BUT YOU ARE NO GRAND KNIGHT. \
+				YOU ARE A LIEUTENANT, ELEVATED ABOVE THE RANK OF KNIGHT-COMMANDER THROUGH SHEER EFFORT. \
 				YOU ARE AUTHORIZED TO KILL."
 
 	outfit = /datum/outfit/job/roguetown/suppressionist
@@ -80,5 +80,9 @@
 	H.change_stat("constitution", 3)
 	H.change_stat("endurance", 3)
 	H.change_stat("perception", 2)
+	if(H.mind)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/holding)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/aim)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/charge)
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)

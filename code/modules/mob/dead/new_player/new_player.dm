@@ -580,6 +580,7 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 	omegalist += list(GLOB.risvon_positions)
 	omegalist += list(GLOB.kingsrow_positions)
 	omegalist += list(GLOB.hunter_positions)
+	omegalist += list(GLOB.rebel_positions)
 	omegalist += list(GLOB.nonaffiliated_positions)
 
 	for(var/list/category in omegalist)
@@ -629,6 +630,8 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 					cat_name = "King's Row"
 				if (HUNTERS)
 					cat_name = "Hunter's Party"
+				if (REBELS)
+					cat_name = "Vos Arderla Rebel Front"
 				if (UNAFFILIATED)
 					cat_name = "Unaffiliated Nobodies"
 			//	if (GOBLIN)

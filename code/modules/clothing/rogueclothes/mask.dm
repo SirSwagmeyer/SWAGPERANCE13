@@ -358,6 +358,8 @@
 	detail_color = COLOR_SILVER
 	sewrepair = TRUE
 
+/obj/item/clothing/mask/rogue/duelmask/red
+	color = COLOR_BLOODRED
 // t13 masks
 
 /obj/item/clothing/mask/rogue/gasmask

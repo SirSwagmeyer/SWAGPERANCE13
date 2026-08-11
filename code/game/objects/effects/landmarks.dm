@@ -1015,13 +1015,13 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/suppressionist
-	name = "Protectorate Suppressionist"
+	name = "Protectorate Triumverate"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/suppressionistlate
-	name = "Protectorate Suppressionist"
+	name = "Protectorate Triumverate"
 	icon_state = "arrow"
-	jobspawn_override = list("Protectorate Suppressionist")
+	jobspawn_override = list("Protectorate Triumverate")
 	delete_after_roundstart = FALSE
 
 //Antagonist spawns
