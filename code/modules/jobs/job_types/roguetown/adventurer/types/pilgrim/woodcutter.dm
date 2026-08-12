@@ -4,13 +4,9 @@
 	either for yourself, or for others. You are a novice carpenter too, so you can bend wood into some items you need, and chop it efficiently."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
-<<<<<<< HEAD
-	outfit = /datum/outfit/job/roguetown/adventurer/woodcutter	
-=======
 	outfit = /datum/outfit/job/roguetown/adventurer/woodcutter
 	cmode_music = 'sound/music/combat_fog.ogg'
 	
->>>>>>> upstream/main
 	category_tags = list(CTAG_PILGRIM, CTAG_TOWNER)
 
 /datum/outfit/job/roguetown/adventurer/woodcutter/pre_equip(mob/living/carbon/human/H)

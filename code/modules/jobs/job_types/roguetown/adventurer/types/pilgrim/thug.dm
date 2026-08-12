@@ -4,10 +4,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/thug
-<<<<<<< HEAD
-=======
 	cmode_music = 'sound/music/combat_fog.ogg'
->>>>>>> upstream/main
 	
 	category_tags = list(CTAG_TOWNER)
 
