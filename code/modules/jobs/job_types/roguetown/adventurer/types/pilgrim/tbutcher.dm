@@ -4,6 +4,10 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/butcher
+<<<<<<< HEAD
+=======
+	cmode_music = 'sound/music/combat_fog.ogg'
+>>>>>>> upstream/main
 	category_tags = list(CTAG_PILGRIM, CTAG_TOWNER)
 
 /datum/outfit/job/roguetown/adventurer/butcher/pre_equip(mob/living/carbon/human/H)

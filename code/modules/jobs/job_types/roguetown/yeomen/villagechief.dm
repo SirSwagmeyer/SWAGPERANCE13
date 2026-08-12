@@ -16,7 +16,7 @@
 	give_bank_account = 16
 	round_contrib_points = 3
 
-	cmode_music = 'sound/music/cmode/towner/combat_retired.ogg'
+	cmode_music = 'sound/music/combat_fog.ogg'
 
 /datum/outfit/job/roguetown/elder
 	name = "Town Elder"
