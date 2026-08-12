@@ -54,6 +54,7 @@
 	H.adjust_skillrank(/datum/skill/misc/stealing, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/lockpicking, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/traps, 4, TRUE)
+	H.adjust_skillrank(/datum/skill/craft/crafting, 4, TRUE)
 	ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NIGHT_OWL, TRAIT_GENERIC) 
 	H.change_stat("intelligence", 4)

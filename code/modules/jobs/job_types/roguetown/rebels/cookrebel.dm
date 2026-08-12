@@ -9,7 +9,7 @@
 	display_order = JDO_COOKREBEL
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
-	cmode_music = 'sound/music/cmode/towner/combat_towner2.ogg'
+	cmode_music = 'sound/music/combat_jester.ogg'
 	agevet_req = FALSE
 
 	tutorial = "There are many mouths to feed in town, and most look to you for it. Although you once worked for innkeepers and tavern owners, you have now joined the rebel cause, and your culinary skills are needed to keep the rebels fed."
@@ -21,12 +21,12 @@
 /datum/outfit/job/roguetown/cookrebel/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/unarmed, 4, TRUE) //SS13 CHEF REFERENCE
 	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/cooking, 5, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/sewing, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/labor/butchering, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/labor/farming, 2, TRUE)
 	if(H.age == AGE_MIDDLEAGED)
@@ -54,6 +54,6 @@
 		/obj/item/book/rogue/yeoldecookingmanual = 1,
 	)
 	H.change_stat("constitution", 2)
-	H.change_stat("strength", 1)
+	H.change_stat("strength", 2)
 	H.change_stat("intelligence", 3) //5 points (weighted)
 	ADD_TRAIT(H, TRAIT_CICERONE, TRAIT_GENERIC)
