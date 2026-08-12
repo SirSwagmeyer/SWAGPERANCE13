@@ -21,7 +21,7 @@
 	min_pq = 0
 	max_pq = null
 
-	cmode_music = 'sound/music/combat_backliner.ogg'
+	cmode_music = 'sound/music/combat_blackoak.ogg'
 
 /datum/outfit/job/roguetown/lumberjackrebel/pre_equip(mob/living/carbon/human/H)
 	..()

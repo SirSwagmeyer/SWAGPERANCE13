@@ -21,7 +21,7 @@
 	min_pq = 0
 	max_pq = null
 
-	cmode_music = 'sound/music/combat_backliner.ogg'
+	cmode_music = 'sound/music/combat_shaman2.ogg'
 
 /datum/outfit/job/roguetown/veteranrebel/pre_equip(mob/living/carbon/human/H)
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/lord

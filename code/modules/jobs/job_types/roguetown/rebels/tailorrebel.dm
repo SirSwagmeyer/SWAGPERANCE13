@@ -9,7 +9,6 @@
 	display_order = JDO_TAILORREBEL
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
-	cmode_music = 'sound/music/cmode/towner/combat_towner2.ogg'
 	agevet_req = FALSE
 
 	tutorial = "You have worked sleepless nights on honing your craft. From sacks, to tapestry and luxurious clothing, there is little you cannot sew into existence. How demeaning, now, that you've been employed by the rebel cause to mend their tattered gambesons."
@@ -18,7 +17,7 @@
 	give_bank_account = 25
 	min_pq = -10
 	max_pq = null
-	cmode_music = 'sound/music/cmode/towner/combat_towner2.ogg'
+	cmode_music = 'sound/music/combat_noble.ogg'
 
 /datum/outfit/job/roguetown/tailorrebel/pre_equip(mob/living/carbon/human/H)
 	..()

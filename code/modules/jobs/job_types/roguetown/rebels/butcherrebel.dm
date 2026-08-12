@@ -10,6 +10,7 @@
 	allowed_races = RACES_ALL_KINDS
 	allowed_ages = ALL_AGES_LIST
 	tutorial = "You are a butcher - a master of butchering, chopping, and preserving animal meat. Although many considered you an odd savant, you've found your calling as a crucial member of the rebel cause - your skills in meat preservation ensures your fellow rebels never go hungry."
+	cmode_music = 'sound/music/combat_gronn.ogg'
 
 	outfit = /datum/outfit/job/roguetown/butcherrebel
 	display_order = JDO_BUTCHERREBEL

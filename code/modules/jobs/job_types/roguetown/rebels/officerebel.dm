@@ -21,7 +21,7 @@
 	min_pq = 0
 	max_pq = null
 
-	cmode_music = 'sound/music/cmode/adventurer/combat_private.ogg'
+	cmode_music = 'sound/music/inquisitorcombat.ogg'
 
 /datum/outfit/job/roguetown/officerebel/pre_equip(mob/living/carbon/human/H)
 	shoes = /obj/item/clothing/shoes/roguetown/boots/otavan

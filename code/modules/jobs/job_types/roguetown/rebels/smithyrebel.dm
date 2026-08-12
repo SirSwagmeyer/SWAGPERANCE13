@@ -18,7 +18,7 @@
 	give_bank_account = 25
 	min_pq = -10
 	max_pq = null
-	cmode_music = 'sound/music/cmode/towner/combat_towner2.ogg'
+	cmode_music = 'sound/music/combat_gronn.ogg'
 
 /datum/outfit/job/roguetown/smithyrebel/pre_equip(mob/living/carbon/human/H)
 	..()

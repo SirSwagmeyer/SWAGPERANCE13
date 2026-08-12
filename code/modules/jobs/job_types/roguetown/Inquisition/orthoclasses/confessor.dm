@@ -5,7 +5,6 @@
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/confessor
 	category_tags = list(CTAG_INQUISITION)
-	cmode_music = 'sound/music/cmode/antag/combat_deadlyshadows.ogg'
 
 /datum/outfit/job/roguetown/confessor
 
