@@ -5,10 +5,7 @@
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/confessor
 	category_tags = list(CTAG_INQUISITION)
-<<<<<<< HEAD
-=======
 	cmode_music = 'sound/music/combat_fog.ogg'
->>>>>>> upstream/main
 
 /datum/outfit/job/roguetown/confessor
 

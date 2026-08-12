@@ -74,11 +74,6 @@
 	wretch_select_bounty(H)
 	switch(H.patron?.type)
 		if(/datum/patron/inhumen/zizo)
-<<<<<<< HEAD
-		if(/datum/patron/inhumen/matthios)
-		if(/datum/patron/inhumen/baotha)
-		if(/datum/patron/inhumen/graggar)
-=======
 			H.cmode_music = 'sound/music/combat_fog.ogg'
 		if(/datum/patron/inhumen/matthios)
 			H.cmode_music = 'sound/music/combat_fog.ogg'
@@ -86,4 +81,3 @@
 			H.cmode_music = 'sound/music/combat_fog.ogg'
 		if(/datum/patron/inhumen/graggar)
 			H.cmode_music = 'sound/music/combat_fog.ogg'
->>>>>>> upstream/main
