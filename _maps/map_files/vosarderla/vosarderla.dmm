@@ -4576,10 +4576,6 @@
 /obj/machinery/light/rogue/torchholder/l,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/outdoors/town)
-"etg" = (
-/obj/structure/roguemachine/boardbarrier,
-/turf/open/floor/rogue/grass,
-/area/rogue/outdoors/town)
 "etn" = (
 /obj/structure/fluff/railing/wood/north{
 	pixel_x = 2;
@@ -14113,10 +14109,6 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/town)
-"nOg" = (
-/obj/structure/mineral_door/wood,
-/turf/open/floor/rogue/concrete,
-/area/rogue/outdoors/town)
 "nOm" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/closet/crate/roguecloset,
@@ -19177,6 +19169,10 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/town)
+"sDU" = (
+/obj/structure/mineral_door/wood,
+/turf/open/floor/rogue/concrete,
 /area/rogue/outdoors/town)
 "sEj" = (
 /obj/effect/decal/edge_corner{
@@ -81740,7 +81736,7 @@ laW
 wnd
 pIk
 gCB
-etg
+ekY
 iog
 obc
 nDo
@@ -115809,7 +115805,7 @@ eQt
 uFs
 mer
 stc
-nOg
+sDU
 jUb
 xzG
 pSk
