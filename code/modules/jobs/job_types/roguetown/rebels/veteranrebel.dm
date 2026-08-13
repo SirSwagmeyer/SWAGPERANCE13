@@ -26,7 +26,7 @@
 /datum/outfit/job/roguetown/veteranrebel/pre_equip(mob/living/carbon/human/H)
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/lord
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather/reinforced
-	cloak = /obj/item/clothing/cloak/huntabard
+	cloak = /obj/item/clothing/cloak/stabard
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants
 	mask = /obj/item/clothing/mask/rogue/gasmask/perserdunmask
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron
