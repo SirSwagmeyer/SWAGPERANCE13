@@ -10,10 +10,9 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 	agevet_req = FALSE
 
-	tutorial = "You did your part in the war, but you were given a medical discharge - a bullet to the knee. Damn Kaspas. \
-				Your early retirement meant nothing to the Empire - they left you with nothing but the clothes on your back and a limp knee. \
-				Stewing in hate and bitterness at the Empire's abandonment, you join the local resistance. \
-				You may be crippled, but you're one of the only rebels around with actual combat experience - the rebels look to you for field leadership." 
+	tutorial = "You cut wood. You chop wood. You sell wood. The swing of an axe is second nature to you. \
+				Now? You serve the rebel cause as a frontline fighter, splintering skulls with the same axe you splintered trees. \
+				Your robust physique allows you to equip and wear chainmaille and medium plate." 
 
 	outfit = /datum/outfit/job/roguetown/lumberjackrebel
 	display_order = JDO_LUMBERJACKREBEL

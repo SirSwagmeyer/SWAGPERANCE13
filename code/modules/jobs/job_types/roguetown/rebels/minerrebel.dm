@@ -10,10 +10,10 @@
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 	agevet_req = FALSE
 
-	tutorial = "You did your part in the war, but you were given a medical discharge - a bullet to the knee. Damn Kaspas. \
-				Your early retirement meant nothing to the Empire - they left you with nothing but the clothes on your back and a limp knee. \
-				Stewing in hate and bitterness at the Empire's abandonment, you join the local resistance. \
-				You may be crippled, but you're one of the only rebels around with actual combat experience - the rebels look to you for field leadership." 
+	tutorial = "Swing the pick. Heave. Swing. Heave. Deep underground where the days lose their meaning, \
+				the work is grueling, the tunnels cramped, and the stale air full of coal dust. \
+				Finally, you've had enough. Underpaid, underfed, and certainly underappreciated, you've joined a cause that sees you for who you are. \
+				Your eyes are adjusted to the dark, and your sturdy build allows you to bear the burden of heavy plate armor with ease."
 
 	outfit = /datum/outfit/job/roguetown/minerrebel
 	display_order = JDO_MINERREBEL
