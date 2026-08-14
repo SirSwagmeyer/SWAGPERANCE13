@@ -52,6 +52,7 @@
 		/obj/item/reagent_containers/food/snacks/rogue/cheddar = 2,
 		/obj/item/natural/cloth = 2,
 		/obj/item/book/rogue/yeoldecookingmanual = 1,
+		/obj/item/rogueweapon/huntingknife/chefknife = 1,
 	)
 	H.change_stat("constitution", 2)
 	H.change_stat("strength", 2)

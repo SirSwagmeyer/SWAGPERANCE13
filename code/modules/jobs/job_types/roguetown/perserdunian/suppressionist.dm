@@ -53,7 +53,7 @@
 	beltl = /obj/item/flashlight/flare/torch/lantern
 	beltr = /obj/item/rogueweapon/mace/cudgel/protectorate
 	backl = /obj/item/rogueweapon/shield/tower/metal/ballistic
-	wrists = /obj/item/scomstone/garrison
+	wrists = /obj/item/scomstone/perlead
 	gloves = /obj/item/clothing/gloves/roguetown/angle
 	backr = /obj/item/storage/backpack/rogue/backpack/perserdun
 	id = /obj/item/roguekey/perserdun
@@ -70,8 +70,8 @@
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/maces, 4, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/shields, 4, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/maces, 5, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/shields, 5, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/revolvers, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)

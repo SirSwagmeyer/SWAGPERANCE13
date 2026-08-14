@@ -2201,10 +2201,8 @@
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
 "cfK" = (
-/obj/structure/stairs{
-	dir = 8
-	},
-/turf/open/floor/rogue/ruinedwood/platform,
+/obj/structure/mineral_door/wood,
+/turf/open/floor/rogue/vcarpet,
 /area/rogue/indoors/town)
 "cgD" = (
 /turf/closed/wall/mineral/rogue/wooddark/end{
@@ -4500,10 +4498,6 @@
 /obj/structure/roguewindow/openclose/reinforced,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/outdoors/town)
-"eqx" = (
-/obj/structure/mineral_door/wood,
-/turf/open/floor/rogue/vcarpet,
-/area/rogue/indoors/town)
 "era" = (
 /obj/structure/flora/roguegrass/bush/wall/tall,
 /turf/open/floor/rogue/dirt/road,
@@ -4587,10 +4581,30 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/outdoors/town)
 "etg" = (
-/obj/structure/stairs{
-	dir = 8
-	},
-/turf/open/floor/rogue/ruinedwood/spiral,
+/obj/structure/rack/rogue/shelf/biggest,
+/obj/item/ammo_box/handfuls/judge,
+/obj/item/ammo_box/handfuls/judge,
+/obj/item/ammo_box/handfuls/judge,
+/obj/item/ammo_box/handfuls/judge,
+/obj/item/ammo_box/handfuls/judge,
+/obj/item/ammo_box/handfuls/judge,
+/obj/item/ammo_box/handfuls/judge,
+/obj/item/ammo_box/handfuls/judge,
+/obj/item/ammo_box/handfuls/judge,
+/obj/item/ammo_box/handfuls/judge,
+/obj/item/ammo_box/handfuls/judge,
+/obj/item/ammo_box/handfuls/judge,
+/obj/item/ammo_box/handfuls/judge,
+/obj/item/ammo_box/handfuls/judge,
+/obj/item/ammo_box/handfuls/judge,
+/obj/item/ammo_box/handfuls/judge,
+/obj/item/ammo_box/handfuls/judge,
+/obj/item/ammo_box/handfuls/judge,
+/obj/item/ammo_box/handfuls/judge,
+/obj/item/ammo_box/handfuls/judge,
+/obj/item/ammo_box/handfuls/judge,
+/obj/item/ammo_box/handfuls/judge,
+/turf/open/floor/rogue/churchbrick,
 /area/rogue/indoors/town)
 "etn" = (
 /obj/structure/fluff/railing/wood/north{
@@ -9910,6 +9924,10 @@
 "jKn" = (
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/town)
+"jKG" = (
+/obj/item/rogueweapon/hammer/steel,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors/town)
 "jKM" = (
 /obj/structure/fluff/railing/border{
 	dir = 8
@@ -14126,9 +14144,11 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/town)
 "nOg" = (
-/obj/structure/mineral_door/wood,
-/turf/open/floor/rogue/concrete,
-/area/rogue/outdoors/town)
+/obj/structure/stairs{
+	dir = 8
+	},
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors/town)
 "nOm" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/closet/crate/roguecloset,
@@ -19129,6 +19149,15 @@
 /obj/structure/fluff/railing/corner/north_east,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/outdoors/town)
+"sAA" = (
+/obj/structure/fluff/railing/sandbag{
+	dir = 8
+	},
+/obj/item/ammo_box/magazine/hmg/a762x59,
+/obj/item/ammo_box/magazine/hmg/a762x59,
+/obj/item/ammo_box/magazine/hmg/a762x59,
+/turf/open/floor/rogue/twig,
+/area/rogue/outdoors/town)
 "sBj" = (
 /obj/item/grown/log/tree/stick,
 /obj/effect/decal/cleanable/debris/woody{
@@ -19215,6 +19244,10 @@
 	dir = 1;
 	pixel_y = 0
 	},
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors/town)
+"sEF" = (
+/obj/item/mg_tripod/spandau,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
 "sEW" = (
@@ -20997,6 +21030,12 @@
 /obj/structure/bed/rogue/bedroll,
 /turf/open/floor/rogue/twig/platform,
 /area/rogue/outdoors/town)
+"usH" = (
+/obj/structure/stairs{
+	dir = 8
+	},
+/turf/open/floor/rogue/ruinedwood/platform,
+/area/rogue/indoors/town)
 "utW" = (
 /obj/structure/table/wood/poor,
 /obj/item/reagent_containers/glass/bottle/rogue/wine,
@@ -23787,6 +23826,13 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town)
+"xaP" = (
+/obj/structure/fluff/railing/sandbag{
+	dir = 8
+	},
+/obj/item/mg_disassembled/spandau,
+/turf/open/floor/rogue/twig,
+/area/rogue/outdoors/town)
 "xbi" = (
 /obj/effect/decal/mossy{
 	dir = 1
@@ -23869,6 +23915,10 @@
 	dir = 1;
 	icon_state = "vertw"
 	},
+/area/rogue/outdoors/town)
+"xgu" = (
+/obj/structure/mineral_door/wood,
+/turf/open/floor/rogue/concrete,
 /area/rogue/outdoors/town)
 "xgN" = (
 /obj/effect/decal/edge_corner{
@@ -115817,7 +115867,7 @@ eQt
 uFs
 mer
 stc
-nOg
+xgu
 jUb
 xzG
 pSk
@@ -118303,8 +118353,8 @@ qWZ
 qWZ
 qWZ
 lbX
-fqX
-fqX
+sAA
+xaP
 fqX
 nis
 fqX
@@ -118530,8 +118580,8 @@ eiX
 tqE
 tqE
 lWv
-xzG
-xzG
+sEF
+jKG
 xzG
 xzG
 xzG
@@ -119888,7 +119938,7 @@ cSV
 cSV
 cSV
 cSV
-eqx
+cfK
 rkX
 rkX
 xap
@@ -120116,7 +120166,7 @@ uqW
 uqW
 uqW
 kRZ
-rkX
+etg
 rkX
 xap
 xap
@@ -120343,7 +120393,7 @@ uqW
 wXM
 osl
 uqW
-rkX
+etg
 rkX
 xap
 xap
@@ -120797,7 +120847,7 @@ uqW
 uqW
 uqW
 uqW
-eqx
+cfK
 uqW
 rsq
 rsq
@@ -123289,7 +123339,7 @@ uqW
 uqW
 uqW
 hjZ
-eqx
+cfK
 wuN
 lLD
 wuN
@@ -123299,7 +123349,7 @@ wuN
 wuN
 lLD
 wuN
-eqx
+cfK
 cJy
 iTy
 iTy
@@ -124429,7 +124479,7 @@ uqW
 uqW
 uqW
 uqW
-eqx
+cfK
 uqW
 uqW
 uqW
@@ -225210,8 +225260,8 @@ iAg
 iAg
 iAg
 cJy
-etg
-cfK
+nOg
+usH
 mJo
 cJy
 uqW
