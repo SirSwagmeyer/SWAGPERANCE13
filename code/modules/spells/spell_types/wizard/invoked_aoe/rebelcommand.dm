@@ -9,6 +9,7 @@
 	charging_slowdown = 2
 	chargedloop = /datum/looping_sound/blank
 	associated_skill = /datum/skill/magic/arcane
+	req_items = list(/obj/item/scomstone/kingsrow)
 	overlay_state = "repulse"
 	spell_tier = 2
 	invocation = "THERE IS NOTHING TO LOSE BUT YOUR CHAINS!!"
@@ -37,6 +38,7 @@
 	charging_slowdown = 2
 	chargedloop = /datum/looping_sound/blank
 	associated_skill = /datum/skill/magic/arcane
+	req_items = list(/obj/item/scomstone/kingsrow)
 	overlay_state = "repulse"
 	spell_tier = 2
 	invocation = "TAKE AIM!"
@@ -65,6 +67,7 @@
 	charging_slowdown = 2
 	chargedloop = /datum/looping_sound/blank
 	associated_skill = /datum/skill/magic/arcane
+	req_items = list(/obj/item/scomstone/kingsrow)
 	overlay_state = "repulse"
 	spell_tier = 2
 	invocation = "FOR THE REVOLUTION, CHAAAAAAAAARGE!!"
