@@ -25,7 +25,7 @@
 
 /datum/outfit/job/roguetown/minerrebel/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/armingcap
+	head = /obj/item/clothing/head/roguetown/articap
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
 	belt = /obj/item/storage/belt/rogue/leather
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
@@ -33,6 +33,7 @@
 	beltr = /obj/item/rogueweapon/huntingknife
 	backl = /obj/item/storage/backpack/rogue/backpack
 	wrists = /obj/item/scomstone/kingsrow
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/jacket/artijacket
 	backpack_contents = list(
 						/obj/item/flint = 1,
 						/obj/item/flashlight/flare/torch = 1,

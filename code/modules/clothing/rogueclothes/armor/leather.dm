@@ -49,9 +49,9 @@
 	return ..()
 
 /obj/item/clothing/suit/roguetown/armor/leather/jacket/artijacket
-	name = "artificer jacket"
+	name = "worker jacket"
 	icon_state = "artijacket"
-	desc = "A thick leather jacket adorned with fur and cog decals. The height of Heartfelt fashion."
+	desc = "A thick leather jacket adorned with fur and cog decals. The height of Vos Arderla fashion."
 
 /obj/item/clothing/suit/roguetown/armor/leather/cuirass
 	name = "leather cuirass"

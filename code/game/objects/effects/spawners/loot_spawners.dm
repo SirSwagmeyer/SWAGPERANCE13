@@ -441,7 +441,7 @@
 /obj/effect/spawner/lootdrop/normalguns
 	name = "normal gun spawner"
 	icon_state = "normgun"
-	lootcount = 3
+	lootcount = 1
 	loot = list(
 		/obj/item/gun/ballistic/rifle/repeater/springfield = 5,
 		/obj/item/gun/ballistic/rifle/repeater/enfield = 5,

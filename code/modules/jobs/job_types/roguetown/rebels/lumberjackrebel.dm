@@ -44,7 +44,7 @@
 	H.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
 	belt = /obj/item/storage/belt/rogue/leather
-	head = /obj/item/clothing/head/roguetown/roguehood
+	head = /obj/item/clothing/head/roguetown/articap
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
 	backr = /obj/item/storage/backpack/rogue/satchel
 	backl = /obj/item/rogueweapon/stoneaxe/battle

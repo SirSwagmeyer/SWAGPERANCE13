@@ -509,7 +509,7 @@
 	desc = "A MACHINE-made, telescopic cudgel - a staple Protectorate sidearm."
 	force = 10
 	icon_state = "riotcudgel_c"
-	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/dagger/sucker_punch/wallop)
+	possible_item_intents = list(/datum/intent/mace/strike, /datum/intent/dagger/sucker_punch/wallop, /datum/intent/mace/smash, /datum/intent/effect/daze)
 	gripped_intents = null
 	wlength = WLENGTH_SHORT
 	w_class = WEIGHT_CLASS_NORMAL
@@ -526,7 +526,7 @@
 	extended = !extended
 	playsound(src.loc, 'sound/blank.ogg', 50, TRUE)
 	if(extended)
-		force = 30
+		force = 35
 		wdefense = 6
 		w_class = WEIGHT_CLASS_NORMAL
 		throwforce = 23

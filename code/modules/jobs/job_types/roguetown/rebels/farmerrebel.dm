@@ -22,7 +22,7 @@
 
 /datum/outfit/job/roguetown/farmerrebel/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/armingcap
+	head = /obj/item/clothing/head/roguetown/articap
 	mask = /obj/item/clothing/head/roguetown/roguehood
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 	wrists = /obj/item/scomstone/kingsrow
@@ -64,5 +64,5 @@
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 
 	pants = /obj/item/clothing/under/roguetown/tights/random
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/jacket/artijacket
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random

@@ -57,9 +57,10 @@
 		/obj/item/storage/belt/rogue/pouch/coins/poor,
 		/obj/item/grenade/gas/poison = 3,
 		/obj/item/grenade/gas/smoke = 3,
-		/obj/item/ammo_box/handfuls/mercy = 3,
-		/obj/item/gun/ballistic/revolver/mercy,
+		/obj/item/ammo_box/handfuls/judge = 3,
+		/obj/item/gun/ballistic/revolver/judge,
 		/obj/item/rope/chain,
+		/obj/item/storage/belt/rogue/pouch/ammobag/judge,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
@@ -76,6 +77,7 @@
 	H.adjust_skillrank(/datum/skill/craft/armorsmithing, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/weaponsmithing, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
 	H.change_stat("strength", 2)
 	H.change_stat("constitution", 2)
 	H.change_stat("endurance", 3)

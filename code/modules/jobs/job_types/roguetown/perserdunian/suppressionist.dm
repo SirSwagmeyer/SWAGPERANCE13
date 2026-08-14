@@ -64,6 +64,7 @@
 		/obj/item/ammo_box/handfuls/judge = 6,
 		/obj/item/gun/ballistic/revolver/judge,
 		/obj/item/rope/chain,
+		/obj/item/storage/belt/rogue/pouch/ammobag/judge,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
@@ -80,6 +81,7 @@
 	H.adjust_skillrank(/datum/skill/craft/armorsmithing, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/weaponsmithing, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/medicine, 3, TRUE)
 	H.change_stat("strength", 2)
 	H.change_stat("constitution", 3)
 	H.change_stat("endurance", 3)
@@ -90,3 +92,4 @@
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/chargeweak)
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_CRITICAL_RESISTANCE, TRAIT_GENERIC)
