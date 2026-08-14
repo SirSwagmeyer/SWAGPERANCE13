@@ -899,13 +899,13 @@ GLOBAL_VAR_INIT(mobids, 1)
 		return FALSE
 	if(restrained())
 		return FALSE
-	if( buckled || stat != CONSCIOUS)
+	if( (buckled && buckled.buckle_prevent_turn) || stat != CONSCIOUS)
 		return FALSE
 	return TRUE
 
-///Checks mobility move as well as parent checks
+///Checks mobility turn as well as parent checks
 /mob/living/canface(atom/A)
-	if(!(mobility_flags & MOBILITY_MOVE))
+	if(!(mobility_flags & MOBILITY_TURN))
 		return FALSE
 	if(world.time < last_dir_change + 5)
 		return

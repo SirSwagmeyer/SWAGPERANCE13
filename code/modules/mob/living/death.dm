@@ -154,6 +154,14 @@
 
 	clear_typing_indicator()
 
+	if(src.job)
+		var/datum/job/dead_job = SSjob.GetJob(src.job)
+		if(dead_job)
+			switch(dead_job.department_flag)
+				if(PERSERDUN)
+					SEND_SIGNAL(SSjob, COMSIG_ADJUST_PERSERDUN, -1)
+				if(RISVON)
+					SEND_SIGNAL(SSjob, COMSIG_ADJUST_RISVON, -1)
 	// AZURE EDIT BEGIN: necra acolyte/priest deathsight trait
 	// this was a player that just died, so do the honors
 	if (client)

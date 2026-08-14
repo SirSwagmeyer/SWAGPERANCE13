@@ -211,6 +211,10 @@
 
 #define PERSERDUN	(1<<12)
 
+// role balance signals - reads from death, far travel, spawning, and revivals
+#define COMSIG_ADJUST_PERSERDUN "faction_gained_perserdun"
+#define COMSIG_ADJUST_RISVON "faction_gained_risvon"
+
 #define GRANDMASTER	(1<<0) // no-armor leadership wimp w/ drip
 #define GRANDKNIGHT (1<<1) // heaviest armor in the game - very tanky - melee only - consider adding a shield
 #define WARPRIEST (1<<2) // rab worshipper support role, uses blood magic, has a few offensive spells with a few support ones too

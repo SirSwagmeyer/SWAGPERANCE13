@@ -99,42 +99,39 @@ Very handy, eh?
 	name = "King's Row Lore Tile"
 	lore = /datum/loreblurb/kingsrow
 
-/obj/effect/loretile/guardpod
-	name = "Guard Pod Lore Tile"
-	lore = /datum/loreblurb/guardpod
 
-/obj/effect/loretile/districtwatch
-	name = "District Watch Lore Tile"
-	lore = /datum/loreblurb/districtwatch
+/obj/effect/loretile/holdout
+	name = "The Holdout"
+	lore = /datum/loreblurb/holdout
 
-/obj/effect/loretile/oldcity
-	name = "Old City Lore Tile"
-	lore = /datum/loreblurb/oldcity
-
-/obj/effect/loretile/privatechurch
-	name = "Noble's Chapel Lore Tile"
-	lore = /datum/loreblurb/privatechurch
-
-/obj/effect/loretile/graves
-	name = "Mass Graves Lore Tile"
-	lore = /datum/loreblurb/graves
-
-/obj/effect/loretile/noble
-	name = "Noble's District Lore Tile"
-	lore = /datum/loreblurb/noble
-
-/obj/effect/loretile/residential
-	name = "Residential District Lore Tile"
+/obj/effect/loretile/residental
+	name = "Residental District"
 	lore = /datum/loreblurb/residential
 
 /obj/effect/loretile/merchant
-	name = "Merchant's District Lore Tile"
+	name = "Merchant's District"
 	lore = /datum/loreblurb/merchant
 
-/obj/effect/loretile/holdout
-	name = "Holdout Lore Tile"
-	lore = /datum/loreblurb/holdout
+/obj/effect/loretile/graves
+	name = "Mass Graves"
+	lore = /datum/loreblurb/graves
 
 /obj/effect/loretile/districthall
-	name = "District Hall Lore Tile"
+	name = "District Hall"
 	lore = /datum/loreblurb/districthall
+
+/obj/effect/loretile/privatechurch
+	name ="Private Church"
+	lore = /datum/loreblurb/privatechurch
+
+/obj/effect/loretile/guardpod
+	name = "Guard Pod"
+	lore = /datum/loreblurb/guardpod
+
+/obj/effect/loretile/districtwatch
+	name = "District Watch"
+	lore = /datum/loreblurb/districtwatch
+
+/obj/effect/loretile/oldcity
+	name = "Old City"
+	lore = /datum/loreblurb/oldcity

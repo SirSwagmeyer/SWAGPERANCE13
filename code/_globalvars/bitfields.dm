@@ -173,6 +173,7 @@ GLOBAL_LIST_INIT(bitfields, list(
 		"UI" = MOBILITY_UI,
 		"STORAGE" = MOBILITY_STORAGE,
 		"PULL" = MOBILITY_PULL,
+		"TURN" = MOBILITY_TURN,
 		),
 	"mob_biotypes" = list (
 		"MOB_ORGANIC" = MOB_ORGANIC,
