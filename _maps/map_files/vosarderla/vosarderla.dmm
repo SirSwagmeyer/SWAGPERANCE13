@@ -306,6 +306,14 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town)
+"api" = (
+/obj/structure/mineral_door/wood{
+	locked = 1;
+	max_integrity = 70
+	},
+/obj/effect/loretile/noble,
+/turf/open/floor/rogue/ruinedwood/herringbone,
+/area/rogue/indoors/town)
 "apP" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "cobbleedge-n"
@@ -1661,6 +1669,10 @@
 /obj/item/grown/log/tree/small,
 /obj/item/grown/log/tree/stick,
 /turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/town)
+"bGC" = (
+/obj/effect/loretile/graves,
+/turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town)
 "bGP" = (
 /obj/structure/chair/bench/church/smallbench{
@@ -3651,6 +3663,7 @@
 /area/rogue/outdoors/town)
 "dFJ" = (
 /obj/structure/stairs/d,
+/obj/effect/loretile/hospital,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town)
 "dFL" = (
@@ -5360,6 +5373,10 @@
 	},
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/town)
+"ffz" = (
+/obj/effect/loretile/noble,
+/turf/open/floor/rogue/cobble,
+/area/rogue/outdoors/town)
 "ffB" = (
 /obj/structure/closet/crate/drawer,
 /obj/item/grenade/gas/smoke,
@@ -5706,6 +5723,7 @@
 /area/rogue/outdoors/town)
 "fuT" = (
 /obj/structure/mineral_door/wood,
+/obj/effect/loretile/holdout,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -5721,6 +5739,7 @@
 /area/rogue/outdoors/town)
 "fuZ" = (
 /obj/structure/mineral_door/bars,
+/obj/effect/loretile/oldcity,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue)
 "fvj" = (
@@ -6572,6 +6591,7 @@
 /obj/effect/decal/cobbleedge{
 	dir = 1
 	},
+/obj/effect/loretile/privatechurch,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town)
 "grW" = (
@@ -7048,6 +7068,11 @@
 "gSc" = (
 /obj/structure/mannequin,
 /turf/open/floor/rogue/herringbone,
+/area/rogue/outdoors/town)
+"gSh" = (
+/obj/item/sandbag,
+/obj/effect/loretile/ruinedcity,
+/turf/open/floor/rogue/twig,
 /area/rogue/outdoors/town)
 "gSK" = (
 /obj/effect/decal/mossy{
@@ -10652,6 +10677,11 @@
 	},
 /turf/open/floor/rogue/grassyel,
 /area/rogue/outdoors/town)
+"kwa" = (
+/obj/item/sandbag,
+/obj/effect/loretile/ruinedcity,
+/turf/open/floor/rogue/cobble,
+/area/rogue/outdoors/town)
 "kwn" = (
 /obj/structure/mineral_door/wood/fancywood{
 	max_integrity = 70;
@@ -12828,6 +12858,11 @@
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/town)
+"myT" = (
+/obj/structure/mineral_door/wood,
+/obj/effect/loretile/holdout,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/indoors/town)
 "myU" = (
 /obj/structure/fluff/clodpile{
 	dir = 4;
@@ -13225,6 +13260,10 @@
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/rogue/grassyel,
 /area/rogue/outdoors/town)
+"mPA" = (
+/obj/effect/loretile/butchersblock,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors/town)
 "mPU" = (
 /obj/structure/bars/passage/shutter/open{
 	redstone_id = "FauxClinic"
@@ -13454,6 +13493,7 @@
 /obj/structure/mineral_door/wood/window{
 	name = "Vos Arderla Housing District"
 	},
+/obj/effect/loretile/districtwatch,
 /turf/open/floor/rogue/vcarpet,
 /area/rogue/indoors/town)
 "nay" = (
@@ -14800,6 +14840,7 @@
 /obj/structure/stairs{
 	dir = 2
 	},
+/obj/effect/loretile/holdout,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/town)
 "oAQ" = (
@@ -15085,6 +15126,11 @@
 /obj/item/natural/feather,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/outdoors/town)
+"oOB" = (
+/obj/item/sandbag,
+/obj/effect/loretile/merchant,
+/turf/open/floor/rogue/twig,
+/area/rogue/outdoors/town)
 "oOF" = (
 /obj/structure/fluff/walldeco/serpflag{
 	pixel_y = 0;
@@ -15337,6 +15383,14 @@
 	pixel_x = 8
 	},
 /turf/open/floor/rogue/concrete,
+/area/rogue/outdoors/town)
+"oWa" = (
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-e"
+	},
+/obj/effect/loretile/noble,
+/turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
 "oWd" = (
 /obj/effect/decal/cleanable/debris/woody,
@@ -15662,6 +15716,7 @@
 "plw" = (
 /obj/effect/landmark/start/suppressionist,
 /obj/effect/landmark/start/suppressionistlate,
+/obj/effect/loretile/districtwatch,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/indoors/town)
 "plF" = (
@@ -17321,6 +17376,11 @@
 	},
 /turf/open/floor/rogue/blocks/stonered,
 /area/rogue/outdoors/town)
+"qHp" = (
+/obj/structure/mineral_door/perserdoor,
+/obj/effect/loretile/guardpod,
+/turf/open/floor/rogue/perdun,
+/area/rogue/indoors/town)
 "qHx" = (
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/town)
@@ -17570,6 +17630,10 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/rogue/ruinedwood,
+/area/rogue/outdoors/town)
+"qXY" = (
+/obj/effect/loretile/residential,
+/turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
 "qYi" = (
 /obj/structure/fluff/walldeco/grandmaster{
@@ -19636,6 +19700,10 @@
 "tcT" = (
 /obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/cobble/mossy,
+/area/rogue/outdoors/town)
+"tdk" = (
+/obj/effect/loretile/butchersblock,
+/turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town)
 "tdB" = (
 /obj/effect/decal/cleanable/dirt/grime/dust,
@@ -22709,6 +22777,7 @@
 	locked = 1;
 	max_integrity = 70
 	},
+/obj/effect/loretile/holdout,
 /turf/closed,
 /area/rogue/outdoors/town)
 "wbv" = (
@@ -23679,6 +23748,10 @@
 "wWw" = (
 /obj/structure/mineral_door/wood/fancywood{
 	max_integrity = 70
+	},
+/obj/effect/loretile/privatechurch{
+	lore = /datum/loreblurb/districthall;
+	name = "District Hall Lore Tile"
 	},
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/town)
@@ -24774,6 +24847,7 @@
 "ycd" = (
 /obj/effect/landmark/start/protectorate,
 /obj/effect/landmark/start/protectoralate,
+/obj/effect/loretile/districtwatch,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/indoors/town)
 "ycL" = (
@@ -24782,6 +24856,13 @@
 	},
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
+"ycP" = (
+/obj/effect/loretile/privatechurch{
+	lore = /datum/loreblurb/districthall;
+	name = "District Hall Lore Tile"
+	},
+/turf/open/floor/rogue/cobble,
+/area/rogue/indoors/town)
 "ydi" = (
 /obj/structure/closet/crate/chest/old_crate,
 /obj/item/reagent_containers/food/snacks/grown/potato/rogue,
@@ -80222,7 +80303,7 @@ gCB
 nbW
 gCB
 fJm
-dDV
+myT
 pPV
 yfQ
 cJB
@@ -85441,7 +85522,7 @@ xzG
 xzG
 xzG
 xzG
-xzG
+qXY
 xzG
 xzG
 xzG
@@ -91115,7 +91196,7 @@ eeE
 xWO
 eeE
 xWO
-xWO
+kwa
 xWO
 eeE
 eeE
@@ -93853,7 +93934,7 @@ iog
 sQd
 fnM
 iFI
-fnM
+tdk
 fnM
 fnM
 fnM
@@ -94496,7 +94577,7 @@ fnM
 fnM
 apP
 rce
-rce
+oWa
 fnM
 lPE
 fnM
@@ -96980,7 +97061,7 @@ aKt
 jQf
 uGf
 fPY
-fBi
+api
 aQR
 dQb
 iog
@@ -97901,7 +97982,7 @@ fnM
 eFe
 fnM
 fnM
-fnM
+ffz
 xzG
 dPO
 fnM
@@ -98572,7 +98653,7 @@ fnM
 tKg
 fgx
 eRz
-fnM
+bGC
 lAr
 nBn
 gYk
@@ -100667,7 +100748,7 @@ fnM
 aEp
 iog
 xzG
-xzG
+mPA
 xzG
 xzG
 xxL
@@ -101992,7 +102073,7 @@ lbX
 fqX
 fqX
 fqX
-nis
+gSh
 fqX
 nis
 fnM
@@ -102036,7 +102117,7 @@ dhR
 fqX
 fqX
 fqX
-nis
+oOB
 fqX
 nis
 wvL
@@ -102500,7 +102581,7 @@ wvL
 tqE
 fqX
 nis
-nis
+oOB
 nis
 fqX
 iog
@@ -104042,7 +104123,7 @@ rox
 sLI
 sLI
 sLI
-dwj
+qHp
 pSn
 xzG
 xzG
@@ -104496,7 +104577,7 @@ fYA
 sLI
 sLI
 sLI
-dwj
+qHp
 xzG
 xzG
 xzG
@@ -107908,7 +107989,7 @@ xzG
 xzG
 xzG
 hda
-cSV
+ycP
 gpT
 gpT
 gpT
@@ -107920,7 +108001,7 @@ gpT
 gpT
 gpT
 gpT
-cSV
+ycP
 coF
 xzG
 xzG
