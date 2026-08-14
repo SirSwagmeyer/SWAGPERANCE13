@@ -28,7 +28,7 @@
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants/otavan
 	shirt = /obj/item/clothing/suit/roguetown/shirt/officeshirt4
 	head = /obj/item/clothing/head/roguetown/headband
-	belt = /obj/item/storage/belt/rogue/leather/steel
+	belt = /obj/item/storage/belt/rogue/leather
 	beltl = /obj/item/flashlight/flare/torch/lantern
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/mid
 	wrists = /obj/item/scomstone/kingsrow
