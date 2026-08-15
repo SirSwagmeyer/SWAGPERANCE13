@@ -306,14 +306,6 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town)
-"api" = (
-/obj/structure/mineral_door/wood{
-	locked = 1;
-	max_integrity = 70
-	},
-/obj/effect/loretile/noble,
-/turf/open/floor/rogue/ruinedwood/herringbone,
-/area/rogue/indoors/town)
 "apP" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "cobbleedge-n"
@@ -5374,8 +5366,8 @@
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/town)
 "ffz" = (
-/obj/effect/loretile/noble,
-/turf/open/floor/rogue/cobble,
+/obj/effect/loretile/residental,
+/turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
 "ffB" = (
 /obj/structure/closet/crate/drawer,
@@ -15384,14 +15376,6 @@
 	},
 /turf/open/floor/rogue/concrete,
 /area/rogue/outdoors/town)
-"oWa" = (
-/obj/effect/decal/cobbleedge{
-	dir = 10;
-	icon_state = "cobbleedge-e"
-	},
-/obj/effect/loretile/noble,
-/turf/open/floor/rogue/cobblerock,
-/area/rogue/outdoors/town)
 "oWd" = (
 /obj/effect/decal/cleanable/debris/woody,
 /obj/effect/decal/cleanable/dirt/grime/dust,
@@ -17630,10 +17614,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/rogue/ruinedwood,
-/area/rogue/outdoors/town)
-"qXY" = (
-/obj/effect/loretile/residential,
-/turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
 "qYi" = (
 /obj/structure/fluff/walldeco/grandmaster{
@@ -23749,10 +23729,7 @@
 /obj/structure/mineral_door/wood/fancywood{
 	max_integrity = 70
 	},
-/obj/effect/loretile/privatechurch{
-	lore = /datum/loreblurb/districthall;
-	name = "District Hall Lore Tile"
-	},
+/obj/effect/loretile/districthall,
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/town)
 "wWF" = (
@@ -24857,10 +24834,7 @@
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
 "ycP" = (
-/obj/effect/loretile/privatechurch{
-	lore = /datum/loreblurb/districthall;
-	name = "District Hall Lore Tile"
-	},
+/obj/effect/loretile/districthall,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town)
 "ydi" = (
@@ -85295,7 +85269,7 @@ xzG
 xzG
 xzG
 xzG
-xzG
+ffz
 xzG
 xzG
 pKY
@@ -85522,7 +85496,7 @@ xzG
 xzG
 xzG
 xzG
-qXY
+xzG
 xzG
 xzG
 xzG
@@ -94577,7 +94551,7 @@ fnM
 fnM
 apP
 rce
-oWa
+rce
 fnM
 lPE
 fnM
@@ -97061,7 +97035,7 @@ aKt
 jQf
 uGf
 fPY
-api
+fBi
 aQR
 dQb
 iog
@@ -97982,7 +97956,7 @@ fnM
 eFe
 fnM
 fnM
-ffz
+fnM
 xzG
 dPO
 fnM
