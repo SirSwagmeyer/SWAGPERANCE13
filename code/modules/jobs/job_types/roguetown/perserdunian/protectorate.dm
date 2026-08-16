@@ -3,8 +3,8 @@
 	flag = PROTECTORATE
 	department_flag = PERSERDUN
 	faction = "Station"
-	total_positions = 10
-	spawn_positions = 10
+	total_positions = 8
+	spawn_positions = 8
 	agevet_req = FALSE
 	allowed_races = RACES_CONSCRIPT
 	allowed_sexes = list(MALE, FEMALE)

@@ -53,15 +53,15 @@
 	beltl = /obj/item/flashlight/flare/torch/lantern
 	beltr = /obj/item/rogueweapon/mace/cudgel/protectorate
 	backl = /obj/item/rogueweapon/shield/tower/metal/ballistic
+	r_hand = /obj/item/gun/ballistic/rifle/repeater/lewis //do not abuse this
 	wrists = /obj/item/scomstone/perlead
 	gloves = /obj/item/clothing/gloves/roguetown/angle
 	backr = /obj/item/storage/backpack/rogue/backpack/perserdun
 	id = /obj/item/roguekey/perserdun
 	backpack_contents = list(
-		/obj/item/storage/belt/rogue/pouch/coins/poor,
-		/obj/item/grenade/gas/poison = 3,
+		/obj/item/grenade/gas/poison = 1,
 		/obj/item/grenade/gas/smoke = 3,
-		/obj/item/ammo_box/handfuls/judge = 6,
+		/obj/item/ammo_box/magazine/lewis = 3,
 		/obj/item/gun/ballistic/revolver/judge,
 		/obj/item/rope/chain,
 		/obj/item/storage/belt/rogue/pouch/ammobag/judge,
