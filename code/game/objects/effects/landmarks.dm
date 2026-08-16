@@ -1024,6 +1024,16 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	jobspawn_override = list("Protectorate Triumverate")
 	delete_after_roundstart = FALSE
 
+/obj/effect/landmark/start/sterilizer
+	name = "Protectorate Sterilizer"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/sterilizerlate
+	name = "Protectorate Sterilizer"
+	icon_state = "arrow"
+	jobspawn_override = list("Protectorate Sterilizer")
+	delete_after_roundstart = FALSE
+
 //Antagonist spawns
 
 /obj/effect/landmark/start/wizard

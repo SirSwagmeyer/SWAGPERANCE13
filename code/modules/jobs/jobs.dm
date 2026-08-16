@@ -197,6 +197,7 @@ GLOBAL_LIST_INIT(perserdun_positions, list(
 	"Radio Officer",
 	"Protectorate Guardsman",
 	"Protectorate Triumverate",
+	"Protectorate Sterilizer",
 ))
 
 GLOBAL_LIST_INIT(risvon_positions, list(

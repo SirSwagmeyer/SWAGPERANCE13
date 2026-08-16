@@ -5510,11 +5510,6 @@
 	},
 /turf/open/floor/rogue/church,
 /area/rogue/indoors/town)
-"flL" = (
-/obj/structure/flora/roguegrass,
-/obj/structure/timed_blocker/thirty,
-/turf/open/floor/rogue/grass,
-/area/rogue/outdoors/town)
 "fnv" = (
 /obj/structure/rack/rogue,
 /obj/item/bomb/dynamite,
@@ -8066,7 +8061,6 @@
 	dir = 1;
 	layer = 3.1
 	},
-/obj/structure/timed_blocker/thirty,
 /turf/open/floor/rogue/grassyel,
 /area/rogue/outdoors/town)
 "hTz" = (
@@ -16563,10 +16557,6 @@
 /obj/item/grenade/frag,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town)
-"pVF" = (
-/obj/structure/timed_blocker/thirty,
-/turf/open/floor/rogue/grassred,
-/area/rogue/outdoors/town)
 "pVT" = (
 /obj/structure/chair/wood/rogue{
 	dir = 4;
@@ -18772,10 +18762,6 @@
 "sdN" = (
 /turf/closed/wall/mineral/rogue/perserdun/outercorner/dir4,
 /area/rogue/indoors/town)
-"seo" = (
-/obj/structure/timed_blocker/thirty,
-/turf/open/floor/rogue/cobblerock,
-/area/rogue/outdoors/town)
 "seF" = (
 /obj/effect/decal/edge_corner{
 	color = "#3f3f3f";
@@ -19470,13 +19456,6 @@
 "sOU" = (
 /obj/item/natural/rock,
 /turf/open/floor/rogue/grass,
-/area/rogue/outdoors/town)
-"sPe" = (
-/obj/effect/decal/edge{
-	color = "#3f3f3f"
-	},
-/obj/structure/timed_blocker/thirty,
-/turf/open/floor/rogue/grassyel,
 /area/rogue/outdoors/town)
 "sPB" = (
 /obj/item/roguebin/trash{
@@ -23475,10 +23454,6 @@
 	},
 /turf/open/floor/rogue/tile,
 /area/rogue/outdoors/town)
-"wIU" = (
-/obj/structure/timed_blocker/thirty,
-/turf/open/floor/rogue/grass,
-/area/rogue/outdoors/town)
 "wJs" = (
 /obj/effect/decal/edge{
 	color = "#3f3f3f";
@@ -23991,13 +23966,12 @@
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors/town)
 "xhk" = (
-/obj/structure/table/wood/poor/alt,
 /obj/effect/decal/edge{
 	icon_state = "roadedge-n";
 	name = "dirt";
 	desc = ""
 	},
-/turf/open/floor/rogue/ruinedwood/turned,
+/turf/closed/wall/mineral/rogue/wooddark,
 /area/rogue/outdoors/town)
 "xhF" = (
 /turf/closed/indestructible/rock,
@@ -117724,20 +117698,20 @@ wvL
 uif
 uif
 uif
-pVF
-wIU
-flL
-sPe
-seo
-seo
-seo
-seo
-seo
-seo
+jFL
+ekY
+vpO
+dhR
+xzG
+xzG
+xzG
+xzG
+xzG
+xzG
 hTe
-pVF
-wIU
-flL
+jFL
+ekY
+vpO
 uif
 uif
 uif

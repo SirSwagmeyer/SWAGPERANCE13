@@ -23,6 +23,7 @@
 		/datum/job/roguetown/hunterrebel = 2,
 		/datum/job/roguetown/suppressionist = 3,
 		/datum/job/roguetown/protectorate = 8,
+		/datum/job/roguetown/sterilizer = 1,
 	)
 	blacklist = list(
 		/datum/job/roguetown/adventurer,

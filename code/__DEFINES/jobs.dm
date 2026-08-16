@@ -232,6 +232,7 @@
 #define PROTECTORATE (1<<14) //Vos Arderla Exclusive, riot control
 #define SUPPRESSIONIST (1<<15) //Vos Arderla Exclusive, riot specialist
 #define PERSERDUN_CONSCRIPT (1<<16) //tester role
+#define STERILIZER (1<<17) //Vos Arderla Exclusive, poison specialist
 
 #define RISVON	(1<<13)
 
@@ -328,6 +329,7 @@
 #define JDO_PROTECTORATE 1.94
 #define JDO_SUPPRESSIONIST 1.95
 #define JDO_PERSERDUN_CONSCRIPT 1.96
+#define JDO_STERILIZER 1.97
 
 // RISVON
 #define JDO_COMMANDANT 2.0
@@ -397,7 +399,8 @@
 	/datum/job/roguetown/envoy,\
 	/datum/job/roguetown/perserconscript,\
 	/datum/job/roguetown/protectorate,\
-	/datum/job/roguetown/suppressionist
+	/datum/job/roguetown/suppressionist,\
+	/datum/job/roguetown/sterilizer
 
 #define RISVON_ROLES \
 	/datum/job/roguetown/commandant,\

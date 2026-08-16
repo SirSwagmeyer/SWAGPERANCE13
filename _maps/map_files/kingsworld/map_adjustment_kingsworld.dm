@@ -25,6 +25,7 @@
 		/datum/job/roguetown/hunterrebel,
 		/datum/job/roguetown/suppressionist,
 		/datum/job/roguetown/protectorate,
+		/datum/job/roguetown/sterilizer,
 	)
 
 

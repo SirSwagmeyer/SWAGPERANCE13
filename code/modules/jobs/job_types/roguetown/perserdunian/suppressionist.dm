@@ -48,7 +48,7 @@
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/full/riot
 	pants = /obj/item/clothing/under/roguetown/tights/riot
 	head = /obj/item/clothing/head/roguetown/helmet/riot
-	mask = /obj/item/clothing/mask/rogue/gasmask/perserdunmask/strap
+	mask = /obj/item/clothing/mask/rogue/gasmask/protectorate
 	belt = /obj/item/storage/belt/rogue/leather/black/soldier
 	beltl = /obj/item/flashlight/flare/torch/lantern
 	beltr = /obj/item/rogueweapon/mace/cudgel/protectorate
@@ -65,6 +65,7 @@
 		/obj/item/gun/ballistic/revolver/judge,
 		/obj/item/rope/chain,
 		/obj/item/storage/belt/rogue/pouch/ammobag/judge,
+		/obj/item/clothing/mask/rogue/gasmask/protectorate,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)

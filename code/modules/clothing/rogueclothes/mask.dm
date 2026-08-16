@@ -470,3 +470,15 @@
 	name = "beaked mask"
 	desc = "A unique 'gas mask' with a beaklike appearance. While it has no filters, its packed with enough herbs to protect you. Maybe."
 	icon_state = "feldmask"
+
+/obj/item/clothing/mask/rogue/gasmask/sterilizer
+	name = "grotesque mask"
+	desc = "A hand-carved mask with a grotesque appearance, akin to a bird of prey. It has a small filter built into the beak, and is designed to protect the wearer from airborne pathogens."
+	icon_state = "pestramask"
+	armor = ARMOR_MASK_METAL_BAD
+
+/obj/item/clothing/mask/rogue/gasmask/protectorate
+	name = "protectorate gas mask"
+	desc = "A bulky MACHINE gas mask, reinforced for Protectorate forces. The lenses are tinted a crimson red for intimidation."
+	icon_state = "protectorate"
+	armor = ARMOR_MASK_METAL_BAD
