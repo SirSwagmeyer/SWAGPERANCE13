@@ -216,6 +216,9 @@
 	salvage_result = /obj/item/natural/hide/cured
 	sewrepair = TRUE
 
+/obj/item/clothing/shoes/roguetown/grenzelhoft/black
+	color = CLOTHING_BLACK
+
 /obj/item/clothing/shoes/roguetown/boots/leather/elven_boots
 	name = "woad elven boots"
 	desc = "The living trunks still blossom in the spring. They let water through, but it is never cold."

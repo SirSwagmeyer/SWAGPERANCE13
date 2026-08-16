@@ -54,6 +54,10 @@
 	..()
 	update_icon()
 
+/obj/item/clothing/under/roguetown/heavy_leather_pants/otavan/generic/black
+	color = CLOTHING_WHITE
+	detail_color = CLOTHING_BLACK
+
 /obj/item/clothing/under/roguetown/heavy_leather_pants/grenzelpants
 	name = "canvassed trousers"
 	desc = "Padded pants for extra comfort and protection, adorned in vibrant colors."

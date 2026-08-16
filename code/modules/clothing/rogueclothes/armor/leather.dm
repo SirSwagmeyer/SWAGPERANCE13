@@ -228,8 +228,8 @@
 	item_state = "freijacket"
 	max_integrity = ARMOR_INT_CHEST_LIGHT_MEDIUM
 	detail_tag = "_detail"
-	color = "#5E4440"
-	detail_color = "#c08955"
+	color = CLOTHING_BLACK
+	detail_color = CLOTHING_WHITE
 
 /obj/item/clothing/suit/roguetown/armor/leather/heavy/freifechter/update_icon()
 	cut_overlays()

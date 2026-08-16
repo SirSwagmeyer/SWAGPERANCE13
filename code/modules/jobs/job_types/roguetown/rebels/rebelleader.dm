@@ -24,15 +24,15 @@
 	cmode_music = 'sound/music/combat_midsomber.ogg'
 
 /datum/outfit/job/roguetown/rebelleader/pre_equip(mob/living/carbon/human/H)
-	shoes = /obj/item/clothing/shoes/roguetown/grenzelhoft
-	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/freifechter
+	shoes = /obj/item/clothing/shoes/roguetown/grenzelhoft/black
+	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/freifechter/black
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/heavy/freifechter
 	cloak = /obj/item/clothing/cloak/half/rebel
-	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants/otavan/generic
-	head = /obj/item/flowercrown/rosa
+	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants/otavan/generic/black
+	head = /obj/item/clothing/head/roguetown/inqhat
 	belt = /obj/item/storage/belt/rogue/leather/knifebelt/black/steel
 	beltl = /obj/item/flashlight/flare/torch/lantern
-	beltr = /obj/item/rogueweapon/sword/rapier/vaquero
+	beltr = /obj/item/rogueweapon/sword/rapier/aliseo
 	mask = /obj/item/clothing/mask/rogue/duelmask/red
 	wrists = /obj/item/scomstone/kingsrow
 	gloves = /obj/item/clothing/gloves/roguetown/angle/grenzelgloves

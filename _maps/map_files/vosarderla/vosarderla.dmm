@@ -1203,7 +1203,7 @@
 "bnw" = (
 /obj/structure/closet/crate/roguecloset,
 /obj/item/clothing/mask/rogue/bulwark,
-/obj/item/clothing/suit/roguetown/armor/plate/hauberk/alt,
+/obj/item/clothing/suit/roguetown/armor/plate/half/iron/ziggurate/pauldrons,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/outdoors/town)
 "bnE" = (
@@ -1761,7 +1761,7 @@
 	pixel_x = 6;
 	pixel_y = 9
 	},
-/obj/effect/spawner/lootdrop/normalguns,
+/obj/item/gun/ballistic/rifle/repeater/enfield,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -2187,9 +2187,11 @@
 /turf/open/floor/rogue/church,
 /area/rogue/indoors/town)
 "cdy" = (
-/obj/effect/spawner/lootdrop/normalgunsoutlet,
-/turf/open/floor/rogue/cobble,
-/area/rogue/outdoors/town)
+/obj/effect/landmark/start/sterilizer,
+/obj/effect/landmark/start/sterilizerlate,
+/obj/effect/loretile/districtwatch,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/indoors/town)
 "ceV" = (
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/open/floor/rogue/ruinedwood/spiral,
@@ -2355,9 +2357,7 @@
 /area/rogue/indoors/town)
 "crv" = (
 /obj/structure/table/wood/long_table,
-/obj/item/clothing/head/roguetown/inqhat{
-	pixel_y = 8
-	},
+/obj/item/clothing/cloak/half/bishopcloak,
 /turf/open/floor/rogue/blocks/stonered,
 /area/rogue/outdoors/town)
 "crw" = (
@@ -7499,7 +7499,7 @@
 /area/rogue/indoors/town)
 "hpY" = (
 /obj/structure/table/wood/poor,
-/obj/effect/spawner/lootdrop/light_armor_spawner,
+/obj/effect/spawner/lootdrop/medium_armor_spawner,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/weapons,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town)
@@ -11697,7 +11697,6 @@
 /obj/structure/curtain/black{
 	pixel_x = -32
 	},
-/obj/effect/spawner/lootdrop/normalgunsoutlet,
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town)
 "lvU" = (
@@ -13791,10 +13790,7 @@
 	locked = 1;
 	lockid = "shop"
 	},
-/obj/item/roguegem/random,
-/obj/effect/spawner/lootdrop/valuable_clutter_spawner,
-/obj/effect/spawner/lootdrop/valuable_clutter_spawner,
-/obj/effect/spawner/lootdrop/valuable_clutter_spawner,
+/obj/effect/spawner/lootdrop/general_loot_hi/x3,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/outdoors/town)
 "ntz" = (
@@ -14512,9 +14508,8 @@
 	locked = 1;
 	lockid = "shop"
 	},
-/obj/item/roguegem/random,
-/obj/item/roguegem/random,
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/general_loot_hi/x3,
+/obj/effect/spawner/lootdrop/general_loot_hi/x3,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/outdoors/town)
 "oeT" = (
@@ -17938,7 +17933,7 @@
 /obj/item/candle/candlestick/gold,
 /obj/effect/spawner/lootdrop/valuable_clutter_spawner,
 /obj/effect/spawner/lootdrop/valuable_clutter_spawner,
-/obj/effect/spawner/lootdrop/valuable_clutter_spawner,
+/obj/effect/spawner/lootdrop/general_loot_hi/x3,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/outdoors/town)
 "rlY" = (
@@ -19035,7 +19030,6 @@
 /obj/item/clothing/head/roguetown/beekeeper{
 	pixel_y = 5
 	},
-/obj/effect/spawner/lootdrop/normalguns,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town)
 "ssK" = (
@@ -21606,10 +21600,11 @@
 "uVB" = (
 /obj/structure/mannequin/male,
 /obj/item/clothing/head/roguetown/helmet/heavy/barbute/visor/hedge,
-/obj/item/clothing/suit/roguetown/armor/plate/hauberk/alt,
 /obj/item/clothing/gloves/roguetown/chain/blk,
 /obj/item/clothing/under/roguetown/chainlegs/blk,
 /obj/item/clothing/shoes/roguetown/boots/armor/blkknight,
+/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/iron,
+/obj/item/clothing/suit/roguetown/armor/plate/half/iron,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/outdoors/town)
 "uVC" = (
@@ -21827,6 +21822,11 @@
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/town)
+"vjm" = (
+/obj/structure/table/wood/poor,
+/obj/effect/spawner/lootdrop/general_loot_hi/x3,
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors/town)
 "vjv" = (
 /obj/effect/decal/carpet/kover_black,
 /turf/open/floor/rogue/ruinedwood{
@@ -23095,12 +23095,6 @@
 /obj/item/burial_shroud,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors/town)
-"wpS" = (
-/obj/effect/landmark/start/sterilizer,
-/obj/effect/landmark/start/sterilizerlate,
-/obj/effect/loretile/districtwatch,
-/turf/open/floor/rogue/naturalstone,
-/area/rogue/indoors/town)
 "wqj" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
@@ -23352,7 +23346,6 @@
 /area/rogue/indoors/town)
 "wDP" = (
 /obj/structure/closet/crate/drawer,
-/obj/effect/spawner/lootdrop/normalguns,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town)
 "wEf" = (
@@ -95014,7 +95007,7 @@ eFu
 sFo
 fnM
 fnM
-cdy
+fnM
 fnM
 kbM
 tqE
@@ -109807,7 +109800,7 @@ eoE
 lEi
 cJy
 cJy
-ygw
+vjm
 fGC
 uif
 jvL
@@ -123378,7 +123371,7 @@ hjZ
 cfK
 wuN
 lLD
-wpS
+cdy
 wuN
 wuN
 wuN

@@ -178,8 +178,8 @@
 	dynamic_hair_suffix = null
 
 /obj/item/clothing/head/roguetown/inqhat
-	name = "imperial galerum"
-	desc = "Commonly worn by Perserdunian Field Bishops. Designed to keep one's eyes away from the heavens, and focus on the blood upon the soil."
+	name = "revolutionary galerum"
+	desc = "Popularized by children's tales of highwaymen and dashing heroes. Designed for flair and panache."
 	icon_state = "inqhat"
 	item_state = "inqhat"
 	sewrepair = TRUE

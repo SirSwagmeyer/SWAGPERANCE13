@@ -131,6 +131,9 @@
 	color = "#FFFFFF"
 	shiftable = FALSE
 
+/obj/item/clothing/suit/roguetown/armor/gambeson/heavy/freifechter/black
+	color = CLOTHING_BLACK
+
 /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/freifechter/housekeeper
 	name = "hardened waistcoat"
 	desc = "Warm yourself by this hearth should you feel the chill in your bones. It is the only place in this manor where you may feel any degree of warmth."
