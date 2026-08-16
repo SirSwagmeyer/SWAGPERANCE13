@@ -246,7 +246,7 @@
 
 /obj/projectile/bullet/a40mmgas/on_hit(target)
 	..()
-	var/datum/effect_system/smoke_spread/poison_gas/S = new /datum/effect_system/smoke_spread/poison_gas
+	var/datum/effect_system/smoke_spread/poison_gas/bad/S = new /datum/effect_system/smoke_spread/poison_gas/bad
 	var/turf/T = src.loc
 	S.set_up(3, T)
 	S.start()

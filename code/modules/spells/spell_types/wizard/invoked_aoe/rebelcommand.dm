@@ -77,7 +77,7 @@
 
 /obj/effect/proc_holder/spell/invoked/charge/rebel/cast(list/targets,mob/user = usr)
 	. = ..()
-	var/list/chargeline = list("RAAAAAGHHHHH!!", "AGHHHHHH!!", "CHAAAAAAAAARGE!!!")
+	var/list/chargeline = list("VIVA ARDERLA!!", "FOR THE REVOLUTION!!", "CHAAAAAAAAARGE!!!")
 	for(var/mob/living/carbon/human/orderedguy in (get_hearers_in_view(order_range, user) - user))
 		if(isliving(orderedguy))
 			if(orderedguy.job in GLOB.rebel_positions)

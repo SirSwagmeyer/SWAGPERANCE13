@@ -57,7 +57,7 @@
 		/obj/item/ammo_box/handfuls/a40mm/gas = 6,
 		/obj/item/grenade/gas/poison = 6,
 		/obj/item/ammo_box/handfuls/a40mm/he = 3,
-		/obj/item/ammo_box/handfuls/a40mm/frag = 3,
+		/obj/item/ammo_box/handfuls/a40mm/frag = 2,
 		/obj/item/ammo_box/handfuls/a40mm/smoke = 6,
 		/obj/item/storage/belt/rogue/pouch/ammobag/gas,
 	)
