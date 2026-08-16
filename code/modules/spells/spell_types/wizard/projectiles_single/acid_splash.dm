@@ -17,7 +17,7 @@
 	movement_interrupt = FALSE
 	antimagic_allowed = FALSE //can you use it if you are antimagicked?
 	spell_tier = 5
-	invocation = "HAHAHAHAHA!!!"
+	invocation = "HAHAHAHAHA!!"
 	invocation_type = "shout"
 	glow_color = null
 	glow_intensity = null
@@ -25,7 +25,7 @@
 	chargedloop = /datum/looping_sound/blank
 	associated_skill = /datum/skill/combat/revolvers
 	cost = 3
-	req_items = list(/obj/item/gun/ballistic/revolver/flaregun/purifier)
+	req_items = list(/obj/item/gun/ballistic/revolver/purifier)
 	xp_gain = TRUE
 	miracle = FALSE
 

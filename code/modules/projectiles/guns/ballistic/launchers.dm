@@ -20,7 +20,7 @@
 
 /obj/item/gun/ballistic/revolver/flaregun //while under the revolver subtype this IS a launcher and needs a lot of niche code to work
 	name = "\improper IFS 40mm grenade launcher"
-	desc = "A handheld grenade launcher. Strangely enough, these were found in the LOVE MACHINE, alongside the flares they were made to fire. They can fit 40mm grenades, and contains an underbarrel acid sprayer."
+	desc = "A handheld grenade launcher. Strangely enough, these were found in the LOVE MACHINE, alongside the flares they were made to fire. They can fit 40mm grenades."
 	icon = 'icons/roguetown/weapons/32guns.dmi'
 	icon_state = "flaregun"
 	item_state = "flaregun"
@@ -81,12 +81,10 @@
 		shell.icon_state = "flareh-handful-1-spent" //FYI, if you make this a more general function make sure repacked shells go back to their initial state
 		//ALSO YES I NEED SPENT VERSIONS OF ALL THE 40MM SPRITES BEFORE I CAN FIX THIS
 
-/obj/item/gun/ballistic/revolver/flaregun/purifier //while under the revolver subtype this IS a launcher and needs a lot of niche code to work
+/obj/item/gun/ballistic/revolver/purifier //while under the revolver subtype this IS a launcher and needs a lot of niche code to work
 	name = "\improper IFS 40mm 'Purifier'"
-	desc = "An unholy combination of the MSD Scorcher and the IFS grenade-launcher mechanism. They can fit multiple 40mm grenades."
+	desc = "An unholy combination of the MSD Scorcher and the IFS grenade-launcher mechanism. There's an underbarrel acid spraying mechanism, and can fit multiple 40mm grenades. "
 	icon = 'icons/roguetown/weapons/32guns.dmi'
-	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
 	icon_state = "purifier"
 	item_state = "purifier"
 	mag_type = /obj/item/ammo_box/magazine/internal/revolver/purifier
@@ -94,14 +92,15 @@
 	slot_flags = ITEM_SLOT_BACK
 	w_class = WEIGHT_CLASS_BULKY
 	longarm = TRUE
-	grid_height = 64
-	grid_width = 64
+	grid_height = 32
+	grid_width = 32
 	spread = 0.5
 	cartridge_wording = "round"
 	fire_sound = GRENADESHOT
 	load_sound = 'sound/combat/ranged/hpistol_cock.ogg'
 	recoil = 2
 	sellprice = 34
+	experimental_inhand = FALSE
 	possible_item_intents = list(
 		/datum/intent/shoot/revolver,
 		/datum/intent/arc/flare,

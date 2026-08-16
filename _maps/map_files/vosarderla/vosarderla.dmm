@@ -23095,6 +23095,12 @@
 /obj/item/burial_shroud,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors/town)
+"wpS" = (
+/obj/effect/landmark/start/sterilizer,
+/obj/effect/landmark/start/sterilizerlate,
+/obj/effect/loretile/districtwatch,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/indoors/town)
 "wqj" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
@@ -123372,7 +123378,7 @@ hjZ
 cfK
 wuN
 lLD
-wuN
+wpS
 wuN
 wuN
 wuN
