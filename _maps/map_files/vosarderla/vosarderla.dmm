@@ -1170,7 +1170,9 @@
 	color = "#3f3f3f";
 	dir = 2
 	},
-/obj/structure/timed_blocker/twentyfive,
+/obj/structure/timed_blocker/twentyfive{
+	max_integrity = 1500
+	},
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
 "bkI" = (
@@ -2124,7 +2126,9 @@
 /turf/open/floor/rogue/herringbone,
 /area/rogue)
 "cbL" = (
-/obj/structure/timed_blocker/twentyfive,
+/obj/structure/timed_blocker/twentyfive{
+	max_integrity = 1500
+	},
 /turf/open/floor/rogue/concrete,
 /area/rogue/outdoors/town)
 "cbV" = (
@@ -2909,7 +2913,9 @@
 /turf/open/floor/rogue/wood,
 /area/rogue/outdoors/town)
 "cUH" = (
-/obj/structure/timed_blocker/twentyfive,
+/obj/structure/timed_blocker/twentyfive{
+	max_integrity = 1500
+	},
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/town)
 "cVc" = (
@@ -3479,7 +3485,9 @@
 	color = "#3f3f3f";
 	dir = 1
 	},
-/obj/structure/timed_blocker/twentyfive,
+/obj/structure/timed_blocker/twentyfive{
+	max_integrity = 1500
+	},
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors/town)
 "dwV" = (
@@ -6695,7 +6703,9 @@
 	color = "#3f3f3f";
 	dir = 2
 	},
-/obj/structure/timed_blocker/twentyfive,
+/obj/structure/timed_blocker/twentyfive{
+	max_integrity = 1500
+	},
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
 "gxK" = (
@@ -7568,7 +7578,9 @@
 	color = "#3f3f3f";
 	dir = 1
 	},
-/obj/structure/timed_blocker/twentyfive,
+/obj/structure/timed_blocker/twentyfive{
+	max_integrity = 1500
+	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town)
 "hta" = (
@@ -8822,7 +8834,9 @@
 	color = "#3f3f3f";
 	dir = 2
 	},
-/obj/structure/timed_blocker/twentyfive,
+/obj/structure/timed_blocker/twentyfive{
+	max_integrity = 1500
+	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town)
 "iFx" = (
@@ -11096,7 +11110,9 @@
 	color = "#3f3f3f";
 	dir = 1
 	},
-/obj/structure/timed_blocker/twentyfive,
+/obj/structure/timed_blocker/twentyfive{
+	max_integrity = 1500
+	},
 /turf/open/floor/rogue/grassyel,
 /area/rogue/outdoors/town)
 "kRU" = (
@@ -12078,6 +12094,11 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt/grime,
+/obj/effect/spawner/lootdrop/medicines,
+/obj/effect/spawner/lootdrop/medicines,
+/obj/effect/spawner/lootdrop/medicines,
+/obj/effect/spawner/lootdrop/medicines,
+/obj/effect/spawner/lootdrop/medicines,
 /turf/open/floor/rogue/church,
 /area/rogue/indoors/town)
 "lQK" = (
@@ -12717,6 +12738,18 @@
 /obj/machinery/light/rogue/torchholder/r{
 	dir = 4
 	},
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/indoors/town)
 "mrP" = (
@@ -15326,7 +15359,9 @@
 /turf/closed/wall/mineral/rogue/decowood,
 /area/rogue/outdoors/town)
 "oUE" = (
-/obj/structure/timed_blocker/twentyfive,
+/obj/structure/timed_blocker/twentyfive{
+	max_integrity = 1500
+	},
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
 "oUK" = (
@@ -16505,6 +16540,10 @@
 	},
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town)
+"pUe" = (
+/obj/item/storage/belt/rogue/surgery_bag/full,
+/turf/open/floor/rogue/blocks/stonered,
+/area/rogue/indoors/town)
 "pUp" = (
 /obj/item/kitchen/spoon,
 /obj/item/kitchen/rollingpin,
@@ -22334,6 +22373,11 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt/grime,
+/obj/effect/spawner/lootdrop/medicines,
+/obj/effect/spawner/lootdrop/medicines,
+/obj/effect/spawner/lootdrop/medicines,
+/obj/effect/spawner/lootdrop/medicines,
+/obj/effect/spawner/lootdrop/medicines,
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/indoors/town)
 "vHn" = (
@@ -23185,7 +23229,9 @@
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town)
 "wuz" = (
-/obj/structure/timed_blocker/twentyfive,
+/obj/structure/timed_blocker/twentyfive{
+	max_integrity = 1500
+	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town)
 "wuN" = (
@@ -23353,7 +23399,9 @@
 	color = "#3f3f3f";
 	dir = 2
 	},
-/obj/structure/timed_blocker/twentyfive,
+/obj/structure/timed_blocker/twentyfive{
+	max_integrity = 1500
+	},
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors/town)
 "wEz" = (
@@ -24261,6 +24309,11 @@
 /obj/structure/chair/wood/rogue/chair4{
 	dir = 4
 	},
+/obj/effect/spawner/lootdrop/medicines,
+/obj/effect/spawner/lootdrop/medicines,
+/obj/effect/spawner/lootdrop/medicines,
+/obj/effect/spawner/lootdrop/medicines,
+/obj/effect/spawner/lootdrop/medicines,
 /turf/open/floor/rogue/church,
 /area/rogue/indoors/town)
 "xzG" = (
@@ -119518,7 +119571,7 @@ mro
 vGV
 lQH
 xyL
-hAo
+pUe
 hAo
 hAo
 mLx

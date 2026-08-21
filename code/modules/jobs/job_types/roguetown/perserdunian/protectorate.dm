@@ -3,8 +3,8 @@
 	flag = PROTECTORATE
 	department_flag = PERSERDUN
 	faction = "Station"
-	total_positions = 8
-	spawn_positions = 8
+	total_positions = 12
+	spawn_positions = 12
 	agevet_req = FALSE
 	allowed_races = RACES_CONSCRIPT
 	allowed_sexes = list(MALE, FEMALE)
@@ -61,6 +61,7 @@
 		/obj/item/gun/ballistic/revolver/judge,
 		/obj/item/rope/chain,
 		/obj/item/storage/belt/rogue/pouch/ammobag/judge,
+		/obj/item/needle,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)

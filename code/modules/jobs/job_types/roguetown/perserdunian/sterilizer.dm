@@ -3,8 +3,8 @@
 	flag = STERILIZER
 	department_flag = PERSERDUN
 	faction = "Station"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	agevet_req = FALSE
 	allowed_races = RACES_CONSCRIPT
 	allowed_sexes = list(MALE, FEMALE)
@@ -60,6 +60,7 @@
 		/obj/item/ammo_box/handfuls/a40mm/frag = 2,
 		/obj/item/ammo_box/handfuls/a40mm/smoke = 6,
 		/obj/item/storage/belt/rogue/pouch/ammobag/gas,
+		/obj/item/needle,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)

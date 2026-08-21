@@ -66,6 +66,7 @@
 		/obj/item/rope/chain,
 		/obj/item/storage/belt/rogue/pouch/ammobag/judge,
 		/obj/item/clothing/mask/rogue/gasmask/protectorate,
+		/obj/item/needle,
 	)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
