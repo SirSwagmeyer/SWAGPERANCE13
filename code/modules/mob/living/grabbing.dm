@@ -590,50 +590,27 @@
 	if(C.apply_damage(damage, BRUTE, limb_grabbed, armor_block))
 		playsound(C.loc, "smallslash", 100, FALSE, -1)
 		var/datum/wound/caused_wound = limb_grabbed.bodypart_attacked_by(BCLASS_BITE, damage, user, sublimb_grabbed, crit_message = TRUE)
-
-		/*
-			BLOODFIEND BITE.
-			Drink directly from the strongest bleeding wound.
-		*/
-		if(HAS_TRAIT(user, TRAIT_BLOODFIEND))
+		if(HAS_TRAIT(user, TRAIT_YUANITE) && user.has_status_effect(/datum/status_effect/debuff/vthirstt3)) // for when you are zerking
 			var/datum/wound/blood_wound
 			var/best_bleed = 0
-
 			for(var/datum/wound/W as anything in limb_grabbed.wounds)
 				if(W.bleed_rate > best_bleed)
 					best_bleed = W.bleed_rate
 					blood_wound = W
-
-			if(blood_wound && best_bleed > 0)
+			if(blood_wound && best_bleed > 0 && caused_wound)
 				var/vitae_gain = max(1, round(best_bleed))
 				user.adjust_vitae(vitae_gain * 100)
 				user.adjust_nutrition(vitae_gain * 100)
 				user.adjust_hydration(vitae_gain * 100)
+				C.visible_message(span_artery("[user] savagely tears off chunks from [C]'s [parse_zone(sublimb_grabbed)]!"), span_userdanger("[user] savagely tears into my [parse_zone(sublimb_grabbed)]!"), span_hear("I hear wet, savage chewing!"))
 
-				C.visible_message(
-					span_danger("[user] greedily drinks blood from [C]'s [parse_zone(sublimb_grabbed)]!"),
-					span_userdanger("[user] tears into my [parse_zone(sublimb_grabbed)], drinking my blood!"),
-					span_hear("I hear wet, savage chewing!")
-				)
-
-		/*
-			WYVERNTOUCHED BITE.
-			The venomous mutation consumes 2% of current blood volume
-			and converts 10% of that amount into poison.
-		*/
-		else if(HAS_TRAIT(user, TRAIT_WYVERNTOUCHED))
+		else if(HAS_TRAIT(user, TRAIT_WYVERNTOUCHED) && !user.has_status_effect(/datum/status_effect/debuff/vthirstt3)) // WTs only produce venom if they're not zerking
 			var/blood_cost = max(1, round(user.blood_volume * 0.02))
 			var/venom = max(1, round(blood_cost * 0.10))
-
 			user.blood_volume = max(user.blood_volume - blood_cost, 0)
 			user.handle_blood()
 			C.reagents?.add_reagent(/datum/reagent/organpoison, venom)
-
-			C.visible_message(
-				span_danger("[user] gnaws into [C]'s [parse_zone(sublimb_grabbed)], pumping venom into the wound!"),
-				span_userdanger("[user] gnaws my [parse_zone(sublimb_grabbed)], pumping venom into my veins!"),
-				span_hear("I hear fangs sinking into flesh!")
-			)
+			C.visible_message(span_necrosis("[user] gnaws into [C]'s [parse_zone(sublimb_grabbed)], pumping venom into the wound!"), span_userdanger("[user] gnaws my [parse_zone(sublimb_grabbed)], pumping venom into my veins!"), span_hear("I hear fangs sinking into flesh!"))
 
 		if(user.mind && caused_wound)
 			if(istype(user.dna.species, /datum/species/werewolf))
@@ -689,14 +666,18 @@
 		playsound(user.loc, 'sound/misc/drink_blood.ogg', 100, FALSE, -4)
 		C.visible_message(span_danger("[user] drinks blood from [C]'s [parse_zone(sublimb_grabbed)]!"))
 		log_combat(user, C, "drank blood from [parse_zone(sublimb_grabbed)]")
+		user.changeNext_move(CLICK_CD_RESIST)
 		return
 
 	if(!HAS_TRAIT(user, TRAIT_NASTY_EATER) || !HAS_TRAIT(user, TRAIT_ORGAN_EATER))
 		playsound(user.loc, 'sound/misc/drink_blood.ogg', 100, FALSE, -4)
 		C.visible_message(span_danger("[user] drinks blood from [C]'s [parse_zone(sublimb_grabbed)]!"))
-		to_chat(user, span_danger("I'm going to puke..."))
+		to_chat(user, span_warning("<i>I'm going to puke...</i>"))
+		C.blood_volume = max(C.blood_volume - max(5, round(limb_grabbed.get_bleed_rate())), 0)
+		C.handle_blood()
 		addtimer(CALLBACK(user, TYPE_PROC_REF(/mob/living/carbon, vomit), 0, TRUE), rand(8 SECONDS, 15 SECONDS))
 		log_combat(user, C, "drank blood from [parse_zone(sublimb_grabbed)]")
+		user.changeNext_move(CLICK_CD_RESIST)
 		return
 
 	if(ishuman(C))

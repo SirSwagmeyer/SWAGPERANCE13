@@ -14,7 +14,7 @@
 	skin_tone_wording = "Ancestry"
 
 	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS,STUBBLE,OLDGREY)
-	inherent_traits = list(TRAIT_NOMOBSWAP, TRAIT_NASTY_EATER, TRAIT_BLOODFIEND, TRAIT_YUANITE)
+	inherent_traits = list(TRAIT_NOMOBSWAP, TRAIT_NASTY_EATER, TRAIT_YUANITE)
 	default_features = MANDATORY_FEATURE_LIST
 	use_skintones = 1
 	disliked_food = NONE

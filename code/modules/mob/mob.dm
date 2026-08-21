@@ -1338,7 +1338,7 @@ GLOBAL_VAR_INIT(mobids, 1)
 /mob/proc/adjust_vitae(change)
 	if(HAS_TRAIT(src, TRAIT_NOHUNGER))
 		bloodpool = VITAE_LEVEL_FULL
-	bloodpool = max(0, hydration + change)
+	bloodpool = max(0, bloodpool + change)
 	if(bloodpool > VITAE_LEVEL_FULL)
 		bloodpool = VITAE_LEVEL_FULL
 
