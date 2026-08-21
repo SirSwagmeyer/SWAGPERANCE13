@@ -39,7 +39,6 @@
 	backr = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(
 		/obj/item/needle, 
-		/obj/item/storage/keyring/tailor,
 		/obj/item/dye_brush, 
 		/obj/item/recipe_book/sewing, 
 		/obj/item/recipe_book/leatherworking
