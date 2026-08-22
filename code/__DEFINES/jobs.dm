@@ -1,46 +1,41 @@
+#define ENGSEC (1<<0)
 
-#define ENGSEC			(1<<0)
+#define CAPTAIN (1<<0)
+#define HOS (1<<1)
+#define WARDEN (1<<2)
+#define DETECTIVE (1<<3)
+#define OFFICER (1<<4)
+#define CHIEF (1<<5)
+#define ENGINEER (1<<6)
+#define ATMOSTECH (1<<7)
+#define ROBOTICIST (1<<8)
+#define AI_JF (1<<9)
+#define CYBORG (1<<10)
 
-#define CAPTAIN			(1<<0)
-#define HOS				(1<<1)
-#define WARDEN			(1<<2)
-#define DETECTIVE		(1<<3)
-#define OFFICER			(1<<4)
-#define CHIEF			(1<<5)
-#define ENGINEER		(1<<6)
-#define ATMOSTECH		(1<<7)
-#define ROBOTICIST		(1<<8)
-#define AI_JF			(1<<9)
-#define CYBORG			(1<<10)
+#define MEDSCI (1<<1)
 
+#define RD_JF (1<<0)
+#define SCIENTIST (1<<1)
+#define CHEMIST (1<<2)
+#define CMO_JF (1<<3)
+#define DOCTOR (1<<4)
+#define GENETICIST (1<<5)
+#define VIROLOGIST (1<<6)
 
-#define MEDSCI			(1<<1)
+#define CIVILIAN (1<<2)
 
-#define RD_JF			(1<<0)
-#define SCIENTIST		(1<<1)
-#define CHEMIST			(1<<2)
-#define CMO_JF			(1<<3)
-#define DOCTOR			(1<<4)
-#define GENETICIST		(1<<5)
-#define VIROLOGIST		(1<<6)
-
-
-#define CIVILIAN		(1<<2)
-
-#define HOP				(1<<0)
-#define BARTENDER		(1<<1)
-#define BOTANIST		(1<<2)
-//#define COOK			(1<<3) //This is redefined below, and is a ss13 leftover.
-#define JANITOR			(1<<4)
-#define CURATOR			(1<<5)
-#define QUARTERMASTER	(1<<6)
-#define CARGOTECH		(1<<7)
-//#define MINER			(1<<8) //This is redefined below, and is a ss13 leftover.
-#define LAWYER			(1<<9)
-#define CHAPLAIN		(1<<10)
-#define CLOWN			(1<<11)
-#define MIME			(1<<12)
-#define ASSISTANT		(1<<13)
+#define HOP (1<<0)
+#define BARTENDER (1<<1)
+#define BOTANIST (1<<2)
+#define JANITOR (1<<4)
+#define CURATOR (1<<5)
+#define QUARTERMASTER (1<<6)
+#define CARGOTECH (1<<7)
+#define LAWYER (1<<9)
+#define CHAPLAIN (1<<10)
+#define CLOWN (1<<11)
+#define MIME (1<<12)
+#define ASSISTANT (1<<13)
 
 #define JOB_AVAILABLE 0
 #define JOB_UNAVAILABLE_GENERIC 1
@@ -62,7 +57,6 @@
 #define DEFAULT_DEITY "Space Jesus"
 
 #define JOB_DISPLAY_ORDER_DEFAULT 0
-
 #define JOB_DISPLAY_ORDER_ASSISTANT 1
 #define JOB_DISPLAY_ORDER_CAPTAIN 2
 #define JOB_DISPLAY_ORDER_HEAD_OF_PERSONNEL 3
@@ -96,142 +90,142 @@
 #define JOB_DISPLAY_ORDER_AI 31
 #define JOB_DISPLAY_ORDER_CYBORG 32
 
-#define NOBLEMEN		(1<<0)
+#define NOBLEMEN (1<<0)
 
-#define LORD		(1<<0)
-#define LADY		(1<<1)
-#define HAND		(1<<2)
-#define STEWARD		(1<<3)
-#define KNIGHT		(1<<4)
-#define GUARD_CAPTAIN		(1<<5)
-#define MARSHAL		(1<<6)
-#define HOSTAGE		(1<<7)
-#define SUITOR		(1<<8)
+#define LORD (1<<0)
+#define LADY (1<<1)
+#define HAND (1<<2)
+#define STEWARD (1<<3)
+#define KNIGHT (1<<4)
+#define GUARD_CAPTAIN (1<<5)
+#define MARSHAL (1<<6)
+#define HOSTAGE (1<<7)
+#define SUITOR (1<<8)
 
-#define GARRISON		(1<<1)
+#define GARRISON (1<<1)
 
-#define GUARDSMAN	(1<<0)
-#define MANATARMS	(1<<1)
-#define DUNGEONEER	(1<<2)
-#define SQUIRE		(1<<3)
-#define BOGGUARD	(1<<4)
-#define SERGEANT	(1<<5)
-#define SHERIFF		(1<<6)
+#define GUARDSMAN (1<<0)
+#define MANATARMS (1<<1)
+#define DUNGEONEER (1<<2)
+#define SQUIRE (1<<3)
+#define BOGGUARD (1<<4)
+#define SERGEANT (1<<5)
+#define SHERIFF (1<<6)
 
-#define CHURCHMEN		(1<<2)
+#define CHURCHMEN (1<<2)
 
-#define PRIEST		(1<<0)
-#define MONK		(1<<1)
-#define GRAVEDIGGER	(1<<2)
-#define DRUID		(1<<3)
+#define PRIEST (1<<0)
+#define MONK (1<<1)
+#define GRAVEDIGGER (1<<2)
+#define DRUID (1<<3)
 
-#define COURTIERS	(1<<3)
+#define COURTIERS (1<<3)
 
-#define JESTER		(1<<0)
-#define WIZARD		(1<<1)
-#define PHYSICIAN 	(1<<2)
-#define BUTLER		(1<<3)
-#define COUNCILLOR	(1<<4)
+#define JESTER (1<<0)
+#define WIZARD (1<<1)
+#define PHYSICIAN (1<<2)
+#define BUTLER (1<<3)
+#define COUNCILLOR (1<<4)
 
-#define YEOMEN		(1<<4)
+#define YEOMEN (1<<4)
 
-#define ARCHIVIST	(1<<1)
-#define ALCHEMIST	(1<<5)
-#define MERCHANT	(1<<8)
-#define SCRIBE		(1<<9)
-#define ELDER		(1<<10)
+#define ARCHIVIST (1<<1)
+#define ALCHEMIST (1<<5)
+#define MERCHANT (1<<8)
+#define SCRIBE (1<<9)
+#define ELDER (1<<10)
 
-#define PEASANTS	(1<<5)
+#define PEASANTS (1<<5)
 
-#define HUNTER		(1<<0)
-#define FARMER		(1<<1)
-#define BUTCHER		(1<<2)
-#define FISHER		(1<<3)
-#define LUMBERJACK	(1<<4)
-#define MINER		(1<<5)
-#define COOK		(1<<6)
+#define HUNTER (1<<0)
+#define FARMER (1<<1)
+#define BUTCHER (1<<2)
+#define FISHER (1<<3)
+#define LUMBERJACK (1<<4)
+#define MINER (1<<5)
+#define COOK (1<<6)
 #define KNAVEWENCH (1<<7)
-#define GRABBER		(1<<8)
-#define NITEMASTER	(1<<9)
-#define WENCH		(1<<10)
-#define BEGGAR		(1<<11)
-#define ADVENTURER	(1<<12)
-#define PILGRIM		(1<<13)
-#define PRISONERR	(1<<15)
-#define PRISONERB	(1<<16)
-#define LUNATIC		(1<<17)
-#define MIGRANT		(1<<18)
-#define BANDIT		(1<<19)
-#define COURTAGENT	(1<<20)
-#define WRETCH		(1<<21)
+#define GRABBER (1<<8)
+#define NITEMASTER (1<<9)
+#define WENCH (1<<10)
+#define BEGGAR (1<<11)
+#define ADVENTURER (1<<12)
+#define PILGRIM (1<<13)
+#define PRISONERR (1<<15)
+#define PRISONERB (1<<16)
+#define LUNATIC (1<<17)
+#define MIGRANT (1<<18)
+#define BANDIT (1<<19)
+#define COURTAGENT (1<<20)
+#define WRETCH (1<<21)
 
-#define YOUNGFOLK	(1<<6)
+#define YOUNGFOLK (1<<6)
 
-#define APPRENTICE	(1<<0)
-#define CHURCHLING	(1<<1)
-#define SERVANT		(1<<2)
-#define ORPHAN		(1<<3)
-#define PRINCE		(1<<4)
-#define SHOPHAND	(1<<5)
-#define CLERK 		(1<<6)
-#define MAGEAPPRENTICE	(1<<7)
-#define APOTHECARY	(1<<8)
+#define APPRENTICE (1<<0)
+#define CHURCHLING (1<<1)
+#define SERVANT (1<<2)
+#define ORPHAN (1<<3)
+#define PRINCE (1<<4)
+#define SHOPHAND (1<<5)
+#define CLERK (1<<6)
+#define MAGEAPPRENTICE (1<<7)
+#define APOTHECARY (1<<8)
 
-#define MERCENARIES		(1<<7)
+#define MERCENARIES (1<<7)
 
-#define VETERAN			(1<<1)
-#define MERCENARY		(1<<2)
-#define DESERT_RIDER	(1<<3)	//Unused
-#define GRENZELHOFT		(1<<4)	//Unused
+#define VETERAN (1<<1)
+#define MERCENARY (1<<2)
+#define DESERT_RIDER (1<<3)
+#define GRENZELHOFT (1<<4)
 
+#define TRIBAL (1<<8)
 
-#define TRIBAL		(1<<8)
+#define CHIEFTAIN (1<<0)
+#define TRIBALCOOK (1<<1)
+#define TRIBALGUARD (1<<2)
+#define TRIBALSMITH (1<<3)
 
-#define CHIEFTAIN	(1<<0)
-#define TRIBALCOOK	(1<<1)
-#define TRIBALGUARD	(1<<2)
-#define TRIBALSMITH	(1<<3)
+#define SLOP (1<<9)
 
-#define SLOP		(1<<9)
-
-#define TESTER		(1<<0)
+#define TESTER (1<<0)
 #define DEATHKNIGHT (1<<1)
-#define SKELETON	(1<<2)
-#define GOBLIN		(1<<3)
+#define SKELETON (1<<2)
+#define GOBLIN (1<<3)
 
 #define INQUISITION (1<<10)
 
-#define PURITAN		(1<<0)
-#define ORTHODOXIST	(1<<1)
+#define PURITAN (1<<0)
+#define ORTHODOXIST (1<<1)
 
-#define GUILDSMEN	(1<<11)
+#define GUILDSMEN (1<<11)
+
 #define GUILDMASTER (1<<1)
-#define GUILDSMAN  	(1<<2)
-#define TAILOR		(1<<3)
+#define GUILDSMAN (1<<2)
+#define TAILOR (1<<3)
 
-#define PERSERDUN	(1<<12)
+#define PERSERDUN (1<<12)
 
-// role balance signals - reads from death, far travel, spawning, and revivals
 #define COMSIG_ADJUST_PERSERDUN "faction_gained_perserdun"
 #define COMSIG_ADJUST_RISVON "faction_gained_risvon"
 
 #define GRANDMASTER	(1<<0) // no-armor leadership wimp w/ drip
 #define GRANDKNIGHT (1<<1) // heaviest armor in the game - very tanky - melee only - consider adding a shield
-#define WARPRIEST (1<<2) // rab worshipper support role, uses blood magic, has a few offensive spells with a few support ones too
-#define KNIGHTCOMMANDER (1<<3) //better armor + sawn down lever-action & a sword
-#define VOLTIGEUR (1<<4) //high speed shotgun flanker, with recon potential to boot
-#define BLACKGUARD (1<<5) //trench raider - specialized in close combat
-#define AUXILIARIST	(1<<6) //support role - same w/ servico
-#define ARMSMAN	(1<<7) //standard soldier w/ a rifle
-#define ROOK (1<<8) // terdun machine gunner
-#define AMMOSQUIRE (1<<9) // terdun ammo bearer
-#define CHIRURGEON (1<<10)
-#define PARTISAN (1<<11)
-#define ENVOY (1<<12)
-#define RADIOTROOPER (1<<13)
-#define PERSERDUN_CONSCRIPT (1<<14) //tester role
+#define MAGISTER (1<<2)
+#define WARPRIEST (1<<3) // rab worshipper support role, uses blood magic, has a few offensive spells with a few support ones too
+#define KNIGHTCOMMANDER (1<<4) //better armor + sawn down lever-action & a sword
+#define VOLTIGEUR (1<<5) //high speed shotgun flanker, with recon potential to boot
+#define BLACKGUARD (1<<6) //trench raider - specialized in close combat
+#define AUXILIARIST	(1<<7) //support role - same w/ servico
+#define ARMSMAN	(1<<8) //standard soldier w/ a rifle
+#define ROOK (1<<9) // terdun machine gunner
+#define AMMOSQUIRE (1<<10) // terdun ammo bearer
+#define CHIRURGEON (1<<11)
+#define PARTISAN (1<<12)
+#define ENVOY (1<<13)
+#define RADIOTROOPER (1<<14)
+#define PERSERDUN_CONSCRIPT (1<<15) //tester role
 
-#define RISVON	(1<<13)
+#define RISVON (1<<13)
 
 #define COMMANDANT (1<<0) //1 slot leadership. probably has a heavy smg & great light armor
 #define OFICIRO (1<<1) //sniper? maybe a semi-auto rifle? + grenades?
@@ -241,12 +235,13 @@
 #define TUORO (1<<5)
 #define PAFANTO (1<<6) //heavy weapon technician - melee weapon and machine gun
 #define MULO (1<<7) // heavy weapon ammo bearer - stripped down soldato gear and ammo storage
-#define SERVISTO (1<<8) //support role - can probably shit meds out the wazoo
-#define CURACISTO (1<<9)
-#define CAMPFOLLOWER (1<<10)
-#define CONSULO (1<<11)
-#define FLAMSOLDATO (1<<12)
-#define RISVON_CONSCRIPT (1<<13) //tester role
+#define DOTTORE (1<<8)
+#define SERVISTO (1<<9) //support role - can probably shit meds out the wazoo
+#define CURACISTO (1<<10)
+#define CAMPFOLLOWER (1<<11)
+#define CONSULO (1<<12)
+#define FLAMSOLDATO (1<<13)
+#define RISVON_CONSCRIPT (1<<14) //tester role
 
 #define KINGSROW (1<<14)
 
@@ -257,7 +252,7 @@
 #define MORTICIAN (1<<4)
 #define TOWNER (1<<5)
 #define BARKEEP (1<<6)
-#define HOUSEKEEPER (1<<6)
+#define HOUSEKEEPER (1<<7)
 #define MANORSERVANT (1<<8)
 
 #define HUNTERS (1<<15)
@@ -272,8 +267,7 @@
 
 #define FOREIGNER (1<<0)
 #define PIONEER (1<<2)
-#define ZOMBIE 	(1<<3)
-
+#define ZOMBIE (1<<3)
 
 #define JCOLOR_NOBLE "#aa83b9"
 #define JCOLOR_COURTIER "#81adc8"
@@ -295,6 +289,7 @@
 // PERSERDUN
 #define JDO_GRANDMASTER 1
 #define JDO_GRANDKNIGHT 1.1
+#define JDO_MAGISTER 1.15
 #define JDO_WARPRIEST 1.2
 #define JDO_KNIGHTCOMMANDER 1.3
 #define JDO_VOLTIGEUR 1.4
@@ -318,12 +313,13 @@
 #define JDO_PAFANTO 2.5
 #define JDO_MULO 2.6
 #define JDO_TUORO 2.7
-#define JDO_SERVISTO 2.8
-#define JDO_CURACISTO 2.9
-#define JDO_CAMPFOLLOWER 2.10
-#define JDO_CONSULO 2.11
-#define JDO_FLAMSOLDATO 2.12
-#define JDO_RISVONCONSCRIPT 2.13
+#define JDO_DOTTORE 2.8
+#define JDO_SERVISTO 2.9
+#define JDO_CURACISTO 2.10
+#define JDO_CAMPFOLLOWER 2.11
+#define JDO_CONSULO 2.12
+#define JDO_FLAMSOLDATO 2.13
+#define JDO_RISVONCONSCRIPT 2.14
 
 // KINGSROW
 #define JDO_HIERARCH 3
@@ -350,6 +346,7 @@
 
 #define PERSERDUN_ROLES \
 	/datum/job/roguetown/grandmaster,\
+	/datum/job/roguetown/magister,\
 	/datum/job/roguetown/warpriest,\
 	/datum/job/roguetown/grandknight,\
 	/datum/job/roguetown/knightcommander,\
@@ -364,24 +361,25 @@
 
 #define RISVON_ROLES \
 	/datum/job/roguetown/commandant,\
+	/datum/job/roguetown/dottore,\
 	/datum/job/roguetown/officaro,\
+	/datum/job/roguetown/kaspafisto,\
 	/datum/job/roguetown/veterano,\
 	/datum/job/roguetown/soldato,\
+	/datum/job/roguetown/pafanto,\
+	/datum/job/roguetown/municioteknikosto,\
 	/datum/job/roguetown/servicus,\
 	/datum/job/roguetown/curacisto,\
 	/datum/job/roguetown/campfollower,\
 	/datum/job/roguetown/consulo,\
 	/datum/job/roguetown/tuoro,\
-	/datum/job/roguetown/pafanto,\
-	/datum/job/roguetown/municioteknikosto,\
-	/datum/job/roguetown/kaspafisto,\
 	/datum/job/roguetown/risvonconscript
 
 #define KINGSROW_ROLES \
 	/datum/job/roguetown/hierarch,\
 	/datum/job/roguetown/displacedhier,\
 	/datum/job/roguetown/manorservant,\
-	/datum/job/roguetown/housekeeper, \
+	/datum/job/roguetown/housekeeper,\
 	/datum/job/roguetown/bulwark,\
 	/datum/job/roguetown/provisioner,\
 	/datum/job/roguetown/mortician,\
@@ -398,4 +396,4 @@
 	/datum/job/roguetown/hedgeborn,\
 	/datum/job/roguetown/huntsteward,\
 	/datum/job/roguetown/mountebank,\
-	/datum/job/roguetown/huntmaster
+	/datum/job/roguetown/huntsman

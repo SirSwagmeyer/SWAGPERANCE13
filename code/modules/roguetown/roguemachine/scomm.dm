@@ -1,4 +1,6 @@
 #define GARRISON_SCOM_COLOR "#FF4242"
+#define LEADER_SCOM_COLOR "#fffc61"
+#define CMO_SCOM_COLOR "#85fbff"
 #define RADIO_SOUNDS
 #define SCOMNET_EMPIRE "empire"
 #define SCOMNET_ZIGS "zigs"
@@ -746,7 +748,7 @@
 
 /obj/item/scomstone/garrison/attack_right(mob/living/carbon/human/user)
 	user.changeNext_move(CLICK_CD_INTENTCAP)
-	visible_message(span_notice ("[user] presses their ring against their mouth."))
+	visible_message(span_notice ("[user] moves their wrist by their mouth."))
 	var/input_text = input(user, "Enter your message:", "Message")
 	if(!input_text)
 		return
@@ -810,7 +812,26 @@
 
 /obj/item/scomstone/rislead/attack_right(mob/living/carbon/human/user)
 	user.changeNext_move(CLICK_CD_INTENTCAP)
-	visible_message(span_notice ("[user] presses their ring against their mouth."))
+	visible_message(span_notice ("[user] moves their wrist by their mouth."))
+	var/input_text = input(user, "Enter your message:", "Message")
+	if(!input_text)
+		return
+	var/usedcolor = user.voice_color
+	if(user.voicecolor_override)
+		usedcolor = user.voicecolor_override
+	user.whisper(input_text)
+	if(length(input_text) > 100) //When these people talk too much, put that shit in slow motion, yeah
+		input_text = "<small>[input_text]</small>"
+	for(var/obj/item/scomstone/S in SSroguemachine.scomm_machines)
+		if(S.faction_net == faction_net)
+			input_text = "<span style='color: [LEADER_SCOM_COLOR]'>[input_text]</span>"
+			S.repeat_message(input_text, src, usedcolor)
+
+/obj/item/scomstone/rislead/lesser
+
+/obj/item/scomstone/rislead/lesser/attack_right(mob/living/carbon/human/user)
+	user.changeNext_move(CLICK_CD_INTENTCAP)
+	visible_message(span_notice ("[user] moves their wrist by their mouth."))
 	var/input_text = input(user, "Enter your message:", "Message")
 	if(!input_text)
 		return
@@ -823,6 +844,63 @@
 	for(var/obj/item/scomstone/S in SSroguemachine.scomm_machines)
 		if(S.faction_net == faction_net)
 			input_text = "<span style='color: [GARRISON_SCOM_COLOR]'>[input_text]</span>"
+			S.repeat_message(input_text, src, usedcolor)
+
+/obj/item/scomstone/rislead/cmo
+
+/obj/item/scomstone/rislead/cmo/attack_right(mob/living/carbon/human/user)
+	user.changeNext_move(CLICK_CD_INTENTCAP)
+	visible_message(span_notice ("[user] moves their wrist by their mouth."))
+	var/input_text = input(user, "Enter your message:", "Message")
+	if(!input_text)
+		return
+	var/usedcolor = user.voice_color
+	if(user.voicecolor_override)
+		usedcolor = user.voicecolor_override
+	user.whisper(input_text)
+	if(length(input_text) > 100) //When these people talk too much, put that shit in slow motion, yeah
+		input_text = "<small>[input_text]</small>"
+	for(var/obj/item/scomstone/S in SSroguemachine.scomm_machines)
+		if(S.faction_net == faction_net)
+			input_text = "<span style='color: [CMO_SCOM_COLOR]'>[input_text]</span>"
+			S.repeat_message(input_text, src, usedcolor)
+
+/obj/item/scomstone/perlead/lesser
+
+/obj/item/scomstone/perlead/lesser/attack_right(mob/living/carbon/human/user)
+	user.changeNext_move(CLICK_CD_INTENTCAP)
+	visible_message(span_notice ("[user] moves their wrist by their mouth."))
+	var/input_text = input(user, "Enter your message:", "Message")
+	if(!input_text)
+		return
+	var/usedcolor = user.voice_color
+	if(user.voicecolor_override)
+		usedcolor = user.voicecolor_override
+	user.whisper(input_text)
+	if(length(input_text) > 100) //When these people talk too much, put that shit in slow motion, yeah
+		input_text = "<small>[input_text]</small>"
+	for(var/obj/item/scomstone/S in SSroguemachine.scomm_machines)
+		if(S.faction_net == faction_net)
+			input_text = "<span style='color: [GARRISON_SCOM_COLOR]'>[input_text]</span>"
+			S.repeat_message(input_text, src, usedcolor)
+
+/obj/item/scomstone/perlead/cmo
+
+/obj/item/scomstone/perlead/cmo/attack_right(mob/living/carbon/human/user)
+	user.changeNext_move(CLICK_CD_INTENTCAP)
+	visible_message(span_notice ("[user] moves their wrist by their mouth."))
+	var/input_text = input(user, "Enter your message:", "Message")
+	if(!input_text)
+		return
+	var/usedcolor = user.voice_color
+	if(user.voicecolor_override)
+		usedcolor = user.voicecolor_override
+	user.whisper(input_text)
+	if(length(input_text) > 100) //When these people talk too much, put that shit in slow motion, yeah
+		input_text = "<small>[input_text]</small>"
+	for(var/obj/item/scomstone/S in SSroguemachine.scomm_machines)
+		if(S.faction_net == faction_net)
+			input_text = "<span style='color: [CMO_SCOM_COLOR]'>[input_text]</span>"
 			S.repeat_message(input_text, src, usedcolor)
 
 /obj/item/scomstone/perlead
@@ -836,7 +914,7 @@
 
 /obj/item/scomstone/perlead/attack_right(mob/living/carbon/human/user)
 	user.changeNext_move(CLICK_CD_INTENTCAP)
-	visible_message(span_notice ("[user] presses their ring against their mouth."))
+	visible_message(span_notice ("[user] moves their wrist by their mouth."))
 	var/input_text = input(user, "Enter your message:", "Message")
 	if(!input_text)
 		return
@@ -848,7 +926,7 @@
 		input_text = "<small>[input_text]</small>"
 	for(var/obj/item/scomstone/S in SSroguemachine.scomm_machines)
 		if(S.faction_net == faction_net)
-			input_text = "<span style='color: [GARRISON_SCOM_COLOR]'>[input_text]</span>"
+			input_text = "<span style='color: [LEADER_SCOM_COLOR]'>[input_text]</span>"
 			S.repeat_message(input_text, src, usedcolor)
 
 /obj/item/scomstone/hunter
@@ -862,7 +940,7 @@
 
 /obj/item/scomstone/hunter/attack_right(mob/living/carbon/human/user)
 	user.changeNext_move(CLICK_CD_INTENTCAP)
-	visible_message(span_notice ("[user] presses their ring against their mouth."))
+	visible_message(span_notice ("[user] moves their wrist by their mouth."))
 	var/input_text = input(user, "Enter your message:", "Message")
 	if(!input_text)
 		return
@@ -892,7 +970,7 @@
 
 /obj/item/scomstone/huntlead/attack_right(mob/living/carbon/human/user)
 	user.changeNext_move(CLICK_CD_INTENTCAP)
-	visible_message(span_notice ("[user] presses their ring against their mouth."))
+	visible_message(span_notice ("[user] moves their wrist by their mouth."))
 	var/input_text = input(user, "Enter your message:", "Message")
 	if(!input_text)
 		return
@@ -904,5 +982,5 @@
 		input_text = "<small>[input_text]</small>"
 	for(var/obj/item/scomstone/S in SSroguemachine.scomm_machines)
 		if(S.faction_net == faction_net)
-			input_text = "<span style='color: [GARRISON_SCOM_COLOR]'>[input_text]</span>"
+			input_text = "<span style='color: [LEADER_SCOM_COLOR]'>[input_text]</span>"
 			S.repeat_message(input_text, src, usedcolor)

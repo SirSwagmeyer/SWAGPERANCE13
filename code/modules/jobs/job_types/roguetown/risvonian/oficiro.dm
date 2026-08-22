@@ -46,7 +46,7 @@
 	belt = /obj/item/storage/belt/rogue/leather/black/soldier
 	beltl = /obj/item/gun/ballistic/rifle/repeater/offiseroluger
 	beltr = /obj/item/storage/belt/rogue/pouch/ammobag
-	wrists = /obj/item/scomstone/rislead
+	wrists = /obj/item/scomstone/rislead/lesser
 	gloves = /obj/item/clothing/gloves/roguetown/eastgloves1
 	id = /obj/item/roguekey/risvon
 	backl = /obj/item/gun/ballistic/rifle/repeater/rattlesnake

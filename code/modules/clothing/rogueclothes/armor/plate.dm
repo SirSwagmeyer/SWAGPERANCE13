@@ -409,6 +409,10 @@
 /obj/item/clothing/suit/roguetown/armor/plate/scale/inqcoat/ComponentInitialize()	//No movement rustle component.
 	return
  
+/obj/item/clothing/suit/roguetown/armor/plate/scale/inqcoat/enginseer
+	name = "archomachine-weaved duster"
+	desc = "Intricate formulas are woven into the heavy coat, reinforced with metal plates. A fine union of arcane craft and machinery only possible by the ingenuinity of an Enginseer."
+
 /obj/item/clothing/suit/roguetown/armor/plate/scale/huntmaster
 	name = "huntmaster duster"
 	desc = "Chipped and torn from tooth and claw. Leather over iron remains after all these years."
