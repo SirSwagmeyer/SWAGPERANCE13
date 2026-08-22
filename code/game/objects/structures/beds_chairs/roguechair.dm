@@ -469,6 +469,7 @@
 
 /obj/item/chair/rogue/generic1
 	icon_state = "genericchair"
+	origin_type = /obj/structure/chair/wood/rogue/generic1
 
 /obj/structure/chair/wood/rogue/generic2
 	icon_state = "genericchair2"
@@ -480,6 +481,7 @@
 
 /obj/item/chair/rogue/generic2
 	icon_state = "genericchair2"
+	origin_type = /obj/structure/chair/wood/rogue/generic2
 
 /obj/structure/chair/wood/rogue/fancy1
 	icon_state = "fancychair"
@@ -491,6 +493,7 @@
 
 /obj/item/chair/rogue/fancychair
 	icon_state = "fancychair"
+	origin_type = /obj/structure/chair/wood/rogue/fancy1
 
 /obj/structure/chair/wood/rogue/fancychair2
 	icon_state = "fancychair2"
@@ -502,6 +505,7 @@
 
 /obj/item/chair/rogue/fancychair2
 	icon_state = "fancychair2"
+	origin_type = /obj/structure/chair/wood/rogue/fancychair2
 
 /obj/structure/bed/rogue/oldcomfy
 	name = "old bed"

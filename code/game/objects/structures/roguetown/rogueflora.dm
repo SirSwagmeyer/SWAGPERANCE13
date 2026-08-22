@@ -87,6 +87,13 @@
 	. = ..()
 	icon_state = "t[rand(1,16)]"
 
+/obj/structure/flora/roguetree/trenches
+	stump_type = /obj/structure/flora/roguetree/stump/trenches
+
+/obj/structure/flora/roguetree/trenches/Initialize()
+	. = ..()
+	icon_state = "t[rand(1,4)]b"
+
 /obj/structure/flora/roguetree/evil/Initialize()
 	. = ..()
 	icon_state = "wv[rand(1,2)]"
@@ -217,6 +224,21 @@
 /obj/structure/flora/roguetree/stump/Initialize()
 	. = ..()
 	icon_state = "t[rand(1,4)]stump"
+
+/obj/structure/flora/roguetree/stump/trenches
+	icon_state = "t1stumpb"
+
+/obj/structure/flora/roguetree/stump/trenches/Initialize()
+	. = ..()
+	icon_state = "t[rand(1,4)]stumpb"
+
+/obj/structure/flora/roguetree/stump/nonrandomtrench
+	icon_state = "burntstump"
+
+/obj/structure/flora/roguetree/trenchburnt
+	name = "ashed tree"
+	desc = "Burned to death."
+	icon_state = "burnt4"
 
 /obj/structure/flora/roguetree/stump/log
 	name = "ancient log"
@@ -787,3 +809,13 @@
 /obj/structure/flora/roguetree/pine/dead/Initialize()
 	. = ..()
 	icon_state = "dead[rand(1, 3)]"
+
+
+/obj/structure/flora/rogueshroom/trenches
+	name = "mushroom?"
+	desc = "Mutated and toxic. I wouldn't get close to it, if I were a thinking man."
+	icon_state = "mush1b"
+
+/obj/structure/flora/rogueshroom/trenches/Initialize()
+	. = ..()
+	icon_state = "mush[rand(1,7)]b"

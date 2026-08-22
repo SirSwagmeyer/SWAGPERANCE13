@@ -108,6 +108,13 @@
 	if(next_move > world.time)
 		return
 
+	if(using_object && !modifiers["shift"])
+		if(istype(using_object, /obj/item/gun/ballistic/heavy_mg) || using_object != A)
+			var/obj/item/gun/ballistic/heavy_mg/M = using_object
+			M.afterattack(A, src)
+			return 1
+
+
 	if(modifiers["middle"] && atkswinging == "middle")
 		if(mmb_intent)
 			if(mmb_intent.get_chargetime())
@@ -364,6 +371,8 @@
 //DOES NOT ACTUALLY KNOW IF YOU'RE RANGED, DO NoT CALL ON IT'S OWN
 /mob/proc/resolveRangedClick(atom/A,obj/item/W,params,used_hand)
 	if(!A)
+		return
+	if(W == /obj/item/gun/ballistic/heavy_mg) //heavymg is handled elsewhere
 		return
 	if(W)
 		W.afterattack(A,src,0,params) // 0: not Adjacent

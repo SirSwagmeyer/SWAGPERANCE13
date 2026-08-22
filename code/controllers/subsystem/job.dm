@@ -20,8 +20,17 @@ SUBSYSTEM_DEF(job)
 	if(!occupations.len)
 		SetupOccupations()
 	set_overflow_role(CONFIG_GET(string/overflow_job))
+	RegisterBalanceSignals()
 	return ..()
 
+// sets up the baseline for reading faction player counts
+/datum/controller/subsystem/job/proc/RegisterBalanceSignals()
+	living_pop = list (
+			"Perserdun" = 0,
+			"Risvon" = 0
+		)
+	RegisterSignal(SSjob, COMSIG_ADJUST_PERSERDUN, PROC_REF(adjust_perse_count))
+	RegisterSignal(SSjob, COMSIG_ADJUST_RISVON, PROC_REF(adjust_risv_count))
 /datum/controller/subsystem/job/proc/set_overflow_role(new_overflow_role)
 	var/datum/job/new_overflow = GetJob(new_overflow_role)
 	if(!new_overflow)
@@ -76,6 +85,10 @@ SUBSYSTEM_DEF(job)
 		var/datum/job/job = GetJob(rank)
 		if(!job)
 			return FALSE
+		if(is_faction_locked(job.department_flag))
+			if(latejoin)
+				to_chat(player, span_warning("That faction has too many players right now."))
+				return FALSE
 		if(is_banned_from(player.ckey, rank) || QDELETED(player))
 			return FALSE
 		if(!job.player_old_enough(player.client))
@@ -93,6 +106,11 @@ SUBSYSTEM_DEF(job)
 		player.mind.assigned_role = rank
 		unassigned -= player
 		job.current_positions++
+		switch(job.department_flag)	
+			if(PERSERDUN)
+				SEND_SIGNAL(SSjob, COMSIG_ADJUST_PERSERDUN, 1)
+			if(RISVON)
+				SEND_SIGNAL(SSjob, COMSIG_ADJUST_RISVON, 1)
 		if(!latejoin)
 			if(player.client)
 				if(job.bypass_lastclass)
@@ -513,9 +531,9 @@ SUBSYSTEM_DEF(job)
 					// If the job isn't filled
 					if((job.current_positions < job.spawn_positions) || job.spawn_positions == -1)
 						testing("DO pass, Player: [player], Level:[level], Job:[job.title]")
-						AssignRole(player, job.title)
-						unassigned -= player
-						break
+						if(AssignRole(player, job.title))
+							unassigned -= player
+							break
 
 
 	JobDebug("DO, Handling unassigned.")
@@ -598,6 +616,10 @@ SUBSYSTEM_DEF(job)
 
 				if(!job.special_job_check(player))
 					continue
+				
+				if((job.current_positions < 1))
+					if(AssignRole(player, job.title))
+						amt_picked++
 
 				// We only need 1 person for the required job, the rest can use the normal system
 				if((job.current_positions < 1))

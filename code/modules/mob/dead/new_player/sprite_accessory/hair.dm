@@ -670,6 +670,18 @@
 	name = "Stacy (Bun)"
 	icon_state = "stacy_bun"
 
+/datum/sprite_accessory/hair/head/strict
+	name = "Strict"
+	icon_state = "strict"
+
+/datum/sprite_accessory/hair/head/strictshort
+	name = "Strict (Short)"
+	icon_state = "strict_short"
+
+/datum/sprite_accessory/hair/head/strictlong
+	name = "Strict (Long)"
+	icon_state = "strict_long"
+
 /datum/sprite_accessory/hair/head/swept
 	name = "Swept Back Hair"
 	icon_state = "swept"
