@@ -77,7 +77,7 @@
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/secular)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/regression)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/convergence)
-//		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/conjure_BEHOLDER)
+//		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/conjure_BEHOLDER) // TODO: conjure beholder, lets me create a useless flying bot used to keep remote company of troopers, it comes with specific spells that give you more data, such as diagnosis, analyze turf (for coordinates) and self-destruct, which flings your mind back to your og mob
 
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_LONGSTRIDER, TRAIT_GENERIC)
