@@ -7,7 +7,7 @@
 	spawn_positions = 1
 	allowed_races = RACES_TEMPERANCE_BATTLEMEDICS
 	allowed_sexes = list(MALE, FEMALE)
-	tutorial = "You are an Enginseer, a member of a cult devoted to the MACHINE. Your knowledge of its ancient and occult workings borders on the otherworldly. The Enginseers are neutral by nature, but the order has split over the war. As a Dottore Enginseer, you have sided with the Dictate, believing the Empire's use of the MACHINE is reckless and its goals dangerous. Your greatest service is retrieving and reviving fallen soldiers from afar through one of your sanctioned inventions. It is an ugly irony that your work only feeds the war you despise, but you cannot allow the Empire to win."
+	tutorial = "Enginseers are \"enlightened\" researchers of the MACHINE, changed by a sudden flood of impossible knowledge after a prolonged exposure to it. You remember only tampering with it before voices, ideas, and motions beyond your time filled your mind. As the Dictate's Dottore, you seek to turn this knowledge into practical discoveries, testing the limits of both yourself and the MACHINE. There is much left to experiment with, and no better place to find willing test subjects than a war."
 	outfit = /datum/outfit/job/roguetown/dottore
 	display_order = JDO_DOTTORE
 	give_bank_account = TRUE
@@ -44,27 +44,33 @@
 	wrists = /obj/item/scomstone/rislead/cmo
 	gloves = /obj/item/clothing/gloves/roguetown/eastgloves1
 	id = /obj/item/roguekey/risvon
-	backr = /obj/item/storage/backpack/rogue/backpack/risvon
+	backr = /obj/item/storage/backpack/rogue/satchel
 
 	backpack_contents = list(
 		/obj/item/storage/belt/rogue/pouch/coins/poor,
-		/obj/item/rogueweapon/stoneaxe/woodcut/risvon,
 	)
 
+	H.adjust_skillrank(/datum/skill/craft/crafting, 5, TRUE)
+	H.adjust_skillrank(/datum/skill/craft/alchemy, 4, TRUE)
+	H.adjust_skillrank(/datum/skill/craft/masonry, 4, TRUE)
+	H.adjust_skillrank(/datum/skill/craft/carpentry, 4, TRUE)
+	H.adjust_skillrank(/datum/skill/craft/weaponsmithing, 5, TRUE)
+	H.adjust_skillrank(/datum/skill/craft/armorsmithing, 5, TRUE)
+	H.adjust_skillrank(/datum/skill/craft/blacksmithing, 5, TRUE)
+	H.adjust_skillrank(/datum/skill/craft/engineering, 6, TRUE)
+	H.adjust_skillrank(/datum/skill/magic/arcane, 4, TRUE)
+
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/combat/knives, 4, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/pistols, 3, TRUE)
 
-	H.adjust_skillrank(/datum/skill/misc/medicine, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/craft/crafting, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/reading, 5, TRUE)
-	H.adjust_skillrank(/datum/skill/magic/arcane, 6, TRUE)
-
-	H.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-	H.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/medicine, 4, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/reading, 6, TRUE)
 	H.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
+	H.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 
 	H.change_stat("intelligence", 6)
 	H.change_stat("constitution", -4)
@@ -74,9 +80,7 @@
 	if(H.mind)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/secular)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/regression)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/convergence)
-//		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/conjure_BEHOLDER)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/conjure_beholder_doc)
 
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_LONGSTRIDER, TRAIT_GENERIC)

@@ -7,6 +7,9 @@
 #define SCOMNET_KINGS "kings"
 #define SCOMNET_HUNTERS "hunters"
 
+/obj/structure/roguemachine/scomm/empire
+	faction_net = SCOMNET_EMPIRE
+
 /obj/structure/roguemachine/scomm
 	name = "SCOM"
 	desc = "The Supernatural Communication Optical Machine is a wonder of magic and technology."
@@ -26,6 +29,7 @@
 	var/obj/structure/roguemachine/scomm/called_by = null
 	var/spawned_rat = FALSE
 	var/garrisonline = FALSE
+	var/faction_net = SCOMNET_ZIGS
 
 /obj/structure/roguemachine/scomm/Initialize()
 	. = ..()
@@ -298,6 +302,9 @@
 			S.repeat_message(raw_message, src, usedcolor, message_language)
 		for(var/obj/item/listenstone/S in SSroguemachine.scomm_machines)
 			S.repeat_message(raw_message, src, usedcolor, message_language)//make the listenstone hear scom
+		for(var/mob/living/simple_animal/hostile/rogue/robot/beholder/B in GLOB.alive_mob_list)
+			if(B.scom_faction_net == faction_net)
+				to_chat(B, span_robot("<b>RADIO:</b> [raw_message]"))
 		SSroguemachine.crown?.repeat_message(raw_message, src, usedcolor, message_language)
 
 /obj/structure/roguemachine/scomm/proc/dictate_laws()
