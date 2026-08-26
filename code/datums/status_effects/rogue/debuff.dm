@@ -108,7 +108,7 @@
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/vthirstt3
 	effectedstats = list(STATKEY_STR = 6, STATKEY_SPD = 6, STATKEY_CON = -4, STATKEY_LCK = -4)
 	duration = -1
-	tick_interval = 10 SECONDS
+	tick_interval = 5 SECONDS
 	status_type = STATUS_EFFECT_REFRESH
 
 /datum/status_effect/debuff/vthirstt3/tick()
@@ -136,7 +136,7 @@
 	)))
 	if(prob(50))
 		owner.emote("twitch")
-	owner.adjustBruteLoss(rand(1,5))
+	owner.adjustBruteLoss(rand(5,15))
 
 /atom/movable/screen/alert/status_effect/debuff/vthirstt3
 	name = "Blood Starved"

@@ -590,6 +590,7 @@
 	if(C.apply_damage(damage, BRUTE, limb_grabbed, armor_block))
 		playsound(C.loc, "smallslash", 100, FALSE, -1)
 		var/datum/wound/caused_wound = limb_grabbed.bodypart_attacked_by(BCLASS_BITE, damage, user, sublimb_grabbed, crit_message = TRUE)
+		
 		if(HAS_TRAIT(user, TRAIT_YUANITE) && user.has_status_effect(/datum/status_effect/debuff/vthirstt3)) // for when you are zerking
 			var/datum/wound/blood_wound
 			var/best_bleed = 0
@@ -599,10 +600,17 @@
 					blood_wound = W
 			if(blood_wound && best_bleed > 0 && caused_wound)
 				var/vitae_gain = max(1, round(best_bleed))
-				user.adjust_vitae(vitae_gain * 100)
-				user.adjust_nutrition(vitae_gain * 100)
-				user.adjust_hydration(vitae_gain * 100)
 				C.visible_message(span_artery("[user] savagely tears off chunks from [C]'s [parse_zone(sublimb_grabbed)]!"), span_userdanger("[user] savagely tears into my [parse_zone(sublimb_grabbed)]!"), span_hear("I hear wet, savage chewing!"))
+				if(C.dna?.species && (NOBLOOD in C.dna.species.species_traits))
+					to_chat(user, span_warning("There is nothing I can make use of this..."))
+				else if(HAS_TRAIT(C, TRAIT_YUANITE))
+					user.adjustToxLoss(25)
+					user.adjust_vitae(-vitae_gain * 100)
+					to_chat(user, span_warning("This flesh is as repulsive as drinking saltwater to quench thirst! It's only making my bloodthirst worse!"))
+				else
+					user.adjust_vitae(vitae_gain * 100)
+					user.adjust_nutrition(vitae_gain * 100)
+					user.adjust_hydration(vitae_gain * 100)
 
 		else if(HAS_TRAIT(user, TRAIT_WYVERNTOUCHED) && !user.has_status_effect(/datum/status_effect/debuff/vthirstt3)) // WTs only produce venom if they're not zerking
 			var/blood_cost = max(1, round(user.blood_volume * 0.02))
@@ -654,6 +662,12 @@
 		return
 
 	if(HAS_TRAIT(user, TRAIT_BLOODFIEND))
+		if(HAS_TRAIT(C, TRAIT_WYVERNTOUCHED))
+			to_chat(user, span_warning("<i>This blood is full of toxins! I'm going to be sick...</i>"))
+			addtimer(CALLBACK(user, TYPE_PROC_REF(/mob/living/carbon, vomit), 0, TRUE), rand(8 SECONDS, 15 SECONDS))
+			user.adjustToxLoss(25)
+			user.changeNext_move(CLICK_CD_RESIST)
+			return
 		last_drink = world.time
 		user.changeNext_move(CLICK_CD_GRABBING)
 		// More severe bleeding means more vitae.

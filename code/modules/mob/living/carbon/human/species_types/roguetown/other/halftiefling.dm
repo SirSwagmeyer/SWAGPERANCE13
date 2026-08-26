@@ -9,12 +9,12 @@
 		The process is highly selective, with only the disabled and dying known to survive it, making Hualians difficult to produce in any meaningful number. \
 		The original humen is lost, leaving behind a new creature marked by horns, a tail, and strange black crystals growing across their body. \
 		They hunger for blood and flesh to maintain their sanity, growing stronger as they lose it, making them fearsome weapons of war when properly managed.<br> \
-		(+1 Intelligence | Inhuman Digestion, Choice: Bloodfiend or Wyverntouched)"
+		(+1 Intelligence, +1 Speed | Steelhearted, Inhuman Digestion, Choice: Bloodfiend or Wyverntouched)"
 
 	skin_tone_wording = "Ancestry"
 
 	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS,STUBBLE,OLDGREY)
-	inherent_traits = list(TRAIT_NOMOBSWAP, TRAIT_NASTY_EATER, TRAIT_YUANITE)
+	inherent_traits = list(TRAIT_NOMOBSWAP, TRAIT_STEELHEARTED, TRAIT_NASTY_EATER, TRAIT_YUANITE)
 	default_features = MANDATORY_FEATURE_LIST
 	use_skintones = 1
 	disliked_food = NONE
@@ -43,7 +43,7 @@
 		OFFSET_SHIRT_F = list(0,0), OFFSET_ARMOR_F = list(0,0), OFFSET_UNDIES_F = list(0,-1),
 	)
 
-	race_bonus = list(STAT_INTELLIGENCE = 1)
+	race_bonus = list(STAT_INTELLIGENCE = 1, STAT_SPEED = 1)
 	enflamed_icon = "widefire"
 
 	bodypart_features = list(
@@ -94,7 +94,7 @@
 
 /datum/species/hualian/after_creation(mob/living/carbon/C)
 	..()
-	addtimer(CALLBACK(C, TYPE_PROC_REF(/mob/living/carbon/human, choose_yuanite_mutation)), 1)
+	addtimer(CALLBACK(C, TYPE_PROC_REF(/mob/living/carbon/human, choose_yuanite_mutation)), 5)
 
 /mob/living/carbon/human/proc/choose_yuanite_mutation()
 	var/mob/living/carbon/human/C = src
@@ -103,15 +103,21 @@
 	switch(choice)
 		if("Bloodfiend (Vampirism)")
 			ADD_TRAIT(C, TRAIT_BLOODFIEND, TRAIT_GENERIC)
+			ADD_TRAIT(C, TRAIT_STRONGBITE, TRAIT_GENERIC)
 			var/obj/item/organ/tail/halftiefling/T = C.getorganslot(ORGAN_SLOT_TAIL)
 			if(T && C.mind)
 				C.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/tail_stab/drain)
 
 		if("Wyverntouched (Toxicity)")
 			ADD_TRAIT(C, TRAIT_WYVERNTOUCHED, TRAIT_GENERIC)
+			ADD_TRAIT(C, TRAIT_TOXIMMUNE, TRAIT_GENERIC)
 			var/obj/item/organ/tail/halftiefling/T = C.getorganslot(ORGAN_SLOT_TAIL)
 			if(T && C.mind)
 				C.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/tail_stab/tox)
+	
+	if(C.mind)
+		C.mind.AddSpell(new /obj/effect/proc_holder/spell/self/feast)
+		C.mind.AddSpell(new /obj/effect/proc_holder/spell/self/devil_trigger)
 
 /datum/species/hualian/qualifies_for_rank(rank, list/features)
 	return TRUE
