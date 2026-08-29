@@ -9,6 +9,18 @@
 	layer = MOB_LAYER + 0.01
 	var/active = FALSE
 
+/obj/structure/machine/astrarium/proc/get_department_name(department_flag)
+	switch(department_flag)
+		if(PERSERDUN)
+			return "PERSERDUN"
+		if(RISVON)
+			return "RISVON"
+		if(KINGSROW)
+			return "KINGSROW"
+		if(HUNTERS)
+			return "HUNTERS"
+		else
+			return "ERROR! REPORT THIS TO TIME-SPACE ENFORCERS!"
 
 /obj/structure/machine/astrarium/attack_hand(mob/user)
 	. = ..()
@@ -103,7 +115,7 @@
 				MACHINE spatial observation and translocation apparatus.
 				<br><br>
 				Authorized Faction:
-				<span class=authorized>[user_job.department_flag]</span>
+				<span class=authorized>[get_department_name(user_job.department_flag)]</span>
 			</div>
 
 			<h2>PRIMARY SYSTEMS</h2>
@@ -206,7 +218,7 @@
 
 			<div>
 				Authorized Faction:
-				<span class=alive>[user_job.department_flag]</span>
+				<span class=alive>[get_department_name(user_job.department_flag)]</span>
 			</div>
 
 			<br>

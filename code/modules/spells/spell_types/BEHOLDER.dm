@@ -267,3 +267,22 @@
 		if(S.faction_net == user.scom_faction_net)
 			S.repeat_message(input_text, user, CMO_SCOM_COLOR, user.get_default_language())
 	return TRUE
+
+/obj/effect/proc_holder/spell/invoked/conjure_astrarium
+	name = "Conjure ASTRARIUM"
+	desc = "Manifest an ASTRARIUM through unknown and unexplainable means."
+	releasedrain = 0
+	chargetime = 1 SECONDS
+	recharge_time = 0
+
+/obj/effect/proc_holder/spell/invoked/conjure_astrarium/cast(list/targets, mob/living/user)
+	if(!user)
+		return FALSE
+	var/turf/T = get_turf(user)
+	if(!T)
+		return FALSE
+	var/obj/structure/machine/astrarium/A = new(T)
+	if(!A)
+		return FALSE
+	qdel(src)
+	return TRUE
