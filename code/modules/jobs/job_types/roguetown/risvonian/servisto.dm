@@ -53,6 +53,7 @@
 		/obj/item/ammo_box/clip/pistol = 4,
 		/obj/item/gun/ballistic/rifle/repeater/pistol,
 		/obj/item/storage/belt/rogue/pouch/coins/poor,
+		/obj/item/reagent_containers/glass/bottle/rogue/aquavitae = 2,
 		/obj/item/grenade/gas/smoke = 2,
 		/obj/item/rogueweapon/stoneaxe/woodcut/risvon,
 	)

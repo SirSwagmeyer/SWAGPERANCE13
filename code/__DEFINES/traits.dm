@@ -188,6 +188,7 @@
 #define TRAIT_EORAN_SERENE "Eoran Serenity"
 #define TRAIT_NECRAS_VOW "Necra's Vow"
 #define TRAIT_FIREARMS_EXPERT "Firearms Expert" 
+#define TRAIT_ADRENALINE_RUSH "Adrenaline Rush"
 // ARMOR / CLOTHING GIVEN TRAITS (GIVEN BY WEARING CLOTHES/ARMOR PIECES)
 #define TRAIT_BLOODIED_ROBE	"Bloodied Vestatures"
 
@@ -345,6 +346,8 @@ GLOBAL_LIST_INIT(roguetraits, list(
   	TRAIT_JACKOFALLTRADES = span_notice("Skills cost half as much for me to raise."),
 	TRAIT_FIREARMS_EXPERT = span_notice("I am an expert with firearms, and can chamber rounds more effectively."),
 	TRAIT_DEATHBYSNUSNU = "With strong intent, I am a violent partner in bed. Breaking pelvis and spirit alike.",
+	TRAIT_BLOODLOSS_IMMUNE = span_notice("While I may bleed, I will feel nothing from it."),
+	TRAIT_ADRENALINE_RUSH = span_notice("I'm invigorated in the midst of battle! I don't feel my wounds!")
 ))
 
 // trait accessor defines

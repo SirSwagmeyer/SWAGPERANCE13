@@ -124,6 +124,11 @@
 	list_reagents = list(/datum/reagent/consumable/ethanol/voddena = 48)
 	desc = "A bottle with the City of Norwandine cork-seal. It contains a respectably pure, clean voddena."
 
+/obj/item/reagent_containers/glass/bottle/rogue/aquavitae
+	list_reagents = list(/datum/reagent/consumable/ethanol/aqua_vitae = 48)
+	desc = "A bottle with no label. Just opening the bottle releases an aroma strong enough to burn your nostrils."
+
+
 // WINES - Expensive, Nobleblooded
 /obj/item/reagent_containers/glass/bottle/rogue/wine
 	list_reagents = list(/datum/reagent/consumable/ethanol/wine = 48)

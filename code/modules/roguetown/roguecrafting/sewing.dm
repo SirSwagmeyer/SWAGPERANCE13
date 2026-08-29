@@ -1170,3 +1170,9 @@
 	result = list(/obj/item/clothing/head/roguetown/menacing/bandit)
 	reqs = list(/obj/item/natural/cloth = 3)
 	craftdiff = 1
+
+/datum/crafting_recipe/roguetown/sewing/bandage
+	name = "bandages (sewing)"
+	result = list(/obj/item/natural/cloth/bandage)
+	reqs = list(/obj/item/natural/silk = 2,
+				/obj/item/natural/cloth = 1)
