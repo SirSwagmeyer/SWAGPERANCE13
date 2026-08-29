@@ -54,6 +54,7 @@
 		/obj/item/storage/belt/rogue/pouch/pillbottle,
 		/obj/item/storage/belt/rogue/pouch/coins/rich,
 		/obj/item/storage/belt/rogue/surgery_bag,
+		/obj/item/reagent_containers/glass/bottle/rogue/aquavitae,
 		)
 	H.adjust_skillrank(/datum/skill/misc/medicine, 5, TRUE)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)

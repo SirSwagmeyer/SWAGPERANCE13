@@ -6,6 +6,10 @@
   *
   * Has a lot of the creature game world logic, such as health etc
   */
+/datum/migrant_role
+	var/name = "Migrant"
+	var/advjob_examine = FALSE
+
 /mob
 	datum_flags = DF_USE_TAG
 	density = TRUE
@@ -167,6 +171,7 @@
 
 	/// What job does this mob have
 	var/job = null//Living
+	var/givingto = null
 	var/migrant_type = null
 	var/advjob = null
 

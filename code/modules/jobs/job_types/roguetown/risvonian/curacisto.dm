@@ -53,6 +53,7 @@
 	backpack_contents = list(
 		/obj/item/storage/belt/rogue/pouch/pillbottle,
 		/obj/item/storage/belt/rogue/pouch/coins/rich,
+		/obj/item/reagent_containers/glass/bottle/rogue/aquavitae = 2,
 		)
 	H.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 	H.adjust_skillrank(/datum/skill/craft/crafting, 4, TRUE)
