@@ -441,6 +441,7 @@
 		return
 
 	target_area.visible_message(span_warning("A strange space-time anomaly rips open, closing as fast as it appears!"))
+	found_ping_global(get_turf(target_area), "anom")
 
 	var/turf/destination = locate(src.x, src.y, src.z - 1)
 
@@ -503,3 +504,22 @@
 			continue
 
 		corpse.dropItemToGround(I, TRUE)
+
+/obj/effect/proc_holder/spell/invoked/conjure_astrarium
+	name = "Conjure ASTRARIUM"
+	desc = "Manifest an ASTRARIUM through unknown and unexplainable means."
+	releasedrain = 0
+	chargetime = 1 SECONDS
+	recharge_time = 0
+
+/obj/effect/proc_holder/spell/invoked/conjure_astrarium/cast(list/targets, mob/living/user)
+	if(!user)
+		return FALSE
+	var/turf/T = get_turf(user)
+	if(!T)
+		return FALSE
+	var/obj/structure/machine/astrarium/A = new(T)
+	if(!A)
+		return FALSE
+	addtimer(CALLBACK(src, PROC_REF(qdel)), 2)
+	return TRUE

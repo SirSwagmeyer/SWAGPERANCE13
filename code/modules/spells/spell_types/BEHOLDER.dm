@@ -1,11 +1,11 @@
-/obj/effect/proc_holder/spell/invoked/conjure_beholder_magi
+/obj/effect/proc_holder/spell/self/conjure_beholder_magi
 	name = "Conjure BEHOLDER"
 	desc = "Conjure a BEHOLDER unit by unknown and unexplainable means, and transfer your consciousness into it."
 	releasedrain = 0
 	chargetime = 1 SECONDS
 	recharge_time = 30 SECONDS
 
-/obj/effect/proc_holder/spell/invoked/conjure_beholder_magi/cast(list/targets, mob/living/user)
+/obj/effect/proc_holder/spell/self/conjure_beholder_magi/cast(list/targets, mob/living/user)
 	if(!user || !user.client)
 		return FALSE
 	var/turf/T = get_turf(user)
@@ -19,14 +19,14 @@
 	B.ckey = user.ckey
 	return TRUE
 
-/obj/effect/proc_holder/spell/invoked/conjure_beholder_doc
+/obj/effect/proc_holder/spell/self/conjure_beholder_doc
 	name = "Conjure BEHOLDER"
 	desc = "Conjure a BEHOLDER unit by unknown and unexplainable means, and transfer your consciousness into it."
 	releasedrain = 0
 	chargetime = 1 SECONDS
 	recharge_time = 30 SECONDS
 
-/obj/effect/proc_holder/spell/invoked/conjure_beholder_doc/cast(list/targets, mob/living/user)
+/obj/effect/proc_holder/spell/self/conjure_beholder_doc/cast(list/targets, mob/living/user)
 	if(!user || !user.client)
 		return FALSE
 	var/turf/T = get_turf(user)
@@ -105,7 +105,8 @@
 	ADD_TRAIT(src, TRAIT_NIGHT_VISION, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_SLEEPIMMUNE, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_STUNIMMUNE, TRAIT_GENERIC)
-	
+	src.update_sight()
+
 /mob/living/simple_animal/hostile/rogue/robot/beholder/death(gibbed)
 	explosion(get_turf(src), 1, 1, 1, 0, FALSE)
 	var/client/return_client = client
@@ -205,11 +206,27 @@
 	var/mine_count = 0
 	for(var/obj/effect/frogmine/M in view(12, T))
 		mine_count++
+		found_ping_global(get_turf(M), "hooked_tile")
 	if(mine_count)
 		to_chat(user, span_danger("There are [mine_count] mines around."))
 	else
 		to_chat(user, span_notice("No mines detected in visual range."))
 	return TRUE
+
+/proc/found_ping_global(atom/A, state)
+	if(!A || !state)
+		return
+	var/image/I = image(icon = 'icons/effects/effects.dmi', loc = A, icon_state = state, layer = 18)
+	if(!I)
+		return
+	I.layer = 18
+	I.plane = 18
+	I.mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	var/list/clients = list()
+	for(var/mob/M in GLOB.player_list)
+		if(M.client)
+			clients += M.client
+	flick_overlay(I, clients, 30)
 
 /obj/effect/proc_holder/spell/self/beholder/explode
 	name = "COMMAND: Self-Destruct"
@@ -266,23 +283,4 @@
 	for(var/obj/item/scomstone/S in SSroguemachine.scomm_machines)
 		if(S.faction_net == user.scom_faction_net)
 			S.repeat_message(input_text, user, CMO_SCOM_COLOR, user.get_default_language())
-	return TRUE
-
-/obj/effect/proc_holder/spell/invoked/conjure_astrarium
-	name = "Conjure ASTRARIUM"
-	desc = "Manifest an ASTRARIUM through unknown and unexplainable means."
-	releasedrain = 0
-	chargetime = 1 SECONDS
-	recharge_time = 0
-
-/obj/effect/proc_holder/spell/invoked/conjure_astrarium/cast(list/targets, mob/living/user)
-	if(!user)
-		return FALSE
-	var/turf/T = get_turf(user)
-	if(!T)
-		return FALSE
-	var/obj/structure/machine/astrarium/A = new(T)
-	if(!A)
-		return FALSE
-	qdel(src)
 	return TRUE

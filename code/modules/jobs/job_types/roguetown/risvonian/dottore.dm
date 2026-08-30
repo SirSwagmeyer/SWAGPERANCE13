@@ -80,7 +80,7 @@
 	if(H.mind)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/secular)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/conjure_beholder_doc)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/conjure_beholder_doc)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/conjure_astrarium)
 
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
