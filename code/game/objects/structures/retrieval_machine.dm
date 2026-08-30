@@ -511,6 +511,10 @@
 	releasedrain = 0
 	chargetime = 1 SECONDS
 	recharge_time = 0
+	range = 4
+
+/obj/effect/proc_holder/spell/invoked/conjure_astrarium/proc/delete_self()
+	qdel(src)
 
 /obj/effect/proc_holder/spell/invoked/conjure_astrarium/cast(list/targets, mob/living/user)
 	if(!user)
@@ -521,5 +525,5 @@
 	var/obj/structure/machine/astrarium/A = new(T)
 	if(!A)
 		return FALSE
-	addtimer(CALLBACK(src, PROC_REF(qdel)), 2)
+	addtimer(CALLBACK(src, PROC_REF(delete_self)), 2)
 	return TRUE

@@ -75,7 +75,9 @@
 	aggro_vision_range = 12
 	retreat_distance = 0
 	minimum_distance = 0
-	base_intents = list()
+	base_intents = list(
+		/datum/intent/unarmed/help,
+	)
 	attack_verb_continuous = "bumps"
 	attack_verb_simple = "bump"
 	attack_sound = 'sound/blank.ogg'
