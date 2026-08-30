@@ -240,14 +240,8 @@
 /obj/structure/machine/astrarium/proc/generate_sitrep(datum/job/user_job)
 	var/list/personnel = list()
 
-	for(var/mob/living/person in GLOB.player_list)
-		if(!person.mind)
-			continue
-
-		if(!person.mind.assigned_role)
-			continue
-
-		var/datum/job/person_job = SSjob.GetJob(person.mind.assigned_role)
+	for(var/mob/living/person in GLOB.mob_list)
+		var/datum/job/person_job = get_user_job(person)
 
 		if(!person_job)
 			continue
@@ -273,7 +267,7 @@
 	"}
 
 	for(var/mob/living/person in personnel)
-		var/datum/job/person_job = SSjob.GetJob(person.mind.assigned_role)
+		var/datum/job/person_job = get_user_job(person)
 
 		if(!person_job)
 			continue
