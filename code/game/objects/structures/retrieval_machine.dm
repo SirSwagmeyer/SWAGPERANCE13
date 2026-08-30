@@ -443,7 +443,7 @@
 	target_area.visible_message(span_warning("A strange space-time anomaly rips open, closing as fast as it appears!"))
 	found_ping_global(get_turf(target_area), "anom")
 
-	var/turf/destination = locate(src.x, src.y, src.z - 1)
+	var/turf/destination = locate(src.x + 2, src.y, src.z)
 
 	if(!destination)
 		active = FALSE
@@ -461,10 +461,10 @@
 		astrarium_strip_inventory(corpse)
 		corpse.forceMove(destination)
 		if(corpse.stat != DEAD)
-			visible_message(span_artery("[corpse] appears multiple times in a row, and all of these timelines converge horrifyingly!"))
+			corpse.visible_message(span_artery("[corpse] spasms as countless versions of their body overlap, flesh splitting and bones cracking as the conflicting timelines violently collapse into one!"))
 			corpse.emote("agony")
 			spawn(1)
-				corpse.gib(TRUE, TRUE, FALSE)
+				corpse.gib_limbs(TRUE, TRUE, FALSE)
 
 	playsound(src, 'sound/misc/loops/machinedone.ogg', 100)
 
