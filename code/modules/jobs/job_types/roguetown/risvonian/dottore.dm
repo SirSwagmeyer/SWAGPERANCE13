@@ -48,6 +48,11 @@
 
 	backpack_contents = list(
 		/obj/item/storage/belt/rogue/pouch/coins/poor,
+		/obj/item/rogueweapon/surgery/scalpel,
+		/obj/item/rogueweapon/surgery/saw,
+		/obj/item/rogueweapon/surgery/hemostat,
+		/obj/item/rogueweapon/surgery/retractor,
+		/obj/item/needle/pestra,
 	)
 
 	H.adjust_skillrank(/datum/skill/craft/crafting, 5, TRUE)
