@@ -60,11 +60,13 @@
 	mob_biotypes = MOB_ROBOTIC|MOB_HUMANOID
 	robust_searching = FALSE
 	move_to_delay = 1
-	speed = -0.5
+	speed = -0.75
+	footstep_type = null
 	movement_type = FLYING
 	pass_flags = PASSTABLE
 	see_in_dark = 10
 	del_on_death = TRUE
+	loot = list(/obj/item/natural/stone, /obj/item/natural/stone, /obj/item/natural/stone)
 	// Time required to change Z-levels.
 	var/fly_time = 5
 	var/mob/living/original_body
@@ -81,13 +83,19 @@
 	AddSpell(new /obj/effect/proc_holder/spell/invoked/beholder/analyze_organic)
 	AddSpell(new /obj/effect/proc_holder/spell/invoked/beholder/analyze_terrain)
 	AddSpell(new /obj/effect/proc_holder/spell/self/beholder/explode)
+	AddSpell(new /obj/effect/proc_holder/spell/self/beholder/shutdown)
 	ADD_TRAIT(src, TRAIT_NIGHT_VISION, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_SLEEPIMMUNE, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_STUNIMMUNE, TRAIT_GENERIC)
 	src.update_sight()
 
 /mob/living/simple_animal/hostile/rogue/robot/beholder/death(gibbed)
-	explosion(get_turf(src), 1, 1, 1, 0, FALSE)
+	var/turf/T = get_turf(src)
+	if(T)
+		var/datum/effect_system/explosion/E = new
+		E.set_up(1, T)
+		E.start()
+		playsound(T, 'sound/misc/explode/explosion.ogg', 100, TRUE)
 	var/client/return_client = client
 	if(original_body && return_client)
 		original_body.ckey = return_client.ckey
@@ -341,4 +349,18 @@
 		return TRUE
 	var/direction = dir2text(get_dir(user, closest))
 	to_chat(user, span_blue("<b>CASUALTY LOCATED: <b>DISTANCE:</b> [closest_distance] paces<br> <b>DIRECTION:</b> [uppertext(direction)]"))
+	return TRUE
+
+/obj/effect/proc_holder/spell/self/beholder/shutdown
+	name = "COMMAND: Shutdown"
+	desc = "Immediately shut down the BEHOLDER, returning your consciousness to your body."
+	player_lock = FALSE
+	releasedrain = 0
+	chargetime = 0
+	recharge_time = 15 SECONDS
+
+/obj/effect/proc_holder/spell/self/beholder/shutdown/cast(list/targets, mob/living/simple_animal/hostile/rogue/robot/beholder/user)
+	if(!user || user.stat == DEAD)
+		return FALSE
+	user.death()
 	return TRUE

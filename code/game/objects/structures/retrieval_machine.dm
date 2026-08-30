@@ -447,8 +447,8 @@
 		say("Cannot establish the specified coordinates.")
 		return
 
-	target_area.visible_message(span_warning("A strange space-time anomaly rips open, closing as fast as it appears!"))
-	found_ping_global(get_turf(target_area), "anom")
+	target.visible_message(span_warning("A strange space-time anomaly rips open, closing as fast as it appears!"))
+	found_ping_global(get_turf(target), "anom")
 
 	var/turf/destination = locate(src.x + 2, src.y, src.z)
 
