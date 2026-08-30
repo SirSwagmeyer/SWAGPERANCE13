@@ -442,11 +442,9 @@
 		say("Critical error in the chrono-anchor state data! The temporal synchronization is interrupted.")
 		return
 
-	var/area/target_area = get_area(target)
-
-	if(!target_area)
+	if(!target)
 		active = FALSE
-		say("Cannot determine the destination area.")
+		say("Cannot establish the specified coordinates.")
 		return
 
 	target_area.visible_message(span_warning("A strange space-time anomaly rips open, closing as fast as it appears!"))
