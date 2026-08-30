@@ -55,42 +55,18 @@
 	icon_state = "beholder"
 	icon_living = "beholder_live"
 	icon_dead = "beholder_dead"
+	speak_emote = list("beeps")
 	gender = NEUTER
 	mob_biotypes = MOB_ROBOTIC|MOB_HUMANOID
 	robust_searching = FALSE
 	move_to_delay = 1
-	speed = -1
+	speed = -0.5
 	movement_type = FLYING
-	loot = list(/obj/item/natural/stone, /obj/item/natural/stone, /obj/item/natural/stone)
-	STACON = 12
-	STASTR = 1
-	STASPD = 20
-	STAEND = 1
-	maxHealth = 10
-	health = 10
-	harm_intent_damage = 1
-	melee_damage_lower = 1
-	melee_damage_upper = 1
-	vision_range = 12
-	aggro_vision_range = 12
-	retreat_distance = 0
-	minimum_distance = 0
-	base_intents = list(
-		/datum/intent/unarmed/help,
-	)
-	attack_verb_continuous = "bumps"
-	attack_verb_simple = "bump"
-	attack_sound = 'sound/blank.ogg'
-	canparry = FALSE
-	d_intent = INTENT_DISARM
-	defprob = 0
-	speak_emote = list("beeps")
-	faction = list("neutral")
-	footstep_type = null
+	pass_flags = PASSTABLE
+	see_in_dark = 10
 	del_on_death = TRUE
-	can_have_ai = FALSE
-	AIStatus = AI_OFF
-	ai_controller = null
+	// Time required to change Z-levels.
+	var/fly_time = 5
 	var/mob/living/original_body
 	var/scom_faction_net
 
@@ -99,11 +75,12 @@
 	can_have_ai = FALSE
 	AIStatus = AI_OFF
 	ai_controller = null
+	verbs += list(/mob/living/simple_animal/hostile/rogue/robot/beholder/proc/fly_up, /mob/living/simple_animal/hostile/rogue/robot/beholder/proc/fly_down)
 	AddSpell(new /obj/effect/proc_holder/spell/self/beholder/comms)
+	AddSpell(new /obj/effect/proc_holder/spell/self/beholder/chronoshift)
 	AddSpell(new /obj/effect/proc_holder/spell/invoked/beholder/analyze_organic)
 	AddSpell(new /obj/effect/proc_holder/spell/invoked/beholder/analyze_terrain)
 	AddSpell(new /obj/effect/proc_holder/spell/self/beholder/explode)
-	AddSpell(new /obj/effect/proc_holder/spell/self/beholder/shutdown)
 	ADD_TRAIT(src, TRAIT_NIGHT_VISION, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_SLEEPIMMUNE, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_STUNIMMUNE, TRAIT_GENERIC)
@@ -115,6 +92,38 @@
 	if(original_body && return_client)
 		original_body.ckey = return_client.ckey
 	return ..()
+
+/mob/living/simple_animal/hostile/rogue/robot/beholder/proc/fly_up()
+	set category = "Hover Mode"
+	set name = "Fly Up"
+	if(src.stat >= UNCONSCIOUS)
+		return
+	if(src.pulledby != null)
+		to_chat(src, span_notice("I can't ascend while being grabbed!"))
+		return
+	src.visible_message(span_notice("[src] begins to ascend!"), span_notice("You begin to ascend..."))
+	if(do_after(src, fly_time, src))
+		if(src.pulledby == null)
+			src.zMove(UP, TRUE)
+			to_chat(src, span_notice("I ascend."))
+		else
+			to_chat(src, span_notice("I can't ascend while being grabbed!"))
+
+/mob/living/simple_animal/hostile/rogue/robot/beholder/proc/fly_down()
+	set category = "Hover Mode"
+	set name = "Fly Down"
+	if(src.stat >= UNCONSCIOUS)
+		return
+	if(src.pulledby != null)
+		to_chat(src, span_notice("I can't descend while being grabbed!"))
+		return
+	src.visible_message(span_notice("[src] begins to descend!"), span_notice("You begin to descend..."))
+	if(do_after(src, fly_time, src))
+		if(src.pulledby == null)
+			src.zMove(DOWN, TRUE)
+			to_chat(src, span_notice("I descend."))
+		else
+			to_chat(src, span_notice("I can't descend while being grabbed!"))
 
 /obj/effect/proc_holder/spell/invoked/beholder/analyze_organic
 	name = "COMMAND: Analyze Organic"
@@ -202,7 +211,7 @@
 	var/turf/T = get_turf(targets[1])
 	if(!T)
 		return FALSE
-	if(!do_after(user, 2 SECONDS))
+	if(!do_after(user, 0.5 SECONDS))
 		return FALSE
 	to_chat(user, span_blue("TERRAIN COORDINATES: X=[T.x] Y=[T.y] Z=[T.z]."))
 	var/mine_count = 0
@@ -250,21 +259,6 @@
 	user.death()
 	return TRUE
 
-
-/obj/effect/proc_holder/spell/self/beholder/shutdown
-	name = "COMMAND: Shutdown"
-	desc = "Immediately shut down the BEHOLDER, returning your consciousness to your body."
-	player_lock = FALSE
-	releasedrain = 0
-	chargetime = 0
-	recharge_time = 15 SECONDS
-
-/obj/effect/proc_holder/spell/self/beholder/shutdown/cast(list/targets, mob/living/simple_animal/hostile/rogue/robot/beholder/user)
-	if(!user || user.stat == DEAD)
-		return FALSE
-	user.death()
-	return TRUE
-
 /obj/effect/proc_holder/spell/self/beholder/comms
 	name = "COMMAND: Interface"
 	desc = "Transmit a message through your assigned communications network."
@@ -285,4 +279,66 @@
 	for(var/obj/item/scomstone/S in SSroguemachine.scomm_machines)
 		if(S.faction_net == user.scom_faction_net)
 			S.repeat_message(input_text, user, CMO_SCOM_COLOR, user.get_default_language())
+	return TRUE
+
+/obj/effect/proc_holder/spell/self/beholder/chronoshift
+	name = "COMMAND: Chronoshift"
+	desc = "Shift through time and space, teleporting several tiles ahead."
+	player_lock = FALSE
+	releasedrain = 0
+	chargetime = 0
+	recharge_time = 10 SECONDS
+
+/obj/effect/proc_holder/spell/self/beholder/chronoshift/cast(list/targets, mob/living/simple_animal/hostile/rogue/robot/beholder/user)
+	if(!user || user.stat == DEAD)
+		return FALSE
+	var/turf/destination = get_step(user, user.dir)
+	if(!destination)
+		return FALSE
+	var/turf/check = destination
+	for(var/i in 1 to 2)
+		check = get_step(check, user.dir)
+		if(!check)
+			return FALSE
+	destination = check
+	if(destination.density)
+		to_chat(user, span_warning("CHRONOSHIFT ABORTED: Destination obstructed."))
+		return FALSE
+	if(!do_after(user, 4 SECONDS, user))
+		return FALSE
+	if(destination.density)
+		to_chat(user, span_warning("CHRONOSHIFT ABORTED: Destination obstructed."))
+		return FALSE
+	do_teleport(user, destination, channel = TELEPORT_CHANNEL_FREE)
+	return TRUE
+
+/obj/effect/proc_holder/spell/self/beholder/locate_casualty
+	name = "COMMAND: Locate Casualty"
+	desc = "Locate the nearest deceased personnel whose consciousness remains anchored to this timeline."
+	player_lock = FALSE
+	releasedrain = 0
+	chargetime = 0
+	recharge_time = 5 SECONDS
+
+/obj/effect/proc_holder/spell/self/beholder/locate_casualty/cast(list/targets, mob/living/simple_animal/hostile/rogue/robot/beholder/user)
+	if(!user || user.stat == DEAD)
+		return FALSE
+	var/mob/living/closest
+	var/closest_distance = INFINITY
+	for(var/mob/living/person in GLOB.mob_list)
+		if(person == user)
+			continue
+		if(person.stat != DEAD)
+			continue
+		if(!person.ckey)
+			continue
+		var/distance = get_dist(user, person)
+		if(distance < closest_distance)
+			closest = person
+			closest_distance = distance
+	if(!closest)
+		to_chat(user, span_warning("CASUALTY SEARCH: No deceased personnel with an anchored consciousness detected."))
+		return TRUE
+	var/direction = dir2text(get_dir(user, closest))
+	to_chat(user, span_blue("<b>CASUALTY LOCATED: <b>DISTANCE:</b> [closest_distance] paces<br> <b>DIRECTION:</b> [uppertext(direction)]"))
 	return TRUE

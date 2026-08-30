@@ -38,6 +38,14 @@
 		return
 	return SSjob.GetJob(user.mind.assigned_role)
 
+/obj/structure/machine/astrarium/proc/is_soul_departed(mob/living/person)
+	if(!person)
+		return FALSE
+	if(person.key)
+		return FALSE
+	if(person.get_ghost(FALSE, TRUE))
+		return FALSE
+	return TRUE
 
 /obj/structure/machine/astrarium/proc/open_interface(mob/user)
 	var/datum/job/user_job = get_user_job(user)
@@ -276,10 +284,17 @@
 		var/status_class
 
 		if(person.stat == DEAD)
-			status = "DECEASED"
-			status_class = "dead"
+			if(is_soul_departed(person))
+				status = "K.I.A.<br>(TIMELINE OVER)"
+				status_class = "dead"
+			else
+				status = "DEAD<br>(TIMELINE INCOMPLETE)"
+				status_class = "dead"
 		else if(person.stat == UNCONSCIOUS)
 			status = "UNCONSCIOUS"
+			status_class = "unconscious"
+		else if(person.stat == SOFT_CRIT)
+			status = "CRITICAL"
 			status_class = "unconscious"
 		else
 			status = "ALIVE"
@@ -444,21 +459,22 @@
 		say("Critical error! Cannot establish a receiving point.")
 		return
 
-	var/list/corpses = list()
+	var/list/personnel = list()
 
 	for(var/mob/living/person in GLOB.mob_list)
-		if(get_area(person) != target_area)
+		if(get_turf(person) != target)
 			continue
-		corpses += person
+		personnel += person
 
-	for(var/mob/living/corpse in corpses)
-		astrarium_strip_inventory(corpse)
-		corpse.forceMove(destination)
-		if(corpse.stat != DEAD)
-			corpse.visible_message(span_artery("[corpse] spasms as countless versions of their body overlap, flesh splitting and bones cracking as the conflicting timelines violently collapse into one!"))
-			corpse.emote("agony")
+	for(var/mob/living/person in personnel)
+		astrarium_strip_inventory(person)
+		person.forceMove(destination)
+
+		if(person.stat != DEAD)
+			person.visible_message(span_artery("[person] spasms as countless versions of their body overlap, flesh splitting and bones cracking as the conflicting timelines violently collapse into one!"))
+			person.emote("agony")
 			spawn(1)
-				corpse.gib_limbs(TRUE, TRUE, FALSE)
+				person.gib_limbs(TRUE, TRUE, FALSE)
 
 	playsound(src, 'sound/misc/loops/machinedone.ogg', 100)
 

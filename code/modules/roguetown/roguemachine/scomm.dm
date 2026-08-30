@@ -39,6 +39,11 @@
 	lose_hearing_sensitivity()
 	return ..()
 
+/proc/scom_send_to_beholders(message, faction_net)
+	for(var/mob/living/simple_animal/hostile/rogue/robot/beholder/B in GLOB.mob_list)
+		if(B.scom_faction_net == faction_net)
+			to_chat(B, span_robot("<b>RADIO:</b> [message]"))
+
 /obj/structure/roguemachine/scomm/OnCrafted(dirin, mob/user)
 	. = ..()
 	loc = user.loc
@@ -294,6 +299,7 @@
 				if(S.garrisonline)
 					S.repeat_message(raw_message, src, usedcolor, message_language)
 			SSroguemachine.crown?.repeat_message(raw_message, src, usedcolor, message_language)
+			scom_send_to_beholders(raw_message, faction_net)
 			return
 		for(var/obj/structure/roguemachine/scomm/S in SSroguemachine.scomm_machines)
 			if(!S.calling)
@@ -302,9 +308,7 @@
 			S.repeat_message(raw_message, src, usedcolor, message_language)
 		for(var/obj/item/listenstone/S in SSroguemachine.scomm_machines)
 			S.repeat_message(raw_message, src, usedcolor, message_language)//make the listenstone hear scom
-		for(var/mob/living/simple_animal/hostile/rogue/robot/beholder/B in GLOB.alive_mob_list)
-			if(B.scom_faction_net == faction_net)
-				to_chat(B, span_robot("<b>RADIO:</b> [raw_message]"))
+		scom_send_to_beholders(raw_message, faction_net)
 		SSroguemachine.crown?.repeat_message(raw_message, src, usedcolor, message_language)
 
 /obj/structure/roguemachine/scomm/proc/dictate_laws()
@@ -337,7 +341,7 @@
 /obj/item/scomstone
 	name = "communication piece"
 	icon_state = "scomstone1"
-	desc = "A wrist-mounted communication device. Used by the Zigs."
+	desc = "A wrist-mounted communication device far ahead of its time, deeply affixed to its wearer. Removing it against its will is an arduous and laborious task."
 	gripped_intents = null
 	dropshrink = 0.75
 	possible_item_intents = list(INTENT_GENERIC)
@@ -349,6 +353,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	experimental_inhand = FALSE
 	muteinmouth = TRUE
+	strip_delay = STRIP_DELAY_LOCKED
 	var/listening = TRUE
 	var/speaking = TRUE
 	var/messagereceivedsound = 'sound/misc/ris_radio.ogg'
@@ -374,6 +379,7 @@
 	for(var/obj/item/scomstone/S in SSroguemachine.scomm_machines)
 		if(S.faction_net == faction_net)
 			S.repeat_message(input_text, src, usedcolor)
+	scom_send_to_beholders(input_text, faction_net)
 
 /obj/item/scomstone/MiddleClick(mob/user)
 	if(.)
@@ -436,7 +442,7 @@
 /obj/item/scomstone/empire
 
 	icon_state = "scomstoner1"
-	desc = "A wrist-mounted device used by the Empire."
+	desc = "A wrist-mounted communication device far ahead of its time, deeply affixed to its wearer. Removing it against its will is an arduous and laborious task."
 	faction_net = SCOMNET_EMPIRE
 
 //needs testing
@@ -454,6 +460,7 @@
 		input_text = "<small>[input_text]</small>"
 	for(var/obj/item/scomstone/empire/S in SSroguemachine.scomm_machines)//make the listenstone hear scomstone
 		S.repeat_message(input_text, src, usedcolor)
+	scom_send_to_beholders(input_text, faction_net)
 
 //LISTENSTONE		LISTENSTONE
 /obj/item/listenstone
@@ -528,7 +535,7 @@
 /obj/item/mattcoin
 	name = "communication device"
 	icon_state = "scomstoner1"
-	desc = "A wrist-mounted device used by the Empire."
+	desc = "A wrist-mounted communication device far ahead of its time, deeply affixed to its wearer. Removing it against its will is an arduous and laborious task."
 	gripped_intents = null
 	dropshrink = 0.75
 	possible_item_intents = list(INTENT_GENERIC)
@@ -746,7 +753,7 @@
 /obj/item/scomstone/garrison
 	name = "communications device"
 	icon_state = "scomstoner1"
-	desc = "A wrist-mounted device used by the Empire."
+	desc = "A wrist-mounted communication device far ahead of its time, deeply affixed to its wearer. Removing it against its will is an arduous and laborious task."
 	var/garrisonline = TRUE
 	messagereceivedsound = 'sound/misc/per_radio.ogg'
 	hearrange = 0
@@ -788,14 +795,14 @@
 /obj/item/scomstone/kingsrow
 	name = "communication piece"
 	icon_state = "scomstone"
-	desc = "A wrist-mounted communication device. Used by the Royalists."
+	desc = "A wrist-mounted communication device far ahead of its time, deeply affixed to its wearer. Removing it against its will is an arduous and laborious task."
 	faction_net = SCOMNET_KINGS
 	drop_sound = 'sound/foley/coinphy (1).ogg'
 
 /obj/item/scomstone/rislead
 	name = "communication piece"
 	icon_state = "scomstone1"
-	desc = "A wrist-mounted communication device. Used by the Zigs."
+	desc = "A wrist-mounted communication device far ahead of its time, deeply affixed to its wearer. Removing it against its will is an arduous and laborious task."
 	gripped_intents = null
 	dropshrink = 0.75
 	possible_item_intents = list(INTENT_GENERIC)
@@ -913,7 +920,7 @@
 /obj/item/scomstone/perlead
 	name = "communications device"
 	icon_state = "scomstoner1"
-	desc = "A wrist-mounted device used by the Empire."
+	desc = "A wrist-mounted communication device far ahead of its time, deeply affixed to its wearer. Removing it against its will is an arduous and laborious task."
 	messagereceivedsound = 'sound/misc/per_radio.ogg'
 	hearrange = 0
 	sellprice = 100
@@ -939,7 +946,7 @@
 /obj/item/scomstone/hunter
 	name = "communications device"
 	icon_state = "scomstoner1"
-	desc = "A wrist-mounted device used by the Huntsman's Party."
+	desc = "A wrist-mounted communication device far ahead of its time, deeply affixed to its wearer. Removing it against its will is an arduous and laborious task."
 	var/garrisonline = TRUE
 	hearrange = 0
 	sellprice = 100
@@ -970,7 +977,7 @@
 /obj/item/scomstone/huntlead
 	name = "communications device"
 	icon_state = "scomstoner1"
-	desc = "A wrist-mounted device used by the Huntsman's Party."
+	desc = "A wrist-mounted communication device far ahead of its time, deeply affixed to its wearer. Removing it against its will is an arduous and laborious task."
 	hearrange = 0
 	sellprice = 100
 	faction_net = SCOMNET_HUNTERS
