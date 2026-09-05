@@ -67,8 +67,8 @@
 	user.visible_message(span_artery("[user] devours the last of [corpse], leaving nothing but bones!"), span_artery("You devour the last of [corpse], leaving nothing but bones."))
 	new /obj/effect/decal/remains/human(T)
 
-	user.set_hunger(100)
-	user.set_thirst(100)
-	user.vitae = min(user.max_vitae, user.vitae + user.max_vitae)
-	qdel(corpse)
+	user.nutrition = NUTRITION_LEVEL_FULL
+	user.hydration = HYDRATION_LEVEL_FULL
+	user.bloodpool = VITAE_LEVEL_FULL
+	corpse.gib(TRUE, TRUE, TRUE)
 	return TRUE
