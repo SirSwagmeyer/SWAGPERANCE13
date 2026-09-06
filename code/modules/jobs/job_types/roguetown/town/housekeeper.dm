@@ -8,6 +8,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_TEMPERANCE_NONCOMBATANT
 	selection_color = JCOLOR_KINGSROW
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 
 	tutorial = "You are the Head Housekeeper, the most trusted servant of the King's Row Estate. \
 				Prior to the coup, you were the protector of the manor, along with the other maids and butlers. \

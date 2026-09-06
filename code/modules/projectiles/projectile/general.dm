@@ -1,73 +1,73 @@
 /obj/projectile/bullet/a762
 	name = "7.62mmR lead bullet"
 	icon_state = "bullet_proj"
-	damage = 70
+	damage = 45
 
 /obj/projectile/bullet/a577
 	name = ".577 bullet"
 	icon_state = "bullet_proj"
-	damage = 160
+	damage = 105
 
 /obj/projectile/bullet/a50
 	name = ".50 caliber bullet"
 	icon_state = "bullet_proj"
-	damage = 140 
+	damage = 90 
 	armor_penetration = 100 //might be super broken, watch during playtests
 
 /obj/projectile/bullet/a9mm
 	name = "9mm bullet"
 	icon_state = "bullet_proj"
-	damage = 40
+	damage = 25
 
 /obj/projectile/bullet/a44
 	name = ".44 bullet"
 	icon_state = "bullet_proj"
-	damage = 60
+	damage = 40
 	armor_penetration = 40 // added armor pen due to the fact it's a higher-load and higher-caliber than 9mm
 
 /obj/projectile/bullet/a22lr
 	name = ".22LR bullet"
 	icon_state = "bullet_proj"
-	damage = 30
+	damage = 20
 
 /obj/projectile/bullet/a45acp
 	name = ".45 ACP bullet"
 	icon_state = "bullet_proj"
-	damage = 48
+	damage = 32
 
 /obj/projectile/bullet/a380
     name = ".380 ACP bullet"
     icon_state = "bullet_proj"
-    damage = 50
+    damage = 30
     armor_penetration = 30
 
 /obj/projectile/bullet/a45lc
 	name = ".45 Long Colt bullet"
 	icon_state = "bullet_proj"
-	damage = 70
+	damage = 45
 	armor_penetration = 40 //added armor pen similar to the .44 bullet
 
 /obj/projectile/bullet/a30
 	name = ".30 light bullet"
 	icon_state = "bullet_proj"
-	damage = 35
+	damage = 25
 
 /obj/projectile/bullet/a762lp
 	name = "LP 7.62mm bullet"
 	icon_state = "bullet_proj"
-	damage = 55
+	damage = 35
 
 // shotgun
 
 /obj/projectile/bullet/shotgun_slug
 	name = "12g shotgun slug"
-	damage = 70
+	damage = 45
 	spread = 2
 	armor_penetration = 65
 
 /obj/projectile/bullet/pellet/shotgun_buckshot
 	name = "buckshot pellet"
-	damage = 13.5
+	damage = 9
 	armor_penetration = 50
 
 // shotgun falloff
@@ -85,17 +85,17 @@
 //hmg
 /obj/projectile/bullet/a762x59 //perserdun mg
 	name = "7.62x59mm bullet"
-	damage = 70
+	damage = 45
 	armor_penetration = 10
 
 /obj/projectile/bullet/a303 //risvon mg 
 	name = ".303 bullet"
-	damage = 70
+	damage = 45
 	armor_penetration = 10
 
 /obj/projectile/bullet/a50d //kingsrow mg
 	name = ".50D bullet"
-	damage = 100
+	damage = 65
 	armor_penetration = 80
 
 //other

@@ -39,13 +39,19 @@
 
 	if(SEND_SIGNAL(src, COMSIG_MOB_DISMEMBER, src) & COMPONENT_CANCEL_DISMEMBER)
 		return FALSE //signal handled the dropping
+	
+	if(C.try_resist_critical())
+		C.visible_message(span_danger("Critical resistance! [C]'s [src.name] hangs on by a thread!</span>"))
+		return FALSE
 
 	var/obj/item/bodypart/affecting = C.get_bodypart(BODY_ZONE_CHEST)
 	if(affecting && dismember_wound)
 		affecting.add_wound(dismember_wound)
 	playsound(C, pick(dismemsound), 50, FALSE, -1)
-	if(body_zone == BODY_ZONE_HEAD)
-		C.visible_message(span_danger("<B>[C] is [pick("BRUTALLY","VIOLENTLY","BLOODILY","MESSILY")] DECAPITATED!</B>"))
+	if(body_zone == BODY_ZONE_HEAD && C.stat != DEAD)
+		C.visible_message(span_danger("<B>[C] is [pick("BRUTALLY","VIOLENTLY","BLOODILY","MESSILY")] butchered through their neck, [pick("DESTROYING","KILLING","FRAGGING","ENDING","RETIRING","HONORABLY DISCHARGING")] them on the SPOT!</B>"))
+		C.death()
+		return TRUE
 	else
 		C.visible_message(span_danger("<B>The [src.name] is [pick("torn off", "sundered", "severed", "separated", "unsewn")]!</B>"))
 	C.emote("painscream")
@@ -67,6 +73,11 @@
 	if(grabbedby)
 		qdel(grabbedby)
 		grabbedby = null
+
+	if(length(wounds))
+		for(var/datum/wound/wound in wounds)
+			remove_wound(wound.type)
+
 
 	drop_limb()
 	if(dam_type == BURN)

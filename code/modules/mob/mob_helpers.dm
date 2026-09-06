@@ -45,6 +45,25 @@
 
 	return zone
 
+/// Returns the targeting zone equivalent of a given bodypart. Kudos to you if you find a use for this.
+/proc/bodypart_to_zone(part)
+	var/obj/item/bodypart/B = part
+	switch(B::type)
+		if(/obj/item/bodypart/chest)
+			return BODY_ZONE_CHEST
+		if(/obj/item/bodypart/head)
+			return BODY_ZONE_HEAD
+		if(/obj/item/bodypart/l_arm)
+			return BODY_ZONE_L_ARM
+		if(/obj/item/bodypart/r_arm)
+			return BODY_ZONE_R_ARM
+		if(/obj/item/bodypart/l_leg)
+			return BODY_ZONE_L_LEG
+		if(/obj/item/bodypart/r_leg)
+			return BODY_ZONE_R_LEG
+		else
+			return BODY_ZONE_CHEST
+
 /**
   * Return the zone or randomly, another valid zone
   *
@@ -532,10 +551,11 @@
 			mmb_intent.glow_color = ranged_ability.glow_color
 			mmb_intent.mob_charge_effect = ranged_ability.mob_charge_effect
 			mmb_intent.update_chargeloop()
-
-	if(hud_used)
+	
+	if(hud_used)		
 		hud_used.quad_intents?.switch_intent(input)
 		hud_used.give_intent?.switch_intent(input)
+	givingto = null
 
 /mob/verb/def_intent_change(input as num)
 	set name = "def-change"
@@ -950,13 +970,26 @@
 /mob/proc/can_see_reagents()
 	return stat == DEAD || has_unlimited_silicon_privilege //Dead guys and silicons can always see reagents
 
+/proc/MIGRANT_ROLE(migrant_path)
+	if(!migrant_path)
+		return null
+	if(ispath(migrant_path, /datum/migrant_role))
+		return new migrant_path
+	return new /datum/migrant_role
+
 /mob/proc/get_role_title()
 	var/used_title
-	if(job)
+	if(migrant_type)
+		var/datum/migrant_role/migrant = MIGRANT_ROLE(migrant_type)
+		if(migrant)
+			used_title = migrant.name
+			if(migrant.advjob_examine && advjob)
+				used_title = advjob
+	else if(job)
 		var/datum/job/J = SSjob.GetJob(job)
 		if(!J)
 			return "unknown"
-		used_title =  J.display_title || J.title
+		used_title = J.title
 		if(J.f_title && (pronouns == SHE_HER || pronouns == THEY_THEM_F))
 			used_title = J.f_title
 		if(J.advjob_examine)

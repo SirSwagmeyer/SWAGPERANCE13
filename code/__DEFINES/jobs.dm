@@ -229,10 +229,13 @@
 #define PARTISAN (1<<11)
 #define ENVOY (1<<12)
 #define RADIOTROOPER (1<<13)
-#define PROTECTORATE (1<<14) //Vos Arderla Exclusive, riot control
-#define SUPPRESSIONIST (1<<15) //Vos Arderla Exclusive, riot specialist
-#define PERSERDUN_CONSCRIPT (1<<16) //tester role
-#define STERILIZER (1<<17) //Vos Arderla Exclusive, poison specialist
+#define PERSERDUN_CONSCRIPT (1<<14) //tester role
+#define MAGISTER (1<<15)
+#define PROTECTORATE (1<<16) //Vos Arderla Exclusive, riot control
+#define SUPPRESSIONIST (1<<17) //Vos Arderla Exclusive, riot specialist
+#define PERSERDUN_CONSCRIPT (1<<18) //tester role
+#define STERILIZER (1<<19) //Vos Arderla Exclusive, poison specialist
+
 
 #define RISVON	(1<<13)
 
@@ -250,6 +253,7 @@
 #define CONSULO (1<<11)
 #define FLAMSOLDATO (1<<12)
 #define RISVON_CONSCRIPT (1<<13) //tester role
+#define DOTTORE (1<<14)
 
 #define KINGSROW (1<<14)
 
@@ -312,8 +316,9 @@
 // job display orders //
 
 // PERSERDUN
-#define JDO_GRANDMASTER 1
+#define JDO_GRANDMASTER 1.0
 #define JDO_GRANDKNIGHT 1.1
+#define JDO_MAGISTER 1.15
 #define JDO_WARPRIEST 1.2
 #define JDO_KNIGHTCOMMANDER 1.3
 #define JDO_VOLTIGEUR 1.4
@@ -334,6 +339,7 @@
 // RISVON
 #define JDO_COMMANDANT 2.0
 #define JDO_OFICIRO 2.1
+#define JDO_DOTTORE 2.15
 #define JDO_KASPAFISTO 2.2
 #define JDO_VETERANO 2.3
 #define JDO_SOLDATO 2.4
@@ -342,10 +348,10 @@
 #define JDO_TUORO 2.7
 #define JDO_SERVISTO 2.8
 #define JDO_CURACISTO 2.9
-#define JDO_CAMPFOLLOWER 2.10
-#define JDO_CONSULO 2.11
-#define JDO_FLAMSOLDATO 2.12
-#define JDO_RISVONCONSCRIPT 2.13
+#define JDO_CAMPFOLLOWER 2.91
+#define JDO_CONSULO 2.92
+#define JDO_FLAMSOLDATO 2.93
+#define JDO_RISVONCONSCRIPT 2.94
 
 // KINGSROW
 #define JDO_HIERARCH 3
@@ -387,6 +393,7 @@
 
 #define PERSERDUN_ROLES \
 	/datum/job/roguetown/grandmaster,\
+	/datum/job/roguetown/magister,\
 	/datum/job/roguetown/warpriest,\
 	/datum/job/roguetown/grandknight,\
 	/datum/job/roguetown/knightcommander,\
@@ -404,6 +411,7 @@
 
 #define RISVON_ROLES \
 	/datum/job/roguetown/commandant,\
+	/datum/job/roguetown/dottore,\
 	/datum/job/roguetown/officaro,\
 	/datum/job/roguetown/veterano,\
 	/datum/job/roguetown/soldato,\

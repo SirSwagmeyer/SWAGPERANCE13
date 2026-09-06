@@ -183,6 +183,7 @@ GLOBAL_LIST_INIT(test_positions, list(
 GLOBAL_LIST_INIT(perserdun_positions, list(
 	"Grandmaster",
 	"Grand Knight",
+	"Magister Enginseer",
 	"Field Bishop",
 	"Knight Commander",
 	"Voltigeur",
@@ -203,6 +204,7 @@ GLOBAL_LIST_INIT(perserdun_positions, list(
 GLOBAL_LIST_INIT(risvon_positions, list(
 	"Commandant",
 	"Oficiro",
+	"Dottore Enginseer",
 	"Kaspafisto",
 	"Veterano",
 	"Soldato",
