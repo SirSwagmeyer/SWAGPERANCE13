@@ -60,7 +60,7 @@
 	mob_biotypes = MOB_ROBOTIC|MOB_HUMANOID
 	robust_searching = FALSE
 	move_to_delay = 1
-	speed = -0.75
+	speed = -0.8
 	footstep_type = null
 	movement_type = FLYING
 	pass_flags = PASSTABLE
@@ -79,7 +79,9 @@
 	ai_controller = null
 	verbs += list(/mob/living/simple_animal/hostile/rogue/robot/beholder/proc/fly_up, /mob/living/simple_animal/hostile/rogue/robot/beholder/proc/fly_down)
 	AddSpell(new /obj/effect/proc_holder/spell/self/beholder/comms)
+	AddSpell(new /obj/effect/proc_holder/spell/self/beholder/light_mode)
 	AddSpell(new /obj/effect/proc_holder/spell/self/beholder/chronoshift)
+	AddSpell(new /obj/effect/proc_holder/spell/self/beholder/locate_casualty)
 	AddSpell(new /obj/effect/proc_holder/spell/invoked/beholder/analyze_organic)
 	AddSpell(new /obj/effect/proc_holder/spell/invoked/beholder/analyze_terrain)
 	AddSpell(new /obj/effect/proc_holder/spell/self/beholder/explode)
@@ -95,7 +97,7 @@
 		var/datum/effect_system/explosion/E = new
 		E.set_up(1, T)
 		E.start()
-		playsound(T, 'sound/misc/explode/explosion.ogg', 100, TRUE)
+		playsound(T, 'sound/misc/explode/bomb.ogg', 100, TRUE)
 	var/client/return_client = client
 	if(original_body && return_client)
 		original_body.ckey = return_client.ckey
@@ -205,6 +207,28 @@
 		to_chat(user, span_warning("<b>STATUS: DAMAGED.</b>"))
 	else
 		to_chat(user, span_boldgreen("<b>STATUS: NOMINAL.</b>"))
+	return TRUE
+
+/obj/effect/proc_holder/spell/self/beholder/light_mode
+	name = "COMMAND: Illuminate"
+	desc = "Activate an internal illumination system, surrounding the BEHOLDER in a gentle artificial light."
+	player_lock = FALSE
+	releasedrain = 0
+	chargetime = 0
+	recharge_time = 5 SECONDS
+	action_icon = 'icons/mob/actions/enginseerspells.dmi'
+	overlay_state = "light"
+
+/obj/effect/proc_holder/spell/self/beholder/light_mode/cast(list/targets, mob/living/simple_animal/hostile/rogue/robot/beholder/user)
+	if(!user || user.stat == DEAD)
+		return FALSE
+	var/datum/status_effect/light_buff/light = user.has_status_effect(/datum/status_effect/light_buff/beholder)
+	if(light)
+		user.remove_status_effect(/datum/status_effect/light_buff/beholder)
+		user.say("ILLUMINATION: Deactivated.")
+		return TRUE
+	user.apply_status_effect(/datum/status_effect/light_buff/beholder)
+	user.say("ILLUMINATION: Activated.")
 	return TRUE
 
 /obj/effect/proc_holder/spell/invoked/beholder/analyze_terrain
