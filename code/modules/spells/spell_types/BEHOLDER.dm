@@ -60,7 +60,7 @@
 	mob_biotypes = MOB_ROBOTIC|MOB_HUMANOID
 	robust_searching = FALSE
 	move_to_delay = 1
-	speed = -0.75
+	speed = -0.8
 	footstep_type = null
 	movement_type = FLYING
 	pass_flags = PASSTABLE
@@ -79,12 +79,14 @@
 	ai_controller = null
 	verbs += list(/mob/living/simple_animal/hostile/rogue/robot/beholder/proc/fly_up, /mob/living/simple_animal/hostile/rogue/robot/beholder/proc/fly_down)
 	AddSpell(new /obj/effect/proc_holder/spell/self/beholder/comms)
+	AddSpell(new /obj/effect/proc_holder/spell/self/beholder/light_mode)
 	AddSpell(new /obj/effect/proc_holder/spell/self/beholder/chronoshift)
+	AddSpell(new /obj/effect/proc_holder/spell/self/beholder/locate_casualty)
 	AddSpell(new /obj/effect/proc_holder/spell/invoked/beholder/analyze_organic)
 	AddSpell(new /obj/effect/proc_holder/spell/invoked/beholder/analyze_terrain)
 	AddSpell(new /obj/effect/proc_holder/spell/self/beholder/explode)
 	AddSpell(new /obj/effect/proc_holder/spell/self/beholder/shutdown)
-	ADD_TRAIT(src, TRAIT_NIGHT_VISION, TRAIT_GENERIC)
+	ADD_TRAIT(src, TRAIT_THERMAL_VISION, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_SLEEPIMMUNE, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_STUNIMMUNE, TRAIT_GENERIC)
 	src.update_sight()
@@ -95,7 +97,7 @@
 		var/datum/effect_system/explosion/E = new
 		E.set_up(1, T)
 		E.start()
-		playsound(T, 'sound/misc/explode/explosion.ogg', 100, TRUE)
+		playsound(T, 'sound/misc/explode/bomb.ogg', 100, TRUE)
 	var/client/return_client = client
 	if(original_body && return_client)
 		original_body.ckey = return_client.ckey
@@ -141,6 +143,8 @@
 	recharge_time = 5 SECONDS
 	range = 4
 	selection_type = "range"
+	action_icon = 'icons/mob/actions/enginseerspells.dmi'
+	overlay_state = "diagnose"
 
 /obj/effect/proc_holder/spell/invoked/beholder/analyze_organic/cast(list/targets, mob/living/user)
 	var/mob/living/carbon/human/human_target = targets[1]
@@ -205,6 +209,28 @@
 		to_chat(user, span_boldgreen("<b>STATUS: NOMINAL.</b>"))
 	return TRUE
 
+/obj/effect/proc_holder/spell/self/beholder/light_mode
+	name = "COMMAND: Illuminate"
+	desc = "Activate an internal illumination system, surrounding the BEHOLDER in a gentle artificial light."
+	player_lock = FALSE
+	releasedrain = 0
+	chargetime = 0
+	recharge_time = 5 SECONDS
+	action_icon = 'icons/mob/actions/enginseerspells.dmi'
+	overlay_state = "light"
+
+/obj/effect/proc_holder/spell/self/beholder/light_mode/cast(list/targets, mob/living/simple_animal/hostile/rogue/robot/beholder/user)
+	if(!user || user.stat == DEAD)
+		return FALSE
+	var/datum/status_effect/light_buff/light = user.has_status_effect(/datum/status_effect/light_buff/beholder)
+	if(light)
+		user.remove_status_effect(/datum/status_effect/light_buff/beholder)
+		user.say("ILLUMINATION: Deactivated.")
+		return TRUE
+	user.apply_status_effect(/datum/status_effect/light_buff/beholder)
+	user.say("ILLUMINATION: Activated.")
+	return TRUE
+
 /obj/effect/proc_holder/spell/invoked/beholder/analyze_terrain
 	name = "COMMAND: Analyze Terrain"
 	desc = "Analyze the terrain's coordinates, and search for nearby mines if any."
@@ -212,6 +238,8 @@
 	releasedrain = 0
 	chargetime = 0
 	recharge_time = 5 SECONDS
+	action_icon = 'icons/mob/actions/enginseerspells.dmi'
+	overlay_state = "analyze"
 
 /obj/effect/proc_holder/spell/invoked/beholder/analyze_terrain/cast(list/targets, mob/living/simple_animal/hostile/rogue/robot/beholder/user)
 	if(!user || user.stat == DEAD)
@@ -254,6 +282,8 @@
 	releasedrain = 0
 	chargetime = 0
 	recharge_time = 15 SECONDS
+	action_icon = 'icons/mob/actions/enginseerspells.dmi'
+	overlay_state = "explode"
 
 /obj/effect/proc_holder/spell/self/beholder/explode/cast(list/targets, mob/living/simple_animal/hostile/rogue/robot/beholder/user)
 	if(!user || user.stat == DEAD)
@@ -274,6 +304,8 @@
 	chargetime = 0
 	recharge_time = 3 SECONDS
 	player_lock = FALSE
+	action_icon = 'icons/mob/actions/enginseerspells.dmi'
+	overlay_state = "comms"
 
 /obj/effect/proc_holder/spell/self/beholder/comms/cast(list/targets, mob/living/simple_animal/hostile/rogue/robot/beholder/user)
 	if(!user || user.stat == DEAD || !user.scom_faction_net)
@@ -296,6 +328,8 @@
 	releasedrain = 0
 	chargetime = 0
 	recharge_time = 10 SECONDS
+	action_icon = 'icons/mob/actions/enginseerspells.dmi'
+	overlay_state = "chronoshift"
 
 /obj/effect/proc_holder/spell/self/beholder/chronoshift/cast(list/targets, mob/living/simple_animal/hostile/rogue/robot/beholder/user)
 	if(!user || user.stat == DEAD)
@@ -327,6 +361,8 @@
 	releasedrain = 0
 	chargetime = 0
 	recharge_time = 5 SECONDS
+	action_icon = 'icons/mob/actions/enginseerspells.dmi'
+	overlay_state = "vision"
 
 /obj/effect/proc_holder/spell/self/beholder/locate_casualty/cast(list/targets, mob/living/simple_animal/hostile/rogue/robot/beholder/user)
 	if(!user || user.stat == DEAD)
@@ -358,6 +394,8 @@
 	releasedrain = 0
 	chargetime = 0
 	recharge_time = 15 SECONDS
+	action_icon = 'icons/mob/actions/enginseerspells.dmi'
+	overlay_state = "shutdown"
 
 /obj/effect/proc_holder/spell/self/beholder/shutdown/cast(list/targets, mob/living/simple_animal/hostile/rogue/robot/beholder/user)
 	if(!user || user.stat == DEAD)
