@@ -9,6 +9,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	anchored = 0
 	density = 0
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	var/id_g = "bmg"
 	var/need_type = /obj/item/gun/ballistic/heavy_mg
 
@@ -23,8 +24,10 @@
 	if(isturf(A) && ismob(user))
 		var/turf/T = A
 		var/mob/M = user
-		if(in_range(T, user) && do_after(user, 20, src))
-			playsound(src, 'sound/items/hw_tripod.ogg', 50, 1)
+		if(!in_range(T, user))
+			return
+		playsound(src, 'sound/items/hw_tripod.ogg', 50, 1)
+		if(do_after(user, 20, src))
 			attach_to_turf(T, M, 1)
 
 /obj/item/mg_tripod/MouseDrop(over_object, src_location, over_location)

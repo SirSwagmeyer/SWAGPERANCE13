@@ -13,6 +13,10 @@
 #define TRAIT_SEEPRICES "Skilled Appraiser"
 #define TRAIT_SEEPRICES_SHITTY "Appraiser"
 #define TRAIT_STRONGBITE "Strong Bite"
+#define TRAIT_BLOODFIEND "Hemophage"
+#define TRAIT_WYVERNTOUCHED "Wyverntouched"
+#define TRAIT_YUANITE "Type-W Yuanite Geneseed"
+#define TRAIT_UNSTOPPABLE "Unstoppable"
 #define TRAIT_NOBLE "Noble Blooded"
 #define TRAIT_DEFILED_NOBLE "Drained Noble Blood"
 #define TRAIT_EMPATH "Empath"
@@ -188,6 +192,7 @@
 #define TRAIT_EORAN_SERENE "Eoran Serenity"
 #define TRAIT_NECRAS_VOW "Necra's Vow"
 #define TRAIT_FIREARMS_EXPERT "Firearms Expert" 
+#define TRAIT_ADRENALINE_RUSH "Adrenaline Rush"
 // ARMOR / CLOTHING GIVEN TRAITS (GIVEN BY WEARING CLOTHES/ARMOR PIECES)
 #define TRAIT_BLOODIED_ROBE	"Bloodied Vestatures"
 
@@ -215,6 +220,10 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_SEEPRICES = "I can tell the prices of things down to the zenny.",
 	TRAIT_SEEPRICES_SHITTY = "I can tell the prices of things... <i>Kind of</i>.",
 	TRAIT_STRONGBITE = span_info("Stronger bites, critical bite attacks."),
+	TRAIT_YUANITE = span_warning("Something is deeply wrong with me. I hunger for raw flesh and blood, crave violence, and grow stronger as I lose control and my sense of humenity. A Dark Bolus suppresses these symptoms, but only for a time."),
+	TRAIT_UNSTOPPABLE = span_boldred("RIP AND TEAR, UNTIL IT'S DONE!! Nothing can take me down, short of divine intervention."),
+	TRAIT_BLOODFIEND = span_artery("I can ingest blood for sustenance. My bites will attempt to consume blood from open wounds before I even think about drinking from it."),
+	TRAIT_WYVERNTOUCHED = span_necrosis("My blood has become poisonous. My bites carry venom, and the tail that grew from me is just as dangerous. In exchange, my organs can no longer process raw blood as easily."),
 	TRAIT_NOBLE = span_blue("I'm of noble blood."),
 	TRAIT_DEFILED_NOBLE = span_blue("I'm of noble blood but... Something feels off!"),
 	TRAIT_EMPATH = span_info("I can notice when people are in pain."),
@@ -345,6 +354,8 @@ GLOBAL_LIST_INIT(roguetraits, list(
   	TRAIT_JACKOFALLTRADES = span_notice("Skills cost half as much for me to raise."),
 	TRAIT_FIREARMS_EXPERT = span_notice("I am an expert with firearms, and can chamber rounds more effectively."),
 	TRAIT_DEATHBYSNUSNU = "With strong intent, I am a violent partner in bed. Breaking pelvis and spirit alike.",
+	TRAIT_BLOODLOSS_IMMUNE = span_notice("While I may bleed, I will feel nothing from it."),
+	TRAIT_ADRENALINE_RUSH = span_notice("I'm invigorated in the midst of battle! I don't feel my wounds!")
 ))
 
 // trait accessor defines

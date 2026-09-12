@@ -16,7 +16,7 @@
 	equip_delay_self = 5 SECONDS
 	unequip_delay_self = 5 SECONDS
 	equip_delay_other = 1 SECONDS
-	strip_delay = 2 SECONDS
+	strip_delay = STRIP_DELAY_NORMAL
 	smelt_bar_num = 4
 	max_integrity = 1000
 	sleeved = null
@@ -84,7 +84,7 @@
 	equip_delay_self = 5 SECONDS
 	unequip_delay_self = 5 SECONDS
 	equip_delay_other = 1 SECONDS
-	strip_delay = 2 SECONDS
+	strip_delay = STRIP_DELAY_NORMAL
 	smelt_bar_num = 4
 	max_integrity = ARMOR_INT_CHEST_PLATE_PSYDON
 	body_parts_covered = CHEST | GROIN | VITALS | LEGS | ARMS | NECK
@@ -166,7 +166,7 @@
 
 /obj/item/clothing/suit/roguetown/armor/plate/modern/blacksteel_full_plate/bulwark
 	name = "machined armor"
-	desc = "Raw strips of metal from the Outlet's walls, headed and formed for personal protection."
+	desc = "Raw strips of metal from the Outlet's walls, heated and formed for personal protection."
 	icon_state = "ibulwark"
 	item_state = "ibulwark"
 	icon = 'icons/roguetown/clothing/armor.dmi'
@@ -245,7 +245,7 @@
 	equip_delay_self = 2.5 SECONDS
 	unequip_delay_self = 2.5 SECONDS
 	equip_delay_other = 0.5 SECONDS
-	strip_delay = 1 SECONDS
+	strip_delay = STRIP_DELAY_NORMAL
 	smelt_bar_num = 2
 	max_integrity = ARMOR_INT_CHEST_PLATE_IRON
 	body_parts_covered = CHEST | GROIN | VITALS | LEGS | ARMS | NECK

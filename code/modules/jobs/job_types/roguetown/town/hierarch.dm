@@ -8,6 +8,7 @@
 	allowed_races = RACES_TEMPERANCE
 	allowed_sexes = list(MALE, FEMALE)
 	selection_color = JCOLOR_KINGSROW
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 
 	tutorial = "You are the current Lord/Lady of Estate for the manor known as King's Row. \
 				Once an adopted, low-born mutt of the former owner - you've clawed their way into control as means of revenge. \

@@ -34,7 +34,6 @@
 		/datum/crafting_recipe/roguetown/survival/stonesword,
 		/datum/crafting_recipe/roguetown/survival/woodsword,
 		/datum/crafting_recipe/roguetown/survival/bag,
-		/datum/crafting_recipe/roguetown/survival/bagx5,
 		/datum/crafting_recipe/roguetown/survival/rod,
 		/datum/crafting_recipe/roguetown/survival/pearlcross,
 		/datum/crafting_recipe/roguetown/survival/bpearlcross,
@@ -43,7 +42,6 @@
 		/datum/crafting_recipe/roguetown/survival/abyssoramulet,
 		/datum/crafting_recipe/roguetown/survival/broom,
 		/datum/crafting_recipe/roguetown/survival/woodcross,
-		/datum/crafting_recipe/roguetown/survival/mantrap,
 		/datum/crafting_recipe/roguetown/survival/tribalrags,
 		/datum/crafting_recipe/roguetown/survival/skullmask,
 		/datum/crafting_recipe/roguetown/survival/bonespear,
@@ -140,9 +138,9 @@
 	I = mob.get_active_held_item()
 	if(I)
 		if(I.return_blood_DNA())
-			testing("yep")
+
 		else
-			testing("nope")
+
 
 #endif
 
@@ -167,16 +165,23 @@
 	experimental_inhand = FALSE
 	bundletype = /obj/item/natural/bundle/cloth
 	sellprice = 4
+	detail_tag = "_soaked"
 	var/wet = 0
-	/// Effectiveness when used as a bandage, how much bloodloss we can staunch
-	var/bandage_effectiveness = 0.9
+	/// Effectiveness when used as a bandage, how much it'll lower the bloodloss, bloodloss will get multiplied by this.
+	var/bandage_effectiveness = 0.5
+	var/bandage_speed = 7 SECONDS
+	///How much you can bleed into the bandage until it needs to be changed
+	var/bandage_health = 150 //75 total blood stopped
+	//bandage_health * (1 - bandage_effectiveness) = total amount of blood saved from one bandage
+	/// If the bandage is soaked in some kind of medicine.
+	var/medicine_quality
+	var/medicine_amount = 0
 
 /obj/item/natural/cloth/Initialize()
 	. = ..()
 	var/static/list/slapcraft_recipe_list = list(
 		/datum/crafting_recipe/roguetown/survival/longbowpartial,
 		/datum/crafting_recipe/roguetown/survival/bag,
-		/datum/crafting_recipe/roguetown/survival/bagx5,
 		/datum/crafting_recipe/roguetown/survival/book_crafting_kit,
 		/datum/crafting_recipe/roguetown/survival/slingpouchcraft,
 		)
@@ -216,7 +221,7 @@
 // CLEANING
 
 /obj/item/natural/cloth/attack_obj(obj/O, mob/living/user)
-	testing("attackobj")
+
 	if(user.client && ((O in user.client.screen) && !user.is_holding(O)))
 		to_chat(user, span_warning("I need to take that [O.name] off before cleaning it!"))
 		return
@@ -260,18 +265,101 @@
 
 // BANDAGING
 /obj/item/natural/cloth/attack(mob/living/M, mob/user)
-	testing("attack")
+
 	bandage(M, user)
 
 /obj/item/natural/cloth/wash_act()
 	. = ..()
 	wet = 10
+	bandage_health = initial(bandage_health)
+	medicine_amount = 0
+	medicine_quality = 0
+	detail_color = null
+	desc = initial(desc)
+	update_icon()
+
+/obj/item/natural/cloth/attackby(obj/item/I, mob/living/user, params)
+	var/obj/item/reagent_containers/C = I
+	if(!istype(C))
+		return ..()
+	if(C.reagents.has_reagent(/datum/reagent/medicine/healthpot, 10) && !medicine_amount)
+		to_chat(user, span_notice("You start soaking the [src] in a medical compound..."))
+		if(do_after(user, 3 SECONDS, target = src))
+			C.reagents.remove_reagent(/datum/reagent/medicine/healthpot, 10)
+			medicine_quality = 1
+			medicine_amount += 10
+			desc += " It has been soaked in a medical compound."
+			detail_color = "#ff0000"
+			update_icon()
+	if(C.reagents.has_reagent(/datum/reagent/medicine/stronghealth, 10) && !medicine_amount)
+		to_chat(user, span_notice("You start soaking the [src] in a strong medical compound..."))
+		if(do_after(user, 3 SECONDS, target = src))
+			C.reagents.remove_reagent(/datum/reagent/medicine/stronghealth, 10)
+			medicine_quality = 2
+			medicine_amount += 10
+			desc += " It has been soaked in a strong medical compound."
+			detail_color = "#820000"
+			update_icon()
+	if(C.reagents.has_reagent(/datum/reagent/consumable/ethanol/aqua_vitae, 10) && !medicine_amount)
+		to_chat(user, span_notice("You start soaking the [src] in aqua vitae..."))
+		if(do_after(user, 3 SECONDS, target = src))
+			C.reagents.remove_reagent(/datum/reagent/consumable/ethanol/aqua_vitae, 10)
+			medicine_quality = 0.5 //slower than health potions, more healing overall. Good for fractures or other big wounds.
+			medicine_amount += 60
+			desc += " It has been soaked in aqua vitae."
+			detail_color = "#6e6e6e"
+			update_icon()
+	if(C.reagents.has_reagent(/datum/reagent/water/blessed, 10) && !medicine_amount)
+		to_chat(user, span_notice("You start soaking the [src] in blessed water..."))
+		if(do_after(user, 3 SECONDS, target = src))
+			C.reagents.remove_reagent(/datum/reagent/water/blessed, 10)
+			medicine_quality = 0.2 //cheap, easy to get, doesn't even heal wounds if it's not on a bandage
+			medicine_amount += 20
+			desc += " It has been soaked in blessed water."
+			detail_color = "#6a9295"
+			update_icon()
+
+/obj/item/natural/cloth/update_icon()
+	cut_overlays()
+	if(medicine_amount > 0)
+		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
+		pic.appearance_flags = RESET_COLOR
+		if(get_detail_color())
+			pic.color = get_detail_color()
+		add_overlay(pic)
 
 /obj/item/natural/cloth/proc/bandage(mob/living/M, mob/user)
+	var/used_time = bandage_speed
+	var/medskill = 0
+
+	if(ishuman(user))
+		var/mob/living/carbon/human/human_user = user
+		medskill = human_user.get_skill_level(/datum/skill/misc/medicine)
+		used_time -= ((medskill * 10) + (human_user.STASPD / 2)) //With 20 SPD you can insta bandage at max medicine.
+
+	if(istype(M, /mob/living/simple_animal))
+		var/mob/living/simple_animal/animal_patient = M
+		if(!animal_patient.bruteloss)
+			to_chat(user, span_warning("[animal_patient] doesn't need bandaging right now."))
+			return
+		playsound(loc, 'sound/foley/bandage.ogg', 100, FALSE)
+		if(!move_after(user, used_time, target = animal_patient))
+			return
+		playsound(loc, 'sound/foley/bandage.ogg', 100, FALSE)
+		animal_patient.adjustHealth(-((animal_patient.maxHealth / 5) * (medskill + 1)), TRUE)
+		user.visible_message(span_notice("[user] bandages [M]'s wounds."), span_notice("I bandage [M]'s wounds."))
+		// clear all the wounds
+		for(var/datum/wound/wound as anything in animal_patient.get_wounds())
+			qdel(wound)
+		qdel(src)
+		return
+
 	if(!M.can_inject(user, TRUE))
 		return
+
 	if(!ishuman(M))
 		return
+
 	var/mob/living/carbon/human/H = M
 	var/obj/item/bodypart/affecting = H.get_bodypart(check_zone(user.zone_selected))
 	if(!affecting)
@@ -279,10 +367,9 @@
 	if(affecting.bandage)
 		to_chat(user, span_warning("There is already a bandage."))
 		return
-	var/used_time = 70
-	used_time -= (H.get_skill_level(/datum/skill/misc/medicine) * 10)
+
 	playsound(loc, 'sound/foley/bandage.ogg', 100, FALSE)
-	if(!do_mob(user, M, used_time))
+	if(!move_after(user, used_time, target = M))
 		return
 	playsound(loc, 'sound/foley/bandage.ogg', 100, FALSE)
 
@@ -291,9 +378,9 @@
 	H.update_damage_overlays()
 
 	if(M == user)
-		user.visible_message(span_notice("[user] bandages [user.p_their()] [affecting]."), span_notice("I bandage my [affecting]."))
+		user.visible_message(span_notice("[user] bandages [user.p_their()] [affecting]."), span_notice("I bandage my [affecting.name]."))
 	else
-		user.visible_message(span_notice("[user] bandages [M]'s [affecting]."), span_notice("I bandage [M]'s [affecting]."))
+		user.visible_message(span_notice("[user] bandages [M]'s [affecting]."), span_notice("I bandage [M]'s [affecting.name]."))
 
 /obj/item/natural/thorn
 	name = "thorn"
@@ -368,6 +455,7 @@
 	icon_state = "fibersroll2"
 	amount = 6
 	firefuel = 30 MINUTES
+	grid_width = 64
 
 /obj/item/natural/bundle/silk
 	name = "silken weave"
@@ -411,7 +499,7 @@
 	icon2 = "clothroll2"
 	icon2step = 10
 	grid_width = 32
-	grid_height = 64
+	grid_height = 32
 
 /obj/item/natural/bundle/stick
 	name = "bundle of sticks"
@@ -490,9 +578,7 @@
 	stacktype = /obj/item/natural/bone
 	stackname = "bones"
 	icon1 = "bonestack1"
-	icon1step = 2
 	icon2 = "bonestack2"
-	icon2step = 4
 
 /obj/item/natural/bundle/bone/full
 	amount = 6
@@ -553,9 +639,9 @@
 	maxamount = 12
 	icon_state = "worm2"
 	icon1 = "worm2"
-	icon1step = 4
+	icon1step = 6
 	icon2 = "worm4"
-	icon2step = 6
+	icon2step = 12
 	icon3 = "worm6"
 	stacktype = /obj/item/natural/worms
 	stackname = "worms"
@@ -579,5 +665,3 @@
 				user.put_in_hands(B)
 		for(var/obj/item/natural/worms/F in get_turf(src))
 			qdel(F)
-
-

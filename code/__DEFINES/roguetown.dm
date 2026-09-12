@@ -175,6 +175,7 @@
 	/datum/species/elf/wood,\
 	/datum/species/demihuman,\
 	/datum/species/tieberian,\
+	/datum/species/hualian,\
 	/datum/species/anthromorph,\
 	/datum/species/human/halfelf,\
 	/datum/species/construct/metal/porcelain,\
@@ -186,7 +187,7 @@
 
 #define RACES_TOLERATED \
 	/datum/species/tieberian,\
-
+	/datum/species/hualian,\
 
 #define RACES_SHUNNED \
 	/datum/species/demihuman,\
@@ -202,6 +203,7 @@
 	/datum/species/elf/wood,\
 	/datum/species/demihuman,\
 	/datum/species/tieberian,\
+	/datum/species/hualian,\
 	/datum/species/human/halfelf,\
 )
 
@@ -210,6 +212,7 @@
 	/datum/species/elf/wood,\
 	/datum/species/demihuman,\
 	/datum/species/tieberian,\
+	/datum/species/hualian,\
 	/datum/species/anthromorph,\
 	/datum/species/human/halfelf,\
 )
@@ -219,6 +222,7 @@
 	/datum/species/elf/wood,\
 	/datum/species/demihuman,\
 	/datum/species/tieberian,\
+	/datum/species/hualian,\
 	/datum/species/anthromorph,\
 	/datum/species/human/halfelf,\
 	/datum/species/construct/metal/porcelain,\
@@ -229,6 +233,7 @@
 	/datum/species/elf/wood,\
 	/datum/species/demihuman,\
 	/datum/species/tieberian,\
+	/datum/species/hualian,\
 	/datum/species/anthromorph,\
 	/datum/species/human/halfelf,\
 	/datum/species/construct/metal/porcelain,\
@@ -239,6 +244,7 @@
 	/datum/species/elf/wood,\
 	/datum/species/demihuman,\
 	/datum/species/tieberian,\
+	/datum/species/hualian,\
 	/datum/species/anthromorph,\
 	/datum/species/human/halfelf,\
 	/datum/species/construct/metal/porcelain,\
@@ -248,6 +254,7 @@
 	/datum/species/human/northern,\
 	/datum/species/elf/wood,\
 	/datum/species/tieberian,\
+	/datum/species/hualian,\
 	/datum/species/human/halfelf,\
 )
 
@@ -264,6 +271,7 @@
 	/datum/species/elf/wood,\
 	/datum/species/demihuman,\
 	/datum/species/tieberian,\
+	/datum/species/hualian,\
 	/datum/species/anthromorph,\
 	/datum/species/human/halfelf,\
 	/datum/species/construct/metal/porcelain,\
@@ -274,6 +282,7 @@
 	/datum/species/elf/wood,\
 	/datum/species/demihuman,\
 	/datum/species/tieberian,\
+	/datum/species/hualian,\
 	/datum/species/anthromorph,\
 	/datum/species/human/halfelf,\
 	/datum/species/construct/metal/porcelain,\
@@ -284,6 +293,7 @@
 	/datum/species/elf/wood,\
 	/datum/species/demihuman,\
 	/datum/species/tieberian,\
+	/datum/species/hualian,\
 	/datum/species/anthromorph,\
 )
 // Non-elf non-dwarf non-kobold non-goblin mostly
@@ -292,6 +302,7 @@
 	/datum/species/elf/wood,\
 	/datum/species/demihuman,\
 	/datum/species/tieberian,\
+	/datum/species/hualian,\
 	/datum/species/anthromorph,\
 )
 #define ALL_CLERIC_PATRONS list(/datum/patron/divine/astrata, /datum/patron/divine/noc, /datum/patron/divine/dendor, /datum/patron/divine/necra, /datum/patron/divine/pestra, /datum/patron/divine/ravox, /datum/patron/divine/malum, /datum/patron/divine/eora) // Currently unused.
@@ -452,6 +463,25 @@ GLOBAL_LIST_EMPTY(round_join_times)
 #define AUTOSGSHOT list('sound/combat/ranged/autosgfire.ogg', 'sound/combat/ranged/autosg2fire.ogg')
 #define FLARESHOT list('sound/combat/ranged/flaregunfire.ogg') //unused for now
 #define GRENADESHOT list('sound/combat/ranged/40mm_fire.ogg')
+
+/*
+Medical defines
+*/
+#define ARTERY_LIMB_BLEEDRATE 20	//This is used as a reference point for dynamic wounds, so it's better off as a define.
+#define CONSTITUTION_BLEEDRATE_MOD 0.1	//How much slower we'll be bleeding for every CON point. 0.1 = 10% slower.
+#define CONSTITUTION_BLEEDRATE_CAP 15	//The CON value up to which we get a bleedrate reduction.
+
+/*
+	Critical Resistance Defines 
+*/
+// Normal classes are guaranteed 4 resists, NPC 2, noblood / revenant 1
+#define CRIT_RESISTANCE_STACKS_PLAYER 4
+#define CRIT_RESISTANCE_STACKS_NPC 2
+#define CRIT_RESISTANCE_STACKS_OP 1 // Noblood / Revenant etc.
+#define CRIT_RESISTANCE_EFFECTIVE_BLEEDRATE 0.5 // How much CR reduce bleedrate by
+#define CRIT_RESISTANCE_TIMER_CD 30 SECONDS // Cooldown between guaranteed CR procs. DOES NOT APPLY TO DISMEMBERMENT.
+
+
 //distant sounds
 #define DISTANTLIGHT list('sound/combat/ranged/light_distant2.ogg', 'sound/combat/ranged/light_distant3.ogg')
 #define DISTANTMEDIUM list('sound/combat/ranged/distant_generic1.ogg', 'sound/combat/ranged/distant_generic2.ogg', 'sound/combat/ranged/distant_generic3.ogg', 'sound/combat/ranged/distant_generic4.ogg', 'sound/combat/ranged/distant_generic5.ogg')

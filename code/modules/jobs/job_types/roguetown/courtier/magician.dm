@@ -19,7 +19,7 @@
 	min_pq = 4 //High potential for abuse, lovepotion/killersice/greater fireball is not for the faint of heart
 	max_pq = null
 	round_contrib_points = 2
-	cmode_music = 'sound/music/cmode/nobility/combat_courtmage.ogg'
+	cmode_music = 'sound/music/combat_fog.ogg'
 
 	// Can't get very far as a magician if you can't chant spells now can you?
 	vice_restrictions = list(/datum/charflaw/mute)
@@ -88,5 +88,5 @@
 	  		/datum/patron/inhumen/matthios,
 	   		/datum/patron/inhumen/graggar,
 	   		/datum/patron/inhumen/baotha)
-			H.cmode_music = 'sound/music/combat_heretic.ogg' // to keep things simple, just giving CM demense. fitting 4 the role no matter the patron.
+			H.cmode_music = 'sound/music/combat_fog.ogg' // to keep things simple, just giving CM demense. fitting 4 the role no matter the patron.
 			ADD_TRAIT(H, TRAIT_HERESIARCH, TRAIT_GENERIC)

@@ -98,3 +98,40 @@ Very handy, eh?
 /obj/effect/loretile/kingsrow
 	name = "King's Row Lore Tile"
 	lore = /datum/loreblurb/kingsrow
+
+
+/obj/effect/loretile/holdout
+	name = "The Holdout"
+	lore = /datum/loreblurb/holdout
+
+/obj/effect/loretile/residental
+	name = "Residental District"
+	lore = /datum/loreblurb/residential
+
+/obj/effect/loretile/merchant
+	name = "Merchant's District"
+	lore = /datum/loreblurb/merchant
+
+/obj/effect/loretile/graves
+	name = "Mass Graves"
+	lore = /datum/loreblurb/graves
+
+/obj/effect/loretile/districthall
+	name = "District Hall"
+	lore = /datum/loreblurb/districthall
+
+/obj/effect/loretile/privatechurch
+	name ="Private Church"
+	lore = /datum/loreblurb/privatechurch
+
+/obj/effect/loretile/guardpod
+	name = "Guard Pod"
+	lore = /datum/loreblurb/guardpod
+
+/obj/effect/loretile/districtwatch
+	name = "District Watch"
+	lore = /datum/loreblurb/districtwatch
+
+/obj/effect/loretile/oldcity
+	name = "Old City"
+	lore = /datum/loreblurb/oldcity

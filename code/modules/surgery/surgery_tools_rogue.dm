@@ -162,7 +162,7 @@
 	update_heated(TRUE)
 	if(cool_timer)
 		deltimer(cool_timer)
-	cool_timer = addtimer(CALLBACK(src, PROC_REF(update_heated), FALSE), added SECONDS, TIMER_STOPPABLE)
+	cool_timer = addtimer(CALLBACK(src, PROC_REF(update_heated), FALSE), 10 SECONDS, TIMER_STOPPABLE)
 
 /obj/item/rogueweapon/surgery/cautery/get_temperature()
 	if(heated)

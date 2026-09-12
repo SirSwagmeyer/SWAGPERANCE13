@@ -488,7 +488,8 @@ GLOBAL_LIST_INIT(roleplay_readme, world.file2list("strings/rt/rp_prompt.txt"))
 
 	testing("basedtest 1")
 
-	SSjob.AssignRole(src, rank, 1)
+	if(!SSjob.AssignRole(src, rank, 1))
+		return FALSE
 	testing("basedtest 2")
 	var/mob/living/character = create_character(TRUE)	//creates the human and transfers vars and mind
 	testing("basedtest 3")

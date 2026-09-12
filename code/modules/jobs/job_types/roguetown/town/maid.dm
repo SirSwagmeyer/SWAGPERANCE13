@@ -8,6 +8,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_TEMPERANCE_NONCOMBATANT
 	selection_color = JCOLOR_KINGSROW
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 
 	tutorial = "You are a butler or maid of the King's Row estate. \
 				Your duty is to cook and to keep the manor clean of dirt, grime and occasional unwelcome guests. \

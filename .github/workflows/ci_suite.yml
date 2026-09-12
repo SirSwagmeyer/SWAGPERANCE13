@@ -70,8 +70,9 @@ jobs:
       
       - name: Install BYOND
         run: |
+          sudo dpkg --add-architecture i386
           sudo apt-get update -qq
-          sudo apt-get install -y make gcc unzip
+          sudo apt-get install -y make gcc unzip lib32z1 libc6:i386 libstdc++6:i386 libgcc-s1:i386 libcurl4:i386
           bash tools/ci/install_byond.sh
 
       - name: Compile BYOND project

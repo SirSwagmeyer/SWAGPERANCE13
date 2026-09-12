@@ -27,13 +27,9 @@
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
 		if(istype(H.wear_ring, /obj/item/roguekey/perserdun))
-			var/obj/item/clothing/S = H.wear_ring
-			var/index = findtext(H.real_name, " ")
-			if(index)
-				index = copytext(H.real_name, 1,index)
-			if(!index)
-				index = H.real_name
-			S.name = " [index]'s dogtag"
+			var/obj/item/roguekey/perserdun/S = H.wear_ring
+			S.set_soldier_name(H)
+
 
 /datum/outfit/job/roguetown/auxiliarist/pre_equip(mob/living/carbon/human/H)
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/lord/leech
@@ -56,8 +52,8 @@
 		/obj/item/reagent_containers/pill/patch/syringe/painkiller,
 		/obj/item/storage/belt/rogue/pouch/ammobag/rifle,
 		/obj/item/storage/belt/rogue/pouch/coins/poor,
-		/obj/item/grenade/gas/poison = 2,
-		/obj/item/natural/cloth,
+		/obj/item/reagent_containers/glass/bottle/rogue/aquavitae = 2,
+		/obj/item/natural/bundle/cloth/bandage/full,
 		/obj/item/rogueweapon/sword/iron/short,
 		/obj/item/rope,
 		/obj/item/clothing/head/roguetown/helmet/leather/leech,

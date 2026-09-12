@@ -35,7 +35,7 @@
 
 /datum/wound/artery/on_bodypart_gain(obj/item/bodypart/affected)
 	. = ..()
-	affected.temporary_crit_paralysis(10 SECONDS)
+	affected.temporary_crit_paralysis(3 SECONDS)
 
 /datum/wound/artery/neck
 	name = "torn carotid"
@@ -62,10 +62,10 @@
 /datum/wound/artery/chest
 	name = "aortic dissection"
 	check_name = span_artery("<B>AORTA</B>")
-	severity = WOUND_SEVERITY_FATAL
+	severity = WOUND_SEVERITY_CRITICAL
 	whp = 100
 	sewn_whp = 35
-	bleed_rate = 50
+	bleed_rate = 30
 	sewn_bleed_rate = 0.8
 	woundpain = 100
 	sewn_woundpain = 50

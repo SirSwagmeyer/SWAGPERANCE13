@@ -42,6 +42,7 @@
 	var/can_be_z_moved = TRUE
 	var/jumping = FALSE
 	var/zfalling = FALSE
+	var/buckle_prevent_turn = FALSE // whether being buckled to this stops you from turning
 	/**
 	 * an associative lazylist of relevant nested contents by "channel", the list is of the form: list(channel = list(important nested contents of that type))
 	 * each channel has a specific purpose and is meant to replace potentially expensive nested contents iteration.
